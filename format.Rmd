@@ -1,0 +1,9 @@
+---
+output:
+  pdf_document:
+    fig_caption: yes
+bibliography: references.bib
+csl: national-science-foundation-grant-proposals.csl
+fontsize: 12pt
+geometry: margin=0.5in
+---

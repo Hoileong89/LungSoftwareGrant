@@ -1,0 +1,186 @@
+
+# Research Strategy
+
+__3(a) Significance.__  Well-vetted and publicly available software is a significant benefit
+to various research communities.  For example, the neuroscience community has greatly
+benefited from highly evolved software packages such as FreeSurfer [?], the FMRIB Software
+Library (FSL) [?], the Analysis of Functional NeuroImages (AFNI) package [?], and the
+Statistical Parametric Mapping (SPM) package [?].  Performing a pubmed query for any one of
+these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
+such packages and the research studies that are produced as a result.  However, despite the
+demonstrable benefits and year-by-year usage increase, no such analogous set of tools exist
+for pulmonary-specific research.
+
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which use common, publicly available neuroimaging analysis packages." }
+years <- 2005:2014
+
+numberOfAbstractsPerYear <- rep( 0, length( years ) )
+for( i in 1:length( years ) )
+  {
+  cat( "Doing year", years[i], "\n" )
+  query = "afni OR fsl OR freesurfer OR (statistical AND parametric AND mapping)"
+  res <- EUtilsSummary( query, db = "pubmed", retmax = 5000, mindate = as.character( years[i] ), maxdate = as.character( years[i] ) )
+  summary( res )
+  fetch <- EUtilsGet( res )
+  abstracts <- AbstractText( fetch )
+  numberOfAbstractsPerYear[i] <- length( abstracts )
+  }
+
+plotDataFrame <- data.frame( Year = as.factor( years ), NumberOfAbstracts = numberOfAbstractsPerYear )
+ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = NumberOfAbstracts ) ) +
+          geom_bar( stat = "identity" ) +
+          scale_fill_gradient( low = "#01256e", high = "#6d0e0e" ) +
+          ylab( "Number of articles" ) +
+          theme( legend.position = "none" )
+```
+
+Medical image analysis libraries (e.g., the Insight ToolKit) provide extensive algorithmic
+capabilities for a range of generic medical image analysis tasks.  However, specific
+applications (e.g., lung image analysis) are not available despite the vast number of algorithms
+that have been proposed in the literature.  This lack was one of the primary motivations
+for the development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
+the mature Insight ToolKit in providing an optimal software framework for building scripts
+and programs specifically for neuroimaging.  For example, the following core neuroimage
+processing algorithms have been made available through our ANTs toolkit (complete with
+examples and developer-tuned parameters)  and have been used extensively by our group and
+others:
+- brain normalization [?],
+- brain template generation [?],
+- skull-stripping or brain extraction [?],
+- prior-based Bayesian brain tissue segmentation [?],
+- cortical gray matter thickness estimation [?],
+- brain tumor segmentation [?], and
+- cortical labeling [?].
+In addition to public availability, some of these algorithms have been showcased in
+international competitions and have performed extremely well [?,?,?].
+
+Analogously, several algorithmic categories exist for lung image analysis which, as we have
+stated previously, do not exist in any comprehensive, publicly available package.  An
+extensive survey concentrating on the years 1999–2004 is given in [16] which covers computer
+aided diagnosis of lung disease and lung cancer in CT (i.e., detection and tracking of
+pulmonary nodules) and provides an overview of the many relevant segmentation methods for
+pulmonary structures. Although many algorithms existed at the time, continued technical
+development has only increased the number of available algorithms.  Following is a small
+sampling of more recently reported techniques for CT analysis:
+- whole lung differentiation from the chest wall (e.g. [13, 44, 46, 14])
+- bronchial structure extraction (e.g. [50, 12]; the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [11]),
+- vasculature segmentation (e.g. [1, 6, 2]),
+- lobe and/or fissure detection (e.g. [49, 15, 43, 47, 41]), and
+- feature extraction and classification [42, 34, 37].
+Since this list is restricted to CT image analysis, inclusion of additional techniques
+specific to other modalities will have additional benefit.  For example, ventilation-based
+segmentation for analysis of ventilation lung imaging [@Tustison:2011aa] will also have
+significant impact in a comprehensive lung image analysis suite.
+
+Important in any methodological discussion is the crucial importance of parameter selection
+which requires domain-specific experience.  For example, although ANTs performance in brain
+registration has been independently evaluated and found to be of relatively high quality
+[Klein2009], applying our registration tool in the EMPIRE10 challenge (Evaluation of Methods
+for Pulmonary Image REgistration 2010) required significant empirically-based tuning.  In
+addition, new innovations in diffeomorphic registration technology has led to a Symmetric
+Normalization B-spline variant which has demonstrated preferred normalizations [@Tustison:2013ac],
+particularly for pulmonary data [@Tustison:2015].  Note that the goals of this proposal would
+significantly support the National Library of Medicine’s own open-source directives in that
+all software would be developed using the established Insight ToolKit’s coding and testing
+standards with the eventual idea that much (if not all) of the actual code would be contributed
+for inclusion in future versions of the Insight ToolKit.
+
+It should also be noted that open-source software, in general, has documented benefits
+within the targeted communities for which it is developed and supported.  In addition to
+the increase in research output illustrated earlier, open-source permits students and
+researchers to learn specific computational techniques in a social environment [?].
+This, in turn, provides motivation for user-based support including potential contributions
+such as bug fixes and feature additions.  Additional analyses have shown the tremendous
+cost savings that open-source software provides [?].
+
+__3(b) Innovation.__  Given the lack of open-source solutions for pulmonary image analysis,
+the proposal goals would produce an innovative framework for corresponding research.
+Many algorithms have been proposed in various technical venues but that which we propose
+would provide well-vetted and easy-to-use implementations of these robust methodologies.
+Many of these methodologies have been developed by our group [?].
+
+An additional innovation we are proposing is the inclusion of data and detailed instructions
+for generating a reproducible, multimodality pulmonary study using the proposed package.
+_Say more about the data specifics here._  Clinical findings will be published in a traditional
+journal (e.g., Chest) for the interested researcher.  In addition, we will provide all image
+data and the quantitative analysis scripts as a companion release to accompany the paper
+(e.g., see previous similar offerings from our group [?,?]) Such a comprehensive clinical
+investigation using these tools will not only provide insight into the specifics of ??
+but will also provide a tangible mechanism for using the tools created with this proposal.
+
+__3(c) Approach.__
+
+__Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
+pulmonary computational analysis.  Development will include several basic tools
+
+_Atlas-based lung segmentation._  Identification of anatomical structure in MRI is often a
+crucial preprocessing step for quantification of morphological features or functional
+information.  Quantitative regional analysis often requires the identification of lung
+and lobar anatomy.  Although much algorithmic research for lung segmentation has been
+reported in the CT literature [?],  co-opting such technologies is complicated by MRI-specific
+issues such as RF coil inhomogeneity, presence and resolution of structural detail, and
+the absence of a physically-based intensity scaling.
+
+We recently proposed a multi-atlas approach for automatically segmenting the left and right
+lungs in proton MRI [?].  Multi-atlas approaches to segmentation have proven highly
+successful in neuroimaging [9] which translates readily to a pulmonary context.  Many
+current strategies for lung image segmentation employ low-level processing techniques based
+on encodable heuristics.  Consensus-based strategies, in contrast, optimize the prior
+knowledge applied to a specific segmentation problem.
+
+_B-spline-based Symmetric Normalization._  A thorough comparative evaluation with the
+well-known ANTs SyN algorithm was performed with a B-spline variant.  The evaluation
+utilized multiple publicly available, annotated brain data sets and demonstrated
+statistically significant improvement in label overlap measures [?].   We also used the
+EMPIRE10 challenge framework to provide an additional comparison in the context of
+pulmonary CT image registration [?].  Due to the performance of this new variant,
+it has become the preferred transformation model for small deformation image registration
+problems (e.g., lung and cardiac [?]).
+
+_Multi-feature CT and multi-modal MRI template generation._  we generate subject-specific
+templates directly from the image data.  Given the variability in lung shape across
+populations and the lack of publicly available lung atlases, generating population- or
+subject-specific templates enhances the accuracy of the longitudinal analysis described
+in this work.  Applicable to pulmonary data is the template construction algorithm described
+in [?] which was applied to T1-weighted brain data.   However, the simultaneous acquisition
+of the 3He and 1H images lends itself to multimodal processing [?] in which both modalities
+are used to simultaneously produce 3He and 1H templates.  This process is represented in
+Fig. 1 for a single subject.
+
+_Atlas-based lobe estimation._  For regional investigation of certain lung pathologies and
+conditions, it is often useful to quantify measurements of interest within more localized
+regions, such as the lobes.  However, as mentioned previously, there is little (if any)
+usable information in proton MRI for image-based lobar segmentation which has led to
+alternative geometric subdivisions which are ad hoc, non-anatomical, and do not adequately
+address intra- and inter-subject correspondences.  However, we can take advantage of
+inter-subject similarities in lobar geometry to provide a prior-based estimation of
+lobar divisions using a consensus labeling approach.
+
+To generate the lobe segmentation in a target proton lung image, we first generate the
+binary lung mask for the proton lung image as described in the previous subsection.  We
+then register the set of CT lung masks to the target binary lung mask using the same
+registration approach mentioned earlier [16,17].   Although the cross-correlation metric
+was used for these particular set of results, other metrics would work as well (e.g.,
+mean-squares).  Subsequently, we warp the set of CT lobe labels to the target image using
+the CT mask-to- proton mask transformation.  Since we have no intensity information inside
+the target lung mask and CT atlas lung masks, we use a simply majority voting strategy to
+generate the optimal labeling for the target image.  Following the majority voting, we
+remove any labelings outside the lung mask and assign any unlabeled voxels with the label
+closest in distance to that voxel.
+
+_Ventilation-based image segmentation._  Developments in MRI research utilizing noble gases,
+such as 3He and 129Xe, have demonstrated the capability of visualizing alveolar and bronchial
+air spaces. Currently, hyperpolarized 3He MRI is a low-risk investigatory technique that
+provides high spatial and temporal resolution images of the air spaces of the lungs and has
+been used to investigate a variety of lung diseases. Automated or semiautomated approaches
+for classifying areas of varying degrees of ventilation are of potential benefit for
+facilitating such investigation.
+
+_Airway and vessel segmentation._  We should propose to implement something here.  We should look at the Slicer/VMTK airway segmentation model.
+
+__Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
+
+\newpage
+
+# References
+
