@@ -16,5 +16,5 @@ for( i in 1:length( rmdFiles ) )
     }
   system( cmd )
   }
-render( stitchedFile )
+render( stitchedFile, output_format = "all" )
 

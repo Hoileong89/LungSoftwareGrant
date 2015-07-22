@@ -34,13 +34,11 @@ image analysis competitions for a variety of applications (neuro, pulmonary, and
 and data scaling and believe that this will also contribute to our success in
 accomplishing the goals of this application as defined by the following specific aims:
 
-- __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
+* __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.
-
-- __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton,
+* __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton,
 and He3) for public use.
-
-- ___Specific Aim 3.__  Perhaps instead of Aim 2, we can include analysis of one of Mike’s
+* ___Specific Aim 3.__  Perhaps instead of Aim 2, we can include analysis of one of Mike’s
 comprehensive data sets (multi-modal CT, proton & Xe), publish the results, as well as
 provide all the scripts (using ANTsR?) for the user to re-run the analysis on the user
 side._

@@ -2,8 +2,19 @@
 output:
   pdf_document:
     fig_caption: yes
+    latex_engine: xelatex
+header-includes:
+   - \usepackage{booktabs}
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
-fontsize: 12pt
+fontsize: 11pt
+mainfont: Georgia
 geometry: margin=0.5in
 ---
+
+<!-- https://grants.nih.gov/grants/ElectronicReceipt/pdf_guidelines.htm -->
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( cache=TRUE )
+```

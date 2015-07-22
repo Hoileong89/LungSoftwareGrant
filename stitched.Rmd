@@ -2,11 +2,22 @@
 output:
   pdf_document:
     fig_caption: yes
+    latex_engine: xelatex
+header-includes:
+   - \usepackage{booktabs}
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
-fontsize: 12pt
+fontsize: 11pt
+mainfont: Georgia
 geometry: margin=0.5in
 ---
+
+<!-- https://grants.nih.gov/grants/ElectronicReceipt/pdf_guidelines.htm -->
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( cache=TRUE )
+```
 
 # Specific Aims
 
@@ -43,13 +54,11 @@ image analysis competitions for a variety of applications (neuro, pulmonary, and
 and data scaling and believe that this will also contribute to our success in
 accomplishing the goals of this application as defined by the following specific aims:
 
-- __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
+* __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.
-
-- __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton,
+* __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton,
 and He3) for public use.
-
-- ___Specific Aim 3.__  Perhaps instead of Aim 2, we can include analysis of one of Mike’s
+* ___Specific Aim 3.__  Perhaps instead of Aim 2, we can include analysis of one of Mike’s
 comprehensive data sets (multi-modal CT, proton & Xe), publish the results, as well as
 provide all the scripts (using ANTsR?) for the user to re-run the analysis on the user
 side._
@@ -63,9 +72,9 @@ community.)_
 
 __3(a) Significance.__  Well-vetted and publicly available software is a significant benefit
 to various research communities.  For example, the neuroscience community has greatly
-benefited from highly evolved software packages such as FreeSurfer [?], the FMRIB Software
-Library (FSL) [?], the Analysis of Functional NeuroImages (AFNI) package [?], and the
-Statistical Parametric Mapping (SPM) package [?].  Performing a pubmed query for any one of
+benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
+Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], and the
+Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa].  Performing a pubmed query for any one of
 these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
 such packages and the research studies that are produced as a result.  However, despite the
 demonstrable benefits and year-by-year usage increase, no such analogous set of tools exist
@@ -104,15 +113,17 @@ and programs specifically for neuroimaging.  For example, the following core neu
 processing algorithms have been made available through our ANTs toolkit (complete with
 examples and developer-tuned parameters)  and have been used extensively by our group and
 others:
-- brain normalization [?],
-- brain template generation [?],
-- skull-stripping or brain extraction [?],
-- prior-based Bayesian brain tissue segmentation [?],
-- cortical gray matter thickness estimation [?],
-- brain tumor segmentation [?], and
-- cortical labeling [?].
+
+* brain normalization [@Avants:2011ab;@Avants:2014aa],
+* brain template generation [@Avants:2010aa],
+* skull-stripping or brain extraction [@Tustison:2014ab],
+* prior-based Bayesian brain tissue segmentation [@Avants:2011ab],
+* cortical gray matter thickness estimation [@Tustison:2014ab],
+* brain tumor segmentation [@Tustison:2014aa], and
+* cortical labeling [@Wang:2012aa;@Wang:2013aa].
+
 In addition to public availability, some of these algorithms have been showcased in
-international competitions and have performed extremely well [?,?,?].
+international competitions and have performed extremely well [@Murphy:2011ab;@Menze:2014aa].
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  An
@@ -122,11 +133,13 @@ pulmonary nodules) and provides an overview of the many relevant segmentation me
 pulmonary structures. Although many algorithms existed at the time, continued technical
 development has only increased the number of available algorithms.  Following is a small
 sampling of more recently reported techniques for CT analysis:
-- whole lung differentiation from the chest wall (e.g. [13, 44, 46, 14])
-- bronchial structure extraction (e.g. [50, 12]; the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [11]),
-- vasculature segmentation (e.g. [1, 6, 2]),
-- lobe and/or fissure detection (e.g. [49, 15, 43, 47, 41]), and
-- feature extraction and classification [42, 34, 37].
+
+* whole lung differentiation from the chest wall (e.g. [13, 44, 46, 14])
+* bronchial structure extraction (e.g. [50, 12]; the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [11]),
+* vasculature segmentation (e.g. [1, 6, 2]),
+* lobe and/or fissure detection (e.g. [49, 15, 43, 47, 41]), and
+* feature extraction and classification [42, 34, 37].
+
 Since this list is restricted to CT image analysis, inclusion of additional techniques
 specific to other modalities will have additional benefit.  For example, ventilation-based
 segmentation for analysis of ventilation lung imaging [@Tustison:2011aa] will also have
@@ -239,6 +252,9 @@ facilitating such investigation.
 _Airway and vessel segmentation._  We should propose to implement something here.  We should look at the Slicer/VMTK airway segmentation model.
 
 __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
+
+\input{ct_table.tex}
+\clearpage
 
 \newpage
 
