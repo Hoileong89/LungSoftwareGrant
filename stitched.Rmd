@@ -21,31 +21,33 @@ knitr::opts_chunk$set( cache=TRUE )
 
 # Specific Aims
 
-Medical research significantly benefits from the development and proliferation of imaging-
-related analysis packages, particularly those softwares which have been tailored for
+Medical research significantly benefits from the development and proliferation of imaging-related
+analysis packages, particularly those softwares which have been tailored for
 specific application domains.  Although several such established packages exist for the
 neuroimaging community (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for the
-pulmonary imaging research community.  The primary goal of this proposal is to develop and
-provide a dissemination platform for a robust, open-source image analysis toolkit with
-annotated data specifically targeted at the pulmonary research community.
+pulmonary imaging research community.  The primary goal of this proposal is to develop
+a robust, open-source image analysis toolkit and dissemination platform along with annotated
+data specifically targeted at the pulmonary research community.
 
 Although methodological research is continually being presented at conferences and
 published in various venues, the unfortunate reality is that much of this work exists
 strictly in “advertisement” form.  Oftentimes the underlying code is unavailable to other
 researchers or is implemented in a limited manner (i.e., strictly as proof-of-concept
-software).  Frequently crucial parameter choices are omitted in the corresponding
-publication(s) which makes outside implementations difficult.  Additionally, the data used
-to showcase the proposed methodology are often private and actual data visualization is
+software).  Frequently, crucial parameter choices are omitted in the corresponding
+publication(s) which makes external implementations difficult.  In addition, the data used
+to showcase the proposed methodologies are often private and actual data visualization is
 limited to carefully selected snapshots for publication (i.e., advertisement) purposes
-which might not be representative of algorithmic performance.
+which might not be representative of algorithmic performance.  Finally, many of these
+analysis methods are patented and/or integrated into proprietary commercial software
+packages which severely limits accessibility to researchers.
 
-As a potential corrective, this proposal will provide an open-source software toolkit for
-core pulmonary image analysis tasks across multiple modalities which we proposed in recent
-publications.  These basic tasks include image registration, template building for
-cross-sectional and longitudinal analyses, and functional and structural lung image
-segmentation.  In addition to the software, we will provide both the input and output
-data as open-source not only so that other users can it to reproduce our results, but it
-will also allow researchers to use it in their studies.
+As a corrective alternative, this proposal will provide an open-source software toolkit for
+core pulmonary image analysis tasks across multiple modalities, many of which we have proposed
+previously in past publications.  These basic tasks include pulmonary image registration,
+template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
+and functional and structural lung image segmentation.  In addition to the software, we will
+provide both the input and output data as open-source not only so that other users can it to
+reproduce our results, but it will also allow researchers to use it unrestricted in their studies.
 
 As principal developers of the popular, open-source ANTs (Advanced Normalization Tools)
 package, we have extensive experience in the development of well-written software that has
@@ -54,17 +56,26 @@ image analysis competitions for a variety of applications (neuro, pulmonary, and
 and data scaling and believe that this will also contribute to our success in
 accomplishing the goals of this application as defined by the following specific aims:
 
-* __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
-pulmonary computational analysis.
-* __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton,
-and He3) for public use.
-* ___Specific Aim 3.__  Perhaps instead of Aim 2, we can include analysis of one of Mike’s
-comprehensive data sets (multi-modal CT, proton & Xe), publish the results, as well as
-provide all the scripts (using ANTsR?) for the user to re-run the analysis on the user
-side._
-
-_Say something more here (e.g., We believe that this will be a valuable resource to the
-community.)_
+* __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
+pulmonary computational analysis.__  These open-source software tools will specifically
+target pulmonary image analysis and comprise core application functions such as
+inspiratory/expiratory registration for pulmonary kinematics, ventilation-based segmentation,
+lung and lobe estimation, airway segmentation, and calculation of clinical indices for
+characterization of lung development and pathology.
+* __Specific Aim 2:__  __To provide multiple sets of multi-modal annotated lung data (CT, proton,
+and He3) for unrestricted public use.__  In addition to the public unavailability of the
+algorithms used to produce the results discussed in publications, the input and output
+data is also typically not available.  Such availability would be invaluable to other
+researchers in the community for appropriation of their own purposes including algorithmic
+performance comparison and running the proposed prior-based methods requiring annotated
+input data.
+* __Specific Aim 3.__  __Validate and disseminate multiple complete studies with input data
+from multiple investigators to showcase the utility of the tools and data provided with this
+proposal.__  In order to maximize the utility of the proposed pulmonary image analysis
+framework, our proposal also includes making available the input data from multiple
+researchers involved in a variety of pulmonary research questions and the output data
+produced by the framework.  Among other purposes, this contribution will provide
+complete, concrete examples demonstrating usage of the proposed contribution.
 
 \newpage
 
@@ -120,7 +131,7 @@ cortical gray matter thickness estimation [@Tustison:2014ab],
 brain tumor segmentation [@Tustison:2014aa], and
 cortical labeling [@Wang:2012aa;@Wang:2013aa].
 In addition to public availability, some of these algorithms have been showcased in
-international competitions and have performed extremely well [@Murphy:2011ab;@Menze:2014aa].
+international competitions and have performed extremely well [@Murphy:2011aa;@Menze:2014aa].
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  An
@@ -245,7 +256,35 @@ been used to investigate a variety of lung diseases. Automated or semiautomated 
 for classifying areas of varying degrees of ventilation are of potential benefit for
 facilitating such investigation.
 
+_Quantitative CT indices._  Imaging biomarkers for characterizing emphysema in CT have
+have been well researched, although there are ample opportunities to refine these methods
+as well as to introduce more advanced approaches. Examples of the latter include texture
+analysis for identifying the centrilobular and groundglass opacities and fractal and
+connectivity approaches to differentiate centrilobular from panlobular emphysema. The
+indices for CT image analysis can roughly be divided into those that characterize the
+pulmonary parenchyma and those that characterize the airways. The former are important
+for subjects with an emphysematous component of disease, whereas the latter are important
+for subjects with a bronchitic component of disease. Such indices can also be studied not
+only at any particular single time point, but also for changes with time. The addition of
+quantitative morphologic measurements of the airways provides an assessment of the
+contribution of airway changes to chronic lung disease.
+
+Table 1 provides an historical overview of the type of
+discriminative measurements that have been used for CT lung assessment. _An important
+premise of this proposal is that many of these measurements can also be directly applied
+to discriminative analysis using 3HeMRI for a variety of lung diseases._  We have already
+implemented many of these image features and have contributed the result of our work to
+the Insight Toolkit (ITK) of the National Institutes of Health (e.g., [@Tustison:2008aa;@Tustison:2009aa]). As an
+open-source repository for medical image analysis algorithms, contribution of our work
+to the ITK allows researchers full access to the latest image analysis algorithms in
+addition to avoiding research redundancy. It is also beneficial in that the entire ITK
+community participates in the vetting of the software library.
+
+[7;9;16;18;19;24;25;26;30;31;32;33;37;41;46;54;55;56;57;59;61;63;64;65;66;68;70;74;76;77;82;83;84;85;92;98;110;111;112;114;117;118;120;121]
+
 _Airway and vessel segmentation._  We should propose to implement something here.  We should look at the Slicer/VMTK airway segmentation model.
+
+
 
 __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
 

@@ -51,7 +51,7 @@ cortical gray matter thickness estimation [@Tustison:2014ab],
 brain tumor segmentation [@Tustison:2014aa], and
 cortical labeling [@Wang:2012aa;@Wang:2013aa].
 In addition to public availability, some of these algorithms have been showcased in
-international competitions and have performed extremely well [@Murphy:2011ab;@Menze:2014aa].
+international competitions and have performed extremely well [@Murphy:2011aa;@Menze:2014aa].
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  An
@@ -176,7 +176,35 @@ been used to investigate a variety of lung diseases. Automated or semiautomated 
 for classifying areas of varying degrees of ventilation are of potential benefit for
 facilitating such investigation.
 
+_Quantitative CT indices._  Imaging biomarkers for characterizing emphysema in CT have
+have been well researched, although there are ample opportunities to refine these methods
+as well as to introduce more advanced approaches. Examples of the latter include texture
+analysis for identifying the centrilobular and groundglass opacities and fractal and
+connectivity approaches to differentiate centrilobular from panlobular emphysema. The
+indices for CT image analysis can roughly be divided into those that characterize the
+pulmonary parenchyma and those that characterize the airways. The former are important
+for subjects with an emphysematous component of disease, whereas the latter are important
+for subjects with a bronchitic component of disease. Such indices can also be studied not
+only at any particular single time point, but also for changes with time. The addition of
+quantitative morphologic measurements of the airways provides an assessment of the
+contribution of airway changes to chronic lung disease.
+
+Table 1 provides an historical overview of the type of
+discriminative measurements that have been used for CT lung assessment. _An important
+premise of this proposal is that many of these measurements can also be directly applied
+to discriminative analysis using 3HeMRI for a variety of lung diseases._  We have already
+implemented many of these image features and have contributed the result of our work to
+the Insight Toolkit (ITK) of the National Institutes of Health (e.g., [@Tustison:2008aa;@Tustison:2009aa]). As an
+open-source repository for medical image analysis algorithms, contribution of our work
+to the ITK allows researchers full access to the latest image analysis algorithms in
+addition to avoiding research redundancy. It is also beneficial in that the entire ITK
+community participates in the vetting of the software library.
+
+[7;9;16;18;19;24;25;26;30;31;32;33;37;41;46;54;55;56;57;59;61;63;64;65;66;68;70;74;76;77;82;83;84;85;92;98;110;111;112;114;117;118;120;121]
+
 _Airway and vessel segmentation._  We should propose to implement something here.  We should look at the Slicer/VMTK airway segmentation model.
+
+
 
 __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
 
