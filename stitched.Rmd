@@ -62,7 +62,7 @@ target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration for pulmonary kinematics, ventilation-based segmentation,
 lung and lobe estimation, airway segmentation, and calculation of clinical indices for
 characterization of lung development and pathology.
-* __Specific Aim 2:__  __To provide multiple sets of multi-modal annotated lung data (CT, proton,
+* __Specific Aim 2:__  __Provide multiple sets of multi-modal annotated lung data (CT, proton,
 and He3) for unrestricted public use.__  In addition to the public unavailability of the
 algorithms used to produce the results discussed in publications, the input and output
 data is also typically not available.  Such availability would be invaluable to other
@@ -81,17 +81,21 @@ complete, concrete examples demonstrating usage of the proposed contribution.
 
 # Research Strategy
 
-__3(a) Significance.__  Well-vetted and publicly available software is a significant benefit
-to various research communities.  For example, the neuroscience community has greatly
+## __3(a) Significance__
+Well-vetted and publicly available software is a significant benefit
+to targeted research communities.  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], and the
 Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa].  Performing a pubmed query for any one of
 these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
 such packages and the research studies that are produced as a result.  However, despite the
-demonstrable benefits and year-by-year usage increase, no such analogous set of tools exist
-for pulmonary-specific research.
+absolute number of articles produced using such software and the year-by-year usage increase,
+no such analogous set of tools exist for pulmonary-specific research.  In fact, in a recent
+review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
+consensus is that ``universally available image analysis software'' is a major hinderance
+to more widespread usage of such imaging biomarkers [@Hoffman:2015aa].
 
-```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which use common, publicly available neuroimaging analysis packages." }
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which use common, publicly available neuroimaging analysis packages (i.e., FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken." }
 years <- 2005:2014
 
 numberOfAbstractsPerYear <- rep( 0, length( years ) )
@@ -111,25 +115,30 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
           geom_bar( stat = "identity" ) +
           scale_fill_gradient( low = "#01256e", high = "#6d0e0e" ) +
           ylab( "Number of articles" ) +
+          xlab( "Publication year" ) +
           theme( legend.position = "none" )
 ```
 
 Medical image analysis libraries (e.g., the Insight ToolKit) provide extensive algorithmic
-capabilities for a range of generic medical image analysis tasks.  However, specific
-applications (e.g., lung image analysis) are not available despite the vast number of algorithms
-that have been proposed in the literature.  This lack was one of the primary motivations
-for the development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
+capabilities for a range of generic medical image analysis tasks.  However,
+tailored software packages for specific application domains (e.g., lung image analysis) are not
+available despite the vast number of algorithms that have been proposed in the literature.
+This lack within the neuroscience community was one of the primary motivations for the development
+of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
 the mature Insight ToolKit in providing an optimal software framework for building scripts
 and programs specifically for neuroimaging.  For example, the following core neuroimage
 processing algorithms have been made available through our ANTs toolkit (complete with
 examples and developer-tuned parameters)  and have been used extensively by our group and
-others:  brain normalization [@Avants:2011ab;@Avants:2014aa],
-brain template generation [@Avants:2010aa],
-skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab],
-prior-based Bayesian brain tissue segmentation [@Avants:2011ab],
-cortical gray matter thickness estimation [@Tustison:2014ab],
-brain tumor segmentation [@Tustison:2014aa], and
-cortical labeling [@Wang:2012aa;@Wang:2013aa].
+others:
+
+* brain normalization [@Avants:2011ab;@Avants:2014aa],
+* brain template generation [@Avants:2010aa],
+* skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab],
+* prior-based Bayesian brain tissue segmentation [@Avants:2011ab],
+* cortical gray matter thickness estimation [@Tustison:2014ab],
+* brain tumor segmentation [@Tustison:2014aa], and
+* cortical labeling [@Wang:2012aa;@Wang:2013aa].
+
 In addition to public availability, some of these algorithms have been showcased in
 international competitions and have performed extremely well [@Murphy:2011aa;@Menze:2014aa].
 
@@ -174,7 +183,8 @@ This, in turn, provides motivation for user-based support including potential co
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
 cost savings that open-source software yields [@Rothwell:2008aa].
 
-__3(b) Innovation.__  Given the lack of open-source solutions for pulmonary image analysis,
+## __3(b) Innovation__
+Given the lack of open-source solutions for pulmonary image analysis,
 the proposal goals would produce an innovative framework for corresponding research.
 Many algorithms have been proposed in various technical venues but that which we propose
 would provide well-vetted and easy-to-use implementations of these robust methodologies.
@@ -189,7 +199,7 @@ data and the quantitative analysis scripts as a companion release to accompany t
 investigation using these tools will not only provide insight into the specifics of ??
 but will also provide a tangible mechanism for using the tools created with this proposal.
 
-__3(c) Approach.__
+## __3(c) Approach__
 
 __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.  Development will include several basic tools

@@ -42,7 +42,7 @@ target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration for pulmonary kinematics, ventilation-based segmentation,
 lung and lobe estimation, airway segmentation, and calculation of clinical indices for
 characterization of lung development and pathology.
-* __Specific Aim 2:__  __To provide multiple sets of multi-modal annotated lung data (CT, proton,
+* __Specific Aim 2:__  __Provide multiple sets of multi-modal annotated lung data (CT, proton,
 and He3) for unrestricted public use.__  In addition to the public unavailability of the
 algorithms used to produce the results discussed in publications, the input and output
 data is also typically not available.  Such availability would be invaluable to other
