@@ -41,10 +41,10 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 
 Medical image analysis libraries (e.g., the Insight ToolKit) provide extensive algorithmic
 capabilities for a range of generic medical image analysis tasks.  However,
-tailored software packages for specific application domains (e.g., lung image analysis) are not
+tailored software packages for certain application domains (e.g., lung image analysis) are not
 available despite the vast number of algorithms that have been proposed in the literature.
-This lack within the neuroscience community was one of the primary motivations for the development
-of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
+Similar deficiency within the neuroscience community has been one of the primary motivations for the
+continued development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
 the mature Insight ToolKit in providing an optimal software framework for building scripts
 and programs specifically for neuroimaging.  For example, the following core neuroimage
 processing algorithms have been made available through our ANTs toolkit (complete with
@@ -55,7 +55,7 @@ others:
 * brain template generation [@Avants:2010aa],
 * skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab],
 * prior-based Bayesian brain tissue segmentation [@Avants:2011ab],
-* cortical gray matter thickness estimation [@Tustison:2014ab],
+* cortical gray matter thickness estimation [@Das:2009aa;@Tustison:2014ab],
 * brain tumor segmentation [@Tustison:2014aa], and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa].
 

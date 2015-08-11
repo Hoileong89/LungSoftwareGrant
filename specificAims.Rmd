@@ -3,11 +3,11 @@
 
 Medical research significantly benefits from the development and proliferation of imaging-related
 analysis packages, particularly those softwares which have been tailored for
-specific application domains.  Although several such established packages exist for the
-neuroimaging community (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for the
-pulmonary imaging research community.  The primary goal of this proposal is to develop
-a robust, open-source image analysis toolkit and dissemination platform along with annotated
-data specifically targeted at the pulmonary research community.
+specific application domains.  Although several such established packages exist for
+*neuroimaging* research (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for
+pulmonary imaging analysis.  The primary goal of this proposal is to develop
+a robust, open-source image analysis toolkit and dissemination platform, along with annotated
+data, specifically targeted at the pulmonary research community.
 
 Although methodological research is continually being presented at conferences and
 published in various venues, the unfortunate reality is that much of this work exists
@@ -26,8 +26,9 @@ core pulmonary image analysis tasks across multiple modalities, many of which we
 previously in past publications.  These basic tasks include pulmonary image registration,
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
 and functional and structural lung image segmentation.  In addition to the software, we will
-provide both the input and output data as open-source not only so that other users can it to
-reproduce our results, but it will also allow researchers to use it unrestricted in their studies.
+provide both the input and output data consistent with open-science principles not only so that other users can it to
+reproduce our results, but it will also allow researchers to use it in an unrestricted manner
+in their own studies.
 
 As principal developers of the popular, open-source ANTs (Advanced Normalization Tools)
 package, we have extensive experience in the development of well-written software that has
@@ -39,22 +40,22 @@ accomplishing the goals of this application as defined by the following specific
 * __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.__  These open-source software tools will specifically
 target pulmonary image analysis and comprise core application functions such as
-inspiratory/expiratory registration for pulmonary kinematics, ventilation-based segmentation,
+inspiratory/expiratory registration for inferring pulmonary kinematics, ventilation-based segmentation,
 lung and lobe estimation, airway segmentation, and calculation of clinical indices for
 characterization of lung development and pathology.
 * __Specific Aim 2:__  __Provide multiple sets of multi-modal annotated lung data (CT, proton,
 and He3) for unrestricted public use.__  In addition to the public unavailability of the
-algorithms used to produce the results discussed in publications, the input and output
+algorithms used to produce the results discussed in certain publications, the input and output
 data is also typically not available.  Such availability would be invaluable to other
-researchers in the community for appropriation of their own purposes including algorithmic
-performance comparison and running the proposed prior-based methods requiring annotated
+researchers in the community for appropriation for their own purposes including algorithmic
+performance assessment and running the proposed prior-based methods requiring annotated
 input data.
-* __Specific Aim 3.__  __Validate and disseminate multiple complete studies with input data
+* __Specific Aim 3:__  __Evaluate and disseminate multiple complete studies with input data
 from multiple investigators to showcase the utility of the tools and data provided with this
 proposal.__  In order to maximize the utility of the proposed pulmonary image analysis
 framework, our proposal also includes making available the input data from multiple
-researchers involved in a variety of pulmonary research questions and the output data
-produced by the framework.  Among other purposes, this contribution will provide
+researchers (with their permission) involved in a variety of pulmonary research questions and
+the output data produced by the framework.  Among other purposes, this contribution will provide
 complete, concrete examples demonstrating usage of the proposed contribution.
 
 \newpage
