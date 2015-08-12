@@ -120,12 +120,12 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
           theme( legend.position = "none" )
 ```
 
-Medical image analysis libraries (e.g., the Insight ToolKit) provide extensive algorithmic
-capabilities for a range of generic medical image analysis tasks.  However,
+Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provide extensive algorithmic
+capabilities for a range of generic image processing tasks.  However,
 tailored software packages for certain application domains (e.g., lung image analysis) are not
 available despite the vast number of algorithms that have been proposed in the literature.
 Similar deficiency within the neuroscience community has been one of the primary motivations for the
-continued development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
+inception and continued development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
 the mature Insight ToolKit in providing an optimal software framework for building scripts
 and programs specifically for neuroimaging.  For example, the following core neuroimage
 processing algorithms have been made available through our ANTs toolkit (complete with
@@ -166,7 +166,7 @@ significant impact in a comprehensive lung image analysis suite.
 Important in any methodological discussion is the crucial importance of parameter selection
 which requires domain-specific experience.  For example, although ANTs performance in brain
 registration has been independently evaluated and found to be of relatively high quality
-[Klein2009], applying our registration tool in the EMPIRE10 challenge (Evaluation of Methods
+[Klein2009], tailoring our registration tool in the EMPIRE10 challenge (Evaluation of Methods
 for Pulmonary Image REgistration 2010) required significant empirically-based tuning.  In
 addition, new innovations in diffeomorphic registration technology has led to a Symmetric
 Normalization B-spline variant which has demonstrated preferred normalizations [@Tustison:2013ac],
@@ -188,22 +188,33 @@ cost savings that open-source software yields [@Rothwell:2008aa].
 Given the lack of open-source solutions for pulmonary image analysis,
 the proposal goals would produce an innovative framework for corresponding research.
 Many algorithms have been proposed in various technical venues but that which we propose
-would provide well-vetted and easy-to-use implementations of these robust methodologies.
-Many of these have been developed by our group.
+would provide well-vetted and easy-to-use implementations of specific robust methodologies,
+many of which have been developed by our group.
 
-An additional innovation we are proposing is the inclusion of data and detailed instructions
-for generating a reproducible, multimodality pulmonary study using the proposed package.
-_Say more about the data specifics here._  Clinical findings will be published in a traditional
-journal (e.g., Chest) for the interested researcher.  In addition, we will provide all image
+An additional innovative component we are proposing is the inclusion of data and detailed instructions
+for generating reproducible, multimodality pulmonary studies using the proposed package with
+input data from several of our external collaborators and colleagues.  Specifically, we have
+asked several scientists and researchers who are familiar with our work to provide imaging data
+of various modalities which we will then process using the proposed toolkit.  These processed
+data will then not only be returned to the corresponding providers with detailed instructions
+on how to obtain these results in their own labs but will also be provided to the public for any
+interested researcher to reproduce the results.  Given the different image acquisition sources,
+this strategy should also demonstrate the robustness of our tools.
+
+Included in these analyses will be studies dealing with our own data.  Clinical findings will be
+published in traditional venues (e.g., Chest) for the interested researcher.  In addition, we will
+provide all image
 data and the quantitative analysis scripts as a companion release to accompany the paper
-(e.g., see previous similar offerings from our group [?,?]) Such a comprehensive clinical
-investigation using these tools will not only provide insight into the specifics of ??
+(e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
+ Such a comprehensive clinical
+investigation using these tools will not only provide insight into the specifics of certain
+pulmonary pathologies
 but will also provide a tangible mechanism for using the tools created with this proposal.
 
 ## __3(c) Approach__
 
 __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
-pulmonary computational analysis.  Development will include several basic tools
+pulmonary computational analysis.  Development will include several basic tools:
 
 _Atlas-based lung segmentation._  Identification of anatomical structure in MRI is often a
 crucial preprocessing step for quantification of morphological features or functional
