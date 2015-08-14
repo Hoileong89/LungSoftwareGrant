@@ -3,6 +3,7 @@ output:
   pdf_document:
     fig_caption: true
     latex_engine: xelatex
+    keep_tex: yes
 header-includes:
    - \usepackage{booktabs}
 bibliography: references.bib

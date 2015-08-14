@@ -169,6 +169,15 @@ current strategies for lung image segmentation employ low-level processing techn
 on encodable heuristics.  Consensus-based strategies, in contrast, optimize the prior
 knowledge applied to a specific segmentation problem (cf Figure 2).
 
+![Sample lung and lobe estimation results in both proton MRI and CT using our
+atlas-based strategy.  (Left) Lung segmentation and lobe estimation results for the given
+proton MRI.  Although lobe estimation is dependent solely on the warped atlases, we are
+able to obtain accurate estimates of lobes which are useful for more regional analysis
+and provide a more intuitive and universal subdivision of the lungs than previous partitioning
+schemes.  (Right) The utility of this method extends to CT where the integrity of lobar anatomical
+markers (such as the lack fissures illustrated by the red arrows) have been compromised due to
+disease.](Figs/lungEstimation.png)
+
 _Atlas-based lobe estimation._  For regional investigation of certain lung pathologies and
 conditions, it is often useful to quantify measurements of interest within more localized
 regions, such as the lobes.  However, as mentioned previously, there is little (if any)
@@ -189,14 +198,6 @@ generate the optimal labeling for the target image.  Following the majority voti
 remove any labelings outside the lung mask and assign any unlabeled voxels with the label
 closest in distance to that voxel.
 
-![Sample lung and lobe estimation results in both proton MRI and CT using our
-atlas-based strategy.  (Left) Lung segmentation and lobe estimation results for the given
-proton MRI.  Although lobe estimation is dependent solely on the warped atlases, we are
-able to obtain accurate estimates of lobes which are useful for more regional analysis
-and provide a more intuitive and universal subdivision of the lungs than previous partitioning
-schemes.  (Right) The utility of this method extends to CT where the integrity of lobar anatomical
-markers (such as the lack fissures illustrated by the red arrows) have been compromised due to
-disease.](Figs/lungEstimation.png)
 
 _Ventilation-based image segmentation._  Developments in MRI research utilizing noble gases,
 such as 3He and 129Xe, have demonstrated the capability of visualizing alveolar and bronchial
@@ -205,6 +206,23 @@ provides high spatial and temporal resolution images of the air spaces of the lu
 been used to investigate a variety of lung diseases. Automated or semiautomated approaches
 for classifying areas of varying degrees of ventilation are of potential benefit for
 facilitating such investigation.
+
+In [@Tustison:2011aa], we presented an automated algorithmic pipeline for ventilation-based
+partitioning of the lungs in hyperpolarized 3He and 129Xe MRI.  Since then, we have
+continued to improve this segmentation pipeline including the recent introduction of
+an ANTs-based implementation of the patch-based denoising protocol described in
+[@Manjon:2010aa].  An example of a set of longitudinal segmentation results are provided
+in Figure 3.
+
+![Pulmonary functional segmentation using the algorithmic framework first described in [@Tustison:2011aa]
+for hyperpolarized 3He MRI.  These data were taken from a current study looking at the
+implications in ventilation pre- and post-albuterol intake including an additional
+acquisition at some delay period following the post-albuterol imaging.  The
+ventilation-based segmentation is as follows:  red = no ventilation, green = poor
+ventilation, blue = normal ventilation, and yellow = normal to hyper-ventilation.
+Note the improvement in both the qualitative assessment of the ventilation map (top) and the corresponding
+segmentation time course (bottom) followed by an approximate return to pre-albuterol
+conditions following the delay period.](Figs/prePostAlbuterol.png)
 
 _Quantitative CT indices._  Imaging biomarkers for characterizing emphysema in CT have
 have been well researched, although there are ample opportunities to refine these methods
