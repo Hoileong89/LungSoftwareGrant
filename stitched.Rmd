@@ -1,7 +1,7 @@
 ---
 output:
   pdf_document:
-    fig_caption: yes
+    fig_caption: true
     latex_engine: xelatex
 header-includes:
    - \usepackage{booktabs}
@@ -48,14 +48,7 @@ template building for cross-sectional and longitudinal (i.e., respiratory cycle)
 and functional and structural lung image segmentation.  In addition to the software, we will
 provide both the input and output data consistent with open-science principles not only so that other users can it to
 reproduce our results, but it will also allow researchers to use it in an unrestricted manner
-in their own studies.
-
-As principal developers of the popular, open-source ANTs (Advanced Normalization Tools)
-package, we have extensive experience in the development of well-written software that has
-gained much traction in the neuroscience community.  We have also participated in several
-image analysis competitions for a variety of applications (neuro, pulmonary, and cardiac)
-and data scaling and believe that this will also contribute to our success in
-accomplishing the goals of this application as defined by the following specific aims:
+in their own studies.   Formally, this proposal is defined by the following specific aims:
 
 * __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.__  These open-source software tools will specifically
@@ -77,6 +70,14 @@ framework, our proposal also includes making available the input data from multi
 researchers (with their permission) involved in a variety of pulmonary research questions and
 the output data produced by the framework.  Among other purposes, this contribution will provide
 complete, concrete examples demonstrating usage of the proposed contribution.
+
+As principal developers of the popular, open-source ANTs (Advanced Normalization Tools)
+package, we have extensive experience in the development of well-written software that has
+gained much traction in the neuroscience community.  We have also participated in several
+image analysis competitions for a variety of applications (neuro, pulmonary, and cardiac)
+and data scaling and believe that this will also contribute to our success in
+accomplishing the goals of this application.
+
 
 \newpage
 
@@ -216,21 +217,6 @@ but will also provide a tangible mechanism for using the tools created with this
 __Specific Aim 1.__  To develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.  Development will include several basic tools:
 
-_Atlas-based lung segmentation._  Identification of anatomical structure in MRI is often a
-crucial preprocessing step for quantification of morphological features or functional
-information.  Quantitative regional analysis often requires the identification of lung
-and lobar anatomy.  Although much algorithmic research for lung segmentation has been
-reported in the CT literature [@Rikxoort:2013aa],  co-opting such technologies is complicated by MRI-specific
-issues such as RF coil inhomogeneity, presence and resolution of structural detail, and
-the absence of a physically-based intensity scaling.
-
-We recently proposed a multi-atlas approach for automatically segmenting the left and right
-lungs in proton MRI [@Tustison:2015aa].  Multi-atlas approaches to segmentation have proven highly
-successful in neuroimaging [@Wang:2012aa;Wang:2013aa] which translates readily to a pulmonary context.  Many
-current strategies for lung image segmentation employ low-level processing techniques based
-on encodable heuristics.  Consensus-based strategies, in contrast, optimize the prior
-knowledge applied to a specific segmentation problem.
-
 _B-spline-based Symmetric Normalization._  A thorough comparative evaluation with the
 well-known ANTs SyN algorithm was performed with a B-spline variant.  The evaluation
 utilized multiple publicly available, annotated brain data sets and demonstrated
@@ -250,6 +236,21 @@ of the 3He and 1H images lends itself to multimodal processing [@Tustison:2014aa
 are used to simultaneously produce 3He and 1H templates.  This process is represented in
 Fig. 1 for a single subject.
 
+_Atlas-based lung segmentation._  Identification of anatomical structure in MRI is often a
+crucial preprocessing step for quantification of morphological features or functional
+information.  Quantitative regional analysis often requires the identification of lung
+and lobar anatomy.  Although much algorithmic research for lung segmentation has been
+reported in the CT literature [@Rikxoort:2013aa],  co-opting such technologies is complicated by MRI-specific
+issues such as RF coil inhomogeneity, presence and resolution of structural detail, and
+the absence of a physically-based intensity scaling.
+
+We recently proposed a multi-atlas approach for automatically segmenting the left and right
+lungs in proton MRI [@Tustison:2015aa].  Multi-atlas approaches to segmentation have proven highly
+successful in neuroimaging [@Wang:2012aa;Wang:2013aa] which translates readily to a pulmonary context.  Many
+current strategies for lung image segmentation employ low-level processing techniques based
+on encodable heuristics.  Consensus-based strategies, in contrast, optimize the prior
+knowledge applied to a specific segmentation problem (cf Figure 2).
+
 _Atlas-based lobe estimation._  For regional investigation of certain lung pathologies and
 conditions, it is often useful to quantify measurements of interest within more localized
 regions, such as the lobes.  However, as mentioned previously, there is little (if any)
@@ -257,7 +258,7 @@ usable information in proton MRI for image-based lobar segmentation which has le
 alternative geometric subdivisions which are ad hoc, non-anatomical, and do not adequately
 address intra- and inter-subject correspondences.  However, we can take advantage of
 inter-subject similarities in lobar geometry to provide a prior-based estimation of
-lobar divisions using a consensus labeling approach.
+lobar divisions using a consensus labeling approach (cf Figure 2).
 
 To generate the lobe segmentation in a target proton lung image, we first generate the
 binary lung mask for the proton lung image as described in the previous subsection.  We
@@ -269,6 +270,15 @@ the target lung mask and CT atlas lung masks, we use a simply majority voting st
 generate the optimal labeling for the target image.  Following the majority voting, we
 remove any labelings outside the lung mask and assign any unlabeled voxels with the label
 closest in distance to that voxel.
+
+![Sample lung and lobe estimation results in both proton MRI and CT using our
+atlas-based strategy.  (Left) Lung segmentation and lobe estimation results for the given
+proton MRI.  Although lobe estimation is dependent solely on the warped atlases, we are
+able to obtain accurate estimates of lobes which are useful for more regional analysis
+and provide a more intuitive and universal subdivision of the lungs than previous partitioning
+schemes.  (Right) The utility of this method extends to CT where the integrity of lobar anatomical
+markers (such as the lack fissures illustrated by the red arrows) have been compromised due to
+disease.](Figs/lungEstimation.png)
 
 _Ventilation-based image segmentation._  Developments in MRI research utilizing noble gases,
 such as 3He and 129Xe, have demonstrated the capability of visualizing alveolar and bronchial

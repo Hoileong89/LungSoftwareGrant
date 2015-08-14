@@ -28,14 +28,7 @@ template building for cross-sectional and longitudinal (i.e., respiratory cycle)
 and functional and structural lung image segmentation.  In addition to the software, we will
 provide both the input and output data consistent with open-science principles not only so that other users can it to
 reproduce our results, but it will also allow researchers to use it in an unrestricted manner
-in their own studies.
-
-As principal developers of the popular, open-source ANTs (Advanced Normalization Tools)
-package, we have extensive experience in the development of well-written software that has
-gained much traction in the neuroscience community.  We have also participated in several
-image analysis competitions for a variety of applications (neuro, pulmonary, and cardiac)
-and data scaling and believe that this will also contribute to our success in
-accomplishing the goals of this application as defined by the following specific aims:
+in their own studies.   Formally, this proposal is defined by the following specific aims:
 
 * __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.__  These open-source software tools will specifically
@@ -57,5 +50,13 @@ framework, our proposal also includes making available the input data from multi
 researchers (with their permission) involved in a variety of pulmonary research questions and
 the output data produced by the framework.  Among other purposes, this contribution will provide
 complete, concrete examples demonstrating usage of the proposed contribution.
+
+As principal developers of the popular, open-source ANTs (Advanced Normalization Tools)
+package, we have extensive experience in the development of well-written software that has
+gained much traction in the neuroscience community.  We have also participated in several
+image analysis competitions for a variety of applications (neuro, pulmonary, and cardiac)
+and data scaling and believe that this will also contribute to our success in
+accomplishing the goals of this application.
+
 
 \newpage
