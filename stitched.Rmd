@@ -281,7 +281,6 @@ generate the optimal labeling for the target image.  Following the majority voti
 remove any labelings outside the lung mask and assign any unlabeled voxels with the label
 closest in distance to that voxel.
 
-
 _Ventilation-based image segmentation._  Developments in MRI research utilizing noble gases,
 such as 3He and 129Xe, have demonstrated the capability of visualizing alveolar and bronchial
 air spaces. Currently, hyperpolarized 3He MRI is a low-risk investigatory technique that
@@ -306,6 +305,17 @@ ventilation, blue = normal ventilation, and yellow = normal to hyper-ventilation
 Note the improvement in both the qualitative assessment of the ventilation map (top) and the corresponding
 segmentation time course (bottom) followed by an approximate return to pre-albuterol
 conditions following the delay period.](Figs/prePostAlbuterol.png)
+
+![Voxelwise regression analysis to determine image-based response to treatment.  First,
+a multi-modal, single-subject template is created to bring all time point images to
+the same coordinate system.  4-D segmentation is performed on the longitudinal time series
+of 3-D image volumes.  Treatment
+effects are expected to follow the simplified treatment hypothesis illustrated with the
+dashed blue line in the plot on the right.  To explore how the longitudinal change in expected
+ventilation follows this treatment hypothesis with image data, we smooth the aligned expected
+ventilation maps (to account for potential voxelwise misalignments) and then quantify how the
+voxelwise intensities regress with the simplified treatment hypothesis. ](Figs/longitudinalStudy.png)
+
 
 _Quantitative CT indices._  Imaging biomarkers for characterizing emphysema in CT have
 have been well researched, although there are ample opportunities to refine these methods
