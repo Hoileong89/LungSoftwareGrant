@@ -2,6 +2,7 @@
 # Research Strategy
 
 ## __3(a) Significance__
+### 3(a.1) The importance of publicly available software tools for domain-specific medical image analysis
 Well-vetted and publicly available software is a significant benefit
 to targeted research communities.  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
@@ -15,7 +16,7 @@ review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, t
 consensus is that ``universally available image analysis software'' is a major hinderance
 to more widespread usage of such imaging biomarkers [@Hoffman:2015aa].
 
-```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which use common, publicly available neuroimaging analysis packages (i.e., FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken." }
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken." }
 years <- 2005:2014
 
 numberOfAbstractsPerYear <- rep( 0, length( years ) )
@@ -43,24 +44,42 @@ Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provi
 capabilities for a range of generic image processing tasks.  However,
 tailored software packages for certain application domains (e.g., lung image analysis) are not
 available despite the vast number of algorithms that have been proposed in the literature.
-Similar deficiency within the neuroscience community has been one of the primary motivations for the
+Note that the goals of this proposal would
+significantly support the National Library of Medicine’s own open-source directives in that
+all software would be developed using the established Insight ToolKit’s coding and testing
+standards with the eventual idea that much (if not all) of the actual code would be contributed
+for inclusion in future versions of the Insight ToolKit as we have done in the past.
+It should also be noted that open-source software, in general, has documented benefits
+within the targeted communities for which it is developed and supported.  In addition to
+the increase in research output illustrated earlier, open-source permits students and
+researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
+This, in turn, provides motivation for user-based support including potential contributions
+such as bug fixes and feature additions.  Additional analyses have shown the tremendous
+cost savings that open-source software yields [@Rothwell:2008aa].
+
+### 3(a.2) ANTs and the neuroimaging community
+
+Deficiency of publicly available tools within the neuroscience community has been one of
+the primary motivations for the
 inception and continued development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
 the mature Insight ToolKit in providing an optimal software framework for building scripts
 and programs specifically for neuroimaging.  For example, the following core neuroimage
 processing algorithms have been made available through our ANTs toolkit (complete with
-examples and developer-tuned parameters)  and have been used extensively by our group and
+online self-contained examples with developer-tuned parameters) and have been used extensively by our group and
 others:
 
-* brain normalization [@Avants:2011ab;@Avants:2014aa],
-* brain template generation [@Avants:2010aa],
-* skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab],
-* prior-based Bayesian brain tissue segmentation [@Avants:2011ab],
-* cortical gray matter thickness estimation [@Das:2009aa;@Tustison:2014ab],
-* brain tumor segmentation [@Tustison:2014aa], and
-* cortical labeling [@Wang:2012aa;@Wang:2013aa].
+* brain normalization [@Avants:2011ab;@Avants:2014aa] (https://github.com/stnava/BasicBrainMapping),
+* brain template generation [@Avants:2010aa] (https://github.com/ntustison/TemplateBuildingExample),
+* skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab] (https://github.com/ntustison/antsBrainExtractionExample),
+* prior-based brain tissue segmentation [@Avants:2011ab] (https://github.com/ntustison/antsAtroposN4Example),
+* cortical  thickness estimation [@Das:2009aa;@Tustison:2014ab] (https://github.com/ntustison/antsCorticalThicknessExample),
+* brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
+* cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
 
 In addition to public availability, some of these algorithms have been showcased in
-international competitions and have performed extremely well [@Murphy:2011aa;@Menze:2014aa].
+international competitions and have performed extremely well [@Murphy:2011aa;@Wang:2012aa;@Menze:2014aa].
+
+### 3(a.3) The significance of ANTs for the pulmonary imaging community
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  An
@@ -68,7 +87,7 @@ extensive survey concentrating on the years 1999–2004 is given in [@Sluimer:20
 aided diagnosis of lung disease and lung cancer in CT (i.e., detection and tracking of
 pulmonary nodules) and provides an overview of the many relevant segmentation methods for
 pulmonary structures. Although many algorithms existed at the time, continued technical
-development has only increased the number of available algorithms.  Following is a small
+development has only increased the number of available algorithms.  The following is a small
 sampling of more recently reported techniques for CT analysis:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa])
@@ -79,29 +98,22 @@ sampling of more recently reported techniques for CT analysis:
 
 Since this list is restricted to CT image analysis, inclusion of additional techniques
 specific to other modalities will have additional benefit.  For example, ventilation-based
-segmentation for analysis of ventilation lung imaging [@Tustison:2011aa] will also have
-significant impact in a comprehensive lung image analysis suite.
-
-Important in any methodological discussion is the crucial importance of parameter selection
-which requires domain-specific experience.  For example, although ANTs performance in brain
+segmentation for analysis of ventilation lung imaging (e.g., [@Tustison:2011aa] which was
+implemented within the ANTs framework) will also have significant impact in a comprehensive
+lung image analysis suite.  Since most of the tools that have been developed within the
+ANTs framework have generic applicability, crucial to the development of our proposed toolset
+will be domain-specific experience.  For example, although ANTs performance in brain
 registration has been independently evaluated and found to be of relatively high quality
 [Klein2009], tailoring our registration tool in the EMPIRE10 challenge (Evaluation of Methods
 for Pulmonary Image REgistration 2010) required significant empirically-based tuning.  In
 addition, new innovations in diffeomorphic registration technology has led to a Symmetric
 Normalization B-spline variant which has demonstrated preferred normalizations [@Tustison:2013ac],
-particularly for pulmonary data [@Tustison:2015aa].  Note that the goals of this proposal would
-significantly support the National Library of Medicine’s own open-source directives in that
-all software would be developed using the established Insight ToolKit’s coding and testing
-standards with the eventual idea that much (if not all) of the actual code would be contributed
-for inclusion in future versions of the Insight ToolKit.
+particularly for pulmonary data [@Tustison:2015aa].
 
-It should also be noted that open-source software, in general, has documented benefits
-within the targeted communities for which it is developed and supported.  In addition to
-the increase in research output illustrated earlier, open-source permits students and
-researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
-This, in turn, provides motivation for user-based support including potential contributions
-such as bug fixes and feature additions.  Additional analyses have shown the tremendous
-cost savings that open-source software yields [@Rothwell:2008aa].
+Given our previous experience in providing well-vetted tools for neuroimage analysis and
+our extensive pulmonary research
+background, our group is well-suited for accomplishing the aims of this proposal and much
+of it has and will use ITK and ANTs as a software foundation.
 
 ## __3(b) Innovation__
 Given the lack of open-source solutions for pulmonary image analysis,
