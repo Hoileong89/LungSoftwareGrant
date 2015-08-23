@@ -370,8 +370,8 @@ tools created with this proposal.
 \subsubsection{3(c.1) Preliminary data}\label{c.1-preliminary-data}
 
 \subsubsection{3(c.2) Specific Aim 1: To develop a set of open-source
-software tools for CT, proton, and He-3 pulmonary computational
-analysis.}\label{c.2-specific-aim-1-to-develop-a-set-of-open-source-software-tools-for-ct-proton-and-he-3-pulmonary-computational-analysis.}
+software tools for CT, proton, and 3He pulmonary computational
+analysis.}\label{c.2-specific-aim-1-to-develop-a-set-of-open-source-software-tools-for-ct-proton-and-3he-pulmonary-computational-analysis.}
 
 Although the proposed software library would be extendable based on new
 methodological developments and continued analysis experience, the core
@@ -507,23 +507,25 @@ $0.882 \pm 0.059$, left lower: $0.868 \pm 0.06$, right upper:
 $0.852 \pm 0.067$, right middle: $0.657 \pm 0.130$, right lower:
 $0.873 \pm 0.063$).
 
-\textbf{Ventilation-based image segmentation.} Developments in MRI
-research utilizing noble gases, such as 3He and 129Xe, have demonstrated
-the capability of visualizing alveolar and bronchial air spaces.
-Currently, hyperpolarized 3He MRI is a low-risk investigatory technique
-that provides high spatial and temporal resolution images of the air
-spaces of the lungs and has been used to investigate a variety of lung
-diseases. Automated or semiautomated approaches for classifying areas of
-varying degrees of ventilation are of potential benefit for facilitating
-such investigation.
+\textbf{Ventilation quantification.} Automated or semiautomated
+approaches for classifying areas of varying degrees of ventilation are
+of potential benefit for pulmonary functional analysis. In {[}34{]}, we
+presented an automated algorithmic pipeline for ventilation-based
+partitioning of the lungs in hyperpolarized 3He and 129Xe MRI. Without
+ground truth data for evaluation, we used a consensus labeling approach
+{[}42{]} to simultaneously estimate the true segmentation from given
+``raters'' which included the segmentation from our automated approach
+and the manual tracings of three trained individuals. In terms of
+combined specificity and sensitivity, our automated algorithm
+demonstrated superior performance with the added benefit of being
+reproducible and less time-consuming.
 
-In {[}34{]}, we presented an automated algorithmic pipeline for
-ventilation-based partitioning of the lungs in hyperpolarized 3He and
-129Xe MRI. Since then, we have continued to improve this segmentation
-pipeline including the recent introduction of an ANTs-based
-implementation of the patch-based denoising protocol described in
-{[}42{]}. An example of a set of longitudinal segmentation results are
-provided in Figure 3.
+Since the initial development, we have continued to improve this
+segmentation pipeline by incorporating an iterative
+bias-correction/segmetnation estimation scheme. An additional component
+that improves results is an ANTs-based implementation of the patch-based
+denoising protocol described in {[}43{]}. Example longitudinal
+segmentation results are provided in Figure 4.
 
 \begin{figure}[htbp]
 \centering
@@ -534,52 +536,107 @@ data were taken from a current study looking at the implications in
 ventilation pre- and post-albuterol intake including an additional
 acquisition at some delay period following the post-albuterol imaging.
 The ventilation-based segmentation is as follows: red = no ventilation,
-green = poor ventilation, blue = normal ventilation, and yellow = normal
-to hyper-ventilation. Note the improvement in both the qualitative
-assessment of the ventilation map (top) and the corresponding
-segmentation time course (bottom) followed by an approximate return to
-pre-albuterol conditions following the delay period.}
+green = poorly ventilated, blue = normally ventilated, and yellow =
+well-ventilated. Note the improvement in both the qualitative assessment
+of the ventilation map (top) and the corresponding segmentation time
+course (bottom) followed by an approximate return to pre-albuterol
+conditions following the delay period.}
 \end{figure}
 
-\_\_Quantitative CT indices.\_ Imaging biomarkers for characterizing
+\textbf{Quantitative CT indices.} Imaging biomarkers for characterizing
 emphysema in CT have have been well researched, although there are ample
 opportunities to refine these methods as well as to introduce more
 advanced approaches. Examples of the latter include texture analysis for
 identifying the centrilobular and groundglass opacities and fractal and
 connectivity approaches to differentiate centrilobular from panlobular
 emphysema. The indices for CT image analysis can roughly be divided into
-those that characterize the pulmonary parenchyma and those that
-characterize the airways. The former are important for subjects with an
-emphysematous component of disease, whereas the latter are important for
-subjects with a bronchitic component of disease. Such indices can also
-be studied not only at any particular single time point, but also for
-changes with time. The addition of quantitative morphologic measurements
-of the airways provides an assessment of the contribution of airway
-changes to chronic lung disease.
+those that characterize the pulmonary parenchyma: volumetric tissue
+(e.g., {[}44, 45{]}), distribution of low attenuation areas (LAA) (e.g.,
+{[}46, 47{]}), cooccurrence and run-length matrix features (e.g., {[}31,
+48{]}), attenuation statistics (e.g., {[}49, 50{]}), deformation
+measures (e.g., {[}51, 52{]}), and stochastic fractal dimension features
+(e.g., {[}31, 50{]}) and those that characterize the airways (e.g.,
+{[}53--55{]}).
 
-Table 1 provides an historical overview of the type of discriminative
-measurements that have been used for CT lung assessment. \emph{An
-important premise of this proposal is that many of these measurements
-can also be directly applied to discriminative analysis using 3HeMRI for
-a variety of lung diseases.} We have already implemented many of these
-image features and have contributed the result of our work to the
-Insight Toolkit (ITK) of the National Institutes of Health (e.g., {[}43,
-44{]}). As an open-source repository for medical image analysis
-algorithms, contribution of our work to the ITK allows researchers full
-access to the latest image analysis algorithms in addition to avoiding
-research redundancy. It is also beneficial in that the entire ITK
-community participates in the vetting of the software library.
+The former are important for subjects with an emphysematous component of
+disease, whereas the latter are important for subjects with a bronchitic
+component of disease. An important premise of this proposal is that many
+of these measurements can also be directly applied to discriminative
+analysis using 3He MRI for a variety of lung diseases. These indices can
+also be studied not only at any particular single time point, but also
+for changes with time. The addition of quantitative morphologic
+measurements of the airways provides an assessment of the contribution
+of airway changes to chronic lung disease.
 
-{[}7;9;16;18;19;24;25;26;30;31;32;33;37;41;46;54;55;56;57;59;61;63;64;65;66;68;70;74;76;77;82;83;84;85;92;98;110;111;112;114;117;118;120;121{]}
+\input{ct_table.tex}
 
-\textbf{Airway and vessel segmentation.} We should propose to implement
-something here. We should look at the Slicer/VMTK airway segmentation
-model.
+Table 1 provides an overview of these types of discriminative
+measurements that can be used for CT and 3He lung assessment. We have
+already implemented many of these image features and have contributed
+the result of our work to the Insight Toolkit (ITK) of the National
+Institutes of Health (e.g., {[}56, 57{]}). As an open-source repository
+for medical image analysis algorithms, contribution of our work to the
+ITK allows researchers full access to the latest image analysis
+algorithms in addition to avoiding research redundancy. It is also
+beneficial in that the entire ITK community participates in the vetting
+of the software library.
+
+\textbf{Airway and vessel segmentation.} In describing the quantitative
+CT lung indices, it was pointed out that lung airway morphology has been
+previously utilized as a biomarker for disease characterization.
+Additionally, there are other potential uses motivating the inclusion of
+airway segmentation in any pulmonary image analysis toolkit (cf Figure
+5). In an evaluation of 15 airway segmentation algorithms {[}58{]} it
+was shown that no algorithm was capable of ``extracting more than 77\%
+of the reference.'' Our plan is to initially provide an implementation
+of the algorithm developed by our group {[}59{]}. Instead of mixing
+airway segmentation and leakage detection at every iteration, this work
+divides this problem into a hypothesis generation of thin airway paths
+and a post processing procedure of removing leakage path candidates. For
+the purpose of generating as many hypotheses as possible, a novel speed
+function for thin airways is used. To exclude leakage regions, a novel
+cost function defined on the whole path candidate is used. Such a scheme
+is more flexible when evaluating the whole path and can be viewed as
+complementary to current region growing methods.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{Figs/airways.png}
+\caption{Potential clinical use case for identifying the feeding airway
+branch path to the ventilation defect. The functional ventilation image
+is normalized to the corresponding CT image. The airways are segmented
+in the individual subject space. After identification of the ventilation
+defect of interest, we can automatically determine the bronchiole
+pathway from the trachea to the defect.}
+\end{figure}
 
 \textbf{Specific Aim 2.} To provide multiple sets of multi-modal
 annotated lung data (CT, proton, and He3) for public use.
 
-\input{ct_table.tex} \clearpage
+\textbf{Specific Aim 3.} Evaluate and disseminate multiple complete
+studies with input data from multiple investigators to showcase the
+utility of the tools and data provided with this proposal.
+
+\subsubsection{Anticipated difficulties}\label{anticipated-difficulties}
+
+Signal intensity in the lungs is poor in areas of low ventilation. COPD
+and asthma are obstructive lung diseases which exhibit focal areas of
+decreased signal intensity on 3HeMRI which are thought to correspond to
+areas of reduced ventilation. These ventilation defects severely inhibit
+our ability to detect the lung boundaries for proper segmentation. Also,
+most of the COPD and asthmatic patients will have ventilation defects
+with the moderate asthmatics having greater than 1 defect per slice also
+negatively affecting boundary delineation. Note that there are similar
+issues for CT images of severe pathologies. However, given the shape and
+intensity prior statistics contained by our 3HeMRI and CT lung
+templates, it is expected that the templates, in combination with our
+proposed segmentation algorithms, will be sufficient to provide a good
+initialization for subsequent manual segmentation if they do not yield
+an adequate segmentation result. The CT data, which provides excellent
+contrast between the lung and chest wall, can also be used to inform the
+3HeMRI segmentation.
+
+\clearpage
 
 \newpage
 
@@ -815,16 +872,107 @@ Segmentation of Pulmonary Structures in Thoracic Computed Tomography
 Scans: a Review}'' \emph{Phys Med Biol} 58, no. 17 (2013): R187--220.
 doi:\href{http://dx.doi.org/10.1088/0031-9155/58/17/R187}{10.1088/0031-9155/58/17/R187}
 
-42. Manj{ó}n, J. V., Coup{é}, P., Mart{í}-Bonmat{í}, L., Collins, D. L.,
+42. Warfield, S. K., Zou, K. H., and Wells, W. M. ``\textbf{Simultaneous
+Truth and Performance Level Estimation (STAPLE): an Algorithm for the
+Validation of Image Segmentation}'' \emph{IEEE Trans Med Imaging} 23,
+no. 7 (2004): 903--21.
+doi:\href{http://dx.doi.org/10.1109/TMI.2004.828354}{10.1109/TMI.2004.828354}
+
+43. Manj{ó}n, J. V., Coup{é}, P., Mart{í}-Bonmat{í}, L., Collins, D. L.,
 and Robles, M. ``\textbf{Adaptive Non-Local Means Denoising of MR Images
 with Spatially Varying Noise Levels}'' \emph{J Magn Reson Imaging} 31,
 no. 1 (2010): 192--203.
 doi:\href{http://dx.doi.org/10.1002/jmri.22003}{10.1002/jmri.22003}
 
-43. Tustison, N. J. and Gee, J. C. ``\textbf{Run-Length Matrices for
+44. Coxson, H. O., Rogers, R. M., Whittall, K. P., D'yachkova, Y.,
+Par{é}, P. D., Sciurba, F. C., and Hogg, J. C. ``\textbf{A
+Quantification of the Lung Surface Area in Emphysema Using Computed
+Tomography}'' \emph{Am J Respir Crit Care Med} 159, no. 3 (1999):
+851--6.
+doi:\href{http://dx.doi.org/10.1164/ajrccm.159.3.9805067}{10.1164/ajrccm.159.3.9805067}
+
+45. Perez, A., 4th, Coxson, H. O., Hogg, J. C., Gibson, K., Thompson, P.
+F., and Rogers, R. M. ``\textbf{Use of CT Morphometry to Detect Changes
+in Lung Weight and Gas Volume}'' \emph{Chest} 128, no. 4 (2005):
+2471--7.
+doi:\href{http://dx.doi.org/10.1378/chest.128.4.2471}{10.1378/chest.128.4.2471}
+
+46. Coxson, H. O. and Rogers, R. M. ``\textbf{New Concepts in the
+Radiological Assessment of COPD}'' \emph{Semin Respir Crit Care Med} 26,
+no. 2 (2005): 211--20.
+doi:\href{http://dx.doi.org/10.1055/s-2005-869540}{10.1055/s-2005-869540}
+
+47. Stolk, J., Putter, H., Bakker, E. M., Shaker, S. B., Parr, D. G.,
+Piitulainen, E., Russi, E. W., Grebski, E., Dirksen, A., Stockley, R.
+A., Reiber, J. H. C., and Stoel, B. C. ``\textbf{Progression Parameters
+for Emphysema: a Clinical Investigation}'' \emph{Respir Med} 101, no. 9
+(2007): 1924--30.
+doi:\href{http://dx.doi.org/10.1016/j.rmed.2007.04.016}{10.1016/j.rmed.2007.04.016}
+
+48. Xu, Y., Sonka, M., McLennan, G., Guo, J., and Hoffman, E. A.
+``\textbf{MDCT-Based 3-D Texture Classification of Emphysema and Early
+Smoking Related Lung Pathologies}'' \emph{IEEE Trans Med Imaging} 25,
+no. 4 (2006): 464--75.
+doi:\href{http://dx.doi.org/10.1109/TMI.2006.870889}{10.1109/TMI.2006.870889}
+
+49. Gevenois, P. A., De Vuyst, P., Sy, M., Scillia, P., Chaminade, L.,
+Maertelaer, V. de, Zanen, J., and Yernault, J. C. ``\textbf{Pulmonary
+Emphysema: quantitative CT During Expiration}'' \emph{Radiology} 199,
+no. 3 (1996): 825--9.
+doi:\href{http://dx.doi.org/10.1148/radiology.199.3.8638012}{10.1148/radiology.199.3.8638012}
+
+50. Hoffman, E. A., Simon, B. A., and McLennan, G. ``\textbf{State of
+the Art. a Structural and Functional Assessment of the Lung via
+Multidetector-Row Computed Tomography: phenotyping Chronic Obstructive
+Pulmonary Disease}'' \emph{Proc Am Thorac Soc} 3, no. 6 (2006): 519--32.
+doi:\href{http://dx.doi.org/10.1513/pats.200603-086MS}{10.1513/pats.200603-086MS}
+
+51. Gee, J., Sundaram, T., Hasegawa, I., Uematsu, H., and Hatabu, H.
+``\textbf{Characterization of Regional Pulmonary Mechanics from Serial
+Magnetic Resonance Imaging Data}'' \emph{Acad Radiol} 10, no. 10 (2003):
+1147--52.
+
+52. Sundaram, T. A. and Gee, J. C. ``\textbf{Towards a Model of Lung
+Biomechanics: pulmonary Kinematics via Registration of Serial Lung
+Images}'' \emph{Med Image Anal} 9, no. 6 (2005): 524--37.
+doi:\href{http://dx.doi.org/10.1016/j.media.2005.04.002}{10.1016/j.media.2005.04.002}
+
+53. Aykac, D., Hoffman, E. A., McLennan, G., and Reinhardt, J. M.
+``\textbf{Segmentation and Analysis of the Human Airway Tree from
+Three-Dimensional X-Ray CT Images}'' \emph{IEEE Trans Med Imaging} 22,
+no. 8 (2003): 940--50.
+doi:\href{http://dx.doi.org/10.1109/TMI.2003.815905}{10.1109/TMI.2003.815905}
+
+54. Park, W., Hoffman, E. A., and Sonka, M. ``\textbf{Segmentation of
+Intrathoracic Airway Trees: a Fuzzy Logic Approach}'' \emph{IEEE Trans
+Med Imaging} 17, no. 4 (1998): 489--97.
+doi:\href{http://dx.doi.org/10.1109/42.730394}{10.1109/42.730394}
+
+55. Ederle, J. R., Heussel, C. P., Hast, J., Fischer, B., Van Beek, E.
+J. R., Ley, S., Thelen, M., and Kauczor, H. U. ``\textbf{Evaluation of
+Changes in Central Airway Dimensions, Lung Area and Mean Lung Density at
+Paired Inspiratory/Expiratory High-Resolution Computed Tomography}''
+\emph{Eur Radiol} 13, no. 11 (2003): 2454--61.
+doi:\href{http://dx.doi.org/10.1007/s00330-003-1909-5}{10.1007/s00330-003-1909-5}
+
+56. Tustison, N. J. and Gee, J. C. ``\textbf{Run-Length Matrices for
 Texture Analysis}'' \emph{Insight Journal} (2008):
 
-44. Tustison, N. J. and Gee, J. C. ``\textbf{Stochastic Fractal
+57. Tustison, N. J. and Gee, J. C. ``\textbf{Stochastic Fractal
 Dimension Image}'' \emph{Insight Journal} (2009):
+
+58. Lo, P., Ginneken, B. van, Reinhardt, J. M., Yavarna, T., Jong, P. A.
+de, Irving, B., Fetita, C., Ortner, M., Pinho, R., Sijbers, J.,
+Feuerstein, M., Fabija{ń}ska, A., Bauer, C., Beichel, R., Mendoza, C.
+S., Wiemker, R., Lee, J., Reeves, A. P., Born, S., Weinheimer, O.,
+Rikxoort, E. M. van, Tschirren, J., Mori, K., Odry, B., Naidich, D. P.,
+Hartmann, I., Hoffman, E. A., Prokop, M., Pedersen, J. H., and Bruijne,
+M. de. ``\textbf{Extraction of Airways from CT (EXACT'09)}'' \emph{IEEE
+Trans Med Imaging} 31, no. 11 (2012): 2093--107.
+doi:\href{http://dx.doi.org/10.1109/TMI.2012.2209674}{10.1109/TMI.2012.2209674}
+
+59. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
+Segmentation by Removing Paths of Leakage}'' \emph{Proc. 3rd int.
+workshop pulmonary image analysis} (2010): 109--116.
 
 \end{document}

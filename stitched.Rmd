@@ -240,7 +240,7 @@ but will also provide a reproducible mechanism for using the tools created with 
 
 ### 3(c.1) Preliminary data
 
-### 3(c.2) Specific Aim 1:   To develop a set of open-source software tools for CT, proton, and He-3 pulmonary computational analysis.
+### 3(c.2) Specific Aim 1:   To develop a set of open-source software tools for CT, proton, and 3He pulmonary computational analysis.
 
 Although the proposed software library would be extendable based on new methodological
 developments and continued analysis experience, the core development will include several fundamental
@@ -346,50 +346,63 @@ with the  state-of-the-art CT methods where fissure information is actually visi
 (left upper: $0.882 \pm 0.059$, left lower: $0.868 \pm 0.06$, right upper: $0.852 \pm 0.067$,
 right middle: $0.657 \pm 0.130$, right lower: $0.873 \pm 0.063$).
 
-__Ventilation-based image segmentation.__  Developments in MRI research utilizing noble gases,
-such as 3He and 129Xe, have demonstrated the capability of visualizing alveolar and bronchial
-air spaces. Currently, hyperpolarized 3He MRI is a low-risk investigatory technique that
-provides high spatial and temporal resolution images of the air spaces of the lungs and has
-been used to investigate a variety of lung diseases. Automated or semiautomated approaches
-for classifying areas of varying degrees of ventilation are of potential benefit for
-facilitating such investigation.
+__Ventilation quantification.__
+Automated or semiautomated approaches for classifying areas of varying degrees of ventilation
+are of potential benefit for pulmonary functional analysis.  In [@Tustison:2011aa], we presented
+an automated algorithmic pipeline for ventilation-based partitioning of the lungs in hyperpolarized
+3He and 129Xe MRI.  Without ground truth data for evaluation, we used a consensus labeling approach [@Warfield:2004aa]
+to simultaneously estimate the true segmentation from given ``raters''
+which included the segmentation from our automated approach and the manual tracings of three trained
+individuals.  In terms of combined specificity and sensitivity, our automated algorithm
+demonstrated superior performance with the added benefit of being reproducible and less
+time-consuming.
 
-In [@Tustison:2011aa], we presented an automated algorithmic pipeline for ventilation-based
-partitioning of the lungs in hyperpolarized 3He and 129Xe MRI.  Since then, we have
-continued to improve this segmentation pipeline including the recent introduction of
-an ANTs-based implementation of the patch-based denoising protocol described in
-[@Manjon:2010aa].  An example of a set of longitudinal segmentation results are provided
-in Figure 3.
+Since the initial development, we have continued to improve this segmentation pipeline by
+incorporating an iterative bias-correction/segmetnation estimation scheme.   An additional
+component that improves results is an ANTs-based implementation of the patch-based denoising protocol
+described in [@Manjon:2010aa].  Example longitudinal segmentation results are provided
+in Figure 4.
 
 ![Pulmonary functional segmentation using the algorithmic framework first described in [@Tustison:2011aa]
 for hyperpolarized 3He MRI.  These data were taken from a current study looking at the
 implications in ventilation pre- and post-albuterol intake including an additional
 acquisition at some delay period following the post-albuterol imaging.  The
-ventilation-based segmentation is as follows:  red = no ventilation, green = poor
-ventilation, blue = normal ventilation, and yellow = normal to hyper-ventilation.
+ventilation-based segmentation is as follows:  red = no ventilation, green = poorly
+ventilated, blue = normally ventilated, and yellow = well-ventilated.
 Note the improvement in both the qualitative assessment of the ventilation map (top) and the corresponding
 segmentation time course (bottom) followed by an approximate return to pre-albuterol
 conditions following the delay period.](Figs/prePostAlbuterol.png)
 
-
-
-__Quantitative CT indices._  Imaging biomarkers for characterizing emphysema in CT have
+__Quantitative CT indices.__  Imaging biomarkers for characterizing emphysema in CT have
 have been well researched, although there are ample opportunities to refine these methods
-as well as to introduce more advanced approaches. Examples of the latter include texture
+as well as to introduce more advanced approaches.  Examples of the latter include texture
 analysis for identifying the centrilobular and groundglass opacities and fractal and
 connectivity approaches to differentiate centrilobular from panlobular emphysema. The
 indices for CT image analysis can roughly be divided into those that characterize the
-pulmonary parenchyma and those that characterize the airways. The former are important
+pulmonary parenchyma:
+  volumetric tissue (e.g., [@Coxson:1999aa;@Perez:2005aa]),
+   distribution of low attenuation areas (LAA) (e.g., [@Coxson:2005aa;@Stolk:2007aa]),
+   cooccurrence and run-length matrix features (e.g., [@Uppaluri:1999aa;@Xu:2006aa]),
+   attenuation statistics (e.g., [@Gevenois:1996aa;@Hoffman:2006aa]),
+   deformation measures (e.g., [@Gee:2003aa;@Sundaram:2005aa]), and
+   stochastic fractal dimension features (e.g., [@Uppaluri:1999aa;@Hoffman:2006aa])
+and those that characterize the airways (e.g., [@Aykac:2003aa;@Park:1998aa;@Ederle:2003aa]).
+
+The former are important
 for subjects with an emphysematous component of disease, whereas the latter are important
-for subjects with a bronchitic component of disease. Such indices can also be studied not
+for subjects with a bronchitic component of disease. An important premise of this
+proposal is that many of these measurements can also be directly applied to discriminative
+analysis using 3He MRI for a variety of lung diseases.
+These indices can also be studied not
 only at any particular single time point, but also for changes with time. The addition of
 quantitative morphologic measurements of the airways provides an assessment of the
 contribution of airway changes to chronic lung disease.
 
-Table 1 provides an historical overview of the type of
-discriminative measurements that have been used for CT lung assessment. _An important
-premise of this proposal is that many of these measurements can also be directly applied
-to discriminative analysis using 3HeMRI for a variety of lung diseases._  We have already
+\input{ct_table.tex}
+
+Table 1 provides an overview of these types of
+discriminative measurements that can be used for CT and 3He lung assessment.
+We have already
 implemented many of these image features and have contributed the result of our work to
 the Insight Toolkit (ITK) of the National Institutes of Health (e.g., [@Tustison:2008aa;@Tustison:2009aa]). As an
 open-source repository for medical image analysis algorithms, contribution of our work
@@ -397,15 +410,53 @@ to the ITK allows researchers full access to the latest image analysis algorithm
 addition to avoiding research redundancy. It is also beneficial in that the entire ITK
 community participates in the vetting of the software library.
 
-[7;9;16;18;19;24;25;26;30;31;32;33;37;41;46;54;55;56;57;59;61;63;64;65;66;68;70;74;76;77;82;83;84;85;92;98;110;111;112;114;117;118;120;121]
+__Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
+it was pointed out that lung airway morphology has been previously utilized as a biomarker
+for disease characterization.  Additionally, there are other potential uses motivating
+the inclusion of airway segmentation in any pulmonary image analysis toolkit (cf Figure 5).
+In an evaluation of 15 airway segmentation algorithms [@Lo:2012aa]
+it was shown that no algorithm was capable of ``extracting more than 77% of the reference.''
+Our plan is to initially provide an implementation of the algorithm developed by our group [@Song:2010aa].
+Instead of mixing airway segmentation and leakage detection at every iteration, this work divides
+this problem into a hypothesis generation of thin airway paths and a post processing
+procedure of removing leakage path candidates. For the purpose of generating as many
+hypotheses as possible, a novel speed function for thin airways is used. To exclude
+leakage regions, a novel cost function defined on the whole path candidate is used.
+Such a scheme is more flexible when evaluating the whole path and can be viewed as
+complementary to current region growing methods.
 
-__Airway and vessel segmentation.__  We should propose to implement something here.  We should look at the Slicer/VMTK airway segmentation model.
-
+![Potential clinical use case for identifying the feeding airway branch path to the
+ventilation defect.  The functional ventilation image is normalized to the corresponding
+CT image.  The airways are segmented in the individual subject space.  After identification
+of the ventilation defect of interest, we can automatically determine the bronchiole
+pathway from the trachea to the defect.](Figs/airways.png)
 
 
 __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
 
-\input{ct_table.tex}
+__Specific Aim 3.__ Evaluate and disseminate multiple complete studies with input data from
+multiple investigators to showcase the utility of the tools and data provided with this proposal.
+
+### Anticipated difficulties
+Signal intensity in the lungs is poor in areas of low ventilation. COPD and asthma are
+obstructive lung diseases which exhibit focal areas of decreased signal intensity on 3HeMRI
+which are thought to correspond to areas of reduced ventilation. These ventilation defects
+severely inhibit our ability to detect the lung boundaries for proper segmentation. Also,
+most of the COPD and asthmatic patients will have ventilation defects with the moderate
+asthmatics having greater than 1 defect per slice also negatively affecting boundary
+delineation. Note that there are similar issues for CT images of severe pathologies.
+However, given the shape and intensity prior statistics contained by our 3HeMRI and CT
+lung templates, it is expected that the templates, in combination with our proposed
+segmentation algorithms, will be sufficient to provide a good initialization for subsequent
+manual segmentation if they do not yield an adequate segmentation result. The CT data,
+which provides excellent contrast between the lung and chest wall, can also be used to
+inform the 3HeMRI segmentation.
+
+
+
+
+
+
 \clearpage
 
 \newpage
