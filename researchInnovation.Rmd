@@ -1,0 +1,38 @@
+
+## __3(b) Innovation__
+
+### 3(b.1) Open source pulmonary algorithmic innovation
+Given the lack of open-source solutions for pulmonary image analysis,
+the proposal goals would produce an innovative platform for performing such research.
+Similar to the brain-specific algorithms provided in our ANTs toolkit, our novel
+and useful proposal would include the most essential algorithms for analyzing lung
+images from different modalities including CT, 3He, and proton MRI.
+Many algorithms have been proposed in various technical venues but that which we propose
+would provide well-vetted and easy-to-use implementations of specific robust methodologies
+for pulmonary medical image analysis, many of which have been developed by our group.
+To facilitate the usage of these algorithms, we will provide several self-contained
+online examples (complete with data).
+
+### 3(b.2) Publicly available multi-site data as a reproducible and didactic component
+
+An additional innovative component we are proposing is the inclusion of complete study
+data and detailed instructions for generating reproducible, multimodality pulmonary studies
+using the proposed package with
+input data from several of our external collaborators and colleagues.  Specifically, we have
+asked several scientists and researchers who are familiar with our work to provide imaging data
+of various modalities which we will then process using the proposed toolkit.  These processed
+data will then not only be returned to the corresponding providers with detailed instructions
+on reproducing these results in their own labs but will also be provided to the public for any
+interested researcher to reproduce the results.  Given the different image acquisition sources,
+this strategy should also demonstrate the robustness of our tools.
+
+Included in these analyses will be analyses of our own data.  Any clinical findings
+of interest will be published in traditional venues (e.g., Chest).  In addition, we will
+provide all image
+data and the quantitative analysis scripts as a companion release to accompany the paper
+(e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
+ Such a comprehensive clinical
+investigation using these tools will not only provide insight into the specifics of certain
+pulmonary pathologies
+but will also provide a reproducible mechanism for using the tools created with this proposal.
+

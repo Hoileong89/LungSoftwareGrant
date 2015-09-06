@@ -46,7 +46,8 @@ As a corrective alternative, this proposal will provide an open-source software 
 core pulmonary image analysis tasks across multiple modalities, many of which we have proposed
 previously in past publications.  These basic tasks include pulmonary image registration,
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
-and functional and structural lung image segmentation.  In addition to the software, we will
+functional and structural lung image segmentation, and computation of quantitative image
+indices as potential imaging biomarkers.  In addition to the software, we will
 provide both the input and output data consistent with open-science principles not only so that other users can it to
 reproduce our results, but it will also allow researchers to use it in an unrestricted manner
 in their own studies.   Formally, this proposal is defined by the following specific aims:
@@ -56,7 +57,9 @@ pulmonary computational analysis.__  These open-source software tools will speci
 target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration for inferring pulmonary kinematics, ventilation-based segmentation,
 lung and lobe estimation, airway segmentation, and calculation of clinical indices for
-characterization of lung development and pathology.
+characterization of lung development and pathology.  To maximize usability, much (if not all)
+of the actual code will be developed and distributed within the  Insight Toolkit of the
+National Library of Medicine.
 * __Specific Aim 2:__  __Provide multiple sets of multi-modal annotated lung data (CT, proton,
 and He3) for unrestricted public use.__  In addition to the public unavailability of the
 algorithms used to produce the results discussed in certain publications, the input and output
@@ -138,9 +141,53 @@ the increase in research output illustrated earlier, open-source permits student
 researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
 This, in turn, provides motivation for user-based support including potential contributions
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
-cost savings that open-source software yields [@Rothwell:2008aa].
+cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore, it should
+be highlighted that open-source development and distribution within a large, and well-invested
+community (such as ITK) takes advantage of Linus's law, i.e., ``given enough eyeballs, all bugs are
+shallow," for producing robust software.
 
-### 3(a.2) ANTs and the neuroimaging community
+## __3(b) Innovation__
+
+### 3(b.1) Open source pulmonary algorithmic innovation
+Given the lack of open-source solutions for pulmonary image analysis,
+the proposal goals would produce an innovative platform for performing such research.
+Similar to the brain-specific algorithms provided in our ANTs toolkit, our novel
+and useful proposal would include the most essential algorithms for analyzing lung
+images from different modalities including CT, 3He, and proton MRI.
+Many algorithms have been proposed in various technical venues but that which we propose
+would provide well-vetted and easy-to-use implementations of specific robust methodologies
+for pulmonary medical image analysis, many of which have been developed by our group.
+To facilitate the usage of these algorithms, we will provide several self-contained
+online examples (complete with data).
+
+### 3(b.2) Publicly available multi-site data as a reproducible and didactic component
+
+An additional innovative component we are proposing is the inclusion of complete study
+data and detailed instructions for generating reproducible, multimodality pulmonary studies
+using the proposed package with
+input data from several of our external collaborators and colleagues.  Specifically, we have
+asked several scientists and researchers who are familiar with our work to provide imaging data
+of various modalities which we will then process using the proposed toolkit.  These processed
+data will then not only be returned to the corresponding providers with detailed instructions
+on reproducing these results in their own labs but will also be provided to the public for any
+interested researcher to reproduce the results.  Given the different image acquisition sources,
+this strategy should also demonstrate the robustness of our tools.
+
+Included in these analyses will be analyses of our own data.  Any clinical findings
+of interest will be published in traditional venues (e.g., Chest).  In addition, we will
+provide all image
+data and the quantitative analysis scripts as a companion release to accompany the paper
+(e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
+ Such a comprehensive clinical
+investigation using these tools will not only provide insight into the specifics of certain
+pulmonary pathologies
+but will also provide a reproducible mechanism for using the tools created with this proposal.
+
+## __3(c) Research design__
+
+### 3(c.1) Preliminary data
+
+### 3(c.1.1) ANTs and the neuroimaging community
 
 Deficiency of publicly available tools within the neuroscience community has been one of
 the primary motivations for the
@@ -162,7 +209,7 @@ others:
 In addition to public availability, some of these algorithms have been showcased in
 international competitions and have performed extremely well [@Murphy:2011aa;@Wang:2012aa;@Menze:2014aa].
 
-### 3(a.3) The significance of ANTs for the pulmonary imaging community
+### 3(c.1.2) The significance of ANTs for the pulmonary imaging community
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  An
@@ -199,46 +246,17 @@ pulmonary research background makes our group well-suited for accomplishing the 
 of it has and will use ITK and ANTs as a software foundation.
 -->
 
-## __3(b) Innovation__
 
-### 3(b.1) Open source pulmonary algorithmic innovation
-Given the lack of open-source solutions for pulmonary image analysis,
-the proposal goals would produce an innovative platform for performing such research.
-Similar to the brain-specific algorithms provided in our ANTs toolkit, our novel
-and useful proposal would include several essential algorithms for analyzing lung
-images from different modalities including CT, 3He, and proton MRI.
-Many algorithms have been proposed in various technical venues but that which we propose
-would provide well-vetted and easy-to-use implementations of specific robust methodologies
-for pulmonary medical image analysis, many of which have been developed by our group.
-To facilitate the usage of these algorithms, we will provide several self-contained
-online examples (complete with data).
 
-### 3(b.2) Publicly available multi-site data as a reproducible and didactic component
 
-An additional innovative component we are proposing is the inclusion of complete study
-data and detailed instructions for generating reproducible, multimodality pulmonary studies
-using the proposed package with
-input data from several of our external collaborators and colleagues.  Specifically, we have
-asked several scientists and researchers who are familiar with our work to provide imaging data
-of various modalities which we will then process using the proposed toolkit.  These processed
-data will then not only be returned to the corresponding providers with detailed instructions
-on reproducing these results in their own labs but will also be provided to the public for any
-interested researcher to reproduce the results.  Given the different image acquisition sources,
-this strategy should also demonstrate the robustness of our tools.
 
-Included in these analyses will be analyses of our own data.  Any clinical findings
-of interest will be published in traditional venues (e.g., Chest).  In addition, we will
-provide all image
-data and the quantitative analysis scripts as a companion release to accompany the paper
-(e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
- Such a comprehensive clinical
-investigation using these tools will not only provide insight into the specifics of certain
-pulmonary pathologies
-but will also provide a reproducible mechanism for using the tools created with this proposal.
 
-## __3(c) Research design__
 
-### 3(c.1) Preliminary data
+
+
+
+
+
 
 ### 3(c.2) Specific Aim 1:   To develop a set of open-source software tools for CT, proton, and 3He pulmonary computational analysis.
 
