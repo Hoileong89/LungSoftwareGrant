@@ -2,7 +2,22 @@
 # Research Strategy
 
 ## __3(a) Significance__
-### 3(a.1) The importance of publicly available software tools for domain-specific medical image analysis
+### 3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation
+
+The increased utilization of imaging for both research and clinical purposes has  furthered
+the demand for quantitative image analysis techniques.  The use of these computational
+techniques are motivated by the need for less subjectivity and more standardization in
+medical image interpretation, increased speed and automation in diagnosis, and greater
+robustness and accuracy for determining biological correlates with imaging findings.
+For example, in the area of pharmaceutical development and testing, imaging biomarkers are crucial.
+In order to determine fundamental study parameters such as drug safety
+and effectiveness, quantitative assessments derived from imaging measures must be objective
+and reproducible [@Wang:2010aa] which is often difficult without computational aid given the intra-
+and inter-reader variability in radiological practice [@Zhao:2013aa;@McErlean:2013aa].
+Additionally, the exciting possibilities associated with "big data" and the potential
+for improvement in individualized, evidence-based medicine has also increased the need
+for sophisticated data transformation and machine learning techniques.
+
 Well-vetted and publicly available software is a significant benefit
 to targeted research communities.  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
@@ -16,7 +31,7 @@ review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, t
 consensus is that ``universally available image analysis software'' is a major hinderance
 to more widespread usage of such imaging biomarkers [@Hoffman:2015aa].
 
-```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken." }
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken despite consensus amongst researchers and clinicians regarding the utility of such offerings." }
 years <- 2005:2014
 
 numberOfAbstractsPerYear <- rep( 0, length( years ) )

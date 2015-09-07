@@ -21,8 +21,26 @@ others:
 * brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
 
-In addition to public availability, some of these algorithms have been showcased in
-international competitions and have performed extremely well [@Murphy:2011aa;@Wang:2012aa;@Menze:2014aa].
+In addition to public availability, some of these algorithms have participated in
+independent evaluations/competitions and have performed extremely well:
+
+* A fairly recent large-scale
+brain normalization evaluation included the Symmetric Normalization (SyN)
+algorithm found in ANTs where it was one of the top performers [@Klein:2009aa] in alignment
+of labeled regions.
+* SyN also competed in the Evaluation of Methods for Pulmonary Image
+REgistration 2010 (EMPIRE10) challenge [@Murphy:2011aa] where it was the top performer
+for the benchmarks
+used to assess lung registration accuracy and biological plausibility of the inferred
+transform (i.e., boundary alignment, fissure alignment, landmark correspondence, and
+displacement field topology).
+* The joint label fusion algorithm of [@Wang:2012aa;@Wang:2013aa] (coupled with SyN)
+  performed well in the MICCAI 2012 challenge for labeled brain data [@Landman2012]
+  and in 2013 for labeled canine hind leg data [@Asman2013].
+* The multivariate template capabilities in ANTs were combined with random forests to win
+the Brain Tumor segmentation (BRATS) competition at MICCAI 2013 [@Tustison:2014aa].
+* A B-spline variant of the SyN algorithm [@Tustison:2013ac] won the best paper award at the
+STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 
 ### 3(c.1.2) The significance of ANTs for the pulmonary imaging community
 
