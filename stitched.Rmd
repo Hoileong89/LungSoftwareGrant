@@ -20,6 +20,8 @@ geometry: margin=0.5in
 knitr::opts_chunk$set( cache=TRUE )
 ```
 
+\pagenumbering{gobble}
+
 # Specific Aims
 
 The development and proliferation of quantitative image analysis methods have accelerated
@@ -37,7 +39,7 @@ easy-to-use image analysis tools.  Historically, the research and clinical commu
 have significantly benefited from the development and proliferation of imaging-related
 analysis packages, particularly those softwares which have been tailored for
 specific application domains.  Although several such established packages exist for
-*neuroimaging* research (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for
+neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for
 pulmonary imaging analysis.  The primary goal of this proposal is to develop
 a robust, open-source image analysis toolkit and dissemination platform
  specifically targeted at the pulmonary research community.
@@ -95,7 +97,10 @@ data and write-ups, online user support, and conduct of hands-on training worksh
 # Research Strategy
 
 ## __3(a) Significance__
+
+<!--
 ### 3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation
+-->
 
 The increased utilization of imaging for both research and clinical purposes has  furthered
 the demand for quantitative image analysis techniques.  The use of these computational
@@ -212,29 +217,23 @@ but will also provide a reproducible mechanism for using the tools created with 
 ### 3(c.1.1) ANTs and the neuroimaging community
 
 Deficiency of publicly available tools within the neuroscience community has been one of
-the primary motivations for the
-inception and continued development of our Advanced Normalization Tools (ANTs).  ANTs takes advantage of
-the mature Insight ToolKit in providing an optimal software framework for building scripts
-and programs specifically for neuroimaging.  For example, the following core neuroimage
-processing algorithms have been made available through our ANTs toolkit (complete with
-online self-contained examples with developer-tuned parameters) and have been used extensively by our group and
-others:
+the primary motivations for the inception and continued development of our Advanced
+Normalization Tools (ANTs).  Our team is well-recognized for seminal contributions to the
+field of image registration that date back to the original elastic matching method of Bajcsy
+and co-investigators [@Bajcsy:1982aa;@Bajcsy:1989aa;@Gee:1993aa]. Our most recent work,
+embodied in the ANTs open-source, cross-platform toolkit for multiple modality image processing
+(http://picsl.upenn.edu/ software/ants/), continues to set the standard in the field. ANTs not
+only encodes the most advanced results in registration research, notably the Symmetric Normalization
+(SyN) algorithm for diffeomorphisms [@Avants:2011ab], but also packages these within a full
+featured platform that includes an extensive library of similarity measures, transformation types, and
+regularizers. Indeed, it serves
+as the basis for the registration component of the latest version of the National Library of
+Medicine Insight Toolkit (ITK) programming library (http://www.itk.org). The
+combination of state-of-the-art algorithms and feature-rich flexibility has translated
+to top-placed rankings in major independent evaluations for certain elements of the ANTs
+toolkit:
 
-* brain normalization [@Avants:2011ab;@Avants:2014aa] (https://github.com/stnava/BasicBrainMapping),
-* brain template generation [@Avants:2010aa] (https://github.com/ntustison/TemplateBuildingExample),
-* skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab] (https://github.com/ntustison/antsBrainExtractionExample),
-* prior-based brain tissue segmentation [@Avants:2011ab] (https://github.com/ntustison/antsAtroposN4Example),
-* cortical  thickness estimation [@Das:2009aa;@Tustison:2014ab] (https://github.com/ntustison/antsCorticalThicknessExample),
-* brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
-* cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
-
-In addition to public availability, some of these algorithms have participated in
-independent evaluations/competitions and have performed extremely well:
-
-* A fairly recent large-scale
-brain normalization evaluation included the Symmetric Normalization (SyN)
-algorithm found in ANTs where it was one of the top performers [@Klein:2009aa] in alignment
-of labeled regions.
+* SyN was a top performer in a fairly recent large-scale brain normalization evaluation [@Klein:2009aa].
 * SyN also competed in the Evaluation of Methods for Pulmonary Image
 REgistration 2010 (EMPIRE10) challenge [@Murphy:2011aa] where it was the top performer
 for the benchmarks
@@ -249,6 +248,29 @@ the Brain Tumor segmentation (BRATS) competition at MICCAI 2013 [@Tustison:2014a
 * A B-spline variant of the SyN algorithm [@Tustison:2013ac] won the best paper award at the
 STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 
+
+
+
+
+
+
+
+ANTs takes advantage of
+the mature Insight ToolKit in providing an optimal software framework for building scripts
+and programs specifically for neuroimaging.  For example, the following core neuroimage
+processing algorithms have been made available through our ANTs toolkit (complete with
+online self-contained examples with developer-tuned parameters) and have been used extensively by our group and
+others:
+
+* brain normalization [@Avants:2011ab;@Avants:2014aa] (https://github.com/stnava/BasicBrainMapping),
+* brain template generation [@Avants:2010aa] (https://github.com/ntustison/TemplateBuildingExample),
+* skull-stripping or brain extraction [@Avants:2010ab;@Tustison:2014ab] (https://github.com/ntustison/antsBrainExtractionExample),
+* prior-based brain tissue segmentation [@Avants:2011ab] (https://github.com/ntustison/antsAtroposN4Example),
+* cortical  thickness estimation [@Das:2009aa;@Tustison:2014ab] (https://github.com/ntustison/antsCorticalThicknessExample),
+* brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
+* cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
+
+
 ### 3(c.1.2) The significance of ANTs for the pulmonary imaging community
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
@@ -261,10 +283,11 @@ development has only increased the number of available algorithms.  The followin
 sampling of more recently reported techniques for CT analysis:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa])
-* bronchial structure extraction (e.g.,[@Zheng:2007aa;@Nakamura:2008aa]; the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
+* bronchial structure extraction (e.g., [@Zheng:2007aa;@Nakamura:2008aa] and the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
 * vasculature segmentation (e.g., [@Agam:2005aa;@Korfiatis:2011aa]),
-* lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]), and
-* feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]).
+* lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]),
+* feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]), and
+* nodule detection (e.g., [@Messay:2010aa;] and the many submissions to the Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD Conference of SPIE Medical Imaging [@Ginneken:2010aa]).
 
 Since this list is restricted to CT image analysis, inclusion of additional techniques
 specific to other modalities will have additional benefit.  For example, ventilation-based

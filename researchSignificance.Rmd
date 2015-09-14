@@ -2,7 +2,10 @@
 # Research Strategy
 
 ## __3(a) Significance__
+
+<!--
 ### 3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation
+-->
 
 The increased utilization of imaging for both research and clinical purposes has  furthered
 the demand for quantitative image analysis techniques.  The use of these computational

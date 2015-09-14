@@ -16,7 +16,7 @@ easy-to-use image analysis tools.  Historically, the research and clinical commu
 have significantly benefited from the development and proliferation of imaging-related
 analysis packages, particularly those softwares which have been tailored for
 specific application domains.  Although several such established packages exist for
-*neuroimaging* research (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for
+neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for
 pulmonary imaging analysis.  The primary goal of this proposal is to develop
 a robust, open-source image analysis toolkit and dissemination platform
  specifically targeted at the pulmonary research community.

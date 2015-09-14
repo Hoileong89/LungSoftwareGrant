@@ -19,3 +19,5 @@ geometry: margin=0.5in
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set( cache=TRUE )
 ```
+
+\pagenumbering{gobble}
