@@ -1,4 +1,9 @@
 
+\begin{center}
+{\LARGE \bf ITK-Lung:  A Software Framework for Lung Image Processing and Analysis}
+\end{center}
+
+
 # Research Strategy
 
 ## __3(a) Significance__

@@ -94,6 +94,11 @@ data and write-ups, online user support, and conduct of hands-on training worksh
 
 \newpage
 
+\begin{center}
+{\LARGE \bf ITK-Lung:  A Software Framework for Lung Image Processing and Analysis}
+\end{center}
+
+
 # Research Strategy
 
 ## __3(a) Significance__
