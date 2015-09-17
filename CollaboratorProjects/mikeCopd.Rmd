@@ -1,0 +1,60 @@
+
+<!-- Mike Copd -->
+
+_1) research project name and any participating team members (and affiliation) that should
+be listed._
+
+_2) brief (1 paragraph?  this can be boilerplate) description of research project (including
+the relevant data)._
+
+Associate Professor Mike Shim and his group have been actively developing 3D hyperpolarized
+xenon-129 dissolved-phase MRI (HXe MRI) as a sensitive biomarker for accurately characterizing
+phenotypes and severity of COPD. This protocol permits regional mapping of ventilation and
+gas uptake by tissue and blood in human lungs with single breath hold
+[@Dregely:2011aa;@Mugler:2010aa;@Qing:2014ab].  This project plans to establish connectivity
+between these advanced HXe MRI imaging signatures and important clinical outcomes of COPD to
+establish HXe MRI as a novel clinical diagnostic tool. They anticipate that this new biomarker
+tool will naturally lead to deeper mechanistic understanding of COPD at the molecular-physiologic
+and clinical levels and support identification of potential pathophysiologic derrangement
+associated with COPD and a new method to accurately predict therapeutic response to current
+standard COPD therapies. Refinement of HXe MRI as a pulmonary diagnostic tool is anticipated
+to encourage development of new clinical interventions.
+
+To date, they have imaged and evaluated 61 subjects using their HXe MRI technique.  This
+preliminary cohort consists of (1) healthy non-smokers
+($n=28$) and (2) patients with symptomatic COPD ($n=33$) due to extensive cigarette smoke
+exposure ($>20$ pack-year).  Evaluation includes spirometry measures based on ATS/ERS
+guidelines and NHANES III [@Miller:2005aa;@Miller:2005ab] and classification from the GOLD
+guideline [@GOLD].  Preliminary quantitation includes correlation analysis with HXe MRI-derived
+imaging signatures. They plan to expand this
+preliminary study to another cohort of 40 subjects with COPD.
+
+_3) brief (ditto) description of project significance/innovation/impact._
+
+To the best of their knowledge, HXe MRI is the
+first non-invasive imaging technique that can provide regional information about three unique
+characteristics of lung function: lung ventilation, size and connectedness of distal alveolar
+airspaces, and HXe gas transfer from airspaces to red blood cells. HXe MRI, therefore, is
+anticipated to overcome the limitation
+of pulmonary function testing (PFT) which only provides physiologic parameters of the lung
+as a whole unit, and High Resolution CT (HRCT) which only provides anatomic characterization
+without physiologic information.
+They anticipate that the HXe MRI will detect pathologic changes present in COPD patients with
+high sensitivity and specificity previously unattainable by current clinical standard
+(PFT and HRCT). Moreover, HXe MRI can determine whether gas transfer
+abnormalities are due to impaired ventilation or reduced gas-exchange, and provide new
+insights into pathogenesis of COPD in individual patients.
+
+_4) brief description of enabling role (e.g., tasks, needs, etc) for research project of
+lung image analysis/processing software proposed for development in this grant; in other
+words, the specific needs of research project, that would be met/advanced by the software
+tools proposed for development in the grant._
+
+Crucial to the success of establishing the utility of HXe MRI as a sensitive biomarker
+for accurately characterizing COPD phenotypes is quantification of imaging signatures in
+an automated and robust fashion.  Identification of ventilation dead space ($V_D$)
+for correlation with GOLD classification will utilize the previously described
+ventilation-based segmentation approach [@Tustison:2011aa].  In order to determine lobar
+values of HXe MRI, they will utilize the recently proposed lobar estimation algorithm
+[@Tustison:2015aa] in both proton MRI and CT.
+
