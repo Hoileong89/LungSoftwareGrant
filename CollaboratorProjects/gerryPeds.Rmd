@@ -1,0 +1,61 @@
+
+<!-- Gerry Peds -->
+
+_1) research project name and any participating team members (and affiliation) that should
+be listed._
+
+* Talissa A. Altes, MD
+* John P. Mugler III, PhD
+* Kai Ruppert, PhD
+* Nicholas J. Tustison, DSc
+* Joanne Gersbach, RN
+* Sylvia Szentpetery, MD
+* Craig H. Meyer, PhD
+* Eduard E. de Lange, MD
+* W. Gerald Teague, MD 5
+
+_2) brief (1 paragraph?  this can be boilerplate) description of research project (including
+the relevant data)._
+
+Advances in rapid image sequencing methods have facilitated the acquisition of high-quality
+hyperpolarized gas MR images in pre-school children [@Altes:2006aa]. Furthermore improvements in image
+processing and signal intensity analysis can accurately measure lung volume compartments [@Tustison:2011aa].
+Dr. Gerry Teague's group is applying these innovations in children with asthma to study whether the lung
+defect volume % as measured by hyperpolarized lung MRI correlates with a range of clinical
+features. They hypothesize the ventilation defect volume % would be higher in children with
+severe asthma, and correlate not only with the degree of airflow limitation, but indicators
+of asthma control, treatment, and inflammation.
+
+Preliminary analysis included 31 children with current asthma based on physician diagnosis
+(median age = 10 years, minimum age = 3 years, maximum age 17 years).  Lung function was
+measured clinically according to ATS guidelines for precision and reproducibility and expressed
+according to standard population reference values [@Hankinson:1999aa].  Hyperpolarized <sup>3</sup>He
+MR imaging acquisition was performed within a few weeks of enrollment according to a protocol
+developed for children. Inhaled beta agonists were withheld for four hours before the MRI procedure.
+Future processing and analysis includes investigating lobar differences in this original
+data set.
+
+_3) brief (ditto) description of project significance/innovation/impact._
+
+Precise measurement of ventilation volumes by hyperpolarized noble gas MRI not only has the
+potential to resolve the spatial and temporal characteristics of gas distribution in
+children with asthma, but could also expand clinically relevant information in regards to
+asthma severity and its features.  In the past simple computer-assisted systems [@Woodhouse:2005aa] or
+hand counts of visual defects were used to estimate the ventilation defect volume [@Altes:2001aa].
+By developing more advanced techniques (in terms of acquisition and analysis), Dr. Teague
+and his group hope to facilitate
+rapid conversion of complex hyperpolarized gas signal data into volume compartments for
+clinical applications.
+
+_4) brief description of enabling role (e.g., tasks, needs, etc) for research project of
+lung image analysis/processing software proposed for development in this grant; in other
+words, the specific needs of research project, that would be met/advanced by the software
+tools proposed for development in the grant._
+
+Absolutely crucial to the advanced techniques being developed by Dr. Teague and his group
+are sophisticated image analysis tools like the ones being proposed.  For example,
+the ventilation-based segmentation described in [@Tustison:2011aa] is being used to determine
+volumetric compartments based on lung function.  Additional ``cleaning'' necessary for these
+data include denoising techniques [@Manjon:2010aa] implemented and made available in ANTs.
+Lobe estimation will be possible by refining the techniques originally described in
+[@Tustison:2015aa].
