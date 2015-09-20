@@ -219,19 +219,113 @@ but will also provide a reproducible mechanism for using the tools created with 
 
 ### 3(c.1) Preliminary data
 
-### 3(c.1.1) ANTs and the neuroimaging community
+### 3(c.1.1) Generic ANTs core tools for image analysis and processing
 
-Deficiency of publicly available tools within the neuroscience community has been one of
-the primary motivations for the inception and continued development of our Advanced
-Normalization Tools (ANTs).  Our team is well-recognized for seminal contributions to the
-field of image registration that date back to the original elastic matching method of Bajcsy
-and co-investigators [@Bajcsy:1982aa;@Bajcsy:1989aa;@Gee:1993aa]. Our most recent work,
-embodied in the ANTs open-source, cross-platform toolkit for multiple modality image processing
-(http://picsl.upenn.edu/ software/ants/), continues to set the standard in the field. ANTs not
-only encodes the most advanced results in registration research, notably the Symmetric Normalization
-(SyN) algorithm for diffeomorphisms [@Avants:2011ab], but also packages these within a full
-featured platform that includes an extensive library of similarity measures, transformation types, and
-regularizers. Indeed, it serves
+Many of the core programs comprising portions of the proposed pulmonary software framework
+have been created and made available within ANTs.  However, as mentioned earlier, these programs have more
+general application and require pulmonary-specific tuning for the pipelines targeted by
+this proposal.  The following list comprises these core software tools for
+tuning, subsequent extensions, documentation, tutorial generation, and the creation of
+easy-to-use bash scripts for large-scale processing of pulmonary imaging data:
+
+![Core processing tools that have made the ANTs package one of the most popular neuroimaging
+toolkits.  Fundamental processing tasks such as image registration, template generation,
+bias correction, denoising, intensity-based segmentation, and joint label
+fusion are extremely well-performing software components which have been utilized for
+neuroimaging tasks such as brain extraction and cortical thickness estimation.](Figs/coreANtsToolsNeuro.png)
+
+__ANTs image registration.__  One of the most important methodological developments in
+medical image analysis is the advent of image registration techniques capable of
+accommodating the highly complex inter-individual variations seen in human neuroanatomy.
+Our team is well-recognized for seminal contributions to the field that date back to the
+original elastic matching method of Bajcsy and co-investigators
+[@Bajcsy:1982aa;@Bajcsy:1989aa;@Gee:1993aa]. Our most recent work, embodied in the ANTs
+open-source, cross-platform toolkit for multiple modality image processing,
+continues to set the standard in the field. ANTs not only encodes the most advanced results
+in registration research, notably the Symmetric Normalization (SyN) algorithm for
+diffeomorphisms [@Avants:2008aa], but also packages these within a full featured platform that
+includes an extensive library of similarity measures, transformation types, and regularizers.
+Recently, a thorough comparison with the original SyN algorithm was performed using a B-spline variant [@Tustison:2013ac].
+This evaluation utilized multiple publicly available, annotated brain data sets and
+demonstrated statistically significant improvement in label overlap measures.  As part of
+that study, we produced the scripts ``antsRegistrationSyN.sh`` and
+``antsRegistrationSyNQuick.sh`` which provide a simple interface to our normalization tools
+for brain-specific normalization.
+
+
+__Multi-modal template generation.__  Given the variability in anatomical shape across
+populations and the lack of publicly available atlases for specific organs, generating population- or
+subject-specific optimal shape/intensity templates significantly enhances study potential
+[@Avants:2010aa;@Tustison:2014aa].  First, an average template is estimated via a voxel-wise
+mean of all the individual subject
+images.  This estimate is iteratively updated by registering each image to the current
+template, performing a voxelwise average to create a new estimate, and then "reshaping"
+this template based on the average inverse transformation which "moves" the template estimate
+closer to the group mean.  See Figure 2 for a cohort-specific multi-modal brain template
+for females in the age range 50--60.
+This functionality has proven to be a vital component of the ANTs
+toolkit for performing neuroimaging research
+(e.g., [@Avants:2015aa;@Datta:2012aa;@McMillan:2014aa;@Cook:2014aa;@Tustison2014ad;@Tustison:2014ab]).
+
+__Bayesian-based segmentation with spatial and MRF priors.__
+Early statistically-based segmentation work appropriated NASA satellite image processing
+software for classification of head tissues in 2-D MR images [@Vannier:1985aa]. Following
+this work, many researchers adopted statistical methods for $n$-tissue anatomical brain
+segmentation. The Expectation-Maximization (EM) framework is natural [@Dempster:1977aa]
+given the "missing data" aspect of this problem. The work described in [@Wells:1996aa]
+was one of the first to use EM for finding a locally optimal solution by iterating between
+bias field estimation and tissue segmentation.  Core components of this type of work is
+the explicit modeling of the tissue intensity values as statistical distributions
+[@Cline:1990aa;@Kikinis:1992aa] and the use of MRF modeling [@Geman:1984aa] for regularizing
+the classification results [@Held:1997aa].  Recently, reseachers have begun to rely on spatial
+prior probability maps of anatomical structures of interest to encode domain knowledge
+[@Van-Leemput:1999aa;@Ashburner:2005aa] by providing spatial
+prior probability maps and an initial segmentation.  Although this particular segmentation
+framework has significant application in the neuroimaging domain, it has also applicable
+to other domains such as breast MRI [@Gubern-Merida:2015aa;@Ribes:2014aa] and functional
+ventilation of the lung [@Tustison:2011aa].  However, despite the numerous algorithms and other developments which have been proposed
+over the years, there are an extremely limited number of software implementations to
+perform these types of segmentations.
+This deficit inspired us to create our own Bayesian-based
+segmentation framework [@Avants:2011aa] (denoted as Atropos) which we have made publicly
+available within ANTs.
+
+__N4 bias correction.__  Critical to quantitative processing of MRI is the minimization of field
+inhomogeneity effects which produce artificial low frequency intensity variation across the image.
+Large-scale studies, such as ADNI, employ perhaps the most widely used bias correction algorithm,
+N3 [@Sled:1998aa], as part of their standard protocol [@Boyes:2008aa].
+In [@Tustison:2010aa] we introduced an improvement of N3, denoted as "N4", which demonstrates
+a significant increase in performance and convergence behavior on a variety of data. This
+improvement is a result of an enhanced fitting routine (which includes multi-resolution
+capabilities) and a modified optimization formulation.
+
+__Joint label fusion for prior-based segmentation.__  Joint label fusion (JLF) is the current
+state-of-the-art for propagating expert labelings from a reference atlas library onto new
+instances of unlabeled data. Image registration is used to align the atlas library
+(images + segmentations) to a common space. A statistical model is then used to combine
+the "guesses" from all the normalized atlas labels to provide a "best guess" estimate of
+the target labeling. Several such algorithms have been developed and much effort has been
+devoted to determining relative performance levels. See, for example, the recent MICCAI 2012
+Grand Challenge and Workshop on Multi-Atlas Labeling).  The joint fusion (JLF) algorithm of
+[@Wang:2013aa;@Wang:2013ab] is one of the top performing JLF algorithms. JLF is capable
+of predicting anatomical labels with accuracy that rivals expert anatomists [@Yushkevich:2010aa].
+It has proven its effectiveness in lung [@Tustison:2015aa], cardiac data [@MALF],
+the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF].
+
+
+__Spatially adaptive denoising.__ Patch-based
+denoising is critical for data "cleaning" prior to subsequent processing such
+as segmentation or spatial normalization.  Recently, a spatially adaptive approach to denoising
+was proposed in [@Manjon:2010aa] which we implemented in ANTs.  This filter
+performs well and is also relatively
+fast.
+
+The previously described core tools, as well as several others, have been part of ANTs
+development efforts for the past decade.  And it was precisely the deficiency of publicly
+available tools within the neuroscience community that motivated the inception and
+continued development of ANTs.  As a result, our team is well-recognized for our many
+open-source contributions including seminal contributions to the
+field of image registration outlined earlier.  Indeed, ANTs-based image registration serves
 as the basis for the registration component of the latest version of the National Library of
 Medicine Insight Toolkit (ITK) programming library (http://www.itk.org). The
 combination of state-of-the-art algorithms and feature-rich flexibility has translated
@@ -254,10 +348,7 @@ the Brain Tumor segmentation (BRATS) competition at MICCAI 2013 [@Tustison:2014a
 STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 
 
-
-
-
-
+### 3(c.1.2) ANTs and the neuroimaging community
 
 
 ANTs takes advantage of
@@ -275,17 +366,60 @@ others:
 * brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
 
+All of these tools have been wrapped in easy-to-use, well-documented shell scripts.  For
+example, the ANTs cortical thickness pipeline, as outlined in [@Tustison:2014ab], comprises
+four major steps:  (1) bias correction, (2) brain extraction, (3) $n$-tissue segmentation,
+and (4) cortical thickness estimation.  Each step requires its own set of ANTs tools with
+appropriately tuned parameters. To maximize the utility of the pipeline for the interested
+user, in [@Tustison:2014ab] we provide all the necessary programs (properly tuned) with
+a minimal set of input data required to obtain good results for common data.  The result
+is an easy-to-use script that can be invoked by the programmer and non-programmer alike to
+obtain the desired processed data which outperforms the current state-of-the-art.  This is
+an example command call for the ANTs cortical thickness pipeline:
+```bash
+  # ANTs processing call for a single subject
 
-### 3(c.1.2) The significance of ANTs for the pulmonary imaging community
+  $ sh antsCorticalThickness.sh -d 3 \
+                                -a IXI/T1/IXI002-Guys-0828-T1.nii.gz \
+                                -e IXI/template/T_Template0.nii.gz \
+                                -m IXI/template/T_template0ProbabilityMask.nii.gz \
+                                -f IXI/template/T_template0ExtractionMask.nii.gz \
+                                -p IXI/template/Priors/priors%d.nii.gz \
+                                -o IXI/ANTsResults/IXI002-Guys-02828-
+```
+This approach to reducing the steep learning curve associated with many processing pipelines
+has several benefits.  Bash is an extremely common command language that permits large-scale
+processing.  Thus, running several jobs on a cluster infrastructure is straightforward with
+this approach (as opposed to a GUI-driven processing paradigm).  Such scripts are readable
+by the interested user who can glean parameters as well as manually make changes.
+
+### 3(c.1.3) The significance of ANTs for the pulmonary imaging community
+
+
+ <!--
+\textcolor{red}{Similarly, we used the EMPIRE10 challenge framework to provide an additional comparison in
+the context of pulmonary CT image registration [@Tustison:2012aa].  Registration accuracy
+is based on a combination of factors including lung boundary and fissure overlap, landmark
+correspondence, and topology considerations in the displacement field.  In this domain, the
+B-spline variant showed a separate performance gain and has since become
+the preferred transformation model for small deformation image registration problems
+(an additional domain is cardiac MRI where it recently won the best paper
+award [@Tustison:2015ab]).  As part of the development, we will provide simple script-based
+interfaces for lung-specific normalization tasks.}
+-->
+
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  An
-extensive survey concentrating on the years 1999–2004 is given in [@Sluimer:2006aa] which covers computer
+extensive survey concentrating on the years 1999–2004 is given in [@Sluimer:2006aa] which
+covers computer
 aided diagnosis of lung disease and lung cancer in CT (i.e., detection and tracking of
 pulmonary nodules) and provides an overview of the many relevant segmentation methods for
 pulmonary structures. Although many algorithms existed at the time, continued technical
-development has only increased the number of available algorithms.  The following is a small
-sampling of more recently reported techniques for CT analysis:
+development has only increased the number of available algorithms.  However, despite the
+continued _reporting_ of pulmonary image analysis algorithms, there is no corresponding
+increase in algorithmic _availability_. The following is a small sampling of more recently
+reported techniques for CT analysis:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa])
 * bronchial structure extraction (e.g., [@Zheng:2007aa;@Nakamura:2008aa] and the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
@@ -308,11 +442,6 @@ addition, new innovations in diffeomorphic registration technology has led to a 
 Normalization B-spline variant which has demonstrated accurate normalizations [@Tustison:2013ac],
 and transformations which are particularly well-suited for pulmonary data [@Tustison:2015aa].
 
-<!--
-Our previous experience in providing well-vetted tools for neuroimage analysis and our extensive
-pulmonary research background makes our group well-suited for accomplishing the aims of this proposal and much
-of it has and will use ITK and ANTs as a software foundation.
--->
 
 
 
@@ -325,37 +454,12 @@ of it has and will use ITK and ANTs as a software foundation.
 
 
 
-
-### 3(c.2) Specific Aim 1:   To develop a set of open-source software tools for CT, proton, and 3He pulmonary computational analysis.
-
-Although the proposed software library would be extendable based on new methodological
-developments and continued analysis experience, the core development will include several fundamental
-tools:
-
-__B-spline-based Symmetric Normalization.__  A thorough comparison with the
-well-known ANTs SyN algorithm [@Avants:2008aa] was performed with a B-spline variant [@Tustison:2013ac].
-This evaluation utilized multiple publicly available, annotated brain data sets and
-demonstrated statistically significant improvement in label overlap measures.  As part of
-that study, we produced the scripts ``antsRegistrationSyN.sh`` and
-``antsRegistrationSyNQuick.sh`` which provide a simple interface to our normalization tools
-for brain-specific normalization based on our extensive experience.
-
-Similarly, we used the EMPIRE10 challenge framework to provide an additional comparison in
-the context of pulmonary CT image registration [@Tustison:2012aa].  Registration accuracy
-is based on a combination of factors including lung boundary and fissure overlap, landmark
-correspondence, and topology considerations in the displacement field.  In this domain, the
-B-spline variant showed a separate performance gain and has since become
-the preferred transformation model for small deformation image registration problems
-(an additional domain is cardiac MRI where it recently won the best paper
-award [@Tustison:2015ab]).  As part of the development, we will provide simple script-based
-interfaces for lung-specific normalization tasks.
-
-__Multi-feature CT and multi-modal MRI template generation.__  Given the variability in lung shape across
-populations and the lack of publicly available lung atlases, generating population- or
-subject-specific templates significantly enhances study potential.  Although the template
+Although the template
 construction algorithm described in [@Avants:2010aa] was applied to T1-weighted brain data
 (with the extension of multimodal data described in [@Tustison:2014aa]), it is sufficiently
-generic  such that it is easily applied to pulmonary data.
+generic such that it can be applied to pulmonary data.
+
+
 
 For example, in Fig. 4, we illustrate the major processing components of a recent study
 analyzing local changes based on a pulmonary treatment plan [@Tustison:2013ad].  This
@@ -377,6 +481,14 @@ voxelwise intensities regress with the simplified treatment hypothesis.  This qu
 is visualized using the correlation maps depicted in the template space (top right).  Positive
 correlations with the expected treatment effect are rendered in orange whereas negative correlations
 are rendered in blue.](Figs/longitudinalStudy.png)
+
+
+
+
+
+
+
+
 
 __Atlas-based lung segmentation.__  Identification of anatomical structure in MRI is often a
 crucial preprocessing step for quantification of morphological features or ventilation
@@ -414,7 +526,7 @@ MRI for image-based lobar segmentation which has led to alternative geometric su
 which are ad hoc, non-anatomical, and do not adequately address intra- and inter-subject
 correspondences.  However, we can take advantage of
 inter-subject similarities in lobar geometry to provide a prior-based estimation of
-lobar divisions using a consensus labeling approach (cf Figure 2).
+lobar divisions using a consensus labeling approach (cf Figure 3).
 
 To generate the lobe segmentation in a target proton or CT lung image, we first generate the
 binary whole lung mask using the whole lung atlas-based estimation.  We
@@ -458,6 +570,24 @@ ventilated, blue = normally ventilated, and yellow = well-ventilated.
 Note the improvement in both the qualitative assessment of the ventilation map (top) and the corresponding
 segmentation time course (bottom) followed by an approximate return to pre-albuterol
 conditions following the delay period.](Figs/prePostAlbuterol.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 3(c.2) Specific Aim 1:   To develop a set of open-source software tools for CT, proton, and 3He pulmonary computational analysis.
+
 
 __Quantitative CT indices.__  Imaging biomarkers for characterizing emphysema in CT have
 have been well researched, although there are ample opportunities to refine these methods
@@ -516,6 +646,11 @@ ventilation defect.  The functional ventilation image is normalized to the corre
 CT image.  The airways are segmented in the individual subject space.  After identification
 of the ventilation defect of interest, we can automatically determine the bronchiole
 pathway from the trachea to the defect.](Figs/airways.png)
+
+__Nodule detection.__
+
+
+
 
 
 __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
