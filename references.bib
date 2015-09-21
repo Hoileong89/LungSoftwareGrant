@@ -2,12 +2,71 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Nick Tustison at 2015-09-18 21:16:21 -0700 
+%% Created for Nick Tustison at 2015-09-21 12:49:20 -0700 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Zhu:1996aa,
+	Author = {S.C. Zhu and A. Yuille},
+	Date-Added = {2015-09-21 19:47:40 +0000},
+	Date-Modified = {2015-09-21 19:48:50 +0000},
+	Journal = {IEEE Trans Pattern Anal Mach Intell},
+	Number = {9},
+	Pages = {884--900},
+	Title = {Region Competition: Unifying Snakes, Region Growing, and Bayes/MDL for Multiband Image Segmentation},
+	Volume = {18},
+	Year = {1996}}
+
+@article{Caselles:1997aa,
+	Author = {V. Caselles and R. Kimmel and G. Sapiro},
+	Date-Added = {2015-09-21 19:45:16 +0000},
+	Date-Modified = {2015-09-21 19:47:05 +0000},
+	Journal = {Int J Comput Vision},
+	Pages = {61--79},
+	Title = {Geodesic active contours},
+	Volume = {22},
+	Year = {1997}}
+
+@article{Zosso:2011aa,
+	Abstract = {In this paper we present a novel geometric framework called geodesic active fields for general image registration. In image registration, one looks for the underlying deformation field that best maps one image onto another. This is a classic ill-posed inverse problem, which is usually solved by adding a regularization term. Here, we propose a multiplicative coupling between the registration term and the regularization term, which turns out to be equivalent to embed the deformation field in a weighted minimal surface problem. Then, the deformation field is driven by a minimization flow toward a harmonic map corresponding to the solution of the registration problem. This proposed approach for registration shares close similarities with the well-known geodesic active contours model in image segmentation, where the segmentation term (the edge detector function) is coupled with the regularization term (the length functional) via multiplication as well. As a matter of fact, our proposed geometric model is actually the exact mathematical generalization to vector fields of the weighted length problem for curves and surfaces introduced by Caselles-Kimmel-Sapiro. The energy of the deformation field is measured with the Polyakov energy weighted by a suitable image distance, borrowed from standard registration models. We investigate three different weighting functions, the squared error and the approximated absolute error for monomodal images, and the local joint entropy for multimodal images. As compared to specialized state-of-the-art methods tailored for specific applications, our geometric framework involves important contributions. Firstly, our general formulation for registration works on any parametrizable, smooth and differentiable surface, including nonflat and multiscale images. In the latter case, multiscale images are registered at all scales simultaneously, and the relations between space and scale are intrinsically being accounted for. Second, this method is, to the best of our knowledge, the first reparametrization invariant registration method introduced in the literature. Thirdly, the multiplicative coupling between the registration term, i.e. local image discrepancy, and the regularization term naturally results in a data-dependent tuning of the regularization strength. Finally, by choosing the metric on the deformation field one can freely interpolate between classic Gaussian and more interesting anisotropic, TV-like regularization.},
+	Author = {Zosso, Dominique and Bresson, Xavier and Thiran, Jean-Philippe},
+	Date-Added = {2015-09-21 19:42:28 +0000},
+	Date-Modified = {2015-09-21 19:42:28 +0000},
+	Doi = {10.1109/TIP.2010.2093904},
+	Journal = {IEEE Trans Image Process},
+	Journal-Full = {IEEE transactions on image processing : a publication of the IEEE Signal Processing Society},
+	Mesh = {Algorithms; Image Enhancement; Image Processing, Computer-Assisted; Imaging, Three-Dimensional; Normal Distribution},
+	Month = {May},
+	Number = {5},
+	Pages = {1300-12},
+	Pmid = {21095870},
+	Pst = {ppublish},
+	Title = {Geodesic active fields--a geometric framework for image registration},
+	Volume = {20},
+	Year = {2011},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1109/TIP.2010.2093904}}
+
+@article{Yushkevich:2006aa,
+	Abstract = {Active contour segmentation and its robust implementation using level set methods are well-established theoretical approaches that have been studied thoroughly in the image analysis literature. Despite the existence of these powerful segmentation methods, the needs of clinical research continue to be fulfilled, to a large extent, using slice-by-slice manual tracing. To bridge the gap between methodological advances and clinical routine, we developed an open source application called ITK-SNAP, which is intended to make level set segmentation easily accessible to a wide range of users, including those with little or no mathematical expertise. This paper describes the methods and software engineering philosophy behind this new tool and provides the results of validation experiments performed in the context of an ongoing child autism neuroimaging study. The validation establishes SNAP intrarater and interrater reliability and overlap error statistics for the caudate nucleus and finds that SNAP is a highly reliable and efficient alternative to manual tracing. Analogous results for lateral ventricle segmentation are provided.},
+	Author = {Yushkevich, Paul A and Piven, Joseph and Hazlett, Heather Cody and Smith, Rachel Gimpel and Ho, Sean and Gee, James C and Gerig, Guido},
+	Date-Added = {2015-09-21 19:41:58 +0000},
+	Date-Modified = {2015-09-21 19:41:58 +0000},
+	Doi = {10.1016/j.neuroimage.2006.01.015},
+	Journal = {Neuroimage},
+	Journal-Full = {NeuroImage},
+	Mesh = {Brain; Caudate Nucleus; Dominance, Cerebral; Humans; Image Processing, Computer-Assisted; Imaging, Three-Dimensional; Magnetic Resonance Imaging; Mathematical Computing; Software; Software Validation; User-Computer Interface},
+	Month = {Jul},
+	Number = {3},
+	Pages = {1116-28},
+	Pmid = {16545965},
+	Pst = {ppublish},
+	Title = {User-guided 3D active contour segmentation of anatomical structures: significantly improved efficiency and reliability},
+	Volume = {31},
+	Year = {2006},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.neuroimage.2006.01.015}}
 
 @article{Boyes:2008aa,
 	Abstract = {Measures of structural brain change based on longitudinal MR imaging are increasingly important but can be degraded by intensity non-uniformity. This non-uniformity can be more pronounced at higher field strengths, or when using multichannel receiver coils. We assessed the ability of the non-parametric non-uniform intensity normalization (N3) technique to correct non-uniformity in 72 volumetric brain MR scans from the preparatory phase of the Alzheimer's Disease Neuroimaging Initiative (ADNI). Normal elderly subjects (n=18) were scanned on different 3-T scanners with a multichannel phased array receiver coil at baseline, using magnetization prepared rapid gradient echo (MP-RAGE) and spoiled gradient echo (SPGR) pulse sequences, and again 2 weeks later. When applying N3, we used five brain masks of varying accuracy and four spline smoothing distances (d=50, 100, 150 and 200 mm) to ascertain which combination of parameters optimally reduces the non-uniformity. We used the normalized white matter intensity variance (standard deviation/mean) to ascertain quantitatively the correction for a single scan; we used the variance of the normalized difference image to assess quantitatively the consistency of the correction over time from registered scan pairs. Our results showed statistically significant (p<0.01) improvement in uniformity for individual scans and reduction in the normalized difference image variance when using masks that identified distinct brain tissue classes, and when using smaller spline smoothing distances (e.g., 50-100 mm) for both MP-RAGE and SPGR pulse sequences. These optimized settings may assist future large-scale studies where 3-T scanners and phased array receiver coils are used, such as ADNI, so that intensity non-uniformity does not influence the power of MR imaging to detect disease progression and the factors that influence it.},
@@ -606,7 +665,8 @@
 @webpage{MALF,
 	Date-Added = {2015-09-19 01:02:31 +0000},
 	Date-Modified = {2015-09-19 01:02:43 +0000},
-	Url = {https://masi.vuse.vanderbilt.edu/workshop2013/index.php/Main_Page}}
+	Url = {https://masi.vuse.vanderbilt.edu/workshop2013/index.php/Main_Page},
+	Bdsk-Url-1 = {https://masi.vuse.vanderbilt.edu/workshop2013/index.php/Main_Page}}
 
 @article{Yushkevich:2010aa,
 	Abstract = {We present and evaluate a new method for automatically labeling the subfields of the hippocampal formation in focal 0.4 × 0.5 × 2.0mm(3) resolution T2-weighted magnetic resonance images that can be acquired in the routine clinical setting with under 5 min scan time. The method combines multi-atlas segmentation, similarity-weighted voting, and a novel learning-based bias correction technique to achieve excellent agreement with manual segmentation. Initial partitioning of MRI slices into hippocampal 'head', 'body' and 'tail' slices is the only input required from the user, necessitated by the nature of the underlying segmentation protocol. Dice overlap between manual and automatic segmentation is above 0.87 for the larger subfields, CA1 and dentate gyrus, and is competitive with the best results for whole-hippocampus segmentation in the literature. Intraclass correlation of volume measurements in CA1 and dentate gyrus is above 0.89. Overlap in smaller hippocampal subfields is lower in magnitude (0.54 for CA2, 0.62 for CA3, 0.77 for subiculum and 0.79 for entorhinal cortex) but comparable to overlap between manual segmentations by trained human raters. These results support the feasibility of subfield-specific hippocampal morphometry in clinical studies of memory and neurodegenerative disease.},
@@ -768,7 +828,8 @@ CONCLUSION: HHe diffusion MR appears to detect the expected increase in alveolar
 @webpage{GOLD,
 	Date-Added = {2015-09-17 00:00:48 +0000},
 	Date-Modified = {2015-09-17 00:00:58 +0000},
-	Url = {http://www.goldcopd.org/Guidelines/ guidelines-resources.html}}
+	Url = {http://www.goldcopd.org/Guidelines/ guidelines-resources.html},
+	Bdsk-Url-1 = {http://www.goldcopd.org/Guidelines/%20guidelines-resources.html}}
 
 @article{Miller:2005ab,
 	Author = {Miller, M R and Hankinson, J and Brusasco, V and Burgos, F and Casaburi, R and Coates, A and Crapo, R and Enright, P and van der Grinten, C P M and Gustafsson, P and Jensen, R and Johnson, D C and MacIntyre, N and McKay, R and Navajas, D and Pedersen, O F and Pellegrino, R and Viegi, G and Wanger, J and {ATS/ERS Task Force}},

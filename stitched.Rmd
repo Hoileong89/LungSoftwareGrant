@@ -608,6 +608,10 @@ addition to avoiding research redundancy. It is also beneficial in that the enti
 community participates in the vetting of the software library.
 
 
+
+
+
+
 <!--
 __Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
@@ -640,6 +644,33 @@ as their combinations [@Ginneken:2010aa].  This competition included entries fro
 academic institutions as well as a system from Philips (although, to our knowledge, none
 are available for public use).
 -->
+
+### 3(c.1.4) ITK-SNAP
+
+Project investigator Paul Yushkevich leads the development of ITK-SNAP [@Yushkevich:2006aa], a multi-platform
+open-source tool for interactive user-guided medical image segmentation. ITK-SNAP provides
+an effective combination of semi-automatic segmentation functionality based on active
+contours [@Caselles:1997aa;@Zhu:1996aa] and manual delineation functionality, put together into a compact and
+easy-to-learn graphical user interface. ITK-SNAP sup- ports segmentation of multiple
+volumetric imaging modalities, species, and anatomical regions, without bias to any
+particular problem domain. Compared to other, larger open-source image analysis tools,
+ITK-SNAP design focuses specifically on the problem of image segmentation, and extraneous
+or unrelated features are kept to a minimum. The design also emphasizes interaction and
+ease of use, with the bulk of the development effort dedi- cated to the user interface.
+ITK-SNAP has thousands of users (there have been over 2000 downloads per month in the
+last year), and our 2006 paper on ITK-SNAP [@Yushkevich:2006aa] has been cited over 1400 times (Google
+Scholar) in the context of various biomedical domains. In recent years, ITK-SNAP
+development and maintenance were funded by grant 5R01 EB014346, and under this grant,
+powerful new functionality for registration was developed. ITK-SNAP will be used in this project for manual labeling
+of the proposed brain atlases; it is already used for this purpose by many investigators,
+including our partners at Duke CIVM and the Allen Institute annotation team responsible
+for labeling its new Common Coordinate Framework.
+ Most crucially, we believe that our track record with ITK-SNAP as
+well as ANTs demonstrates our team’s commitment to producing high-quality research
+software and making it accessible to the wider research community through open-source
+practices, intuitive user interfaces, and outreach efforts. These strengths of the team
+will be applied to the software and data developed in the course of this project.
+
 
 
 
