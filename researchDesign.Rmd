@@ -463,7 +463,18 @@ will be applied to the software and data developed in the course of this project
 
 ### 3(c.3) __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and 3He) for public use.
 
-### 3(c.4) __Specific Aim 3.__ Evaluate and disseminate multiple complete studies with input data from multiple investigators to showcase the utility of the tools and data provided with this proposal.
+
+C.3.7. Software engineering. Both ANTs and ITK-SNAP development utilizes open-source
+software engineering best practices, such as the use of Git version management software
+for collaborative development and easy branching and merging; use of a centralized repository
+(SourceForge) for code, executable and data sharing; use of the CMake/CTest/CDash suite for
+cross-platform development, testing and automatic builds. Virtual machines with different
+versions of Windows, MacOS and Linux operating systems generate nightly builds and execute
+test code, uploading a binary to the central SourceForge repository. ANTs and ITK-SNAP are
+documented through video and text tutorials, housed online on dedicated websites [@ANTsWebsite;@SnapWebsite].
+A similar infrastructure will be developed for the software resources proposed in Aim 1.
+
+### 3(c.4) __Specific Aim 3.__ Evaluate multiple complete studies with input data from multiple investigators to showcase the utility of the tools and data provided with this proposal.
 
 ### Anticipated difficulties
 Signal intensity in the lungs is poor in areas of low ventilation. COPD and asthma are
