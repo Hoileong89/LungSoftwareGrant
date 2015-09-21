@@ -222,8 +222,9 @@ but will also provide a reproducible mechanism for using the tools created with 
 ### 3(c.1.1) Generic ANTs core tools for image analysis and processing
 
 Many of the core programs comprising portions of the proposed pulmonary software framework
-have been created and made available within ANTs.  However, as mentioned earlier, these programs have more
-general application and require pulmonary-specific tuning for the pipelines targeted by
+have been created and made available within ANTs (and either simultaneously or subsequently
+made available in ITK).  However, as mentioned earlier, these programs have more
+general application and require pulmonary-specific tuning for the tasks targeted by
 this proposal.  The following list comprises these core software tools for
 tuning, subsequent extensions, documentation, tutorial generation, and the creation of
 easy-to-use bash scripts for large-scale processing of pulmonary imaging data:
@@ -320,8 +321,8 @@ was proposed in [@Manjon:2010aa] which we implemented in ANTs.  This filter
 performs well and is also relatively
 fast.
 
-The previously described core tools, as well as several others, have been part of ANTs
-development efforts for the past decade.  And it was precisely the deficiency of publicly
+The previously described core tools, as well as several others, have been part of ANTs and
+ITK development efforts for more than a decade.  And it was precisely the deficiency of publicly
 available tools within the neuroscience community that motivated the inception and
 continued development of ANTs.  As a result, our team is well-recognized for our many
 open-source contributions including seminal contributions to the
@@ -410,85 +411,36 @@ interfaces for lung-specific normalization tasks.}
 
 
 Analogously, several algorithmic categories exist for lung image analysis which, as we have
-stated previously, do not exist in any comprehensive, publicly available package.  An
-extensive survey concentrating on the years 1999–2004 is given in [@Sluimer:2006aa] which
-covers computer
-aided diagnosis of lung disease and lung cancer in CT (i.e., detection and tracking of
+stated previously, do not exist in any comprehensive, publicly available package.  This is
+in spite of the fact that new algorithms for lung image analysis are frequently reported
+in the literature.   An extensive survey concentrating on the years 1999–2004 is given in
+[@Sluimer:2006aa] which
+covers computer-aided diagnosis of lung disease and lung cancer in CT (i.e., detection and
+tracking of
 pulmonary nodules) and provides an overview of the many relevant segmentation methods for
 pulmonary structures. Although many algorithms existed at the time, continued technical
-development has only increased the number of available algorithms.  However, despite the
+development has only increased the number of available algorithms.    However, despite the
 continued _reporting_ of pulmonary image analysis algorithms, there is no corresponding
-increase in algorithmic _availability_. The following is a small sampling of more recently
-reported techniques for CT analysis:
+increase in algorithmic _availability_.
 
-* whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa])
+_A primary assumption for this proposal is that, through extension and continued development
+of ANTs and ITK functionality, we can make a significant impact for the pulmonary imaging
+research community in both basic science and clinical workflows by developing lung-specific
+algorithms which are easy to use as we have done for the neuroimaging community._  The
+following is a small sampling of more recently reported techniques for CT analysis that
+would be incorporated into ITK-Lung:
+
+* whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa]),
 * bronchial structure extraction (e.g., [@Zheng:2007aa;@Nakamura:2008aa] and the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
 * vasculature segmentation (e.g., [@Agam:2005aa;@Korfiatis:2011aa]),
 * lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]),
 * feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]), and
-* nodule detection (e.g., [@Messay:2010aa;] and the many submissions to the Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD Conference of SPIE Medical Imaging [@Ginneken:2010aa]).
+* nodule detection (e.g., [@Messay:2010aa] and the many submissions to the Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD Conference of SPIE Medical Imaging [@Ginneken:2010aa]).
 
-Since this list is restricted to CT image analysis, inclusion of additional techniques
-specific to other modalities will have additional benefit.  For example, ventilation-based
-segmentation for analysis of ventilation lung imaging (e.g., [@Tustison:2011aa] which was
-implemented within the ANTs framework) will also have significant impact in a comprehensive
-lung image analysis suite.  Since most of the tools that have been developed within the
-ANTs framework have generic applicability, crucial to the development of our proposed toolset
-will be domain-specific experience.  For example, although ANTs performance in brain
-registration has been independently evaluated and found to be of relatively high quality
-[Klein2009], tailoring our registration tool in the EMPIRE10 challenge (Evaluation of Methods
-for Pulmonary Image REgistration 2010) required significant empirically-based tuning.  In
-addition, new innovations in diffeomorphic registration technology has led to a Symmetric
-Normalization B-spline variant which has demonstrated accurate normalizations [@Tustison:2013ac],
-and transformations which are particularly well-suited for pulmonary data [@Tustison:2015aa].
-
-
-
-
-
-
-
-
-
-
-
-
-
-Although the template
-construction algorithm described in [@Avants:2010aa] was applied to T1-weighted brain data
-(with the extension of multimodal data described in [@Tustison:2014aa]), it is sufficiently
-generic such that it can be applied to pulmonary data.
-
-
-
-For example, in Fig. 4, we illustrate the major processing components of a recent study
-analyzing local changes based on a pulmonary treatment plan [@Tustison:2013ad].  This
-study employed several of the tools we are proposing for inclusion in the specified aims.
-The firs major component is the construction of a single-subject 3He/proton MRI
-template for all five imaging time points.  This step generates the statistical coordinate
-system for the voxelwise regression analysis of the normalized intensities to determine
-correlation with expected treatment effects.
-
-![Voxelwise regression analysis to determine image-based response to treatment.  First,
-a multi-modal, single-subject template is created to bring all time point images to
-the same coordinate system.  4-D segmentation is performed on the longitudinal time series
-of 3-D image volumes.  Treatment
-effects are expected to follow the simplified treatment hypothesis illustrated with the
-dashed blue line in the plot on the right.  To explore how the longitudinal change in expected
-ventilation follows this treatment hypothesis with image data, we smooth the aligned expected
-ventilation maps (to account for potential voxelwise misalignments) and then quantify how the
-voxelwise intensities regress with the simplified treatment hypothesis.  This quantification
-is visualized using the correlation maps depicted in the template space (top right).  Positive
-correlations with the expected treatment effect are rendered in orange whereas negative correlations
-are rendered in blue.](Figs/longitudinalStudy.png)
-
-
-
-
-
-
-
-
+Although this list is restricted to CT image analysis, inclusion of additional techniques
+specific to other modalities has additional benefit and are included in
+this proposal.  Using ANTs core tools, we have produced several lung-specific algorithms
+for core tasks:
 
 __Atlas-based lung segmentation.__  Identification of anatomical structure in MRI is often a
 crucial preprocessing step for quantification of morphological features or ventilation
@@ -575,19 +527,47 @@ conditions following the delay period.](Figs/prePostAlbuterol.png)
 
 
 
+<!--
+Crucial to the development of ITK-Lung will be domain-specific experience.  For example,
+although ANTs performance in brain
+registration has been independently evaluated and found to be of relatively high quality
+[@Klein:2009aa], tailoring our registration tool to achieve top performance levels for the
+EMPIRE10 challenge (Evaluation of Methods
+for Pulmonary Image REgistration 2010) required significant empirically-based tuning.  In
+addition, new innovations in diffeomorphic registration technology has led to a Symmetric
+Normalization B-spline variant which has demonstrated accurate normalizations
+[@Tustison:2013ac]
+and transformations which are particularly well-suited for pulmonary data [@Tustison:2012aa].
+-->
 
+__Multi-modal lung template construction.__
+Additionally, although the template construction algorithm described in [@Avants:2010aa] is,
+as pointed out earlier, frequently applied to T1-weighted brain data,
+it is sufficiently generic such that it can also be applied
+to pulmonary data.  Also, new innovations in diffeomorphic registration technology has led to a Symmetric
+Normalization B-spline variant which has demonstrated accurate normalizations
+[@Tustison:2013ac] and transformations which are particularly well-suited for pulmonary data [@Tustison:2012aa].
 
+In Figure 4, we illustrate the major processing components of a recent study
+analyzing local changes based on a pulmonary treatment plan [@Tustison:2013ad].  This
+study employed several of the tools we are proposing for inclusion in the specified aims.
+The first major component is the construction of a single-subject 3He/proton MRI
+template for all five imaging time points.  This step generates the statistical coordinate
+system for the voxelwise regression analysis of the normalized intensities to determine
+correlation with expected treatment effects.
 
-
-
-
-
-
-
-
-
-### 3(c.2) Specific Aim 1:   To develop a set of open-source software tools for CT, proton, and 3He pulmonary computational analysis.
-
+![Voxelwise regression analysis to determine image-based response to treatment.  First,
+a multi-modal, single-subject template is created to bring all time point images to
+the same coordinate system.  4-D segmentation is performed on the longitudinal time series
+of 3-D image volumes.  Treatment
+effects are expected to follow the simplified treatment hypothesis illustrated with the
+dashed blue line in the plot on the right.  To explore how the longitudinal change in expected
+ventilation follows this treatment hypothesis with image data, we smooth the aligned expected
+ventilation maps (to account for potential voxelwise misalignments) and then quantify how the
+voxelwise intensities regress with the simplified treatment hypothesis.  This quantification
+is visualized using the correlation maps depicted in the template space (top right).  Positive
+correlations with the expected treatment effect are rendered in orange whereas negative correlations
+are rendered in blue.](Figs/longitudinalStudy.png)
 
 __Quantitative CT indices.__  Imaging biomarkers for characterizing emphysema in CT have
 have been well researched, although there are ample opportunities to refine these methods
@@ -620,12 +600,15 @@ Table 1 provides an overview of these types of
 discriminative measurements that can be used for CT and 3He lung assessment.
 We have already
 implemented many of these image features and have contributed the result of our work to
-the Insight Toolkit (ITK) of the National Institutes of Health (e.g., [@Tustison:2008aa;@Tustison:2009aa]). As an
+the Insight Toolkit (ITK) of the National Institutes of Health (e.g., [@Tustison:2008aa;@Tustison:2009aa]).
+As an
 open-source repository for medical image analysis algorithms, contribution of our work
 to the ITK allows researchers full access to the latest image analysis algorithms in
 addition to avoiding research redundancy. It is also beneficial in that the entire ITK
 community participates in the vetting of the software library.
 
+
+<!--
 __Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
 for disease characterization.  Additionally, there are other potential uses motivating
@@ -647,31 +630,41 @@ CT image.  The airways are segmented in the individual subject space.  After ide
 of the ventilation defect of interest, we can automatically determine the bronchiole
 pathway from the trachea to the defect.](Figs/airways.png)
 
-__Nodule detection.__
+__Nodule detection.__ CT is used for screening of lung cancers (i.e., pulmonary nodules)
+which currently requires human intervention for the laborious and tedius task of manual
+scanning.  Automated detection methods could potentially save much time and effort which
+has inspired much research literature on the topic including several commercial systems
+and specialized visualization hardware for facilitating detection.  In 2009, a nodule
+detection competition was held for comparing performance of individual algorithms as well
+as their combinations [@Ginneken:2010aa].  This competition included entries from both
+academic institutions as well as a system from Philips (although, to our knowledge, none
+are available for public use).
+-->
 
 
 
+### 3(c.2) __Specific Aim 1:__   To develop a set of open-source software tools for CT, proton, and 3He pulmonary computational analysis.
 
 
-__Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and He3) for public use.
 
-__Specific Aim 3.__ Evaluate and disseminate multiple complete studies with input data from
-multiple investigators to showcase the utility of the tools and data provided with this proposal.
+### 3(c.3) __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and 3He) for public use.
+
+### 3(c.4) __Specific Aim 3.__ Evaluate and disseminate multiple complete studies with input data from multiple investigators to showcase the utility of the tools and data provided with this proposal.
 
 ### Anticipated difficulties
 Signal intensity in the lungs is poor in areas of low ventilation. COPD and asthma are
-obstructive lung diseases which exhibit focal areas of decreased signal intensity on 3HeMRI
+obstructive lung diseases which exhibit focal areas of decreased signal intensity on 3He MRI
 which are thought to correspond to areas of reduced ventilation. These ventilation defects
 severely inhibit our ability to detect the lung boundaries for proper segmentation. Also,
 most of the COPD and asthmatic patients will have ventilation defects with the moderate
 asthmatics having greater than 1 defect per slice also negatively affecting boundary
 delineation. Note that there are similar issues for CT images of severe pathologies.
-However, given the shape and intensity prior statistics contained by our 3HeMRI and CT
+However, given the shape and intensity prior statistics contained by our 3He MRI and CT
 lung templates, it is expected that the templates, in combination with our proposed
 segmentation algorithms, will be sufficient to provide a good initialization for subsequent
 manual segmentation if they do not yield an adequate segmentation result. The CT data,
 which provides excellent contrast between the lung and chest wall, can also be used to
-inform the 3HeMRI segmentation.
+inform the 3He MRI segmentation.
 
 
 
