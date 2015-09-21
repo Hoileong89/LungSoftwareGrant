@@ -464,7 +464,7 @@ will be applied to the software and data developed in the course of this project
 ### 3(c.3) __Specific Aim 2.__  To provide multiple sets of multi-modal annotated lung data (CT, proton, and 3He) for public use.
 
 
-C.3.7. Software engineering. Both ANTs and ITK-SNAP development utilizes open-source
+__3(c.3.7) Software engineering.__ Both ANTs and ITK-SNAP development utilizes open-source
 software engineering best practices, such as the use of Git version management software
 for collaborative development and easy branching and merging; use of a centralized repository
 (SourceForge) for code, executable and data sharing; use of the CMake/CTest/CDash suite for
