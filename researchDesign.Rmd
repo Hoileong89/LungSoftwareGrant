@@ -95,9 +95,9 @@ instances of unlabeled data. Image registration is used to align the atlas libra
 (images + segmentations) to a common space. A statistical model is then used to combine
 the "guesses" from all the normalized atlas labels to provide a "best guess" estimate of
 the target labeling. Several such algorithms have been developed and much effort has been
-devoted to determining relative performance levels. See, for example, the recent MICCAI 2012
+devoted to determining relative performance levels---see, for example, the recent MICCAI 2012
 Grand Challenge and Workshop on Multi-Atlas Labeling).  The joint fusion (JLF) algorithm of
-[@Wang:2013aa;@Wang:2013ab] is one of the top performing JLF algorithms. JLF is capable
+[@Wang:2013aa;@Wang:2013ab] from our group is one of the top performing JLF algorithms. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists [@Yushkevich:2010aa].
 It has proven its effectiveness in lung [@Tustison:2015aa], cardiac data [@MALF],
 the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF].
@@ -126,8 +126,8 @@ REgistration 2010 (EMPIRE10) challenge [@Murphy:2011aa] where it was the top per
 for the benchmarks
 used to assess lung registration accuracy and biological plausibility of the inferred
 transform (i.e., boundary alignment, fissure alignment, landmark correspondence, and
-displacement field topology).  Even though the competition has continued to the present,
-SyN has remained top-ranked.
+displacement field topology).  The competition has continued to the present and
+SyN has remained the top-ranked algorithm.
 * The joint label fusion algorithm of [@Wang:2012aa;@Wang:2013aa] (coupled with SyN)
   was top-ranked in the MICCAI 2012 challenge for labeled brain data [@Landman2012]
   and in 2013 for labeled canine hind leg data [@Asman2013].
@@ -136,7 +136,7 @@ the Brain Tumor segmentation (BRATS) competition at MICCAI 2013 [@Tustison:2014a
 * A B-spline variant of the SyN algorithm [@Tustison:2013ac] won the best paper award at the
 STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 
-### 3(c.1.2) Neuroimaging ANTs use as a model for the pulmonary community
+### 3(c.1.2) Neuroimaging with ANTs as a model for the pulmonary community
 
 ANTs takes advantage of
 the mature Insight ToolKit in providing an optimal software framework for building scripts

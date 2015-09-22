@@ -441,13 +441,13 @@ segmentations) to a common space. A statistical model is then used to
 combine the ``guesses'' from all the normalized atlas labels to provide
 a ``best guess'' estimate of the target labeling. Several such
 algorithms have been developed and much effort has been devoted to
-determining relative performance levels. See, for example, the recent
+determining relative performance levels---see, for example, the recent
 MICCAI 2012 Grand Challenge and Workshop on Multi-Atlas Labeling). The
-joint fusion (JLF) algorithm of {[}40, 41{]} is one of the top
-performing JLF algorithms. JLF is capable of predicting anatomical
-labels with accuracy that rivals expert anatomists {[}42{]}. It has
-proven its effectiveness in lung {[}43{]}, cardiac data {[}44{]}, the
-human brain {[}12{]}, and in multiple modality canine MRI {[}44{]}.
+joint fusion (JLF) algorithm of {[}40, 41{]} from our group is one of
+the top performing JLF algorithms. JLF is capable of predicting
+anatomical labels with accuracy that rivals expert anatomists {[}42{]}.
+It has proven its effectiveness in lung {[}43{]}, cardiac data {[}44{]},
+the human brain {[}12{]}, and in multiple modality canine MRI {[}44{]}.
 
 \textbf{Spatially adaptive denoising.} Patch-based denoising is critical
 for data ``cleaning'' prior to subsequent processing such as
@@ -480,8 +480,8 @@ elements of the ANTs toolkit:
   performer for the benchmarks used to assess lung registration accuracy
   and biological plausibility of the inferred transform (i.e., boundary
   alignment, fissure alignment, landmark correspondence, and
-  displacement field topology). Even though the competition has
-  continued to the present, SyN has remained top-ranked.
+  displacement field topology). The competition has continued to the
+  present and SyN has remained the top-ranked algorithm.
 \item
   The joint label fusion algorithm of {[}40, 48{]} (coupled with SyN)
   was top-ranked in the MICCAI 2012 challenge for labeled brain data
@@ -496,9 +496,9 @@ elements of the ANTs toolkit:
   {[}51{]}.
 \end{itemize}
 
-\subsubsection{3(c.1.2) Neuroimaging ANTs use as a model for the
+\subsubsection{3(c.1.2) Neuroimaging with ANTs as a model for the
 pulmonary
-community}\label{c.1.2-neuroimaging-ants-use-as-a-model-for-the-pulmonary-community}
+community}\label{c.1.2-neuroimaging-with-ants-as-a-model-for-the-pulmonary-community}
 
 ANTs takes advantage of the mature Insight ToolKit in providing an
 optimal software framework for building scripts and programs
@@ -606,19 +606,20 @@ open-source software tools for CT, proton, and 3He pulmonary
 computational
 analysis.}\label{c.2-specific-aim-1-to-develop-a-set-of-open-source-software-tools-for-ct-proton-and-3he-pulmonary-computational-analysis.}
 
-Analogously, several algorithmic categories exist for lung image
-analysis which, as we have stated previously, do not exist in any
-comprehensive, publicly available package. This is in spite of the fact
-that new algorithms for lung image analysis are frequently reported in
-the literature. An extensive survey concentrating on the years
-1999--2004 is given in {[}59{]} which covers computer-aided diagnosis of
-lung disease and lung cancer in CT (i.e., detection and tracking of
-pulmonary nodules) and provides an overview of the many relevant
-segmentation methods for pulmonary structures. Although many algorithms
-existed at the time, continued technical development has only increased
-the number of available algorithms. However, despite the continued
-\emph{reporting} of pulmonary image analysis algorithms, there is no
-corresponding increase in algorithmic \emph{availability}.
+Analogous to the neuroimaging tasks described earlier, several
+algorithmic categories exist for lung image analysis which, as we have
+stated previously, do not exist in any comprehensive, publicly available
+package. This is in spite of the fact that new algorithms for lung image
+analysis are frequently reported in the literature. An extensive survey
+concentrating on the years 1999--2004 is given in {[}59{]} which covers
+computer-aided diagnosis of lung disease and lung cancer in CT (i.e.,
+detection and tracking of pulmonary nodules) and provides an overview of
+the many relevant segmentation methods for pulmonary structures.
+Although many algorithms existed at the time, continued technical
+development has only increased the number of available algorithms.
+However, despite the continued \emph{reporting} of pulmonary image
+analysis algorithms, there is no corresponding increase in algorithmic
+\emph{availability}.
 
 \emph{A primary assumption for this proposal is that, through extension
 and continued development of ANTs and ITK functionality, we can make a
