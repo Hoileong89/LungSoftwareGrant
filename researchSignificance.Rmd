@@ -1,10 +1,5 @@
 
-\begin{center}
-{\LARGE \bf ITK-Lung:  A Software Framework for Lung Image Processing and Analysis}
-\end{center}
-
-
-# Research Strategy
+# 3 Research Strategy
 
 ## __3(a) Significance__
 
@@ -12,8 +7,8 @@
 ### 3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation
 -->
 
-The increased utilization of imaging for both research and clinical purposes has  furthered
-the demand for quantitative image analysis techniques.  The use of these computational
+__3(a.1.1) The increased utilization of imaging for both research and clinical purposes has  furthered
+the demand for quantitative image analysis techniques.__  The use of these computational
 techniques are motivated by the need for less subjectivity and more standardization in
 medical image interpretation, increased speed and automation in diagnosis, and greater
 robustness and accuracy for determining biological correlates with imaging findings.
@@ -26,8 +21,8 @@ Additionally, the exciting possibilities associated with "big data" and the pote
 for improvement in individualized, evidence-based medicine has also increased the need
 for sophisticated data transformation and machine learning techniques.
 
-Well-vetted and publicly available software is a significant benefit
-to targeted research communities.  For example, the neuroscience community has greatly
+__3(a.1.2) Well-vetted and publicly available software is a significant benefit
+to targeted research communities.__  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], and the
 Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa].  Performing a pubmed query for any one of
@@ -67,10 +62,10 @@ Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provi
 capabilities for a range of generic image processing tasks.  However,
 tailored software packages for certain application domains (e.g., lung image analysis) are not
 available despite the vast number of algorithms that have been proposed in the literature.
-Note that the goals of this proposal would
+It is important to note that the goals of this proposal would
 significantly support the National Library of Medicine’s own open-source directives in that
 all software would be developed using the established Insight ToolKit’s coding and testing
-standards with the eventual idea that much (if not all) of the actual code would be contributed
+standards with the specific objective that all project code would be contributed
 for inclusion in future versions of the Insight ToolKit as we have done in the past.
 It should also be noted that open-source software, in general, has documented benefits
 within the targeted communities for which it is developed and supported.  In addition to

@@ -1,5 +1,8 @@
+\begin{center}
+{\LARGE \bf ITK-Lung:  A Software Framework for Lung Image Processing and Analysis}
+\end{center}
 
-# Specific Aims
+# 2 Specific Aims
 
 The development and proliferation of quantitative image analysis methods have accelerated
 research efforts and are having an increasingly significant impact in modern clinical
@@ -28,14 +31,14 @@ researchers or is implemented in a limited manner (i.e., strictly as proof-of-co
 software).  Frequently, crucial parameter choices are omitted in the corresponding
 publication(s) which makes external implementations difficult.  In addition, the data used
 to showcase the proposed methodologies are often private and actual data visualization is
-limited to carefully selected snapshots for publication (i.e., advertisement) purposes
+limited to carefully selected snapshots for publication purposes
 which might not be representative of algorithmic performance.  Finally, many of these
 analysis methods are patented and/or integrated into proprietary commercial software
 packages which severely limits accessibility to researchers.
 
 As a corrective alternative, this proposal will provide an open-source software toolkit
-targeted for pulmonary research.  As principal developers of the popular, open-source ANTs
-(Advanced Normalization Tools) package, we have extensive experience in the development of
+targeted for pulmonary research.  As principal developers of the popular, open-source
+ANTS, ITK-SNAP and ITK packages, we have extensive experience in the development of
 well-written software that has gained much traction in the neuroscience community and propose
 to make a similar impact in the pulmonary community with this proposal.  Specifically,
 we plan to provide methods for core pulmonary image analysis tasks across multiple modalities, many
@@ -43,7 +46,7 @@ of which we have proposed previously in past publications.  These basic tasks in
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
 functional and structural lung image segmentation, and computation of quantitative image
 indices as potential imaging biomarkers.  In addition to the software, we will
-provide additional data, documentation, and tutorial materials consistent with open-science
+provide scripts, documentation, and tutorial materials consistent with open-science
 principles.   Formally, this proposal is defined by the following specific aims:
 
 * __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
@@ -51,22 +54,15 @@ pulmonary computational analysis.__  These open-source software tools will speci
 target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration for inferring pulmonary kinematics, ventilation-based segmentation,
 lung and lobe estimation, airway segmentation, and calculation of clinical indices for
-characterization of lung development and pathology.  To maximize usability, much (if not all)
-of the actual code will be developed and distributed within the  Insight Toolkit of the
+characterization of lung development and pathology.  To maximize usability
+code will be developed and distributed within the  Insight Toolkit of the
 National Library of Medicine.
-* __Specific Aim 2:__  __Provide multiple sets of multi-modal annotated lung data (CT, proton,
-and He3) for unrestricted public use.__  In addition to the public unavailability of the
-algorithms used to produce the results discussed in certain publications, the input and output
-data is also typically not available.  Such availability would be invaluable to other
-researchers in the community for appropriation for their own purposes including algorithmic
-performance assessment and running the proposed prior-based methods requiring annotated
-input data.
+* __Specific Aim 2:__
 * __Specific Aim 3:__  __Evaluate and disseminate the developed resources by leveraging
-input data from multiple partner investigators.__  This aim will evaluate and refine the
+use cases from multiple partner investigators.__  This aim will evaluate and refine the
 developed methodology within the real-world context of pulmonary research being carried out at
-various partner sites \textcolor{red}{(e.g., University of Virginia, University of Pennsylvania, \ldots,
-need to add others)}.
-We will disseminate the results of the project through open-source distribution of the software,
-data and write-ups, online user support, and conduct of hands-on training workshops.
+various partner sites.
+We will disseminate the results of the project through open-source distribution of the software
+and write-ups, online user support, and conduct of hands-on training workshops.
 
 \newpage

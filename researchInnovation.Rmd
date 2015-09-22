@@ -11,19 +11,24 @@ Many algorithms have been proposed in various technical venues but that which we
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
 for pulmonary medical image analysis, many of which have been developed by our group.
 To facilitate the usage of these algorithms, we will provide several self-contained
-online examples (complete with data).
+online examples.
 
-### 3(b.2) Publicly available multi-site data as a reproducible and didactic component
+### 3(b.2) Use case studies with leading pulmonary research scientists
 
-An additional innovative component we are proposing is the inclusion of complete study
-data and detailed instructions for generating reproducible, multimodality pulmonary studies
-using the proposed package with
-input data from several of our external collaborators and colleagues.  Specifically, we have
+An additional innovative component we are proposing is the inclusion of extensive use
+cases from leading pulmonary research scientists in various locations with different
+image acquisition protocols, equipment, etc. to ensure quality and robustness of the
+processed data.  These real-world use cases were solicited representing as broadly as
+possible the requirements of the community as well as
+the multiple modality and algorithmic variations which commonly occur.
+
+Specifically, we have
 asked several scientists and researchers who are familiar with our work to provide imaging data
 of various modalities which we will then process using the proposed toolkit.  These processed
-data will then not only be returned to the corresponding providers with detailed instructions
-on reproducing these results in their own labs but will also be provided to the public for any
-interested researcher to reproduce the results.  Given the different image acquisition sources,
+data will then be returned to the corresponding providers with detailed instructions
+on reproducing these results in their own labs.  Software and tutorial materials drawn from
+these experiences will be provided to the public for any interested researcher to
+apply to their own data.  Given the different image acquisition sources,
 this strategy should also demonstrate the robustness of our tools.
 
 Included in these analyses will be analyses of our own data.  Any clinical findings
