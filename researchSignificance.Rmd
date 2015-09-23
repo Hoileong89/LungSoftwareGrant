@@ -3,12 +3,10 @@
 
 ## __3(a) Significance__
 
-<!--
-### 3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation
--->
-
-__3(a.1.1) The increased utilization of imaging for both research and clinical purposes has  furthered
-the demand for quantitative image analysis techniques.__  The use of these computational
+__3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation.__
+The increased utilization of imaging for both research and clinical purposes has
+furthered
+the demand for quantitative image analysis techniques.  The use of these computational
 techniques are motivated by the need for less subjectivity and more standardization in
 medical image interpretation, increased speed and automation in diagnosis, and greater
 robustness and accuracy for determining biological correlates with imaging findings.
@@ -21,8 +19,9 @@ Additionally, the exciting possibilities associated with "big data" and the pote
 for improvement in individualized, evidence-based medicine has also increased the need
 for sophisticated data transformation and machine learning techniques.
 
-__3(a.1.2) Well-vetted and publicly available software is a significant benefit
-to targeted research communities.__  For example, the neuroscience community has greatly
+__3(a.2) Open-source as an essential attribute of high-impact image analysis toolkits.__
+Well-vetted and publicly available software is a significant benefit
+to targeted research communities.  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], and the
 Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa].  Performing a pubmed query for any one of
@@ -58,7 +57,8 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
           theme( legend.position = "none" )
 ```
 
-Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provide extensive algorithmic
+Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provide extensive
+algorithmic
 capabilities for a range of generic image processing tasks.  However,
 tailored software packages for certain application domains (e.g., lung image analysis) are not
 available despite the vast number of algorithms that have been proposed in the literature.

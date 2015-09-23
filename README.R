@@ -5,7 +5,9 @@ library( RISmed )
 stitchedFile <- "stitched.Rmd";
 
 rmdFiles <- c( "format.Rmd", "specificAims.Rmd",
-  "researchSignificance.Rmd", "researchInnovation.Rmd", "researchDesign.Rmd" )
+  "researchSignificance.Rmd", "researchInnovation.Rmd",
+  "researchDesignPreliminaryData.Rmd",
+  "researchDesignSpecificAims.Rmd" )
 
 for( i in 1:length( rmdFiles ) )
   {

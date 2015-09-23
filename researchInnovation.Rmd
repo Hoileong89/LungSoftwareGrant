@@ -1,7 +1,7 @@
 
 ## __3(b) Innovation__
 
-### 3(b.1) Open source pulmonary algorithmic innovation
+__3(b.1) Open-source pulmonary algorithmic innovation.__
 Given the lack of open-source solutions for pulmonary image analysis,
 the proposal goals would produce an innovative platform for performing such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit, our novel
@@ -13,8 +13,7 @@ for pulmonary medical image analysis, many of which have been developed by our g
 To facilitate the usage of these algorithms, we will provide several self-contained
 online examples.
 
-### 3(b.2) Use case studies with leading pulmonary research scientists
-
+__3(b.2) Use case studies with leading pulmonary research scientists.__
 An additional innovative component we are proposing is the inclusion of extensive use
 cases from leading pulmonary research scientists in various locations with different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the

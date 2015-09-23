@@ -6,6 +6,20 @@ output:
     keep_tex: yes
 header-includes:
    - \usepackage{booktabs}
+   - \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
+   - \linespread{0.95}
+   - \usepackage[compact]{titlesec}
+   - \titlespacing{\section}{2pt}{*0}{*0}
+   - \titlespacing{\subsection}{2pt}{*0}{*0}
+   - \titlespacing{\subsubsection}{2pt}{*0}{*0}
+   - \setlength{\parskip}{3pt}
+   - \setlength{\topsep}{0pt}
+   - \setlength{\partopsep}{0pt}
+   - \setlength{\itemsep}{0pt}
+   - \setlength{\floatsep}{0pt}
+   - \setlength{\intextsep}{10pt}
+   - \setlength{\abovecaptionskip}{2pt}
+   - \setlength{\belowcaptionskip}{2pt}
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
 fontsize: 11pt

@@ -1,5 +1,5 @@
 \begin{center}
-{\LARGE \bf ITK-Lung:  A Software Framework for Lung Image Processing and Analysis}
+{\Large \bf ITK-Lung:  A Software Framework for Lung Image Processing and Analysis}
 \end{center}
 
 # 2 Specific Aims
@@ -57,12 +57,11 @@ lung and lobe estimation, airway segmentation, and calculation of clinical indic
 characterization of lung development and pathology.  To maximize usability
 code will be developed and distributed within the  Insight Toolkit of the
 National Library of Medicine.
-* __Specific Aim 2:__
-* __Specific Aim 3:__  __Evaluate and disseminate the developed resources by leveraging
+* __Specific Aim 2:__  __Evaluate and disseminate the developed resources by leveraging
 use cases from multiple partner investigators.__  This aim will evaluate and refine the
 developed methodology within the real-world context of pulmonary research being carried out at
-various partner sites.
-We will disseminate the results of the project through open-source distribution of the software
+various partner sites.  We will disseminate the results of the evaluation through open-source
+distribution of the software
 and write-ups, online user support, and conduct of hands-on training workshops.
 
 \newpage
