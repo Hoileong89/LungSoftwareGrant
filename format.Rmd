@@ -17,7 +17,7 @@ header-includes:
    - \setlength{\partopsep}{0pt}
    - \setlength{\itemsep}{0pt}
    - \setlength{\floatsep}{0pt}
-   - \setlength{\intextsep}{10pt}
+   - \setlength{\intextsep}{2pt}
    - \setlength{\abovecaptionskip}{2pt}
    - \setlength{\belowcaptionskip}{2pt}
 bibliography: references.bib

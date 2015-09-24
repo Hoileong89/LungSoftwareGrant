@@ -19,10 +19,10 @@ easy-to-use image analysis tools.  Historically, the research and clinical commu
 have significantly benefited from the development and proliferation of imaging-related
 analysis packages, particularly those softwares which have been tailored for
 specific application domains.  Although several such established packages exist for
-neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), no such package exists for
+neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), _no such package exists for
 pulmonary imaging analysis.  The primary goal of this proposal is to develop
 a robust, open-source image analysis toolkit and dissemination platform
- specifically targeted at the pulmonary research community.
+ specifically targeted at the pulmonary research community._
 
 Although methodological research is continually being presented at conferences and
 published in various venues, the unfortunate reality is that much of this work exists
@@ -42,7 +42,7 @@ ANTS, ITK-SNAP and ITK packages, we have extensive experience in the development
 well-written software that has gained much traction in the neuroscience community and propose
 to make a similar impact in the pulmonary community with this proposal.  Specifically,
 we plan to provide methods for core pulmonary image analysis tasks across multiple modalities, many
-of which we have proposed previously in past publications.  These basic tasks include pulmonary image registration,
+of which we have proposed in past publications.  These basic tasks include pulmonary image registration,
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
 functional and structural lung image segmentation, and computation of quantitative image
 indices as potential imaging biomarkers.  In addition to the software, we will
@@ -57,8 +57,9 @@ lung and lobe estimation, airway segmentation, and calculation of clinical indic
 characterization of lung development and pathology.  To maximize usability
 code will be developed and distributed within the  Insight Toolkit of the
 National Library of Medicine.
-* __Specific Aim 2:__  __Evaluate and disseminate the developed resources by leveraging
-use cases from multiple partner investigators.__  This aim will evaluate and refine the
+* __Specific Aim 2:__  __Validate and disseminate the developed ITK-Lung resources by leveraging use
+cases from a broad network of partner investigators representing the state-of-the-science in
+lung imaging research.__  This aim will evaluate and refine the
 developed methodology within the real-world context of pulmonary research being carried out at
 various partner sites.  We will disseminate the results of the evaluation through open-source
 distribution of the software

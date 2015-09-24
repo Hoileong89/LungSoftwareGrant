@@ -4,26 +4,30 @@
 __3(b.1) Open-source pulmonary algorithmic innovation.__
 Given the lack of open-source solutions for pulmonary image analysis,
 the proposal goals would produce an innovative platform for performing such research.
-Similar to the brain-specific algorithms provided in our ANTs toolkit, our novel
-and useful proposal would include the most essential algorithms for analyzing lung
-images from different modalities including CT, 3He, and proton MRI.
-Many algorithms have been proposed in various technical venues but that which we propose
+Similar to the brain-specific algorithms provided in our ANTs toolkit, our
+ proposal would include the most essential algorithms for analyzing lung
+images from different modalities including CT, 3He, and 1H MRI.
+_Many algorithms have been proposed in various technical venues but that which we propose
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
-for pulmonary medical image analysis, many of which have been developed by our group.
-To facilitate the usage of these algorithms, we will provide several self-contained
-online examples.
+for pulmonary medical image analysis, many of which have been developed by our group._
+To facilitate the usage of these algorithms, we will provide documentation including
+self-contained online examples, tutorials, and hands-on training workshops.
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
 An additional innovative component we are proposing is the inclusion of extensive use
 cases from leading pulmonary research scientists in various locations with different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
-processed data.  These real-world use cases were solicited representing as broadly as
+processed data.  Additionally, such  use cases involving other groups
+would highlight existing deficiencies in algorithmic functionality in our proposal
+which would then be remedied by additional development efforts.
+These real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
 
-Specifically, we have
-asked several scientists and researchers who are familiar with our work to provide imaging data
-of various modalities which we will then process using the proposed toolkit.  These processed
+We have
+asked several leading pulmonary research groups who are familiar with our work to provide
+study-specific imaging data of various modalities which we will then process using the
+proposed toolkit.  These processed
 data will then be returned to the corresponding providers with detailed instructions
 on reproducing these results in their own labs.  Software and tutorial materials drawn from
 these experiences will be provided to the public for any interested researcher to
@@ -32,8 +36,7 @@ this strategy should also demonstrate the robustness of our tools.
 
 Included in these analyses will be analyses of our own data.  Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
-provide all image
-data and the quantitative analysis scripts as a companion release to accompany the paper
+provide all the quantitative analysis scripts as a companion release for the paper
 (e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
  Such a comprehensive clinical
 investigation using these tools will not only provide insight into the specifics of certain

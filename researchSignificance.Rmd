@@ -7,7 +7,7 @@ __3(a.1) The importance of pulmonary image analysis tools for research and clini
 The increased utilization of imaging for both research and clinical purposes has
 furthered
 the demand for quantitative image analysis techniques.  The use of these computational
-techniques are motivated by the need for less subjectivity and more standardization in
+techniques is motivated by the need for less subjectivity and more standardization in
 medical image interpretation, increased speed and automation in diagnosis, and greater
 robustness and accuracy for determining biological correlates with imaging findings.
 For example, in the area of pharmaceutical development and testing, imaging biomarkers are crucial.
@@ -23,8 +23,8 @@ __3(a.2) Open-source as an essential attribute of high-impact image analysis too
 Well-vetted and publicly available software is a significant benefit
 to targeted research communities.  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
-Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], and the
-Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa].  Performing a pubmed query for any one of
+Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], the
+Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa], and several others.  Performing a pubmed query for any one of
 these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
 such packages and the research studies that are produced as a result.  However, despite the
 absolute number of articles produced using such software and the year-by-year usage increase,
@@ -73,7 +73,7 @@ the increase in research output illustrated earlier, open-source permits student
 researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
 This, in turn, provides motivation for user-based support including potential contributions
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
-cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore, it should
-be highlighted that open-source development and distribution within a large, and well-invested
+cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore,
+ open-source development and distribution within a large, and well-invested
 community (such as ITK) takes advantage of Linus's law, i.e., ``given enough eyeballs, all bugs are
 shallow," for producing robust software.
