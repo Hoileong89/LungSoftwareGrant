@@ -1,0 +1,58 @@
+
+# Significance
+
+##  E. A. Hoffman et al., JMRI 2015.
+
+> "More widespread use of all [pulmonary] imaging biomarkers has been limited for a number
+> of key reasons, including:
+>        1) lack of support to harmonize image acquisition software;
+>      __2) universally available image analysis software;__
+>        3) regulatory boundaries for emerging approaches; and
+>        4) historically weak links between respiratory and radiology clinical programs."
+
+## What does the neuroimaging community offer?
+
+Great packages such as:
+
+* AFNI
+* FSL
+* FreeSurfer
+* SPM
+
+## Public & robust software $\longrightarrow$ research output
+
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6}
+years <- 2005:2014
+
+numberOfAbstractsPerYear <- rep( 0, length( years ) )
+for( i in 1:length( years ) )
+  {
+  cat( "Doing year", years[i], "\n" )
+  query = "afni OR fsl OR freesurfer OR (statistical AND parametric AND mapping)"
+  res <- EUtilsSummary( query, db = "pubmed", retmax = 5000, mindate = as.character( years[i] ), maxdate = as.character( years[i] ) )
+  summary( res )
+  fetch <- EUtilsGet( res )
+  abstracts <- AbstractText( fetch )
+  numberOfAbstractsPerYear[i] <- length( abstracts )
+  }
+
+plotDataFrame <- data.frame( Year = as.factor( years ), NumberOfAbstracts = numberOfAbstractsPerYear )
+ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = NumberOfAbstracts ) ) +
+          geom_bar( stat = "identity" ) +
+          scale_fill_gradient( low = "#01256e", high = "#6d0e0e" ) +
+          ylab( "Number of articles" ) +
+          xlab( "Publication year" ) +
+          theme( legend.position = "none" )
+```
+
+## Benefits of open-source:
+
+* Motivates community-based support:
+     * bug fixes (_"Given enough eyeballs, all bugs are shallow."_),
+     * new features,
+     * reproducibility verification, and
+     * community tech support.
+* Learn directly from journal manuscripts *and* implementations.
+* Tremendous cost-savings.
+
+

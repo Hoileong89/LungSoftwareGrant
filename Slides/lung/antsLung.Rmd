@@ -1,0 +1,36 @@
+
+# ANTs for pulmonary imaging
+
+## ANTs core tools for lung image analysis
+
+![](./lung/figures/coreANtsToolsLung.png)
+
+## Functional ventilation
+
+![](./lung/figures/prePostAlbuterol.png)
+
+## Lung and lobe estimation
+
+![](./lung/figures/lungEstimation.png)
+
+## Good results on 1H MRI
+
+|     |  __Mean__   |   __SD__   | __Median__ |
+|:----|:-------:|:------:|:------:|
+| __Left lung__   |  0.963 (0.974)  |  0.013 (0.097)  |  0.964 (0.992) |
+| __Right lung__  |  0.968 (0.972)  |  0.012 (0.135)  |  0.970 (0.996) |
+| __Left upper__  |  0.882 (0.922)  |  0.059 (0.163)  |  0.894 (0.978) |
+| __Left lower__  |  0.868 (0.885)  |  0.06 (0.229)   |  0.892 (0.964) |
+| __Right upper__ |  0.852 (0.921)  |  0.067 (0.088)  |  0.875 (0.96)  |
+| __Right middle__|  0.657 (0.765)  |  0.130 (0.299)  |  0.696 (0.886) |
+| __Right lower__ |  0.873 (0.914)  |  0.063 (0.176)  |  0.900 (0.968) |
+
+(*) Comparison with state-of-the-art in both 1H MRI and CT
+
+## Combining ANTs lung functionality I
+
+![](./lung/figures/longitudinalStudy.png)
+
+## Combining ANTs lung functionality II
+
+![](./lung/figures/airways.png)
