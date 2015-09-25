@@ -7,8 +7,10 @@ output:
 header-includes:
    - \usepackage{booktabs}
    - \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
-   - \linespread{0.95}
+   - \linespread{0.9}
    - \usepackage[compact]{titlesec}
+   - \usepackage{enumitem}
+   - \setlist{nolistsep}
    - \titlespacing{\section}{2pt}{*0}{*0}
    - \titlespacing{\subsection}{2pt}{*0}{*0}
    - \titlespacing{\subsubsection}{2pt}{*0}{*0}
@@ -19,7 +21,7 @@ header-includes:
    - \setlength{\floatsep}{0pt}
    - \setlength{\intextsep}{2pt}
    - \setlength{\abovecaptionskip}{2pt}
-   - \setlength{\belowcaptionskip}{2pt}
+   - \setlength{\belowcaptionskip}{0pt}
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
 fontsize: 11pt

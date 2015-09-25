@@ -205,7 +205,13 @@ practices, intuitive user interfaces, and outreach efforts. These strengths of t
 will be applied to the software and data developed in the course of this project.
 
 
+<!--
+
+<img src="Figs/snap.png" alt="Screenshot of the well-known ITK-SNAP open source tool showing co-registered 1H (left) and 3He MRI (right).  The spatially normalized images permits extraction of anatomical information (i.e., lung and lobar regions) and functional information in terms of ventilation.  Shown in the bottom left panel is the surface rendering of the ventilation-based segmentation." style="width: 200px;"/>
+
 ![Screenshot of the well-known ITK-SNAP open source tool showing co-registered 1H (left) and
 3He MRI (right).  The spatially normalized images permits extraction of anatomical information
 (i.e., lung and lobar regions) and functional information in terms of ventilation.  Shown
 in the bottom left panel is the surface rendering of the ventilation-based segmentation.](Figs/snap.png)
+
+-->

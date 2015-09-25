@@ -7,7 +7,9 @@ stitchedFile <- "stitched.Rmd";
 rmdFiles <- c( "format.Rmd", "specificAims.Rmd",
   "researchSignificance.Rmd", "researchInnovation.Rmd",
   "researchDesignPreliminaryData.Rmd",
-  "researchDesignSpecificAims.Rmd" )
+  "researchDesignSpecificAim1.Rmd",
+  "researchDesignSpecificAim2.Rmd"
+   )
 
 for( i in 1:length( rmdFiles ) )
   {
