@@ -7,7 +7,7 @@ output:
 header-includes:
    - \usepackage{booktabs}
    - \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
-   - \linespread{0.9}
+   - \linespread{0.91}
    - \usepackage[compact]{titlesec}
    - \usepackage{enumitem}
    - \setlist{nolistsep}
@@ -449,6 +449,9 @@ in the bottom left panel is the surface rendering of the ventilation-based segme
 
 ### 3(c.2) __Specific Aim 1:__   To develop a set of open-source software tools for CT, 1H, and 3He pulmonary computational analysis.
 
+__3(c.2.1) Sub-Aim 1a will expand the ITK/ANTs open-source libraries by implementing currently
+unavailable lung-specific algorithms.__
+
 Analogous to the neuroimaging tasks described earlier, several algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available package.  This is
 in spite of the fact that new algorithms for lung image analysis are frequently reported
@@ -492,7 +495,7 @@ specific to other modalities has additional benefit and are included in
 this proposal (cf Table 1).  Using ANTs core tools, we have produced several
 lung-specific algorithms for core tasks such as:
 
-__Atlas-based lung segmentation.__  Identification of anatomical structure in MRI is often a
+__ Atlas-based lung segmentation.__  Identification of anatomical structure in MRI is often a
 crucial preprocessing step for quantification of morphological features or ventilation
 information from functional images.  Quantitative regional analysis often requires the
 identification of lung and lobar anatomy.  Although much algorithmic research for lung
@@ -660,7 +663,7 @@ to the ITK allows researchers full access to the latest image analysis algorithm
 addition to avoiding research redundancy. It is also beneficial in that the entire ITK
 community participates in the vetting of the software library.
 
-__Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
+__ Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
 for disease characterization.  Additionally, there are other potential uses motivating
 the inclusion of airway segmentation in any pulmonary image analysis toolkit.
@@ -693,7 +696,20 @@ as their combinations [@Ginneken:2010aa].  This competition included entries fro
 academic institutions as well as a system from Philips (although, to our knowledge, none
 are available for public use).
 
-__3(c.3.1) Software engineering.__ Both ANTs and ITK-SNAP development, based on a solid foundation
+__3(c.2.2) Sub-Aim 1b will extend current functionality of ITK-SNAP for qualitative assessment
+of the results produced by the proposed algorithms in Sub-Aim 1a.__  Several features will
+be added to ITK-SNAP to enhance its usability and adoption by those interested in the
+lung-specific algorithms developed in the Sub-Aim 1a.  In order to assess image
+registration results, we plan to extend SNAP to allow for loading of ITK-style transforms
+to better visualize the mapping between two images in separate ITK-SNAP windows.  Users will
+also be able to generate the entire ITK transform library on the fly using manual annotations
+and intensity information increasing interaction during the registration process.
+_We believe that the proposed enhancements to the software will be extremely useful to the
+general imaging research community and not just those investigators targeted in this project.
+Thus, the impact of this work will be both immediate and broad for pulmonary-driven science
+and research._
+
+__3(c.2.3) Software engineering.__ Both ANTs and ITK-SNAP development, based on a solid foundation
 provided by the Insight Toolkit, utilizes open-source
 software engineering best practices, such as the use of Git version management software
 for collaborative development and easy branching and merging; use of a centralized repository
@@ -703,9 +719,14 @@ versions of Windows, MacOS and Linux operating systems generate nightly builds a
 test code, uploading a binary to the central SourceForge repository. ANTs and ITK-SNAP are
 documented through video and text tutorials, housed online on dedicated websites [@ANTsWebsite;@SnapWebsite].
 A similar infrastructure will be developed for the software resources proposed in Aim 1.
+_Most crucially, we believe that our track record with ITK-SNAP as well as ANTs demonstrates
+our team’s commitment to producing high-quality research software and making it accessible
+to the wider research community through open-source practices, intuitive user interfaces,
+and outreach efforts. These strengths of the team will be applied to the software and data
+developed in the course of this project._
 
 
-### 3(c.4) __Specific Aim 2.__  Validate and disseminate the developed resources by leveraging use cases from a broad network of partner investigators representing the state-of-the-science in lung imaging research
+### 3(c.3) __Specific Aim 2.__  Validate and disseminate the developed resources by leveraging use cases from a broad network of partner investigators representing the state-of-the-science in lung imaging research
 This aim builds on the project team’s long and successful track record of collaboration with the general
 user community.  In particular, the investigator-driven studies presented below are carefully selected
 both for their capacity to fully exercise the developed tools and to provide a comprehensive representation
@@ -717,7 +738,7 @@ of the various processing and analysis tasks of interest to the community.
 <!--          UVA           -->
 
 
-__Novel imaging biomarkers for COPD.__
+__3(c.3.1) Novel imaging biomarkers for COPD.__
 Co-investigator __Mike Shim__ and his group have been actively developing 3D hyperpolarized
 xenon-129 dissolved-phase MRI (HXe MRI) as a sensitive biomarker for accurately characterizing
 phenotypes and severity of COPD. This protocol permits regional mapping of ventilation and
@@ -752,7 +773,7 @@ values of HXe MRI, they will utilize the recently proposed lobar estimation algo
 [@Tustison:2015aa] in both proton MRI and CT.
 
 
-__Hyperpolarized gas imaging in children with asthma.__
+__3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
 Advances in rapid image sequencing methods have facilitated the acquisition of high-quality
 hyperpolarized gas MR images in pre-school children [@Altes:2006aa]. Furthermore improvements in image
 processing and signal intensity analysis can accurately measure lung volume compartments [@Tustison:2011aa].
@@ -786,7 +807,7 @@ Lobe estimation will be possible by refining the techniques originally described
 <!--          Jim contacts           -->
 
 
-__Characterization of COPDGene cohort by hyperpolarized gas (HP) MRI.__
+__3(c.3.3) Characterization of COPDGene cohort by hyperpolarized gas (HP) MRI.__
 Co-investigator __Rahim Rizi__ is leading a study of lung function and
 structure in Chronic Obstructive Pulmonary Disease (COPD) using HP MRI.
 Once inhaled, this gas can tell the researcher how well specific lung
@@ -856,7 +877,7 @@ study:
 *	Registration and analysis of inspiratory and expiratory CT with MRI to study the similarities and differences of the two modalities in phenotyping the COPD population
 *	Registration of the follow-up MRI and CT images (two years) to determine if disease progression is in part caused by excessive stretch in regions of the lung next to blocked-off areas unable to inflate normally (based on the baseline MRI and CT)
 
-__Advanced image analysis of CT for early diagnosis and prognosis of
+__3(c.3.4) Advanced image analysis of CT for early diagnosis and prognosis of
 bronchiolitis obliterans syndrome (BOS) in lung transplant patients.__
 Co-investigators __Eduardo Barbosa__ and __Warren Gefter__ are conducting a
 retrospective study of more than 300 lung transplant patients to advance
@@ -913,7 +934,7 @@ abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
 
-__Comparison of automated multi-modality registration methodologies to
+__3(c.3.5) Comparison of automated multi-modality registration methodologies to
 manual registration for lung CT bronchial morphologic changes and
 hyperpolarized helium MR ventilation defects in asthma patients: Can
 automation speed the work flow for combining structure and function
@@ -928,7 +949,7 @@ translation to the clinic will require standardized implementations
 across sites, and the project’s open-source platform is ideal for this
 purpose.
 
-__Deep functional phenotyping of COPD.__  Our collaborator __Hans-Ulrich
+__3(c.3.6) Deep functional phenotyping of COPD.__  Our collaborator __Hans-Ulrich
 Kauczor__, __University Medical Center Heidelberg__, is leading the COSYCONET
 (German COPD and Systemic Consequences--Comorbidities Network) study,
 the world’s first prospective multicenter trial comparing proton MRI and
@@ -950,7 +971,7 @@ registration is essential to tracking changes over time, and
 segmentation is an additional requirement to support automated lesion
 delineation for the cancer project.
 
-__Advanced image processing pipelines for MR image-guided pulmonary
+__3(c.3.7) Advanced image processing pipelines for MR image-guided pulmonary
 therapy decisions and support.__  Our collaborator __Grace Parraga__,
 __University of Western Ontario__, has been at the forefront of MR imaging
 of lung structure and function since 2005.  A major challenge hampering
@@ -963,7 +984,7 @@ work, carried out in collaboration with industrial partners, will
 support patient phenotyping and stratification to therapy as well as
 measurement of longitudinal changes and response to therapy.
 
-__Functional MR imaging of the lungs using hyperpolarized and inert gases.__
+__3(c.3.8) Functional MR imaging of the lungs using hyperpolarized and inert gases.__
 Our collaborator, __Mitchell Albert__, __Thunder Bay Regional Research
 Institute__, has been advancing the use of inert fluorinated gases that
 can be breathed continuously in order to measure indicators of wash-in,
@@ -971,7 +992,7 @@ wash-out and air trapping with dynamic imaging protocols.  To compute
 the wash-in and wash-out time constants on a pixelwise basis, access to
 accurate and reliable image registration tools will be essential.
 
-__Multimodality imaging studies of pulmonary diseases.__  Our collaborator,
+__3(c.3.9) Multimodality imaging studies of pulmonary diseases.__  Our collaborator,
 __Edwin van Beek__, __University of Edinburgh__, has been conducting various
 multimodality studies, including the evaluation of pulmonary fibrosis
 using both gadolinium-enhanced MRI and contrast-enhanced CT perfusion
@@ -990,7 +1011,7 @@ and analysis software resources in this project.  Moreover, the studies
 will yield valuable additions to the portfolio of use cases that serve
 as primary reference and instructional material._
 
-__3(c.4) Sub-Aim 2a will disseminate the results of the project through open-source publication of the
+__3(c.3.10) Sub-Aim 2a will disseminate the results of the project through open-source publication of the
 code, annotated processed data, online user support, and conduct of hands-on training workshops.__
 ITK is the leading open-source development system for medical image analysis, and to demonstrate its
 endorsement of this project’s value to the field, ITK will lend its infrastructure to provide long-term
@@ -1001,7 +1022,7 @@ letter of support.  Further leveraging of ITK support will include formalized ad
 core development team (of which the project team is a member), and access to and promotion within its
 extensive outreach program.  Complete dissemination details can be found in the Resource Sharing Plan.
 
-__3(c.5) Risks and alternatives__
+__3(c.4) Risks and alternatives__
 While the proposed infrastructure is complex and integrates multiple cutting-edge technologies,
 we do not anticipate significant problems in its development and consider the risk of failure of
 the project to be very low. Our optimism is based on the extensive preliminary work that has been
@@ -1010,7 +1031,7 @@ of the project. Given the level of expertise and experience of our interdiscipli
 well-defined scope of the imaging and software engineering problems, we are highly confident in a
 successful outcome.
 
-__3(c.6) Timeline__
+__3(c.5) Timeline__
 __Aim 1:__  Software development will take place in Years 1-5, with Year 1 focused on refactoring of
 existing ANTs-based code and integration with ITK; Year 2 focused on incorporation of new methods
 to support expanded functionality beyond core algorithms; Year 3 focused on GUI implementation;

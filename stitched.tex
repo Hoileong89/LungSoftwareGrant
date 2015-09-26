@@ -104,7 +104,7 @@
 
 \usepackage{booktabs}
 \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
-\linespread{0.9}
+\linespread{0.91}
 \usepackage[compact]{titlesec}
 \usepackage{enumitem}
 \setlist{nolistsep}
@@ -616,6 +616,10 @@ in the course of this project.
 open-source software tools for CT, 1H, and 3He pulmonary computational
 analysis.}\label{c.2-specific-aim-1-to-develop-a-set-of-open-source-software-tools-for-ct-1h-and-3he-pulmonary-computational-analysis.}
 
+\textbf{3(c.2.1) Sub-Aim 1a will expand the ITK/ANTs open-source
+libraries by implementing currently unavailable lung-specific
+algorithms.}
+
 Analogous to the neuroimaging tasks described earlier, several
 algorithmic categories exist for lung image analysis which, as we have
 stated previously, do not exist in any comprehensive, publicly available
@@ -683,7 +687,7 @@ benefit and are included in this proposal (cf Table 1). Using ANTs core
 tools, we have produced several lung-specific algorithms for core tasks
 such as:
 
-\textbf{Atlas-based lung segmentation.} Identification of anatomical
+\_\_ Atlas-based lung segmentation.\_\_ Identification of anatomical
 structure in MRI is often a crucial preprocessing step for
 quantification of morphological features or ventilation information from
 functional images. Quantitative regional analysis often requires the
@@ -805,7 +809,7 @@ analysis algorithms in addition to avoiding research redundancy. It is
 also beneficial in that the entire ITK community participates in the
 vetting of the software library.
 
-\textbf{Airway and vessel segmentation.} In describing the quantitative
+\_\_ Airway and vessel segmentation.\_\_ In describing the quantitative
 CT lung indices, it was pointed out that lung airway morphology has been
 previously utilized as a biomarker for disease characterization.
 Additionally, there are other potential uses motivating the inclusion of
@@ -835,7 +839,23 @@ combinations {[}80{]}. This competition included entries from both
 academic institutions as well as a system from Philips (although, to our
 knowledge, none are available for public use).
 
-\textbf{3(c.3.1) Software engineering.} Both ANTs and ITK-SNAP
+\textbf{3(c.2.2) Sub-Aim 1b will extend current functionality of
+ITK-SNAP for qualitative assessment of the results produced by the
+proposed algorithms in Sub-Aim 1a.} Several features will be added to
+ITK-SNAP to enhance its usability and adoption by those interested in
+the lung-specific algorithms developed in the Sub-Aim 1a. In order to
+assess image registration results, we plan to extend SNAP to allow for
+loading of ITK-style transforms to better visualize the mapping between
+two images in separate ITK-SNAP windows. Users will also be able to
+generate the entire ITK transform library on the fly using manual
+annotations and intensity information increasing interaction during the
+registration process. \emph{We believe that the proposed enhancements to
+the software will be extremely useful to the general imaging research
+community and not just those investigators targeted in this project.
+Thus, the impact of this work will be both immediate and broad for
+pulmonary-driven science and research.}
+
+\textbf{3(c.2.3) Software engineering.} Both ANTs and ITK-SNAP
 development, based on a solid foundation provided by the Insight
 Toolkit, utilizes open-source software engineering best practices, such
 as the use of Git version management software for collaborative
@@ -848,13 +868,19 @@ test code, uploading a binary to the central SourceForge repository.
 ANTs and ITK-SNAP are documented through video and text tutorials,
 housed online on dedicated websites {[}99, 100{]}. A similar
 infrastructure will be developed for the software resources proposed in
-Aim 1.
+Aim 1. \emph{Most crucially, we believe that our track record with
+ITK-SNAP as well as ANTs demonstrates our team's commitment to producing
+high-quality research software and making it accessible to the wider
+research community through open-source practices, intuitive user
+interfaces, and outreach efforts. These strengths of the team will be
+applied to the software and data developed in the course of this
+project.}
 
-\subsubsection{3(c.4) \textbf{Specific Aim 2.} Validate and disseminate
+\subsubsection{3(c.3) \textbf{Specific Aim 2.} Validate and disseminate
 the developed resources by leveraging use cases from a broad network of
 partner investigators representing the state-of-the-science in lung
 imaging
-research}\label{c.4-specific-aim-2.-validate-and-disseminate-the-developed-resources-by-leveraging-use-cases-from-a-broad-network-of-partner-investigators-representing-the-state-of-the-science-in-lung-imaging-research}
+research}\label{c.3-specific-aim-2.-validate-and-disseminate-the-developed-resources-by-leveraging-use-cases-from-a-broad-network-of-partner-investigators-representing-the-state-of-the-science-in-lung-imaging-research}
 
 This aim builds on the project team's long and successful track record
 of collaboration with the general user community. In particular, the
@@ -863,16 +889,16 @@ for their capacity to fully exercise the developed tools and to provide
 a comprehensive representation of the various processing and analysis
 tasks of interest to the community.
 
-\textbf{Novel imaging biomarkers for COPD.} Co-investigator \textbf{Mike
-Shim} and his group have been actively developing 3D hyperpolarized
-xenon-129 dissolved-phase MRI (HXe MRI) as a sensitive biomarker for
-accurately characterizing phenotypes and severity of COPD. This protocol
-permits regional mapping of ventilation and gas uptake by tissue and
-blood in human lungs with single breath hold {[}101--103{]}. This
-project plans to establish connectivity between these advanced HXe MRI
-imaging signatures and important clinical outcomes of COPD to establish
-HXe MRI as a novel clinical diagnostic tool. They anticipate that this
-new biomarker tool will naturally lead to deeper mechanistic
+\textbf{3(c.3.1) Novel imaging biomarkers for COPD.} Co-investigator
+\textbf{Mike Shim} and his group have been actively developing 3D
+hyperpolarized xenon-129 dissolved-phase MRI (HXe MRI) as a sensitive
+biomarker for accurately characterizing phenotypes and severity of COPD.
+This protocol permits regional mapping of ventilation and gas uptake by
+tissue and blood in human lungs with single breath hold {[}101--103{]}.
+This project plans to establish connectivity between these advanced HXe
+MRI imaging signatures and important clinical outcomes of COPD to
+establish HXe MRI as a novel clinical diagnostic tool. They anticipate
+that this new biomarker tool will naturally lead to deeper mechanistic
 understanding of COPD at the molecular-physiologic and clinical levels
 and support identification of potential pathophysiologic derrangement
 associated with COPD and a new method to accurately predict therapeutic
@@ -903,18 +929,19 @@ ventilation-based segmentation approach {[}36{]}. In order to determine
 lobar values of HXe MRI, they will utilize the recently proposed lobar
 estimation algorithm {[}48{]} in both proton MRI and CT.
 
-\textbf{Hyperpolarized gas imaging in children with asthma.} Advances in
-rapid image sequencing methods have facilitated the acquisition of
-high-quality hyperpolarized gas MR images in pre-school children
-{[}104{]}. Furthermore improvements in image processing and signal
-intensity analysis can accurately measure lung volume compartments
-{[}36{]}. Co-investigators \textbf{Gerry Teague} and \textbf{Talissa
-Altes} are applying these innovations in children with asthma to study
-whether the lung defect volume \% as measured by hyperpolarized lung MRI
-correlates with a range of clinical features. They hypothesize the
-ventilation defect volume \% would be higher in children with severe
-asthma, and correlate not only with the degree of airflow limitation,
-but indicators of asthma control, treatment, and inflammation.
+\textbf{3(c.3.2) Hyperpolarized gas imaging in children with asthma.}
+Advances in rapid image sequencing methods have facilitated the
+acquisition of high-quality hyperpolarized gas MR images in pre-school
+children {[}104{]}. Furthermore improvements in image processing and
+signal intensity analysis can accurately measure lung volume
+compartments {[}36{]}. Co-investigators \textbf{Gerry Teague} and
+\textbf{Talissa Altes} are applying these innovations in children with
+asthma to study whether the lung defect volume \% as measured by
+hyperpolarized lung MRI correlates with a range of clinical features.
+They hypothesize the ventilation defect volume \% would be higher in
+children with severe asthma, and correlate not only with the degree of
+airflow limitation, but indicators of asthma control, treatment, and
+inflammation.
 
 Precise measurement of ventilation volumes by hyperpolarized noble gas
 MRI not only has the potential to resolve the spatial and temporal
@@ -936,12 +963,12 @@ include denoising techniques {[}49{]} implemented and made available in
 ANTs. Lobe estimation will be possible by refining the techniques
 originally described in {[}48{]}.
 
-\textbf{Characterization of COPDGene cohort by hyperpolarized gas (HP)
-MRI.} Co-investigator \textbf{Rahim Rizi} is leading a study of lung
-function and structure in Chronic Obstructive Pulmonary Disease (COPD)
-using HP MRI. Once inhaled, this gas can tell the researcher how well
-specific lung regions replace the air during the normal breathing cycle
-(Fractional Ventilation, FV), how much oxygen is in the airspaces
+\textbf{3(c.3.3) Characterization of COPDGene cohort by hyperpolarized
+gas (HP) MRI.} Co-investigator \textbf{Rahim Rizi} is leading a study of
+lung function and structure in Chronic Obstructive Pulmonary Disease
+(COPD) using HP MRI. Once inhaled, this gas can tell the researcher how
+well specific lung regions replace the air during the normal breathing
+cycle (Fractional Ventilation, FV), how much oxygen is in the airspaces
 (Oxygen Tension, PAO2), and if the normal spongy tissue structure has
 been compromised in lung disease (Apparent Diffusion Coefficient).
 Subjects will include those at risk for lung disease, and those
@@ -1033,41 +1060,42 @@ study:
   inflate normally (based on the baseline MRI and CT)
 \end{itemize}
 
-\textbf{Advanced image analysis of CT for early diagnosis and prognosis
-of bronchiolitis obliterans syndrome (BOS) in lung transplant patients.}
-Co-investigators \textbf{Eduardo Barbosa} and \textbf{Warren Gefter} are
-conducting a retrospective study of more than 300 lung transplant
-patients to advance the early diagnosis of BOS. Lung transplantation is
-an established treatment for end-stage, irreversible pulmonary disease,
-particularly due to COPD and interstitial lung disease (ILD). While
-continued improvements in surgical techniques and immunosuppressive
-medications have reduced the complication rates and increased short-term
-survival after the procedure, chronic allograft rejection due to
-bronchiolitis obliterans (a fibrous obliterative disease of bronchioles
-representing the histological hallmark of chronic rejection and
-resulting in obstructive pulmonary physiology) remains the major cause
-of morbidity and mortality after six months following transplantation.
-Bronchiolitis obliterans currently represents the greatest limitation to
-long-term survival after lung transplantation. While the diagnosis of
-bronchiolitis obliterans is a pathologic one and therefore requires
-invasive biopsy, the distribution of disease is patchy, with focal areas
-of abnormality surrounded by normal lung, and consequently even biopsies
-may fail to demonstrate the diagnosis. For these reasons, the
-International Society for Heart and Lung Transplantation has recommended
-using declining spirometry, termed bronchiolitis obliterans syndrome
-(BOS), as a surrogate marker of chronic allograft rejection. In clinical
-practice, the diagnosis of BOS is suspected based on an unexplained
-decline in lung function (measured by PFT, of greater than 20\% of
-baseline FEV1) and worsening cough and dyspnea, in the absence of other
-explanations such as pulmonary infection or congestive heart failure.
-MDCT plays an important role by demonstrating low attenuation areas
-representing air trapping, particularly on expiratory images, which
-correlate with the presence of bronchiolitis obliterans. Prior studies
-reported limited sensitivity for the early diagnosis of bronchiolitis
-obliterans; however these utilized semi-quantitative or qualitative
-assessment of air trapping in non-volumetric data sets. This study aims
-to assess whether automated imaging analysis can detect early BOS prior
-to development of clinically apparent disease.
+\textbf{3(c.3.4) Advanced image analysis of CT for early diagnosis and
+prognosis of bronchiolitis obliterans syndrome (BOS) in lung transplant
+patients.} Co-investigators \textbf{Eduardo Barbosa} and \textbf{Warren
+Gefter} are conducting a retrospective study of more than 300 lung
+transplant patients to advance the early diagnosis of BOS. Lung
+transplantation is an established treatment for end-stage, irreversible
+pulmonary disease, particularly due to COPD and interstitial lung
+disease (ILD). While continued improvements in surgical techniques and
+immunosuppressive medications have reduced the complication rates and
+increased short-term survival after the procedure, chronic allograft
+rejection due to bronchiolitis obliterans (a fibrous obliterative
+disease of bronchioles representing the histological hallmark of chronic
+rejection and resulting in obstructive pulmonary physiology) remains the
+major cause of morbidity and mortality after six months following
+transplantation. Bronchiolitis obliterans currently represents the
+greatest limitation to long-term survival after lung transplantation.
+While the diagnosis of bronchiolitis obliterans is a pathologic one and
+therefore requires invasive biopsy, the distribution of disease is
+patchy, with focal areas of abnormality surrounded by normal lung, and
+consequently even biopsies may fail to demonstrate the diagnosis. For
+these reasons, the International Society for Heart and Lung
+Transplantation has recommended using declining spirometry, termed
+bronchiolitis obliterans syndrome (BOS), as a surrogate marker of
+chronic allograft rejection. In clinical practice, the diagnosis of BOS
+is suspected based on an unexplained decline in lung function (measured
+by PFT, of greater than 20\% of baseline FEV1) and worsening cough and
+dyspnea, in the absence of other explanations such as pulmonary
+infection or congestive heart failure. MDCT plays an important role by
+demonstrating low attenuation areas representing air trapping,
+particularly on expiratory images, which correlate with the presence of
+bronchiolitis obliterans. Prior studies reported limited sensitivity for
+the early diagnosis of bronchiolitis obliterans; however these utilized
+semi-quantitative or qualitative assessment of air trapping in
+non-volumetric data sets. This study aims to assess whether automated
+imaging analysis can detect early BOS prior to development of clinically
+apparent disease.
 
 PFT is the current reference standard for diagnosis of BOS, however, by
 the time PFT abnormalities beyond the threshold of BOS diagnosis ensue,
@@ -1090,7 +1118,7 @@ abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
 
-\textbf{Comparison of automated multi-modality registration
+\textbf{3(c.3.5) Comparison of automated multi-modality registration
 methodologies to manual registration for lung CT bronchial morphologic
 changes and hyperpolarized helium MR ventilation defects in asthma
 patients: Can automation speed the work flow for combining structure and
@@ -1105,7 +1133,7 @@ the two modalities. Furthermore, translation to the clinic will require
 standardized implementations across sites, and the project's open-source
 platform is ideal for this purpose.
 
-\textbf{Deep functional phenotyping of COPD.} Our collaborator
+\textbf{3(c.3.6) Deep functional phenotyping of COPD.} Our collaborator
 \textbf{Hans-Ulrich Kauczor}, \textbf{University Medical Center
 Heidelberg}, is leading the COSYCONET (German COPD and Systemic
 Consequences--Comorbidities Network) study, the world's first
@@ -1127,7 +1155,7 @@ registration is essential to tracking changes over time, and
 segmentation is an additional requirement to support automated lesion
 delineation for the cancer project.
 
-\textbf{Advanced image processing pipelines for MR image-guided
+\textbf{3(c.3.7) Advanced image processing pipelines for MR image-guided
 pulmonary therapy decisions and support.} Our collaborator \textbf{Grace
 Parraga}, \textbf{University of Western Ontario}, has been at the
 forefront of MR imaging of lung structure and function since 2005. A
@@ -1141,8 +1169,8 @@ with industrial partners, will support patient phenotyping and
 stratification to therapy as well as measurement of longitudinal changes
 and response to therapy.
 
-\textbf{Functional MR imaging of the lungs using hyperpolarized and
-inert gases.} Our collaborator, \textbf{Mitchell Albert},
+\textbf{3(c.3.8) Functional MR imaging of the lungs using hyperpolarized
+and inert gases.} Our collaborator, \textbf{Mitchell Albert},
 \textbf{Thunder Bay Regional Research Institute}, has been advancing the
 use of inert fluorinated gases that can be breathed continuously in
 order to measure indicators of wash-in, wash-out and air trapping with
@@ -1150,11 +1178,11 @@ dynamic imaging protocols. To compute the wash-in and wash-out time
 constants on a pixelwise basis, access to accurate and reliable image
 registration tools will be essential.
 
-\textbf{Multimodality imaging studies of pulmonary diseases.} Our
-collaborator, \textbf{Edwin van Beek}, \textbf{University of Edinburgh},
-has been conducting various multimodality studies, including the
-evaluation of pulmonary fibrosis using both gadolinium-enhanced MRI and
-contrast-enhanced CT perfusion imaging, and the assessment of lung
+\textbf{3(c.3.9) Multimodality imaging studies of pulmonary diseases.}
+Our collaborator, \textbf{Edwin van Beek}, \textbf{University of
+Edinburgh}, has been conducting various multimodality studies, including
+the evaluation of pulmonary fibrosis using both gadolinium-enhanced MRI
+and contrast-enhanced CT perfusion imaging, and the assessment of lung
 nodules using PET-CT and CT perfusion imaging. These relatively new
 techniques would benefit from quantitative analysis of contrast
 enhancement, and advanced image registration and segmentation
@@ -1169,7 +1197,7 @@ processing and analysis software resources in this project. Moreover,
 the studies will yield valuable additions to the portfolio of use cases
 that serve as primary reference and instructional material.}
 
-\textbf{3(c.4) Sub-Aim 2a will disseminate the results of the project
+\textbf{3(c.3.10) Sub-Aim 2a will disseminate the results of the project
 through open-source publication of the code, annotated processed data,
 online user support, and conduct of hands-on training workshops.} ITK is
 the leading open-source development system for medical image analysis,
@@ -1185,7 +1213,7 @@ team (of which the project team is a member), and access to and
 promotion within its extensive outreach program. Complete dissemination
 details can be found in the Resource Sharing Plan.
 
-\textbf{3(c.5) Risks and alternatives} While the proposed infrastructure
+\textbf{3(c.4) Risks and alternatives} While the proposed infrastructure
 is complex and integrates multiple cutting-edge technologies, we do not
 anticipate significant problems in its development and consider the risk
 of failure of the project to be very low. Our optimism is based on the
@@ -1196,7 +1224,7 @@ interdisciplinary team and the well-defined scope of the imaging and
 software engineering problems, we are highly confident in a successful
 outcome.
 
-\textbf{3(c.6) Timeline} \textbf{Aim 1:} Software development will take
+\textbf{3(c.5) Timeline} \textbf{Aim 1:} Software development will take
 place in Years 1-5, with Year 1 focused on refactoring of existing
 ANTs-based code and integration with ITK; Year 2 focused on
 incorporation of new methods to support expanded functionality beyond

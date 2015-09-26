@@ -1,5 +1,5 @@
 
-### 3(c.4) __Specific Aim 2.__  Validate and disseminate the developed resources by leveraging use cases from a broad network of partner investigators representing the state-of-the-science in lung imaging research
+### 3(c.3) __Specific Aim 2.__  Validate and disseminate the developed resources by leveraging use cases from a broad network of partner investigators representing the state-of-the-science in lung imaging research
 This aim builds on the project team’s long and successful track record of collaboration with the general
 user community.  In particular, the investigator-driven studies presented below are carefully selected
 both for their capacity to fully exercise the developed tools and to provide a comprehensive representation
@@ -11,7 +11,7 @@ of the various processing and analysis tasks of interest to the community.
 <!--          UVA           -->
 
 
-__Novel imaging biomarkers for COPD.__
+__3(c.3.1) Novel imaging biomarkers for COPD.__
 Co-investigator __Mike Shim__ and his group have been actively developing 3D hyperpolarized
 xenon-129 dissolved-phase MRI (HXe MRI) as a sensitive biomarker for accurately characterizing
 phenotypes and severity of COPD. This protocol permits regional mapping of ventilation and
@@ -46,7 +46,7 @@ values of HXe MRI, they will utilize the recently proposed lobar estimation algo
 [@Tustison:2015aa] in both proton MRI and CT.
 
 
-__Hyperpolarized gas imaging in children with asthma.__
+__3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
 Advances in rapid image sequencing methods have facilitated the acquisition of high-quality
 hyperpolarized gas MR images in pre-school children [@Altes:2006aa]. Furthermore improvements in image
 processing and signal intensity analysis can accurately measure lung volume compartments [@Tustison:2011aa].
@@ -80,7 +80,7 @@ Lobe estimation will be possible by refining the techniques originally described
 <!--          Jim contacts           -->
 
 
-__Characterization of COPDGene cohort by hyperpolarized gas (HP) MRI.__
+__3(c.3.3) Characterization of COPDGene cohort by hyperpolarized gas (HP) MRI.__
 Co-investigator __Rahim Rizi__ is leading a study of lung function and
 structure in Chronic Obstructive Pulmonary Disease (COPD) using HP MRI.
 Once inhaled, this gas can tell the researcher how well specific lung
@@ -150,7 +150,7 @@ study:
 *	Registration and analysis of inspiratory and expiratory CT with MRI to study the similarities and differences of the two modalities in phenotyping the COPD population
 *	Registration of the follow-up MRI and CT images (two years) to determine if disease progression is in part caused by excessive stretch in regions of the lung next to blocked-off areas unable to inflate normally (based on the baseline MRI and CT)
 
-__Advanced image analysis of CT for early diagnosis and prognosis of
+__3(c.3.4) Advanced image analysis of CT for early diagnosis and prognosis of
 bronchiolitis obliterans syndrome (BOS) in lung transplant patients.__
 Co-investigators __Eduardo Barbosa__ and __Warren Gefter__ are conducting a
 retrospective study of more than 300 lung transplant patients to advance
@@ -207,7 +207,7 @@ abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
 
-__Comparison of automated multi-modality registration methodologies to
+__3(c.3.5) Comparison of automated multi-modality registration methodologies to
 manual registration for lung CT bronchial morphologic changes and
 hyperpolarized helium MR ventilation defects in asthma patients: Can
 automation speed the work flow for combining structure and function
@@ -222,7 +222,7 @@ translation to the clinic will require standardized implementations
 across sites, and the project’s open-source platform is ideal for this
 purpose.
 
-__Deep functional phenotyping of COPD.__  Our collaborator __Hans-Ulrich
+__3(c.3.6) Deep functional phenotyping of COPD.__  Our collaborator __Hans-Ulrich
 Kauczor__, __University Medical Center Heidelberg__, is leading the COSYCONET
 (German COPD and Systemic Consequences--Comorbidities Network) study,
 the world’s first prospective multicenter trial comparing proton MRI and
@@ -244,7 +244,7 @@ registration is essential to tracking changes over time, and
 segmentation is an additional requirement to support automated lesion
 delineation for the cancer project.
 
-__Advanced image processing pipelines for MR image-guided pulmonary
+__3(c.3.7) Advanced image processing pipelines for MR image-guided pulmonary
 therapy decisions and support.__  Our collaborator __Grace Parraga__,
 __University of Western Ontario__, has been at the forefront of MR imaging
 of lung structure and function since 2005.  A major challenge hampering
@@ -257,7 +257,7 @@ work, carried out in collaboration with industrial partners, will
 support patient phenotyping and stratification to therapy as well as
 measurement of longitudinal changes and response to therapy.
 
-__Functional MR imaging of the lungs using hyperpolarized and inert gases.__
+__3(c.3.8) Functional MR imaging of the lungs using hyperpolarized and inert gases.__
 Our collaborator, __Mitchell Albert__, __Thunder Bay Regional Research
 Institute__, has been advancing the use of inert fluorinated gases that
 can be breathed continuously in order to measure indicators of wash-in,
@@ -265,7 +265,7 @@ wash-out and air trapping with dynamic imaging protocols.  To compute
 the wash-in and wash-out time constants on a pixelwise basis, access to
 accurate and reliable image registration tools will be essential.
 
-__Multimodality imaging studies of pulmonary diseases.__  Our collaborator,
+__3(c.3.9) Multimodality imaging studies of pulmonary diseases.__  Our collaborator,
 __Edwin van Beek__, __University of Edinburgh__, has been conducting various
 multimodality studies, including the evaluation of pulmonary fibrosis
 using both gadolinium-enhanced MRI and contrast-enhanced CT perfusion
@@ -284,7 +284,7 @@ and analysis software resources in this project.  Moreover, the studies
 will yield valuable additions to the portfolio of use cases that serve
 as primary reference and instructional material._
 
-__3(c.4) Sub-Aim 2a will disseminate the results of the project through open-source publication of the
+__3(c.3.10) Sub-Aim 2a will disseminate the results of the project through open-source publication of the
 code, annotated processed data, online user support, and conduct of hands-on training workshops.__
 ITK is the leading open-source development system for medical image analysis, and to demonstrate its
 endorsement of this project’s value to the field, ITK will lend its infrastructure to provide long-term
@@ -295,7 +295,7 @@ letter of support.  Further leveraging of ITK support will include formalized ad
 core development team (of which the project team is a member), and access to and promotion within its
 extensive outreach program.  Complete dissemination details can be found in the Resource Sharing Plan.
 
-__3(c.5) Risks and alternatives__
+__3(c.4) Risks and alternatives__
 While the proposed infrastructure is complex and integrates multiple cutting-edge technologies,
 we do not anticipate significant problems in its development and consider the risk of failure of
 the project to be very low. Our optimism is based on the extensive preliminary work that has been
@@ -304,7 +304,7 @@ of the project. Given the level of expertise and experience of our interdiscipli
 well-defined scope of the imaging and software engineering problems, we are highly confident in a
 successful outcome.
 
-__3(c.6) Timeline__
+__3(c.5) Timeline__
 __Aim 1:__  Software development will take place in Years 1-5, with Year 1 focused on refactoring of
 existing ANTs-based code and integration with ITK; Year 2 focused on incorporation of new methods
 to support expanded functionality beyond core algorithms; Year 3 focused on GUI implementation;
