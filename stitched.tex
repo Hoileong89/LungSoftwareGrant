@@ -814,18 +814,16 @@ CT lung indices, it was pointed out that lung airway morphology has been
 previously utilized as a biomarker for disease characterization.
 Additionally, there are other potential uses motivating the inclusion of
 airway segmentation in any pulmonary image analysis toolkit. In an
-evaluation of 15 airway segmentation algorithms {[}97{]} it was shown
-that no algorithm was capable of ``extracting more than 77\% of the
-reference.'' Our plan is to initially provide an implementation of the
-algorithm developed by our group {[}98{]}. Instead of mixing airway
-segmentation and leakage detection at every iteration, this work divides
-this problem into a hypothesis generation of thin airway paths and a
-post processing procedure of removing leakage path candidates. For the
-purpose of generating as many hypotheses as possible, a novel speed
-function for thin airways is used. To exclude leakage regions, a novel
-cost function defined on the whole path candidate is used. Such a scheme
-is more flexible when evaluating the whole path and can be viewed as
-complementary to current region growing methods.
+evaluation of 15 airway segmentation algorithms {[}97{]} for the
+Extraction of Airways from CT challenge held in 2009, a total of 40 CT
+scans from 8 sites divided into testing and training data sets and
+manually annotated by medical student observers. Sensitivity and
+specifity criteria were used to assess relative performance levels with
+the top 2 performers were the algorithms of {[}98{]} and {[}99{]} with
+the latter being one of the more conservative algorithms and the former
+being more prone to false positives. Our plan is to provide an
+implementation of {[}98{]} and then augment this functionality with some
+of our previous work {[}100{]} for removing leakage path candidates.
 
 \textbf{Nodule detection.} CT is used for screening of lung cancers
 (i.e., pulmonary nodules) which currently requires human intervention
@@ -837,7 +835,13 @@ facilitating detection. In 2009, a nodule detection competition was held
 for comparing performance of individual algorithms as well as their
 combinations {[}80{]}. This competition included entries from both
 academic institutions as well as a system from Philips (although, to our
-knowledge, none are available for public use).
+knowledge, none are available for public use). The best performing
+algorithm of that competition was based on the work presented in
+{[}\textbf{???}{]} where a k-nearest neighbor classification employing
+local image features is built from a large training data set. We plan to
+implement this method potentially with some modifications based on our
+experience with a more recent challenge dealing with segmentation of
+pathology {[}19{]}.
 
 \textbf{3(c.2.2) Sub-Aim 1b will extend current functionality of
 ITK-SNAP for qualitative assessment of the results produced by the
@@ -866,7 +870,7 @@ automatic builds. Virtual machines with different versions of Windows,
 MacOS and Linux operating systems generate nightly builds and execute
 test code, uploading a binary to the central SourceForge repository.
 ANTs and ITK-SNAP are documented through video and text tutorials,
-housed online on dedicated websites {[}99, 100{]}. A similar
+housed online on dedicated websites {[}101, 102{]}. A similar
 infrastructure will be developed for the software resources proposed in
 Aim 1. \emph{Most crucially, we believe that our track record with
 ITK-SNAP as well as ANTs demonstrates our team's commitment to producing
@@ -894,7 +898,7 @@ tasks of interest to the community.
 hyperpolarized xenon-129 dissolved-phase MRI (HXe MRI) as a sensitive
 biomarker for accurately characterizing phenotypes and severity of COPD.
 This protocol permits regional mapping of ventilation and gas uptake by
-tissue and blood in human lungs with single breath hold {[}101--103{]}.
+tissue and blood in human lungs with single breath hold {[}103--105{]}.
 This project plans to establish connectivity between these advanced HXe
 MRI imaging signatures and important clinical outcomes of COPD to
 establish HXe MRI as a novel clinical diagnostic tool. They anticipate
@@ -932,7 +936,7 @@ estimation algorithm {[}48{]} in both proton MRI and CT.
 \textbf{3(c.3.2) Hyperpolarized gas imaging in children with asthma.}
 Advances in rapid image sequencing methods have facilitated the
 acquisition of high-quality hyperpolarized gas MR images in pre-school
-children {[}104{]}. Furthermore improvements in image processing and
+children {[}106{]}. Furthermore improvements in image processing and
 signal intensity analysis can accurately measure lung volume
 compartments {[}36{]}. Co-investigators \textbf{Gerry Teague} and
 \textbf{Talissa Altes} are applying these innovations in children with
@@ -948,8 +952,8 @@ MRI not only has the potential to resolve the spatial and temporal
 characteristics of gas distribution in children with asthma, but could
 also expand clinically relevant information in regards to asthma
 severity and its features. In the past simple computer-assisted systems
-{[}105{]} or hand counts of visual defects were used to estimate the
-ventilation defect volume {[}106{]}. Development of more advanced
+{[}107{]} or hand counts of visual defects were used to estimate the
+ventilation defect volume {[}108{]}. Development of more advanced
 techniques (in terms of acquisition and analysis) will facilitate rapid
 conversion of complex hyperpolarized gas signal data into volume
 compartments for clinical applications.
@@ -1791,15 +1795,24 @@ M. de. ``\textbf{Extraction of Airways from CT (EXACT'09)}'' \emph{IEEE
 Trans Med Imaging} 31, no. 11 (2012): 2093--107.
 doi:\href{http://dx.doi.org/10.1109/TMI.2012.2209674}{10.1109/TMI.2012.2209674}
 
-98. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
+98. Feuerstein, M., Kitasaka, T., and Mori, K. ``\textbf{Adaptive Branch
+Tracing and Image Sharpening for Airway Tree Extraction in 3-d Chest
+CT}'' \emph{Proc. of second international workshop on pulmonary image
+analysis} (2009):
+
+99. Lee, J. and Reeves, A. P. ``\textbf{Segmentation of the Airway Tree
+from Chest CT Using Local Volume of Interest}'' \emph{Proc. of second
+international workshop on pulmonary image analysis} (2009):
+
+100. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
 Segmentation by Removing Paths of Leakage}'' \emph{Proc. 3rd int.
 workshop pulmonary image analysis} (2010): 109--116.
 
-99. Available at \url{http://picsl.upenn.edu/software/ants/}
+101. Available at \url{http://picsl.upenn.edu/software/ants/}
 
-100. Available at \url{http://www.itksnap.org}
+102. Available at \url{http://www.itksnap.org}
 
-101. Dregely, I., Mugler, J. P., 3rd, Ruset, I. C., Altes, T. A., Mata,
+103. Dregely, I., Mugler, J. P., 3rd, Ruset, I. C., Altes, T. A., Mata,
 J. F., Miller, G. W., Ketel, J., Ketel, S., Distelbrink, J., Hersman, F.
 W., and Ruppert, K. ``\textbf{Hyperpolarized Xenon-129 Gas-Exchange
 Imaging of Lung Microstructure: first Case Studies in Subjects with
@@ -1807,7 +1820,7 @@ Obstructive Lung Disease}'' \emph{J Magn Reson Imaging} 33, no. 5
 (2011): 1052--62.
 doi:\href{http://dx.doi.org/10.1002/jmri.22533}{10.1002/jmri.22533}
 
-102. Mugler, J. P., 3rd, Altes, T. A., Ruset, I. C., Dregely, I. M.,
+104. Mugler, J. P., 3rd, Altes, T. A., Ruset, I. C., Dregely, I. M.,
 Mata, J. F., Miller, G. W., Ketel, S., Ketel, J., Hersman, F. W., and
 Ruppert, K. ``\textbf{Simultaneous Magnetic Resonance Imaging of
 Ventilation Distribution and Gas Uptake in the Human Lung Using
@@ -1815,27 +1828,27 @@ Hyperpolarized Xenon-129}'' \emph{Proc Natl Acad Sci U S A} 107, no. 50
 (2010): 21707--12.
 doi:\href{http://dx.doi.org/10.1073/pnas.1011912107}{10.1073/pnas.1011912107}
 
-103. Qing, K., Mugler, J. P., 3rd, Altes, T. A., Jiang, Y., Mata, J. F.,
+105. Qing, K., Mugler, J. P., 3rd, Altes, T. A., Jiang, Y., Mata, J. F.,
 Miller, G. W., Ruset, I. C., Hersman, F. W., and Ruppert, K.
 ``\textbf{Assessment of Lung Function in Asthma and COPD Using
 Hyperpolarized 129Xe Chemical Shift Saturation Recovery Spectroscopy and
 Dissolved-Phase MRI}'' \emph{NMR Biomed} 27, no. 12 (2014): 1490--501.
 doi:\href{http://dx.doi.org/10.1002/nbm.3179}{10.1002/nbm.3179}
 
-104. Altes, T. A., Mata, J., Lange, E. E. de, Brookeman, J. R., and
+106. Altes, T. A., Mata, J., Lange, E. E. de, Brookeman, J. R., and
 Mugler, J. P., 3rd. ``\textbf{Assessment of Lung Development Using
 Hyperpolarized Helium-3 Diffusion MR Imaging}'' \emph{J Magn Reson
 Imaging} 24, no. 6 (2006): 1277--83.
 doi:\href{http://dx.doi.org/10.1002/jmri.20723}{10.1002/jmri.20723}
 
-105. Woodhouse, N., Wild, J. M., Paley, M. N. J., Fichele, S., Said, Z.,
+107. Woodhouse, N., Wild, J. M., Paley, M. N. J., Fichele, S., Said, Z.,
 Swift, A. J., and Beek, E. J. R. van. ``\textbf{Combined Helium-3/Proton
 Magnetic Resonance Imaging Measurement of Ventilated Lung Volumes in
 Smokers Compared to Never-Smokers}'' \emph{J Magn Reson Imaging} 21, no.
 4 (2005): 365--9.
 doi:\href{http://dx.doi.org/10.1002/jmri.20290}{10.1002/jmri.20290}
 
-106. Altes, T. A., Powers, P. L., Knight-Scott, J., Rakes, G.,
+108. Altes, T. A., Powers, P. L., Knight-Scott, J., Rakes, G.,
 Platts-Mills, T. A., Lange, E. E. de, Alford, B. A., Mugler, J. P., 3rd,
 and Brookeman, J. R. ``\textbf{Hyperpolarized 3He MR Lung Ventilation
 Imaging in Asthmatics: preliminary Findings}'' \emph{J Magn Reson

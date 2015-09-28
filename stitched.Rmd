@@ -667,16 +667,15 @@ __ Airway and vessel segmentation.__  In describing the quantitative CT lung ind
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
 for disease characterization.  Additionally, there are other potential uses motivating
 the inclusion of airway segmentation in any pulmonary image analysis toolkit.
-In an evaluation of 15 airway segmentation algorithms [@Lo:2012aa]
-it was shown that no algorithm was capable of ``extracting more than 77% of the reference.''
-Our plan is to initially provide an implementation of the algorithm developed by our group [@Song:2010aa].
-Instead of mixing airway segmentation and leakage detection at every iteration, this work divides
-this problem into a hypothesis generation of thin airway paths and a post processing
-procedure of removing leakage path candidates. For the purpose of generating as many
-hypotheses as possible, a novel speed function for thin airways is used. To exclude
-leakage regions, a novel cost function defined on the whole path candidate is used.
-Such a scheme is more flexible when evaluating the whole path and can be viewed as
-complementary to current region growing methods.
+In an evaluation of 15 airway segmentation algorithms [@Lo:2012aa] for the
+Extraction of Airways from CT challenge held in 2009, a total of 40 CT scans from 8 sites
+divided into testing and training data sets and manually annotated by medical student
+observers.  Sensitivity and specifity criteria were used to assess relative performance
+levels with the top 2 performers were the algorithms of [@Feuerstein:2009aa] and [@Lee:2009aa]  with the latter
+being one of the more conservative algorithms and the former being more prone to false positives.
+Our plan is to provide an implementation of [@Feuerstein:2009aa] and then augment this
+functionality with some of our previous work [@Song:2010aa] for
+removing leakage path candidates.
 
 <!--
 ![Potential clinical use case for identifying the feeding airway branch path to the
@@ -694,7 +693,11 @@ and specialized visualization hardware for facilitating detection.  In 2009, a n
 detection competition was held for comparing performance of individual algorithms as well
 as their combinations [@Ginneken:2010aa].  This competition included entries from both
 academic institutions as well as a system from Philips (although, to our knowledge, none
-are available for public use).
+are available for public use).  The best performing algorithm of that competition was
+based on the work presented in [@Murphy:2009] where a k-nearest neighbor classification employing
+local image features is built from a large training data set.  We plan to implement this
+method potentially with some modifications based on our experience with a more recent
+challenge dealing with segmentation of pathology [@Tustison:2014aa].
 
 __3(c.2.2) Sub-Aim 1b will extend current functionality of ITK-SNAP for qualitative assessment
 of the results produced by the proposed algorithms in Sub-Aim 1a.__  Several features will
