@@ -7,7 +7,7 @@ output:
 header-includes:
    - \usepackage{booktabs}
    - \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
-   - \linespread{0.91}
+   - \linespread{0.95}
    - \usepackage[compact]{titlesec}
    - \usepackage{enumitem}
    - \setlist{nolistsep}
@@ -25,7 +25,7 @@ header-includes:
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
 fontsize: 11pt
-mainfont: Georgia
+mainfont: Arial
 geometry: margin=0.5in
 ---
 

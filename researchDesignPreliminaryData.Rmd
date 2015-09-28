@@ -4,6 +4,8 @@
 ### 3(c.1) Preliminary data
 
 __3(c.1.1) Generic ANTs core tools for image analysis and processing.__
+The Advanced Normalization Tools (ANTs) package is a state-of-the-art, open-source software toolkit
+for image registration, segmentation, and other core medical image analysis functionality.
 Several core programs comprising portions of the proposed pulmonary software framework
 have been created and made available within ANTs (and either simultaneously or subsequently
 made available in ITK).  However, as mentioned earlier, these programs have more
@@ -57,18 +59,18 @@ this work, many researchers adopted statistical methods for $n$-tissue anatomica
 segmentation. The Expectation-Maximization (EM) framework is natural [@Dempster:1977aa]
 given the "missing data" aspect of this problem. Core components of this type of work include
 the explicit modeling of the tissue intensity values as statistical distributions
-[@Cline:1990aa;@Kikinis:1992aa] and the use of MRF modeling [@Geman:1984aa] for regularizing
+[@Cline:1990aa;@Kikinis:1992aa] and the use of Markov Random Field (MRF) modeling [@Geman:1984aa] for regularizing
 the classification results [@Held:1997aa].  Spatial
 prior probability maps of anatomical structures of interest are also employed within this framework
 [@Van-Leemput:1999aa;@Ashburner:2005aa].  Although this particular segmentation
-framework has significant application in the neuroimaging domain, it has also applicable
-to other domains such as breast MRI [@Gubern-Merida:2015aa;@Ribes:2014aa] and functional
+framework has significant application in the neuroimaging domain, it is also relevant
+to other domains including functional
 ventilation of the lung [@Tustison:2011aa].  _However, despite the numerous
 developments which have been proposed
 over the years within this area, there are an extremely limited number of actual software implementations.
 This deficit inspired us to create our own Bayesian
 segmentation framework [@Avants:2011aa] (denoted as Atropos) which we have made publicly
-available within ANTs and has proven extremely useful in quantification of
+available within ANTs and has proven highly effective in quantification of
 functional lung imaging [@Tustison:2011aa;@Altes:2012aa;@Teague:2014aa;@Kirby:2014aa]._
 
 __N4 bias correction.__  Critical to quantitative processing of MRI is the minimization of field
@@ -92,7 +94,7 @@ Grand Challenge and Workshop on Multi-Atlas Labeling).  The joint fusion (JLF) a
 of predicting anatomical labels with accuracy that rivals expert anatomists [@Yushkevich:2010aa].
 It has proven its effectiveness not only in cardiac data [@MALF],
 the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF] _but has
-also proven incredibly important in applying prior-based information to lung and lobe
+also been successfully extended to the challening problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2015aa]._
 
 __Spatially adaptive denoising.__ Patch-based
@@ -104,10 +106,11 @@ The previously described core tools, as well as several others, have been part o
 ITK development efforts for more than a decade.  The deficiency of publicly
 available tools within the neuroscience community was the original motivation for the inception and
 continued development of ANTs.  As a result, our team is well-recognized for our many
-open-source contributions including important contributions to the
+open-source advancements including important contributions to the
 field of image registration outlined earlier.  Indeed, ANTs-based image registration serves
 as the basis for the registration component of the latest version of the National Library of
-Medicine Insight Toolkit (ITK) programming library (http://www.itk.org). _The
+Medicine Insight Toolkit (ITK) programming library (http://www.itk.org) which is the leading
+open-source platform for medical image analysis. _The
 combination of state-of-the-art algorithms and feature-rich flexibility has translated
 to top-placed rankings in major independent evaluations for core elements of the ANTs
 toolkit:_
@@ -134,8 +137,8 @@ ANTs takes advantage of
 the mature Insight ToolKit in providing an optimal software framework for building scripts
 and programs specifically for neuroimaging.  For example, the following core neuroimage
 processing algorithms have been made available through our ANTs toolkit (complete with
-online self-contained examples with developer-tuned parameters) and have been used extensively by our group and
-others:
+online self-contained examples with developer-tuned parameters) and have been used extensively
+by the community:
 
 * brain normalization [@Avants:2011ab;@Avants:2014aa] (https://github.com/stnava/BasicBrainMapping),
 * brain template generation [@Avants:2010aa] (https://github.com/ntustison/TemplateBuildingExample),
@@ -177,7 +180,7 @@ obtain the desired processed data which outperforms the current state-of-the-art
 This approach to reducing the steep learning curve associated with many processing pipelines
 has several benefits.  Bash is an extremely common command language that permits large-scale
 processing.  Thus, running several jobs on a cluster infrastructure is straightforward with
-this approach (as opposed to a GUI-driven processing paradigm).  Such scripts are readable
+this approach.  Such scripts are readable
 by the interested user who can glean parameters as well as manually make changes.
 
 
@@ -191,18 +194,18 @@ volumetric imaging modalities, species, and anatomical regions, without bias to 
 particular problem domain. Compared to other, larger open-source image analysis tools,
 ITK-SNAP design focuses specifically on the problem of image segmentation, and extraneous
 or unrelated features are kept to a minimum. The design also emphasizes interaction and
-ease of use, with the bulk of the development effort dedi- cated to the user interface.
+ease of use, with the bulk of the development effort dedicated to the user interface.
 ITK-SNAP has thousands of users (there have been over 2000 downloads per month in the
 last year), and our 2006 paper on ITK-SNAP [@Yushkevich:2006aa] has been cited over 1400 times (Google
 Scholar) in the context of various biomedical domains. In recent years, ITK-SNAP
 development and maintenance were funded by grant 5R01 EB014346, and under this grant,
 powerful new functionality for registration was developed. ITK-SNAP will be used in this project for manual labeling
-of the proposed brain atlases; it is already used for this purpose by many investigators.
- Most crucially, we believe that our track record with ITK-SNAP as
+of the proposed CT lung atlases; it is already used for this purpose by many investigators.
+_Most crucially, we believe that our track record with ITK-SNAP as
 well as ANTs demonstrates our team’s commitment to producing high-quality research
 software and making it accessible to the wider research community through open-source
 practices, intuitive user interfaces, and outreach efforts. These strengths of the team
-will be applied to the software and data developed in the course of this project.
+will be applied to the software and data developed in the course of this project._
 
 
 <!--

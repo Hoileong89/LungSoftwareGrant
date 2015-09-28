@@ -33,7 +33,7 @@ review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, t
 consensus is that ``universally available image analysis software'' is a major hinderance
 to more widespread usage of such imaging biomarkers [@Hoffman:2015aa].
 
-```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken despite consensus amongst researchers and clinicians regarding the utility of such offerings." }
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=2, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken despite consensus amongst researchers and clinicians regarding the utility of such offerings." }
 years <- 2005:2014
 
 numberOfAbstractsPerYear <- rep( 0, length( years ) )
