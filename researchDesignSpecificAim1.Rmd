@@ -215,7 +215,7 @@ to the ITK allows researchers full access to the latest image analysis algorithm
 addition to avoiding research redundancy. It is also beneficial in that the entire ITK
 community participates in the vetting of the software library.
 
-__ Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
+__Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
 for disease characterization.  Additionally, there are other potential uses motivating
 the inclusion of airway segmentation in any pulmonary image analysis toolkit.
@@ -246,7 +246,7 @@ detection competition was held for comparing performance of individual algorithm
 as their combinations [@Ginneken:2010aa].  This competition included entries from both
 academic institutions as well as a system from Philips (although, to our knowledge, none
 are available for public use).  The best performing algorithm of that competition was
-based on the work presented in [@Murphy:2009] where a k-nearest neighbor classification employing
+based on the work presented in [@Murphy:2009aa] where a k-nearest neighbor classification employing
 local image features is built from a large training data set.  We plan to implement this
 method potentially with some modifications based on our experience with a more recent
 challenge dealing with segmentation of pathology [@Tustison:2014aa].
