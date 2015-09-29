@@ -1,0 +1,118 @@
+Slide 73:  ANTs for pulmonary imaging
+
+(Brief history of ANTs):
+ANTs was conceived and initially developed in order to perform accurate image registrations
+on neuroimaging data.  This work consisted primarily of the well-know Symmetric Normalization
+algorithm developed by Brian Avants and Jim Gee at PICSL with much clinical input pushing
+the need for accurate registrations coming from neurologist Murray Grossman.  However, given
+the general utility of the SyN algorithm, it was soon adopted by PICSL lab member,
+Tessa Sundaram, for performing diffeomorphic registrations (transforms with differentiable
+inverse transforms) for lung data.  Thus, although most of the forces driving ANTs work
+were primarily neuroimaging-related, as will be shown on the next few slides, one can apply
+domain-specific knowledge to extend ANTs tools to other domains (such as the
+lung).
+
+Slide 74:  ANTs core tools for lung image analysis
+
+Image registration is an obvious first choice for inclusion in a comprehensive toolkit for
+medical image analysis.  But after initial development of a stable registration tool, it
+became obvious that other data manipulation tools were absolutely essential to put together
+pipelines or workflows for doing large scale processing to ultimately obtain quantitative
+of clinical interest.  For example, N4 bias correction was developed by our group to remove
+the inhomogeneity associated with MRI acquisition.  N4 is an extension of the well-known
+N3 algorithm developed at the Montreal Neurological Institute and, like many other tools,
+was motivated *not* as a means to formulate the best algorithm but because the current
+implementation was inadequate in some form or another.
+
+(top left) N4 has proven to have a significant impact in the lung-domain by "cleaning up" inhomogeneity
+in functional (hyperpolarized gas) imaging (as shown here) and in 1H MRI.
+
+(bottom left) Atropos, our segmentation tool, was also developed initially for n-tissue
+brain segmentation.  However, it was discovered to have an immediate impact for
+ventilation-based segmentation in hyperpolarized gas imaging.  We discuss this further
+in a subsequent slide.
+
+(top center) One of the benefits of open-source is the community that open develops around such
+efforts.  At a recent conference, one of the ANTs developers was offered some code for
+spatially adaptive denoising to put in ANTs.  We welcome such contributions.  The code was
+rewritten in an ITK/ANTs style and has been adopted within a couple segmentation
+pipelines for improved results including lung CT image registration and segmentation.
+
+(bottom center) Recent work within the neuro community has highlighted the importance of
+incorporating prior knowledge into medical image analysis tasks.  Such intuition has proven
+highly effective in multi-atlas label fusion approaches where annotated atlas libraries
+are registered to a target image and the warped segmentation labels are intelligently fused
+to produce a target segmentation.  Again, this had an immediate impact for the lung community
+in providing a framework for lung and lobe estimation.  More on this later.
+
+(right)  Another well-known tool in the ANTs toolbox is the template-generating functionality
+which permits the construction of optimal shape/intensity multi-modal templates which often
+serve as the normalized statistical coordinate system for performing longitudinal or groupwise
+voxel-based analysis.
+
+Slide 75:  Functional ventilation
+
+Shown here is a single subject from a longitudinal study using hyperpolarized gas imaging.
+One of the objectives of this study is analysis of the localized lung ventilation before,
+after, and after a delayed time period of albuterol administration.  Shown at the top are
+the hyperpolarized 3He images normalized to the longitudinal template.  On the bottom are the
+corresponding segmentation slices where a rough clinical labeling is as follows:
+
+red = no ventilation
+green = hypoventilation
+blue & yellow = normal ventilation
+
+Notice how ventilation improves with albuterol administration but then regresses somewhat
+after a delay.
+
+Slide 76:  Lung and lobe estimation
+
+One of the recent publications from our group concerned the task of lung estimation in
+1H MRI.  Our functional imaging analysis workflows are very much dependent on whole lung
+segmentation in the 1H MRI given the simultaneous acquisition of 1H/3He MRI.  In other words,
+since the anatomical and functional images reside in the same space at acquisition, we can
+segment the proton MRI to provide a whole lung mask for functional image segmentation.
+We use the joint label fusion approach discussed earlier to obtain the
+left/right lung segmentation in a given target image.  Additionally, this framework can be
+used to give a good estimate of the lobes even when anatomical information (such as the
+fissures) is absent given the modality (such as 1H) or in cases of pathology (such as CT).
+
+Slide 77:  Good results on 1H MRI
+
+Shown here are the evaluation numbers for the joint label fusion approach described
+on the previous slide.  This evaluation was done by comparing the segmentation results
+with those obtained during the LOLA11 challenge representing the state-of-the-art lung
+*CT* segmentation strategies.  The LOLA11 numbers are given in parentheses.  Note how
+well the JLF numbers compare given the relative limitations of proton MRI compared with CT
+in the lung (i.e., inhomogeneity, lower resolution, relative intensity scale).  The use
+of prior knowledge significantly reduces the standard deviation across subjects implying
+comparatively excellent robustness.
+
+
+Slide 78:  Combining ANTs lung functionality I
+
+Ultimately, the goal of these tools are to optimize the clinical measures of interest
+so these tools are often organized together in optimal pipelines for producing
+clinically usable data.  This is work we did looking at the longitudinal treatment effects
+of a particular drug on a certain lung disease.  Each subject was imaged 5 times and the
+drug was administered on a schedule such that the expected treatment effect (simplified)
+was as provided in the lower right.  At the first two time points, we expected baseline to
+be lower than time points 3 and 4.  At time point 5, the effect of the drugs were expected
+to have been reduced.  We wanted to quantify the local effects of this drug treatment which
+we were able to do using ANTs tools.  (top left) First, a multi-modal template (statistical coordinate
+system) was created for each subject.  (bottom left) Second, each spatially normalized,
+4-D longitudinal data set was segmented as a single unit using our N4/Atropos segmetnation
+strategy.  The segmentations were then used to create normalized intensity images which
+we call "expected ventilation" images (continuous values in the range [1,4] where 1 is
+limited ventilation and 4 is normal ventilation).  At each voxel, we can see how its longitudinal
+intensity covaries with the simplified expected treatment hypothesis and calculate a correlation
+value.  (top right) These correlation maps can then be plotted in the space of the multi-modal template
+to illustrate variation in treatment response.
+
+Slide 79:  Combining ANTs lung functionality II
+
+This is another application of ANTs tools for determining airway pathway to a specific
+ventilation defect.  Ventilation-based segmentation is used to identify ventilation
+defects (red areas on the segmentation maps provided a couple slides back).  Airways are
+segmented using the corresponding CT image.  The functional and anatomical information are
+co-registered and rendered showing the defect/airway correspondence.
