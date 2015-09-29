@@ -57,7 +57,11 @@ pulmonary computational analysis.__  These open-source software tools will speci
 target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration for inferring pulmonary kinematics, ventilation-based segmentation,
 lung and lobe estimation, airway and vessel segmentation, nodule detection, and calculation of clinical indices for
-characterization of lung development and pathology.  [To supportXXX, multi-atlas library for CT XXX.]
+characterization of lung development and pathology.  To support these software development
+efforts, CT and 1H MRI multi-atlas libraries ($n=30$ per library) per will be provided as open data complete
+with the corresponding lung, airway, vessel, and lobe segmentations according to modality.
+In addition, we will provide the corresponding optimal intensity/shape templates.  Both
+sets of data will be provided with the corresponding scripts in order to reproduce the results.
 As developers of several leading open-source applications for image segmentation and registration, we
 know firsthand that the impact of a particular technological innovation greatly depends on the availability
 of an easily accessible software implementation.  The proposed software framework will tie together all of

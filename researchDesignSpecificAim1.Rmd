@@ -1,6 +1,20 @@
 
 ### 3(c.2) __Specific Aim 1:__   To develop a set of open-source software tools for CT, 1H, and 3He pulmonary computational analysis
 
+The envisioned open-science tool set for pulmonary image analysis consists of software,
+processed data to illustrate the use of the software, and the ability to visualize the
+processed data.  With this comprehensive offering, the goal of this proposal is to help
+the pulmonary imaging research community on a much deeper level than simply providing a
+set of programs.  In order to facilitate engagement on the part of the community, we are
+proposing a multi-prong offering with ITK-Lung.  The main componenent will be the
+core tool set described in Sub-Aim 1a which would permit large-scale processing of multi-modal
+pulmonary image data.  To illustrate the use of the software, allow for processing of other
+public and private data sets, and provide baseline data for algorithmic comparison, we
+plan to release CT and 1H MRI annotated atlas libraries, corresponding templates, and
+data-generating scripts as described in Section Sum-Aim 1b.  The third component will be
+significant extensions to the well-known ITK-SNAP tool for enhanced visualization of
+the results.
+
 __3(c.2.1) Sub-Aim 1a will expand the ITK/ANTs open-source libraries by implementing currently
 unavailable lung-specific algorithms.__
 Analogous to the neuroimaging tasks described earlier, several algorithmic categories exist for lung image
@@ -264,20 +278,55 @@ local image features is built from a large training data set.  We plan to implem
 method potentially with some modifications based on our experience with a more recent
 challenge dealing with segmentation of pathology [@Tustison:2014aa].
 
-__3(c.2.2) Sub-Aim 1b will extend current functionality of ITK-SNAP for qualitative
-and quantitative assessment of the results produced by ITK-Lung.__  Several features will
-be added to ITK-SNAP to enhance its usability and adoption by those interested in the
-lung-specific algorithms developed in the Sub-Aim 1a.  In order to assess image
-registration results, we plan to extend SNAP to allow for loading of ITK-style transforms
-to better visualize the mapping between two images in separate ITK-SNAP windows.  Users will
-also be able to generate the entire ITK transform library on the fly using manual annotations
-and intensity information increasing interaction during the registration process.
+__3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas libraries, one for CT and one for 1H MRI.
+The corresponding group templates will also be provided with the scripts to produce the results using
+ITK-Lung.__  As a complement to the open-source software provided in Sub-Aim 1a, we will generate
+atlas libraries for both CT and 1H MRI acquisitions.  Both libraries will consist of $n=30$ different
+subjects and will be annotated according to modality.  The CT atlas library will include lung, lobe,
+airway, and vessel segmentations.  The 1H MRI atlas library will include left/right lung segmentations.
+With the annotated data we will provide the scripts and documentation to reproduce
+the ITK-Lung results.  Additionally, two group templates [@Avants:2010aa] for the two atlas
+libraries will be included as part of these open data sets.
+
+__3(c.2.3) Sub-Aim 1c will extend current functionality of ITK-SNAP for qualitative
+and quantitative assessment of the results produced by ITK-Lung.__
+Project investigator Paul Yushkevich leads the development of ITK-SNAP [@Yushkevich:2006aa], a multi-platform
+open-source tool for interactive user-guided medical image segmentation and data visualization. ITK-SNAP provides
+an effective combination of semi-automatic segmentation functionality based on active
+contours [@Caselles:1997aa;@Zhu:1996aa] and manual delineation functionality, put together into a compact and
+easy-to-learn graphical user interface. ITK-SNAP supports segmentation of multiple
+volumetric imaging modalities, species, and anatomical regions, without bias to any
+particular problem domain. Compared to other, larger open-source image analysis tools,
+ITK-SNAP design focuses specifically on the problem of image segmentation, and extraneous
+or unrelated features are kept to a minimum. The design also emphasizes interaction and
+ease of use, with the bulk of the development effort dedicated to the user interface.
+ITK-SNAP has thousands of users (there have been over 2000 downloads per month in the
+last year), and our 2006 paper on ITK-SNAP [@Yushkevich:2006aa] has been cited over 1400 times (Google
+Scholar) in the context of various biomedical domains. In recent years, ITK-SNAP
+development and maintenance were funded by grant 5R01 EB014346, and under this grant,
+powerful new functionality for registration was developed. ITK-SNAP will be used in this project for manual labeling
+of the proposed CT lung atlases; it is already used for this purpose by many investigators.
+_Most crucially, we believe that our track record with ITK-SNAP as
+well as ANTs demonstrates our team’s commitment to producing high-quality research
+software and making it accessible to the wider research community through open-source
+practices, intuitive user interfaces, and outreach efforts. These strengths of the team
+will be applied to the software and data developed in the course of this project._
+
+Several features will
+be added to ITK-SNAP to enhance visualization and quantitation for the registration
+and segmentation results of the lung-specific algorithms developed in the Sub-Aim 1a
+and the data generated in Sub-Aim 1b.  Users will be able to edit and annotate these
+segmentations, modify transforms, and extract quantities both globally and regionally.
+Transforms will be modifiable via manual annotations (clicking corresponding landmarks and/or
+tracing curves) or by directly modifying transform parameters.  Finally, quantitative parameters,
+such as volumes and strain tensors, will be available through the ITK-SNAP interface.
 _We believe that the proposed enhancements to the software will be extremely useful to the
 general imaging research community and not just those investigators targeted in this project.
 Thus, the impact of this work will be both immediate and broad for pulmonary-driven science
 and research._
 
-__3(c.2.3) Software engineering.__ Both ANTs and ITK-SNAP development, based on a solid foundation
+
+__3(c.2.4) Software engineering.__ Both ANTs and ITK-SNAP development, based on a solid foundation
 provided by the Insight Toolkit, utilizes open-source
 software engineering best practices, such as the use of Git version management software
 for collaborative development and easy branching and merging; use of a centralized repository

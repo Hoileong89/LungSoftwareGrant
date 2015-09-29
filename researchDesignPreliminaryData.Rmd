@@ -184,30 +184,6 @@ this approach.  Such scripts are readable
 by the interested user who can glean parameters as well as manually make changes.
 
 
-__3(c.1.3) ITK-SNAP.__
-Project investigator Paul Yushkevich leads the development of ITK-SNAP [@Yushkevich:2006aa], a multi-platform
-open-source tool for interactive user-guided medical image segmentation and data visualization. ITK-SNAP provides
-an effective combination of semi-automatic segmentation functionality based on active
-contours [@Caselles:1997aa;@Zhu:1996aa] and manual delineation functionality, put together into a compact and
-easy-to-learn graphical user interface. ITK-SNAP supports segmentation of multiple
-volumetric imaging modalities, species, and anatomical regions, without bias to any
-particular problem domain. Compared to other, larger open-source image analysis tools,
-ITK-SNAP design focuses specifically on the problem of image segmentation, and extraneous
-or unrelated features are kept to a minimum. The design also emphasizes interaction and
-ease of use, with the bulk of the development effort dedicated to the user interface.
-ITK-SNAP has thousands of users (there have been over 2000 downloads per month in the
-last year), and our 2006 paper on ITK-SNAP [@Yushkevich:2006aa] has been cited over 1400 times (Google
-Scholar) in the context of various biomedical domains. In recent years, ITK-SNAP
-development and maintenance were funded by grant 5R01 EB014346, and under this grant,
-powerful new functionality for registration was developed. ITK-SNAP will be used in this project for manual labeling
-of the proposed CT lung atlases; it is already used for this purpose by many investigators.
-_Most crucially, we believe that our track record with ITK-SNAP as
-well as ANTs demonstrates our team’s commitment to producing high-quality research
-software and making it accessible to the wider research community through open-source
-practices, intuitive user interfaces, and outreach efforts. These strengths of the team
-will be applied to the software and data developed in the course of this project._
-
-
 <!--
 
 <img src="Figs/snap.png" alt="Screenshot of the well-known ITK-SNAP open source tool showing co-registered 1H (left) and 3He MRI (right).  The spatially normalized images permits extraction of anatomical information (i.e., lung and lobar regions) and functional information in terms of ventilation.  Shown in the bottom left panel is the surface rendering of the ventilation-based segmentation." style="width: 200px;"/>

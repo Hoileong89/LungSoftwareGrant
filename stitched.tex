@@ -203,10 +203,15 @@ proposal is defined by the following specific aims:
   kinematics, ventilation-based segmentation, lung and lobe estimation,
   airway and vessel segmentation, nodule detection, and calculation of
   clinical indices for characterization of lung development and
-  pathology. {[}To supportXXX, multi-atlas library for CT XXX.{]} As
-  developers of several leading open-source applications for image
-  segmentation and registration, we know firsthand that the impact of a
-  particular technological innovation greatly depends on the
+  pathology. To support these software development efforts, CT and 1H
+  MRI multi-atlas libraries ($n=30$ per library) per will be provided as
+  open data complete with the corresponding lung, airway, vessel, and
+  lobe segmentations according to modality. In addition, we will provide
+  the corresponding optimal intensity/shape templates. Both sets of data
+  will be provided with the corresponding scripts in order to reproduce
+  the results. As developers of several leading open-source applications
+  for image segmentation and registration, we know firsthand that the
+  impact of a particular technological innovation greatly depends on the
   availability of an easily accessible software implementation. The
   proposed software framework will tie together all of the capabilities
   of the project's developed methodology in the form of programmable
@@ -599,38 +604,26 @@ several jobs on a cluster infrastructure is straightforward with this
 approach. Such scripts are readable by the interested user who can glean
 parameters as well as manually make changes.
 
-\textbf{3(c.1.3) ITK-SNAP.} Project investigator Paul Yushkevich leads
-the development of ITK-SNAP {[}58{]}, a multi-platform open-source tool
-for interactive user-guided medical image segmentation and data
-visualization. ITK-SNAP provides an effective combination of
-semi-automatic segmentation functionality based on active contours
-{[}59, 60{]} and manual delineation functionality, put together into a
-compact and easy-to-learn graphical user interface. ITK-SNAP supports
-segmentation of multiple volumetric imaging modalities, species, and
-anatomical regions, without bias to any particular problem domain.
-Compared to other, larger open-source image analysis tools, ITK-SNAP
-design focuses specifically on the problem of image segmentation, and
-extraneous or unrelated features are kept to a minimum. The design also
-emphasizes interaction and ease of use, with the bulk of the development
-effort dedicated to the user interface. ITK-SNAP has thousands of users
-(there have been over 2000 downloads per month in the last year), and
-our 2006 paper on ITK-SNAP {[}58{]} has been cited over 1400 times
-(Google Scholar) in the context of various biomedical domains. In recent
-years, ITK-SNAP development and maintenance were funded by grant 5R01
-EB014346, and under this grant, powerful new functionality for
-registration was developed. ITK-SNAP will be used in this project for
-manual labeling of the proposed CT lung atlases; it is already used for
-this purpose by many investigators. \emph{Most crucially, we believe
-that our track record with ITK-SNAP as well as ANTs demonstrates our
-team's commitment to producing high-quality research software and making
-it accessible to the wider research community through open-source
-practices, intuitive user interfaces, and outreach efforts. These
-strengths of the team will be applied to the software and data developed
-in the course of this project.}
-
 \subsubsection{3(c.2) \textbf{Specific Aim 1:} To develop a set of
 open-source software tools for CT, 1H, and 3He pulmonary computational
 analysis}\label{c.2-specific-aim-1-to-develop-a-set-of-open-source-software-tools-for-ct-1h-and-3he-pulmonary-computational-analysis}
+
+The envisioned open-science tool set for pulmonary image analysis
+consists of software, processed data to illustrate the use of the
+software, and the ability to visualize the processed data. With this
+comprehensive offering, the goal of this proposal is to help the
+pulmonary imaging research community on a much deeper level than simply
+providing a set of programs. In order to facilitate engagement on the
+part of the community, we are proposing a multi-prong offering with
+ITK-Lung. The main componenent will be the core tool set described in
+Sub-Aim 1a which would permit large-scale processing of multi-modal
+pulmonary image data. To illustrate the use of the software, allow for
+processing of other public and private data sets, and provide baseline
+data for algorithmic comparison, we plan to release CT and 1H MRI
+annotated atlas libraries, corresponding templates, and data-generating
+scripts as described in Section Sum-Aim 1b. The third component will be
+significant extensions to the well-known ITK-SNAP tool for enhanced
+visualization of the results.
 
 \textbf{3(c.2.1) Sub-Aim 1a will expand the ITK/ANTs open-source
 libraries by implementing currently unavailable lung-specific
@@ -640,7 +633,7 @@ we have noted previously, do not exist in any comprehensive, publicly
 available package. This is in spite of the fact that new algorithms for
 lung image analysis are frequently reported in the literature. An
 extensive survey concentrating on the years 1999--2004 is given in
-{[}61{]} which covers computer-aided diagnosis of lung disease and lung
+{[}58{]} which covers computer-aided diagnosis of lung disease and lung
 cancer in CT (i.e., detection and tracking of pulmonary nodules) and
 provides an overview of the many relevant segmentation methods for
 pulmonary structures. Although many algorithms existed at the time,
@@ -651,7 +644,7 @@ in algorithmic \emph{availability}. \emph{Additionally, a key problem in
 the pulmonary image analysis community is that the lack of publicly
 available tools translates directly into a lack of baseline performance
 standards with which researchers can compare their own algorithms
-{[}62{]}. This proposal constitutes a specific and overdue response to
+{[}59{]}. This proposal constitutes a specific and overdue response to
 this major deficiency in the field.}
 
 \begin{figure}[htbp]
@@ -677,22 +670,22 @@ analysis that would be incorporated into ITK-Lung:
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  whole lung differentiation from the chest wall (e.g., {[}63--66{]}),
+  whole lung differentiation from the chest wall (e.g., {[}60--63{]}),
 \item
-  bronchial structure extraction (e.g., {[}67, 68{]} and the many
+  bronchial structure extraction (e.g., {[}64, 65{]} and the many
   submissions to the recent Extraction of Airways from CT (ExACT)
   challenge of the 2nd International Workshop on Pulmonary Image
-  Analysis {[}69{]}),
+  Analysis {[}66{]}),
 \item
-  vasculature segmentation (e.g., {[}70, 71{]}),
+  vasculature segmentation (e.g., {[}67, 68{]}),
 \item
-  lobe and/or fissure detection (e.g., {[}72, 73{]}),
+  lobe and/or fissure detection (e.g., {[}69, 70{]}),
 \item
-  feature extraction and classification (e.g., {[}74--76{]}), and
+  feature extraction and classification (e.g., {[}71--73{]}), and
 \item
-  nodule detection (e.g., {[}77{]} and the many submissions to the
+  nodule detection (e.g., {[}74{]} and the many submissions to the
   Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD
-  Conference of SPIE Medical Imaging {[}78{]}).
+  Conference of SPIE Medical Imaging {[}75{]}).
 \end{itemize}
 
 Although this list is restricted to CT image analysis, inclusion of
@@ -707,7 +700,7 @@ quantification of morphological features or ventilation information from
 functional images. Quantitative regional analysis often requires the
 identification of lung and lobar anatomy. Although much algorithmic
 research for lung segmentation has been reported in the CT literature
-{[}79{]}, co-opting such technologies is complicated by MRI-specific
+{[}76{]}, co-opting such technologies is complicated by MRI-specific
 issues such as RF coil inhomogeneity, presence and resolution of
 structural detail, and the absence of a physically-based intensity
 scaling.
@@ -763,7 +756,7 @@ right upper: $0.852 \pm 0.067$, right middle: $0.657 \pm 0.130$, right
 lower: $0.873 \pm 0.063$). We will extend this framework to pulmonary CT
 in providing spatial prior probability maps augmented by image-specific
 CT data features as fissures, airways, and blood vessels for
-data-driven, subject-specific lobe segmentation {[}73{]}.
+data-driven, subject-specific lobe segmentation {[}70{]}.
 
 \textbf{Ventilation quantification.} Automated or semi-automated
 approaches for classifying areas of varying degrees of ventilation are
@@ -771,7 +764,7 @@ of potential benefit for pulmonary functional analysis. In {[}34{]}, we
 presented an automated algorithmic pipeline for ventilation-based
 partitioning of the lungs in hyperpolarized 3He and 129Xe MRI. Without
 ground truth data for evaluation, we used a consensus labeling approach
-{[}80{]} to simultaneously estimate the true segmentation from given
+{[}77{]} to simultaneously estimate the true segmentation from given
 ``raters'' which included the segmentation from our automated approach
 and the manual tracings of three trained individuals. In terms of
 combined specificity and sensitivity, our automated algorithm
@@ -799,12 +792,12 @@ identifying the centrilobular and groundglass opacities and fractal and
 connectivity approaches to differentiate centrilobular from panlobular
 emphysema. The indices for CT image analysis can roughly be divided into
 those that characterize the pulmonary parenchyma: volumetric tissue
-(e.g., {[}81, 82{]}), distribution of low attenuation areas (LAA) (e.g.,
-{[}83, 84{]}), cooccurrence and run-length matrix features (e.g., {[}74,
-85{]}), attenuation statistics (e.g., {[}86, 87{]}), deformation
-measures (e.g., {[}88, 89{]}), and stochastic fractal dimension features
-(e.g., {[}74, 87{]}); and those that characterize the airways (e.g.,
-{[}90--92{]}). The former are important for subjects with an
+(e.g., {[}78, 79{]}), distribution of low attenuation areas (LAA) (e.g.,
+{[}80, 81{]}), cooccurrence and run-length matrix features (e.g., {[}71,
+82{]}), attenuation statistics (e.g., {[}83, 84{]}), deformation
+measures (e.g., {[}85, 86{]}), and stochastic fractal dimension features
+(e.g., {[}71, 84{]}); and those that characterize the airways (e.g.,
+{[}87--89{]}). The former are important for subjects with an
 emphysematous component of disease, whereas the latter are important for
 subjects with a bronchitic component of disease. \emph{An important
 component of this proposal is that many of these measurements can also
@@ -820,24 +813,24 @@ lung disease.
 Table 2 provides an overview of these types of discriminative
 measurements, many of which can be used for CT and 3He lung assessment.
 We have already implemented many of these image features and have
-contributed the result of our work to the Insight Toolkit (e.g., {[}93,
-94{]}).
+contributed the result of our work to the Insight Toolkit (e.g., {[}90,
+91{]}).
 
 \textbf{Airway and vessel segmentation.} In describing the quantitative
 CT lung indices, it was pointed out that lung airway morphology has been
 previously utilized as a biomarker for disease characterization.
 Additionally, there are other potential uses motivating the inclusion of
 airway segmentation in any pulmonary image analysis toolkit. In an
-evaluation of 15 airway segmentation algorithms {[}95{]} for the
+evaluation of 15 airway segmentation algorithms {[}92{]} for the
 Extraction of Airways from CT challenge held in 2009, a total of 40 CT
 scans from 8 sites divided into testing and training data sets and
 manually annotated by medical student observers. Sensitivity and
 specifity criteria were used to assess relative performance levels with
-the top 2 performers were the algorithms of {[}96{]} and {[}97{]} with
+the top 2 performers were the algorithms of {[}93{]} and {[}94{]} with
 the latter being one of the more conservative algorithms and the former
 being more prone to false positives. Our plan is to provide an
-implementation of {[}96{]} and then augment this functionality with some
-of our previous work {[}98{]} for removing leakage path candidates.
+implementation of {[}93{]} and then augment this functionality with some
+of our previous work {[}95{]} for removing leakage path candidates.
 
 ITK has extensive functionality for segmentation of vessel-like
 structures. Much of that work has been incorporated into comprehensive
@@ -854,33 +847,76 @@ which has inspired much research literature on the topic including
 several commercial systems and specialized visualization hardware for
 facilitating detection. In 2009, a nodule detection competition was held
 for comparing performance of individual algorithms as well as their
-combinations {[}78{]}. This competition included entries from both
+combinations {[}75{]}. This competition included entries from both
 academic institutions as well as a system from Philips (although, to our
 knowledge, none are available for public use). The best performing
 algorithm of that competition was based on the work presented in
-{[}99{]} where a k-nearest neighbor classification employing local image
+{[}96{]} where a k-nearest neighbor classification employing local image
 features is built from a large training data set. We plan to implement
 this method potentially with some modifications based on our experience
 with a more recent challenge dealing with segmentation of pathology
 {[}19{]}.
 
-\textbf{3(c.2.2) Sub-Aim 1b will extend current functionality of
-ITK-SNAP for qualitative and quantitative assessment of the results
-produced by ITK-Lung.} Several features will be added to ITK-SNAP to
-enhance its usability and adoption by those interested in the
-lung-specific algorithms developed in the Sub-Aim 1a. In order to assess
-image registration results, we plan to extend SNAP to allow for loading
-of ITK-style transforms to better visualize the mapping between two
-images in separate ITK-SNAP windows. Users will also be able to generate
-the entire ITK transform library on the fly using manual annotations and
-intensity information increasing interaction during the registration
-process. \emph{We believe that the proposed enhancements to the software
-will be extremely useful to the general imaging research community and
-not just those investigators targeted in this project. Thus, the impact
-of this work will be both immediate and broad for pulmonary-driven
-science and research.}
+\textbf{3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas
+libraries, one for CT and one for 1H MRI. The corresponding group
+templates will also be provided with the scripts to produce the results
+using ITK-Lung.} As a complement to the open-source software provided in
+Sub-Aim 1a, we will generate atlas libraries for both CT and 1H MRI
+acquisitions. Both libraries will consist of $n=30$ different subjects
+and will be annotated according to modality. The CT atlas library will
+include lung, lobe, airway, and vessel segmentations. The 1H MRI atlas
+library will include left/right lung segmentations. With the annotated
+data we will provide the scripts and documentation to reproduce the
+ITK-Lung results. Additionally, two group templates {[}18{]} for the two
+atlas libraries will be included as part of these open data sets.
 
-\textbf{3(c.2.3) Software engineering.} Both ANTs and ITK-SNAP
+\textbf{3(c.2.3) Sub-Aim 1c will extend current functionality of
+ITK-SNAP for qualitative and quantitative assessment of the results
+produced by ITK-Lung.} Project investigator Paul Yushkevich leads the
+development of ITK-SNAP {[}97{]}, a multi-platform open-source tool for
+interactive user-guided medical image segmentation and data
+visualization. ITK-SNAP provides an effective combination of
+semi-automatic segmentation functionality based on active contours
+{[}98, 99{]} and manual delineation functionality, put together into a
+compact and easy-to-learn graphical user interface. ITK-SNAP supports
+segmentation of multiple volumetric imaging modalities, species, and
+anatomical regions, without bias to any particular problem domain.
+Compared to other, larger open-source image analysis tools, ITK-SNAP
+design focuses specifically on the problem of image segmentation, and
+extraneous or unrelated features are kept to a minimum. The design also
+emphasizes interaction and ease of use, with the bulk of the development
+effort dedicated to the user interface. ITK-SNAP has thousands of users
+(there have been over 2000 downloads per month in the last year), and
+our 2006 paper on ITK-SNAP {[}97{]} has been cited over 1400 times
+(Google Scholar) in the context of various biomedical domains. In recent
+years, ITK-SNAP development and maintenance were funded by grant 5R01
+EB014346, and under this grant, powerful new functionality for
+registration was developed. ITK-SNAP will be used in this project for
+manual labeling of the proposed CT lung atlases; it is already used for
+this purpose by many investigators. \emph{Most crucially, we believe
+that our track record with ITK-SNAP as well as ANTs demonstrates our
+team's commitment to producing high-quality research software and making
+it accessible to the wider research community through open-source
+practices, intuitive user interfaces, and outreach efforts. These
+strengths of the team will be applied to the software and data developed
+in the course of this project.}
+
+Several features will be added to ITK-SNAP to enhance visualization and
+quantitation for the registration and segmentation results of the
+lung-specific algorithms developed in the Sub-Aim 1a and the data
+generated in Sub-Aim 1b. Users will be able to edit and annotate these
+segmentations, modify transforms, and extract quantities both globally
+and regionally. Transforms will be modifiable via manual annotations
+(clicking corresponding landmarks and/or tracing curves) or by directly
+modifying transform parameters. Finally, quantitative parameters, such
+as volumes and strain tensors, will be available through the ITK-SNAP
+interface. \emph{We believe that the proposed enhancements to the
+software will be extremely useful to the general imaging research
+community and not just those investigators targeted in this project.
+Thus, the impact of this work will be both immediate and broad for
+pulmonary-driven science and research.}
+
+\textbf{3(c.2.4) Software engineering.} Both ANTs and ITK-SNAP
 development, based on a solid foundation provided by the Insight
 Toolkit, utilizes open-source software engineering best practices, such
 as the use of Git version management software for collaborative
@@ -1581,33 +1617,19 @@ organization of human brain mapping} (2010):
 \emph{Neuroimage} 45, no. 3 (2009): 867--79.
 doi:\href{http://dx.doi.org/10.1016/j.neuroimage.2008.12.016}{10.1016/j.neuroimage.2008.12.016}
 
-58. Yushkevich, P. A., Piven, J., Hazlett, H. C., Smith, R. G., Ho, S.,
-Gee, J. C., and Gerig, G. ``\textbf{User-Guided 3D Active Contour
-Segmentation of Anatomical Structures: significantly Improved Efficiency
-and Reliability}'' \emph{Neuroimage} 31, no. 3 (2006): 1116--28.
-doi:\href{http://dx.doi.org/10.1016/j.neuroimage.2006.01.015}{10.1016/j.neuroimage.2006.01.015}
-
-59. Caselles, V., Kimmel, R., and Sapiro, G. ``\textbf{Geodesic Active
-Contours}'' \emph{Int J Comput Vision} 22, (1997): 61--79.
-
-60. Zhu, S. and Yuille, A. ``\textbf{Region Competition: Unifying
-Snakes, Region Growing, and Bayes/MDL for Multiband Image
-Segmentation}'' \emph{IEEE Trans Pattern Anal Mach Intell} 18, no. 9
-(1996): 884--900.
-
-61. Sluimer, I., Schilham, A., Prokop, M., and Ginneken, B. van.
+58. Sluimer, I., Schilham, A., Prokop, M., and Ginneken, B. van.
 ``\textbf{Computer Analysis of Computed Tomography Scans of the Lung: a
 Survey}'' \emph{IEEE Trans Med Imaging} 25, no. 4 (2006): 385--405.
 doi:\href{http://dx.doi.org/10.1109/TMI.2005.862753}{10.1109/TMI.2005.862753}
 
-62. Tustison, N. J., Johnson, H. J., Rohlfing, T., Klein, A., Ghosh, S.
+59. Tustison, N. J., Johnson, H. J., Rohlfing, T., Klein, A., Ghosh, S.
 S., Ibanez, L., and Avants, B. B. ``\textbf{Instrumentation Bias in the
 Use and Evaluation of Scientific Software: recommendations for
 Reproducible Practices in the Computational Sciences}'' \emph{Front
 Neurosci} 7, (2013): 162.
 doi:\href{http://dx.doi.org/10.3389/fnins.2013.00162}{10.3389/fnins.2013.00162}
 
-63. De Nunzio, G., Tommasi, E., Agrusti, A., Cataldo, R., De Mitri, I.,
+60. De Nunzio, G., Tommasi, E., Agrusti, A., Cataldo, R., De Mitri, I.,
 Favetta, M., Maglio, S., Massafra, A., Quarta, M., Torsello, M., Zecca,
 I., Bellotti, R., Tangaro, S., Calvini, P., Camarlinghi, N., Falaschi,
 F., Cerello, P., and Oliva, P. ``\textbf{Automatic Lung Segmentation in
@@ -1615,81 +1637,81 @@ CT Images with Accurate Handling of the Hilar Region}'' \emph{J Digit
 Imaging} 24, no. 1 (2011): 11--27.
 doi:\href{http://dx.doi.org/10.1007/s10278-009-9229-1}{10.1007/s10278-009-9229-1}
 
-64. Prasad, M. N., Brown, M. S., Ahmad, S., Abtin, F., Allen, J., Costa,
+61. Prasad, M. N., Brown, M. S., Ahmad, S., Abtin, F., Allen, J., Costa,
 I. da, Kim, H. J., McNitt-Gray, M. F., and Goldin, J. G.
 ``\textbf{Automatic Segmentation of Lung Parenchyma in the Presence of
 Diseases Based on Curvature of Ribs}'' \emph{Acad Radiol} 15, no. 9
 (2008): 1173--80.
 doi:\href{http://dx.doi.org/10.1016/j.acra.2008.02.004}{10.1016/j.acra.2008.02.004}
 
-65. Wang, J., Li, F., and Li, Q. ``\textbf{Automated Segmentation of
+62. Wang, J., Li, F., and Li, Q. ``\textbf{Automated Segmentation of
 Lungs with Severe Interstitial Lung Disease in CT}'' \emph{Med Phys} 36,
 no. 10 (2009): 4592--9.
 
-66. Rikxoort, E. M. van, Hoop, B. de, Viergever, M. A., Prokop, M., and
+63. Rikxoort, E. M. van, Hoop, B. de, Viergever, M. A., Prokop, M., and
 Ginneken, B. van. ``\textbf{Automatic Lung Segmentation from Thoracic
 Computed Tomography Scans Using a Hybrid Approach with Error
 Detection}'' \emph{Med Phys} 36, no. 7 (2009): 2934--47.
 
-67. Zheng, B., Leader, J. K., McMurray, J. M., Park, S. C., Fuhrman, C.
+64. Zheng, B., Leader, J. K., McMurray, J. M., Park, S. C., Fuhrman, C.
 R., Gur, D., and Sciurba, F. C. ``\textbf{Automated Detection and
 Quantitative Assessment of Pulmonary Airways Depicted on CT Images}''
 \emph{Med Phys} 34, no. 7 (2007): 2844--52.
 
-68. Nakamura, M., Wada, S., Miki, T., Shimada, Y., Suda, Y., and Tamura,
+65. Nakamura, M., Wada, S., Miki, T., Shimada, Y., Suda, Y., and Tamura,
 G. ``\textbf{Automated Segmentation and Morphometric Analysis of the
 Human Airway Tree from Multidetector CT Images}'' \emph{J Physiol Sci}
 58, no. 7 (2008): 493--8.
 doi:\href{http://dx.doi.org/10.2170/physiolsci.RP007408}{10.2170/physiolsci.RP007408}
 
-69. Lo, P., Ginneken, B. van, Reinhardt, J. M., and Bruijne, M. de.
+66. Lo, P., Ginneken, B. van, Reinhardt, J. M., and Bruijne, M. de.
 ``\textbf{Extraction of Airways from CT (EXACT '09)}'' \emph{The second
 international workshop on pulmonary image analysis} (2009):
 
-70. Agam, G., Armato, S. G., 3rd, and Wu, C. ``\textbf{Vessel Tree
+67. Agam, G., Armato, S. G., 3rd, and Wu, C. ``\textbf{Vessel Tree
 Reconstruction in Thoracic CT Scans with Application to Nodule
 Detection}'' \emph{IEEE Trans Med Imaging} 24, no. 4 (2005): 486--99.
 
-71. Korfiatis, P. D., Kalogeropoulou, C., Karahaliou, A. N., Kazantzi,
+68. Korfiatis, P. D., Kalogeropoulou, C., Karahaliou, A. N., Kazantzi,
 A. D., and Costaridou, L. I. ``\textbf{Vessel Tree Segmentation in
 Presence of Interstitial Lung Disease in MDCT}'' \emph{IEEE Trans Inf
 Technol Biomed} 15, no. 2 (2011): 214--20.
 doi:\href{http://dx.doi.org/10.1109/TITB.2011.2112668}{10.1109/TITB.2011.2112668}
 
-72. Qi, S., Triest, H. J. W. van, Yue, Y., Xu, M., and Kang, Y.
+69. Qi, S., Triest, H. J. W. van, Yue, Y., Xu, M., and Kang, Y.
 ``\textbf{Automatic Pulmonary Fissure Detection and Lobe Segmentation in
 CT Chest Images}'' \emph{Biomed Eng Online} 13, (2014): 59.
 doi:\href{http://dx.doi.org/10.1186/1475-925X-13-59}{10.1186/1475-925X-13-59}
 
-73. Doel, T., Gavaghan, D. J., and Grau, V. ``\textbf{Review of
+70. Doel, T., Gavaghan, D. J., and Grau, V. ``\textbf{Review of
 Automatic Pulmonary Lobe Segmentation Methods from CT}'' \emph{Comput
 Med Imaging Graph} 40, (2015): 13--29.
 doi:\href{http://dx.doi.org/10.1016/j.compmedimag.2014.10.008}{10.1016/j.compmedimag.2014.10.008}
 
-74. Uppaluri, R., Hoffman, E. A., Sonka, M., Hartley, P. G.,
+71. Uppaluri, R., Hoffman, E. A., Sonka, M., Hartley, P. G.,
 Hunninghake, G. W., and McLennan, G. ``\textbf{Computer Recognition of
 Regional Lung Disease Patterns}'' \emph{Am J Respir Crit Care Med} 160,
 no. 2 (1999): 648--54.
 doi:\href{http://dx.doi.org/10.1164/ajrccm.160.2.9804094}{10.1164/ajrccm.160.2.9804094}
 
-75. Rosas, I. O., Yao, J., Avila, N. A., Chow, C. K., Gahl, W. A., and
+72. Rosas, I. O., Yao, J., Avila, N. A., Chow, C. K., Gahl, W. A., and
 Gochuico, B. R. ``\textbf{Automated Quantification of High-Resolution CT
 Scan Findings in Individuals at Risk for Pulmonary Fibrosis}''
 \emph{Chest} 140, no. 6 (2011): 1590--7.
 doi:\href{http://dx.doi.org/10.1378/chest.10-2545}{10.1378/chest.10-2545}
 
-76. DeBoer, E. M., Swiercz, W., Heltshe, S. L., Anthony, M. M., Szefler,
+73. DeBoer, E. M., Swiercz, W., Heltshe, S. L., Anthony, M. M., Szefler,
 P., Klein, R., Strain, J., Brody, A. S., and Sagel, S. D.
 ``\textbf{Automated CT Scan Scores of Bronchiectasis and Air Trapping in
 Cystic Fibrosis}'' \emph{Chest} 145, no. 3 (2014): 593--603.
 doi:\href{http://dx.doi.org/10.1378/chest.13-0588}{10.1378/chest.13-0588}
 
-77. Messay, T., Hardie, R. C., and Rogers, S. K. ``\textbf{A New
+74. Messay, T., Hardie, R. C., and Rogers, S. K. ``\textbf{A New
 Computationally Efficient CAD System for Pulmonary Nodule Detection in
 CT Imagery}'' \emph{Med Image Anal} 14, no. 3 (2010): 390--406.
 doi:\href{http://dx.doi.org/10.1016/j.media.2010.02.004}{10.1016/j.media.2010.02.004}
 
-78. Ginneken, B. van, Armato, S. G., 3rd, Hoop, B. de, Vorst, S. van
+75. Ginneken, B. van, Armato, S. G., 3rd, Hoop, B. de, Vorst, S. van
 Amelsvoort-van de, Duindam, T., Niemeijer, M., Murphy, K., Schilham, A.,
 Retico, A., Fantacci, M. E., Camarlinghi, N., Bagagli, F., Gori, I.,
 Hara, T., Fujita, H., Gargano, G., Bellotti, R., Tangaro, S., Bola{ñ}os,
@@ -1700,95 +1722,95 @@ Scans: The ANODE09 Study}'' \emph{Med Image Anal} 14, no. 6 (2010):
 707--22.
 doi:\href{http://dx.doi.org/10.1016/j.media.2010.05.005}{10.1016/j.media.2010.05.005}
 
-79. Rikxoort, E. M. van and Ginneken, B. van. ``\textbf{Automated
+76. Rikxoort, E. M. van and Ginneken, B. van. ``\textbf{Automated
 Segmentation of Pulmonary Structures in Thoracic Computed Tomography
 Scans: a Review}'' \emph{Phys Med Biol} 58, no. 17 (2013): R187--220.
 doi:\href{http://dx.doi.org/10.1088/0031-9155/58/17/R187}{10.1088/0031-9155/58/17/R187}
 
-80. Warfield, S. K., Zou, K. H., and Wells, W. M. ``\textbf{Simultaneous
+77. Warfield, S. K., Zou, K. H., and Wells, W. M. ``\textbf{Simultaneous
 Truth and Performance Level Estimation (STAPLE): an Algorithm for the
 Validation of Image Segmentation}'' \emph{IEEE Trans Med Imaging} 23,
 no. 7 (2004): 903--21.
 doi:\href{http://dx.doi.org/10.1109/TMI.2004.828354}{10.1109/TMI.2004.828354}
 
-81. Coxson, H. O., Rogers, R. M., Whittall, K. P., D'yachkova, Y.,
+78. Coxson, H. O., Rogers, R. M., Whittall, K. P., D'yachkova, Y.,
 Par{é}, P. D., Sciurba, F. C., and Hogg, J. C. ``\textbf{A
 Quantification of the Lung Surface Area in Emphysema Using Computed
 Tomography}'' \emph{Am J Respir Crit Care Med} 159, no. 3 (1999):
 851--6.
 doi:\href{http://dx.doi.org/10.1164/ajrccm.159.3.9805067}{10.1164/ajrccm.159.3.9805067}
 
-82. Perez, A., 4th, Coxson, H. O., Hogg, J. C., Gibson, K., Thompson, P.
+79. Perez, A., 4th, Coxson, H. O., Hogg, J. C., Gibson, K., Thompson, P.
 F., and Rogers, R. M. ``\textbf{Use of CT Morphometry to Detect Changes
 in Lung Weight and Gas Volume}'' \emph{Chest} 128, no. 4 (2005):
 2471--7.
 doi:\href{http://dx.doi.org/10.1378/chest.128.4.2471}{10.1378/chest.128.4.2471}
 
-83. Coxson, H. O. and Rogers, R. M. ``\textbf{New Concepts in the
+80. Coxson, H. O. and Rogers, R. M. ``\textbf{New Concepts in the
 Radiological Assessment of COPD}'' \emph{Semin Respir Crit Care Med} 26,
 no. 2 (2005): 211--20.
 doi:\href{http://dx.doi.org/10.1055/s-2005-869540}{10.1055/s-2005-869540}
 
-84. Stolk, J., Putter, H., Bakker, E. M., Shaker, S. B., Parr, D. G.,
+81. Stolk, J., Putter, H., Bakker, E. M., Shaker, S. B., Parr, D. G.,
 Piitulainen, E., Russi, E. W., Grebski, E., Dirksen, A., Stockley, R.
 A., Reiber, J. H. C., and Stoel, B. C. ``\textbf{Progression Parameters
 for Emphysema: a Clinical Investigation}'' \emph{Respir Med} 101, no. 9
 (2007): 1924--30.
 doi:\href{http://dx.doi.org/10.1016/j.rmed.2007.04.016}{10.1016/j.rmed.2007.04.016}
 
-85. Xu, Y., Sonka, M., McLennan, G., Guo, J., and Hoffman, E. A.
+82. Xu, Y., Sonka, M., McLennan, G., Guo, J., and Hoffman, E. A.
 ``\textbf{MDCT-Based 3-D Texture Classification of Emphysema and Early
 Smoking Related Lung Pathologies}'' \emph{IEEE Trans Med Imaging} 25,
 no. 4 (2006): 464--75.
 doi:\href{http://dx.doi.org/10.1109/TMI.2006.870889}{10.1109/TMI.2006.870889}
 
-86. Gevenois, P. A., De Vuyst, P., Sy, M., Scillia, P., Chaminade, L.,
+83. Gevenois, P. A., De Vuyst, P., Sy, M., Scillia, P., Chaminade, L.,
 Maertelaer, V. de, Zanen, J., and Yernault, J. C. ``\textbf{Pulmonary
 Emphysema: quantitative CT During Expiration}'' \emph{Radiology} 199,
 no. 3 (1996): 825--9.
 doi:\href{http://dx.doi.org/10.1148/radiology.199.3.8638012}{10.1148/radiology.199.3.8638012}
 
-87. Hoffman, E. A., Simon, B. A., and McLennan, G. ``\textbf{State of
+84. Hoffman, E. A., Simon, B. A., and McLennan, G. ``\textbf{State of
 the Art. a Structural and Functional Assessment of the Lung via
 Multidetector-Row Computed Tomography: phenotyping Chronic Obstructive
 Pulmonary Disease}'' \emph{Proc Am Thorac Soc} 3, no. 6 (2006): 519--32.
 doi:\href{http://dx.doi.org/10.1513/pats.200603-086MS}{10.1513/pats.200603-086MS}
 
-88. Gee, J., Sundaram, T., Hasegawa, I., Uematsu, H., and Hatabu, H.
+85. Gee, J., Sundaram, T., Hasegawa, I., Uematsu, H., and Hatabu, H.
 ``\textbf{Characterization of Regional Pulmonary Mechanics from Serial
 Magnetic Resonance Imaging Data}'' \emph{Acad Radiol} 10, no. 10 (2003):
 1147--52.
 
-89. Sundaram, T. A. and Gee, J. C. ``\textbf{Towards a Model of Lung
+86. Sundaram, T. A. and Gee, J. C. ``\textbf{Towards a Model of Lung
 Biomechanics: pulmonary Kinematics via Registration of Serial Lung
 Images}'' \emph{Med Image Anal} 9, no. 6 (2005): 524--37.
 doi:\href{http://dx.doi.org/10.1016/j.media.2005.04.002}{10.1016/j.media.2005.04.002}
 
-90. Aykac, D., Hoffman, E. A., McLennan, G., and Reinhardt, J. M.
+87. Aykac, D., Hoffman, E. A., McLennan, G., and Reinhardt, J. M.
 ``\textbf{Segmentation and Analysis of the Human Airway Tree from
 Three-Dimensional X-Ray CT Images}'' \emph{IEEE Trans Med Imaging} 22,
 no. 8 (2003): 940--50.
 doi:\href{http://dx.doi.org/10.1109/TMI.2003.815905}{10.1109/TMI.2003.815905}
 
-91. Park, W., Hoffman, E. A., and Sonka, M. ``\textbf{Segmentation of
+88. Park, W., Hoffman, E. A., and Sonka, M. ``\textbf{Segmentation of
 Intrathoracic Airway Trees: a Fuzzy Logic Approach}'' \emph{IEEE Trans
 Med Imaging} 17, no. 4 (1998): 489--97.
 doi:\href{http://dx.doi.org/10.1109/42.730394}{10.1109/42.730394}
 
-92. Ederle, J. R., Heussel, C. P., Hast, J., Fischer, B., Van Beek, E.
+89. Ederle, J. R., Heussel, C. P., Hast, J., Fischer, B., Van Beek, E.
 J. R., Ley, S., Thelen, M., and Kauczor, H. U. ``\textbf{Evaluation of
 Changes in Central Airway Dimensions, Lung Area and Mean Lung Density at
 Paired Inspiratory/Expiratory High-Resolution Computed Tomography}''
 \emph{Eur Radiol} 13, no. 11 (2003): 2454--61.
 doi:\href{http://dx.doi.org/10.1007/s00330-003-1909-5}{10.1007/s00330-003-1909-5}
 
-93. Tustison, N. J. and Gee, J. C. ``\textbf{Run-Length Matrices for
+90. Tustison, N. J. and Gee, J. C. ``\textbf{Run-Length Matrices for
 Texture Analysis}'' \emph{Insight Journal} (2008):
 
-94. Tustison, N. J. and Gee, J. C. ``\textbf{Stochastic Fractal
+91. Tustison, N. J. and Gee, J. C. ``\textbf{Stochastic Fractal
 Dimension Image}'' \emph{Insight Journal} (2009):
 
-95. Lo, P., Ginneken, B. van, Reinhardt, J. M., Yavarna, T., Jong, P. A.
+92. Lo, P., Ginneken, B. van, Reinhardt, J. M., Yavarna, T., Jong, P. A.
 de, Irving, B., Fetita, C., Ortner, M., Pinho, R., Sijbers, J.,
 Feuerstein, M., Fabija{ń}ska, A., Bauer, C., Beichel, R., Mendoza, C.
 S., Wiemker, R., Lee, J., Reeves, A. P., Born, S., Weinheimer, O.,
@@ -1798,25 +1820,39 @@ M. de. ``\textbf{Extraction of Airways from CT (EXACT'09)}'' \emph{IEEE
 Trans Med Imaging} 31, no. 11 (2012): 2093--107.
 doi:\href{http://dx.doi.org/10.1109/TMI.2012.2209674}{10.1109/TMI.2012.2209674}
 
-96. Feuerstein, M., Kitasaka, T., and Mori, K. ``\textbf{Adaptive Branch
+93. Feuerstein, M., Kitasaka, T., and Mori, K. ``\textbf{Adaptive Branch
 Tracing and Image Sharpening for Airway Tree Extraction in 3-d Chest
 CT}'' \emph{Proc. of second international workshop on pulmonary image
 analysis} (2009):
 
-97. Lee, J. and Reeves, A. P. ``\textbf{Segmentation of the Airway Tree
+94. Lee, J. and Reeves, A. P. ``\textbf{Segmentation of the Airway Tree
 from Chest CT Using Local Volume of Interest}'' \emph{Proc. of second
 international workshop on pulmonary image analysis} (2009):
 
-98. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
+95. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
 Segmentation by Removing Paths of Leakage}'' \emph{Proc. 3rd int.
 workshop pulmonary image analysis} (2010): 109--116.
 
-99. Murphy, K., Ginneken, B. van, Schilham, A. M. R., Hoop, B. J. de,
+96. Murphy, K., Ginneken, B. van, Schilham, A. M. R., Hoop, B. J. de,
 Gietema, H. A., and Prokop, M. ``\textbf{A Large-Scale Evaluation of
 Automatic Pulmonary Nodule Detection in Chest CT Using Local Image
 Features and K-Nearest-Neighbour Classification}'' \emph{Med Image Anal}
 13, no. 5 (2009): 757--70.
 doi:\href{http://dx.doi.org/10.1016/j.media.2009.07.001}{10.1016/j.media.2009.07.001}
+
+97. Yushkevich, P. A., Piven, J., Hazlett, H. C., Smith, R. G., Ho, S.,
+Gee, J. C., and Gerig, G. ``\textbf{User-Guided 3D Active Contour
+Segmentation of Anatomical Structures: significantly Improved Efficiency
+and Reliability}'' \emph{Neuroimage} 31, no. 3 (2006): 1116--28.
+doi:\href{http://dx.doi.org/10.1016/j.neuroimage.2006.01.015}{10.1016/j.neuroimage.2006.01.015}
+
+98. Caselles, V., Kimmel, R., and Sapiro, G. ``\textbf{Geodesic Active
+Contours}'' \emph{Int J Comput Vision} 22, (1997): 61--79.
+
+99. Zhu, S. and Yuille, A. ``\textbf{Region Competition: Unifying
+Snakes, Region Growing, and Bayes/MDL for Multiband Image
+Segmentation}'' \emph{IEEE Trans Pattern Anal Mach Intell} 18, no. 9
+(1996): 884--900.
 
 100. Available at \url{http://picsl.upenn.edu/software/ants/}
 
