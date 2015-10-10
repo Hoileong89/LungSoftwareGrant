@@ -4,7 +4,9 @@ library( RISmed )
 
 stitchedFile <- "stitched.Rmd";
 
-rmdFiles <- c( "format.Rmd", "specificAims.Rmd",
+formatFile <- "format.Rmd"
+
+rmdFiles <- c( formatFile, "specificAims.Rmd",
   "researchSignificance.Rmd", "researchInnovation.Rmd",
   "researchDesignPreliminaryData.Rmd",
   "researchDesignSpecificAim1.Rmd",
@@ -21,5 +23,19 @@ for( i in 1:length( rmdFiles ) )
     }
   system( cmd )
   }
+
+cat( '\n Pandoc rendering', stitchedFile, '\n' )
 render( stitchedFile, output_format = "all" )
+
+soloFiles <- c( "narrative.Rmd",
+                 "summary.Rmd"
+              )
+for( i in 1:length( soloFiles ) )
+  {
+  soloStitchedFile <- sub( '.Rmd', 'X.Rmd', soloFiles[i] )
+  cmd <- paste( "cat", formatFile, soloFiles[i], ">", soloStitchedFile )
+  system( cmd )
+  render( soloStitchedFile, output_format = "pdf_document" )
+  cat( '\n Pandoc rendering', soloFiles[i], '\n\n' )
+  }
 

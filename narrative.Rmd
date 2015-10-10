@@ -1,0 +1,15 @@
+
+\begin{center}
+{\bf Narrative}
+\end{center}
+
+This project will improve pulmonary scientists’ ability to explore clinical hypotheses
+concerning the structure and function of the human lung using multi-modal imaging data.
+Scientific research has been significantly enhanced by recent emphases on open-data and
+open-source tools.  This success has been quite apparent within the neuroimaging community
+but no such publicly available computational resources exist for pulmonary imaging.
+By providing open-source, user-friendly, widely interoperable, and extensively validated
+tools for pulmonary imaging analysis and mapping, the project will enable a broad field of
+scientists to leverage modern imaging technologies more effectively in answering basic
+science questions about the lung, which will potentially lead to clinical insights and
+advancements.
