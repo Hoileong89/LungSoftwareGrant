@@ -20,7 +20,7 @@ have significantly benefited from computational image
 analysis packages, particularly those softwares which have been tailored for
 specific application domains.  Although several such established packages exist for
 neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), _no such package exists for
-pulmonary imaging analysis.  The primary goal of this proposal is to develop
+pulmonary imaging analysis.  The primary goal of this project is to develop
 a robust, open-source image analysis toolkit and dissemination platform
  specifically targeted at the pulmonary research community._
 
@@ -50,18 +50,19 @@ template building for cross-sectional and longitudinal (i.e., respiratory cycle)
 functional and structural lung image segmentation, and computation of quantitative image
 indices as potential imaging biomarkers.  In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science
-principles.   Formally, this proposal is defined by the following specific aims:
+principles.   Formally, this project is defined by the following specific aims:
 
 * __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.__  These open-source software tools will specifically
 target pulmonary image analysis and comprise core application functions such as
-inspiratory/expiratory registration for inferring pulmonary kinematics, ventilation-based segmentation,
+inspiratory/expiratory registration, ventilation-based segmentation,
 lung and lobe estimation, airway and vessel segmentation, nodule detection, and calculation of clinical indices for
 characterization of lung development and pathology.  To support these software development
-efforts, CT and 1H MRI multi-atlas libraries ($n=30$ per library) per will be provided as open data complete
+efforts, CT and 1H MRI multi-atlas libraries will be provided as open data complete
 with the corresponding lung, airway, vessel, and lobe segmentations according to modality.
-In addition, we will provide the corresponding optimal intensity/shape templates.  Both
-sets of data will be provided with the corresponding scripts in order to reproduce the results.
+In addition, we will generate optimal intensity/shape templates from each library.  Both
+sets of data will be provided with the scripts used to produce them in order to permit
+user-reproduction of the results.
 As developers of several leading open-source applications for image segmentation and registration, we
 know firsthand that the impact of a particular technological innovation greatly depends on the availability
 of an easily accessible software implementation.  The proposed software framework will tie together all of
@@ -73,7 +74,7 @@ evaluation and visualization of processed results.
 cases from a broad network of partner investigators representing the state-of-the-science in
 lung imaging research.__  This aim will evaluate and refine the
 developed methodology within the real-world context of pulmonary research being carried out at
-various partner sites.  We will disseminate the results of the evaluation through open-source
+various partner sites.  We will disseminate the results of the project through open-source
 distribution of the software, atlases and documentation, online user support, and conduct of hands-on training workshops.
 
 \newpage

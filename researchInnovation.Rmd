@@ -5,7 +5,7 @@ __3(b.1) Open-source pulmonary imaging algorithmic innovation.__
 Given the lack of open-source solutions for pulmonary image analysis,
 this project would produce the first-of-its-kind processing and analytic  platform for performing such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit, our
- proposal would include the most essential algorithms for analyzing lung
+ project would include the most essential algorithms for analyzing lung
 images from different modalities including CT, 3He, and 1H MRI.
 _Many algorithms have been proposed in various technical venues but that which we propose
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
@@ -14,11 +14,11 @@ To facilitate the usage of these algorithms, we will provide documentation inclu
 self-contained online examples, tutorials, and hands-on training workshops.
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
-An additional innovative component we are proposing is the inclusion of extensive use
+An additional innovative component of the project is the inclusion of extensive use
 cases from leading pulmonary imaging research scientists in various locations with different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
 processed data.  Additionally, such  use cases involving other groups
-would highlight existing deficiencies in algorithmic functionality in our proposal
+would highlight existing deficiencies in algorithmic functionality in our project
 which would then be remedied by additional development efforts.
 These real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
@@ -28,18 +28,18 @@ We have partnered with leading pulmonary research groups who are familiar with o
 and who will provide
 study-specific imaging data of various modalities which we will then process using the
 proposed toolkit.  These processed
-data will then be returned to the corresponding providers with detailed instructions
+data will be returned to the corresponding providers with detailed instructions
 on reproducing these results in their own labs.  Software and tutorial materials drawn from
 these experiences will be provided to the public for any interested researcher to
 apply to their own data.  Given the different image acquisition sources,
 this strategy should also demonstrate the robustness of our tools.
 
-In addition to these collaborative efforts, our own analyses will also be included.  Any clinical findings
+In addition to these collaborative efforts, our own analyses at Penn and UVa will also be included.  Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
 provide all the quantitative analysis scripts as a companion release for the paper
 (e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
- Such a comprehensive clinical
+ Such a comprehensive clinical research
 investigation using these tools will not only provide insight into the specifics of certain
 pulmonary pathologies
-but will also provide a reproducible mechanism for using the tools created in this project.
+but will also offer a reproducible mechanism for using the tools created in this project.
 

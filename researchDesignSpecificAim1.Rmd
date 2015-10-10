@@ -1,9 +1,9 @@
 
-### 3(c.2) __Specific Aim 1:__   To develop a set of open-source software tools for CT, 1H, and 3He pulmonary computational analysis
+### 3(c.2) __Specific Aim 1:__   To develop ITK-Lung, a set of open-source software tools for CT, 1H, and 3He pulmonary computational analysis
 
 The envisioned open-science tool set for pulmonary image analysis consists of software,
-processed data to illustrate the use of the software, and the ability to visualize the
-processed data.  With this comprehensive offering, the goal of this proposal is to help
+processed data to illustrate the use of the software, and the ability to evaluate and visualize user-generated
+results.  With this comprehensive offering, the goal of this project is to help
 the pulmonary imaging research community on a much deeper level than simply providing a
 set of programs.  In order to facilitate engagement on the part of the community, we are
 proposing a multi-prong offering with ITK-Lung.  The main componenent will be the
@@ -11,9 +11,11 @@ core tool set described in Sub-Aim 1a which would permit large-scale processing 
 pulmonary image data.  To illustrate the use of the software, allow for processing of other
 public and private data sets, and provide baseline data for algorithmic comparison, we
 plan to release CT and 1H MRI annotated atlas libraries, corresponding templates, and
-data-generating scripts as described in Section Sum-Aim 1b.  The third component will be
-significant extensions to the well-known ITK-SNAP tool for enhanced visualization of
-the results.
+data-generating scripts as described below.
+The third component will be significant extensions to the well-known ITK-SNAP software for
+an enhanced user experience through a full featured graphical user interface to support
+interactive parameter tuning and an extensive suite of tools for evaluation and visualization
+of user processed results.
 
 __3(c.2.1) Sub-Aim 1a will expand the ITK/ANTs open-source libraries by implementing currently
 unavailable lung-specific algorithms.__
@@ -42,11 +44,13 @@ additional development and tuning, a robust and generic software foundation ensu
 these extensions are of high quality and are readily adapted to the pulmonary image
 domain.](Figs/coreANtsToolsLung.png)
 
-_A primary assumption for this project is that, through extension and continued development
+_A primary impetus for this project is that, through extension and continued development
 of ANTs and ITK functionality, we can make a significant impact for the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
 algorithms which are easy to use as we have done for the neuroimaging community._  The
-following list comprises core functionality for CT analysis that would be incorporated into ITK-Lung:
+following list comprises core functionality for CT analysis that would be incorporated into
+ITK-Lung in addition to further enhancements to registration and segmentation capabilities
+described in preliminary work:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa]),
 * bronchial structure extraction (e.g., [@Zheng:2007aa;@Nakamura:2008aa] and the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
@@ -79,7 +83,7 @@ The evaluation of our proposed method [@Tustison:2015aa] demonstrated excellent 
 with Jaccard overlap measures for the left and right lungs being $0.966 \pm 0.018$ and
 $0.970 \pm 0.016$, respectively.  Further work for this project includes extension to
 CT datasets with a particular emphasis on segmentation in the presence of lung pathology
-which will incorporate the data from the multi-atlas CT library.
+which will incorporate the data from the proposed multi-atlas CT library .
 
 \input{algorithm_table.tex}
 
@@ -103,14 +107,15 @@ correspondences.  However, we can take advantage of
 inter-subject similarities in lobar geometry to provide a prior-based estimation of
 lobar divisions using a consensus labeling approach (cf Figure 3).
 
-To generate the lobe segmentation in a target 1H or CT lung image, we first generate the
+To generate the lobe segmentation in a target 1H or CT lung image, we first generate a
 binary whole lung mask using the whole lung atlas-based estimation.  We
-then register the set of CT lung masks which have beeen expertly annotated to the target
+then register a set of CT lung masks which have beeen expertly annotated (as part of the multi-atlas
+library) to the target
 binary lung mask using the B-spline
 SyN registration approach described earlier [@Tustison:2013ac].
  Subsequently, we warp the set of CT lobe labels to the target image using
 the CT mask-to-target mask transformation.  This process will be illustrated publicly as part
-of the project using the open-data multi-atlas CT library created as part of the Sub-Aim 1b.
+of the project using the open-data multi-atlas CT library created as part of Sub-Aim 1b.
 
 Since we have no intensity information inside
 the target lung mask and CT atlas lung masks, we use a simply majority voting strategy to
@@ -170,7 +175,7 @@ and transformations which are particularly well-suited for pulmonary data [@Tust
 __Multi-modal lung template construction.__
 Although the template construction algorithm described in [@Avants:2010aa] is,
 as pointed out earlier, frequently applied to T1-weighted brain data,
-it is sufficiently generic such that it can potentially be applied
+it is sufficiently general such that it can potentially be applied
 to pulmonary data.  Also, new innovations in diffeomorphic registration technology has led to a Symmetric
 Normalization B-spline variant which will be extended and refined to provide accurate
 normalizations [@Tustison:2013ac] for pulmonary data [@Tustison:2012aa].
@@ -203,7 +208,7 @@ have been well researched, although there are ample opportunities to refine thes
 as well as to introduce more advanced approaches.  Examples of the latter include texture
 analysis for identifying the centrilobular and groundglass opacities and fractal and
 connectivity approaches to differentiate centrilobular from panlobular emphysema. The
-indices for CT image analysis can roughly be divided into those that characterize the
+available indices for CT image analysis can roughly be divided into those that characterize the
 pulmonary parenchyma:
   volumetric tissue (e.g., [@Coxson:1999aa;@Perez:2005aa]),
    distribution of low attenuation areas (LAA) (e.g., [@Coxson:2005aa;@Stolk:2007aa]),
@@ -215,7 +220,7 @@ and those that characterize the airways (e.g., [@Aykac:2003aa;@Park:1998aa;@Eder
 The former are important
 for subjects with an emphysematous component of disease, whereas the latter are important
 for subjects with a bronchitic component of disease. _An important component of this
-proposal is that many of these measurements can also be directly applied to discriminative
+project is that many of these measurements can also be directly applied to discriminative
 analysis using 3He MRI for a variety of lung diseases._
 These indices can also be studied not only at any particular single time point, but also
 for changes with time. The addition of quantitative morphologic measurements of the airways
@@ -241,10 +246,7 @@ it was pointed out that lung airway morphology has been previously utilized as a
 for disease characterization.  Additionally, there are other potential uses motivating
 the inclusion of airway segmentation in any pulmonary image analysis toolkit.
 In an evaluation of 15 airway segmentation algorithms [@Lo:2012aa] for the
-Extraction of Airways from CT challenge held in 2009, a total of 40 CT scans from 8 sites
-divided into testing and training data sets and manually annotated by medical student
-observers.  Sensitivity and specifity criteria were used to assess relative performance
-levels with the top 2 performers were the algorithms of [@Feuerstein:2009aa] and [@Lee:2009aa]  with the latter
+Extraction of Airways from CT challenge held in 2009, the top 2 performers were the algorithms of [@Feuerstein:2009aa] and [@Lee:2009aa]  with the latter
 being one of the more conservative algorithms and the former being more prone to false positives.
 Our plan is to provide an implementation of [@Feuerstein:2009aa] and then augment this
 functionality with some of our previous work [@Song:2010aa] for
@@ -278,15 +280,16 @@ local image features is built from a large training data set.  We plan to implem
 method potentially with some modifications based on our experience with a more recent
 challenge dealing with segmentation of pathology [@Tustison:2014aa].
 
-__3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas libraries, one for CT and one for 1H MRI.
-The corresponding group templates will also be provided with the scripts to produce the results using
+__3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas libraries, one for CT and another for 1H MRI.
+The corresponding group templates will also be provided along with the scripts to produce the results using
 ITK-Lung.__  As a complement to the open-source software provided in Sub-Aim 1a, we will generate
 atlas libraries for both CT and 1H MRI acquisitions.  Both libraries will consist of $n=30$ different
-subjects and will be annotated according to modality.  The CT atlas library will include lung, lobe,
-airway, and vessel segmentations.  The 1H MRI atlas library will include left/right lung segmentations.
-With the annotated data we will provide the scripts and documentation to reproduce
+subjects to represent a range of age and gender and will be annotated according to modality.  The CT atlas library will include lung, lobe,
+airway, and vessel segmentations.  The 1H MRI atlas library will include left/right lung segmentations
+and lobar estimations [@Tustison:2015aa].
+Along with the annotated data we will provide the scripts and documentation to allow reproduction of
 the ITK-Lung results.  Additionally, two group templates [@Avants:2010aa] for the two atlas
-libraries will be included as part of these open data sets.
+libraries, respectively, will be included as part of these open data sets.
 
 __3(c.2.3) Sub-Aim 1c will extend current functionality of ITK-SNAP for qualitative
 and quantitative assessment of the results produced by ITK-Lung.__
@@ -330,7 +333,7 @@ __3(c.2.4) Software engineering.__ Both ANTs and ITK-SNAP development, based on 
 provided by the Insight Toolkit, utilizes open-source
 software engineering best practices, such as the use of Git version management software
 for collaborative development and easy branching and merging; use of a centralized repository
-(SourceForge) for code, executable and data sharing; use of the CMake/CTest/CDash suite for
+(SourceForge) for code, executable and data sharing; and use of the CMake/CTest/CDash suite for
 cross-platform development, testing and automatic builds. Virtual machines with different
 versions of Windows, MacOS and Linux operating systems generate nightly builds and execute
 test code, uploading a binary to the central SourceForge repository. ANTs and ITK-SNAP are

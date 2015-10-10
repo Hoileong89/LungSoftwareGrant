@@ -10,6 +10,8 @@ header-includes:
    - \linespread{0.95}
    - \usepackage[compact]{titlesec}
    - \usepackage{enumitem}
+   - \usepackage{tikz}
+   - \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
    - \setlist{nolistsep}
    - \titlespacing{\section}{2pt}{*0}{*0}
    - \titlespacing{\subsection}{2pt}{*0}{*0}
@@ -25,7 +27,7 @@ header-includes:
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
 fontsize: 11pt
-mainfont: Arial
+mainfont: Georgia
 geometry: margin=0.5in
 ---
 

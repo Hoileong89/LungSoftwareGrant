@@ -5,12 +5,12 @@
 
 __3(c.1.1) Generic ANTs core tools for image analysis and processing.__
 The Advanced Normalization Tools (ANTs) package is a state-of-the-art, open-source software toolkit
-for image registration, segmentation, and other core medical image analysis functionality.
+for image registration, segmentation, and other core medical image analysis functionality [@ANTsWebsite].
 Several core programs comprising portions of the proposed pulmonary software framework
 have been created and made available within ANTs (and either simultaneously or subsequently
 made available in ITK).  However, as mentioned earlier, these programs have more
 general application and require pulmonary-specific tuning for the tasks targeted by
-this proposal.  The following list comprises several core software tools for
+this project.  The following list comprises several core software tools for
 tuning, subsequent extensions, documentation, tutorial generation, and the creation of
 easy-to-use bash scripts for large-scale processing of pulmonary imaging data.
 
@@ -44,7 +44,7 @@ mean of all the individual subject images.  This estimate is iteratively updated
 each image to the current
 template, performing a voxelwise average to create a new estimate, and then "reshaping"
 this template based on the average inverse transformation which "moves" the template estimate
-closer to the group mean.  See Figure 2 for a cohort-specific multi-modal brain template
+closer to the group mean---see Figure 2 for a cohort-specific multi-modal brain template
 for females in the age range 50--60.
 This functionality has proven to be a vital component of the ANTs toolkit for performing neuroimaging research
 (e.g., [@Avants:2015aa;@Datta:2012aa;@McMillan:2014aa;@Cook:2014aa;@Tustison:2014ad;@Tustison:2014ab]).
@@ -85,16 +85,16 @@ capabilities) and a modified optimization formulation.
 __Joint label fusion for prior-based segmentation.__  Joint label fusion (JLF) is the current
 state-of-the-art for propagating expert labelings from a reference atlas library onto new
 instances of unlabeled data. Image registration is used to align the atlas library
-(images + segmentations) to a common space. A statistical model is then used to combine
+(images plus segmentations) to a common space. A statistical model is then used to combine
 the "guesses" from all the normalized atlas labels to provide a "best guess" estimate of
 the target labeling. Several such algorithms have been developed and much effort has been
 devoted to determining relative performance levels---see, for example, the recent MICCAI 2012
-Grand Challenge and Workshop on Multi-Atlas Labeling).  The joint fusion (JLF) algorithm of
+Grand Challenge and Workshop on Multi-Atlas Labeling.  The joint label fusion (JLF) algorithm of
 [@Wang:2013aa;@Wang:2013ab] from our group is one of the top performing JLF algorithms. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists [@Yushkevich:2010aa].
 It has proven its effectiveness not only in cardiac data [@MALF],
 the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF] _but has
-also been successfully extended to the challening problem of applying prior-based information to lung and lobe
+also been successfully extended to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2015aa]._
 
 __Spatially adaptive denoising.__ Patch-based
@@ -109,7 +109,7 @@ continued development of ANTs.  As a result, our team is well-recognized for our
 open-source advancements including important contributions to the
 field of image registration outlined earlier.  Indeed, ANTs-based image registration serves
 as the basis for the registration component of the latest version of the National Library of
-Medicine Insight Toolkit (ITK) programming library (http://www.itk.org) which is the leading
+Medicine Insight Toolkit programming library (http://www.itk.org) which is the leading
 open-source platform for medical image analysis. _The
 combination of state-of-the-art algorithms and feature-rich flexibility has translated
 to top-placed rankings in major independent evaluations for core elements of the ANTs
