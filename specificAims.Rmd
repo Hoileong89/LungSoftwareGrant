@@ -52,7 +52,7 @@ indices as potential imaging biomarkers.  In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science
 principles.   Formally, this project is defined by the following specific aims:
 
-* __Specific Aim 1:__  __Develop a set of open-source software tools for CT, proton, and He-3
+* __Specific Aim 1:__  __Develop ITK-Lung, a set of open-source software tools for CT, proton, and He-3
 pulmonary computational analysis.__  These open-source software tools will specifically
 target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration, ventilation-based segmentation,
