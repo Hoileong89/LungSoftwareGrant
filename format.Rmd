@@ -5,9 +5,10 @@ output:
     latex_engine: xelatex
     keep_tex: yes
 header-includes:
+   - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\small}
    - \usepackage{booktabs}
    - \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
-   - \linespread{0.9}
+   - \linespread{0.92}
    - \usepackage[compact]{titlesec}
    - \usepackage{enumitem}
    - \usepackage{tikz}
@@ -17,13 +18,6 @@ header-includes:
    - \titlespacing{\subsection}{2pt}{*0}{*0}
    - \titlespacing{\subsubsection}{2pt}{*0}{*0}
    - \setlength{\parskip}{3pt}
-   - \setlength{\topsep}{0pt}
-   - \setlength{\partopsep}{0pt}
-   - \setlength{\itemsep}{0pt}
-   - \setlength{\floatsep}{0pt}
-   - \setlength{\intextsep}{2pt}
-   - \setlength{\abovecaptionskip}{2pt}
-   - \setlength{\belowcaptionskip}{0pt}
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
 fontsize: 11pt
@@ -31,9 +25,25 @@ mainfont: Georgia
 geometry: margin=0.5in
 ---
 
+<!--
+   - \setlength{\parskip}{3pt}
+   - \setlength{\topsep}{0pt}
+   - \setlength{\partopsep}{0pt}
+   - \setlength{\itemsep}{0pt}
+   - \setlength{\floatsep}{0pt}
+   - \setlength{\intextsep}{2pt}
+   - \setlength{\abovecaptionskip}{2pt}
+   - \setlength{\belowcaptionskip}{0pt}
+-->
+
+
 <style type="text/css">
+body,
 code.bash{
-  font-size: 8pt;
+  font-size: 8px;
+}
+pre {
+  font-size: 8px
 }
 </style>
 

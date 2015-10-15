@@ -4,7 +4,7 @@
 __3(b.1) Open-source pulmonary imaging algorithmic innovation.__
 Given the lack of open-source solutions for pulmonary image analysis,
 this project would produce the first-of-its-kind processing and analytic  platform for performing such research.
-Similar to the brain-specific algorithms provided in our ANTs toolkit, our
+Similar to the brain-specific algorithms provided in our ANTs toolkit [@ANTsWebsite], our
  project would include the most essential algorithms for analyzing lung
 images from different modalities including CT, 3He, and 1H MRI.
 _Many algorithms have been proposed in various technical venues but that which we propose

@@ -6,7 +6,7 @@
 __3(c.1.1) Generic ANTs core tools for image analysis and processing.__
 The Advanced Normalization Tools (ANTs) package is a state-of-the-art, open-source software toolkit
 for image registration, segmentation, and other core medical image analysis functionality [@ANTsWebsite].
-Several core programs comprising portions of the proposed pulmonary software framework
+Several core programs comprising portions of the proposed pulmonary imaging analysis software framework
 have been created and made available within ANTs (and either simultaneously or subsequently
 made available in ITK).  However, as mentioned earlier, these programs have more
 general application and require pulmonary-specific tuning for the tasks targeted by
@@ -32,7 +32,7 @@ that study, we produced the scripts ``antsRegistrationSyN.sh`` and
 ``antsRegistrationSyNQuick.sh`` which provide a simple interface to our normalization tools
 for brain-specific normalization and are two of the most widely used scripts in the ANTs
 toolkit.  _Similar to the developments that we are proposing,
-these scripts were extensively modified to serve as a follow-up entry into the EMPIRE10 lung
+these scripts were extensively modified to serve as a follow-up entry into the EMPIRE10 lung image
 registration challenge where B-spline SyN performed better than its original counterpart on pulmonary
 data [@Tustison:2012aa]._
 
@@ -44,7 +44,7 @@ mean of all the individual subject images.  This estimate is iteratively updated
 each image to the current
 template, performing a voxelwise average to create a new estimate, and then "reshaping"
 this template based on the average inverse transformation which "moves" the template estimate
-closer to the group mean---see Figure 2 for a cohort-specific multi-modal brain template
+closer to the group mean---see Figure 2 for a cohort-specific multi-modality brain template
 for females in the age range 50--60.
 This functionality has proven to be a vital component of the ANTs toolkit for performing neuroimaging research
 (e.g., [@Avants:2015aa;@Datta:2012aa;@McMillan:2014aa;@Cook:2014aa;@Tustison:2014ad;@Tustison:2014ab]).
@@ -69,7 +69,7 @@ ventilation of the lung [@Tustison:2011aa].  _However, despite the numerous
 developments which have been proposed
 over the years within this area, there are an extremely limited number of actual software implementations.
 This deficit inspired us to create our own Bayesian
-segmentation framework [@Avants:2011aa] (denoted as Atropos) which we have made publicly
+segmentation framework [@Avants:2011aa] (denoted as Atropos), which we have made publicly
 available within ANTs and has proven highly effective in quantification of
 functional lung imaging [@Tustison:2011aa;@Altes:2012aa;@Teague:2014aa;@Kirby:2014aa]._
 
@@ -77,7 +77,7 @@ __N4 bias correction.__  Critical to quantitative processing of MRI is the minim
 inhomogeneity effects which produce artificial low frequency intensity variation across the image.
 Large-scale studies, such as ADNI, employ perhaps the most widely used bias correction algorithm,
 N3 [@Sled:1998aa], as part of their standard protocol [@Boyes:2008aa].
-In [@Tustison:2010aa] we introduced an improvement of N3, denoted as "N4", which demonstrates
+In [@Tustison:2010aa] we introduced an improvement of N3, denoted as "N4," which demonstrates
 a significant increase in performance and convergence behavior on a variety of data. This
 improvement is a result of an enhanced fitting routine (which includes multi-resolution
 capabilities) and a modified optimization formulation.
@@ -93,7 +93,7 @@ Grand Challenge and Workshop on Multi-Atlas Labeling.  The joint label fusion (J
 [@Wang:2013aa;@Wang:2013ab] from our group is one of the top performing JLF algorithms. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists [@Yushkevich:2010aa].
 It has proven its effectiveness not only in cardiac data [@MALF],
-the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF] _but has
+the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF], _but has
 also been successfully extended to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2015aa]._
 
@@ -109,7 +109,7 @@ continued development of ANTs.  As a result, our team is well-recognized for our
 open-source advancements including important contributions to the
 field of image registration outlined earlier.  Indeed, ANTs-based image registration serves
 as the basis for the registration component of the latest version of the National Library of
-Medicine Insight Toolkit programming library (http://www.itk.org) which is the leading
+Medicine Insight Toolkit programming library (http://www.itk.org), which is the leading
 open-source platform for medical image analysis. _The
 combination of state-of-the-art algorithms and feature-rich flexibility has translated
 to top-placed rankings in major independent evaluations for core elements of the ANTs
@@ -117,7 +117,7 @@ toolkit:_
 
 * SyN was a top performer in a fairly recent large-scale brain normalization evaluation [@Klein:2009aa].
 * SyN also competed in the Evaluation of Methods for Pulmonary Image
-REgistration 2010 (EMPIRE10) challenge [@Murphy:2011aa] where it was the top performer
+REgistration 2010 (EMPIRE10) challenge [@Murphy:2011aa], where it was the top performer
 for the benchmarks
 used to assess lung registration accuracy and biological plausibility of the inferred
 transform (i.e., boundary alignment, fissure alignment, landmark correspondence, and

@@ -39,13 +39,13 @@ response to this major deficiency in the field._
 
 ![Using ANTs core processing tools, our team has developed several lung-specific extensions
 such as ventilation-based segmentation, lung and lobe estimation, and
-multi-modal pulmonary template building.  Although each of these extensions requires significant
+multi-modality pulmonary template building.  Although each of these extensions requires significant
 additional development and tuning, a robust and generic software foundation ensures that
 these extensions are of high quality and are readily adapted to the pulmonary image
 domain.](Figs/coreANtsToolsLung.png)
 
 _A primary impetus for this project is that, through extension and continued development
-of ANTs and ITK functionality, we can make a significant impact for the pulmonary imaging
+of ANTs and ITK functionality, we can make a significant impact on the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
 algorithms which are easy to use as we have done for the neuroimaging community._  The
 following list comprises core functionality for CT analysis that would be incorporated into
@@ -80,10 +80,10 @@ the pulmonary domain.  Whereas many current strategies for lung image segmentati
 low-level processing techniques based on encodable heuristics, consensus-based strategies,
 in contrast, optimize the prior knowledge applied to a specific segmentation problem (cf Figure 3).
 The evaluation of our proposed method [@Tustison:2015aa] demonstrated excellent performance
-with Jaccard overlap measures for the left and right lungs being $0.966 \pm 0.018$ and
-$0.970 \pm 0.016$, respectively.  Further work for this project includes extension to
-CT datasets with a particular emphasis on segmentation in the presence of lung pathology
-which will incorporate the data from the proposed multi-atlas CT library .
+with Jaccard overlap measures for the left and right lungs being $0.966\pm0.018$ and
+$0.970\pm0.016$, respectively.  Further work for this project includes extension to
+CT datasets with a particular emphasis on segmentation in the presence of lung pathology that
+will incorporate the data from the proposed multi-atlas CT library.
 
 \input{algorithm_table.tex}
 
@@ -107,15 +107,14 @@ correspondences.  However, we can take advantage of
 inter-subject similarities in lobar geometry to provide a prior-based estimation of
 lobar divisions using a consensus labeling approach (cf Figure 3).
 
-To generate the lobe segmentation in a target 1H or CT lung image, we first generate a
-binary whole lung mask using the whole lung atlas-based estimation.  We
-then register a set of CT lung masks which have beeen expertly annotated (as part of the multi-atlas
-library) to the target
-binary lung mask using the B-spline
+Specifically, to generate the lobe segmentation in a target 1H or CT lung image, we register the
+same-modality atlas set to the target image (given the general increased robustness
+of intra-modality vs. inter-modality image registration) using the B-spline
 SyN registration approach described earlier [@Tustison:2013ac].
- Subsequently, we warp the set of CT lobe labels to the target image using
-the CT mask-to-target mask transformation.  This process will be illustrated publicly as part
-of the project using the open-data multi-atlas CT library created as part of Sub-Aim 1b.
+Subsequently, we warp the set of lobe label images to the target image using
+the  atlas-to-target  transformation.  This process will be illustrated publicly as part
+of the project using the open-data multi-atlas CT and 1H atlas libraries created as part of Sub-Aim 1b.
+
 
 Since we have no intensity information inside
 the target lung mask and CT atlas lung masks, we use a simply majority voting strategy to
@@ -128,7 +127,7 @@ with state-of-the-art CT methods where fissure information is actually visible
 right middle: $0.657 \pm 0.130$, right lower: $0.873 \pm 0.063$).  We will extend this
 framework to pulmonary CT in providing
 spatial prior probability maps
-augmented by image-specific CT data features as fissures, airways, and blood vessels
+augmented by image-specific CT data features such as fissures, airways, and blood vessels
 for data-driven, subject-specific lobe segmentation
 [@Doel:2015aa].
 
@@ -172,7 +171,7 @@ Normalization B-spline variant which has demonstrated accurate normalizations
 and transformations which are particularly well-suited for pulmonary data [@Tustison:2012aa].
 -->
 
-__Multi-modal lung template construction.__
+__Multi-modality lung template construction.__
 Although the template construction algorithm described in [@Avants:2010aa] is,
 as pointed out earlier, frequently applied to T1-weighted brain data,
 it is sufficiently general such that it can potentially be applied
@@ -267,7 +266,7 @@ pathway from the trachea to the defect.](Figs/airways.png)
 -->
 
 __Nodule detection.__ CT is used for screening of lung cancers (i.e., pulmonary nodules)
-which currently requires human intervention for the laborious and tedius task of manual
+which currently requires human intervention for the laborious and tedious task of manual
 scanning.  Automated detection methods could potentially save significant time and effort which
 has inspired much research literature on the topic including several commercial systems
 and specialized visualization hardware for facilitating detection.  In 2009, a nodule
@@ -275,7 +274,7 @@ detection competition was held for comparing performance of individual algorithm
 as their combinations [@Ginneken:2010aa].  This competition included entries from both
 academic institutions as well as a system from Philips (although, to our knowledge, none
 are available for public use).  The best performing algorithm of that competition was
-based on the work presented in [@Murphy:2009aa] where a k-nearest neighbor classification employing
+based on the work presented in [@Murphy:2009aa], where a k-nearest neighbor classification employing
 local image features is built from a large training data set.  We plan to implement this
 method potentially with some modifications based on our experience with a more recent
 challenge dealing with segmentation of pathology [@Tustison:2014aa].
@@ -309,7 +308,7 @@ Equally important, the GUI will permit qualitative and quantitative assessment o
 produced by ITK-Lung as well as potentially other software, another much needed capability
 not currently available to the general community. Based on these considerations, we propose
 to base the GUI front-end to ITK-Lung on the ITK-SNAP multi-platform, open-source tool
-for interactive user-guided medical image segmentation and data visualization [@Yushkevich:2006aa], whose
+for interactive user-guided medical image segmentation and data visualization [@Yushkevich:2006aa], and whose
 development is led by project investigator Paul Yushkevich. ITK-SNAP provides an effective
 combination of semi-automatic segmentation functionality based on active contours
 [@Caselles:1997aa, @Zhu:1996aa]
@@ -320,12 +319,12 @@ the development effort dedicated to the user interface. ITK- SNAP has thousands 
 (there have been over 2000 downloads per month in the last year), and our 2006 paper on
 ITK-SNAP [@Yushkevich:2006aa] has been cited over 1400 times (Google Scholar) in the context of various
 biomedical domains. ITK-SNAP will also be used in this project for manual labeling of the
-proposed lung atlases; it is already used for this purpose by many investigators. Most
+proposed lung atlases; it is already used for this purpose by many investigators. _Most
 crucially, we believe that our track record with ITK-SNAP as well as ANTs demonstrates
 our team’s commitment to producing high-quality research software and making it accessible
 to the wider research community through open-source practices, intuitive user interfaces,
 and outreach efforts.  These strengths of the team will be applied to the software and
-data developed in the course of this project.
+data developed in the course of this project._
 
 Several features will be added to ITK-SNAP to enhance visualization and quantitation for
 the registration and segmentation results of the lung-specific algorithms developed in
@@ -337,10 +336,10 @@ parameters, such as volumes and strain tensors, will be available through the IT
 interface. Finally, existing ITK-SNAP functionality for segmentation visualization will
 be extended to support evaluation of registration quality, including a dashboard of performance
 metrics, linked cursors identifying corresponding positions in multi-window configurations,
-and fused data displays with adjustable blending. These proposed enhancements to the software
+and fused data displays with adjustable blending. _These proposed enhancements to the software
 will be extremely useful to the general imaging research community and not just those
 investigators targeted in this project. Thus, the impact of this work will be both
-immediate and broad for pulmonary-driven science and research.
+immediate and broad on pulmonary-driven science and research._
 
 
 

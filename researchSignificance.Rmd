@@ -66,7 +66,7 @@ It is important to note that the goals of this project would
 significantly support the National Library of Medicine’s own open-source directives in that
 all software would be developed using the established Insight ToolKit’s coding and testing
 standards with the specific objective that all project code would be contributed
-for inclusion in future versions of the Insight ToolKit as we have done in the past.
+for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past.
 It should also be noted that open-source software, in general, has documented benefits
 within the targeted communities for which it is developed and supported.  In addition to
 the increase in research output illustrated earlier, open-source permits students and

@@ -18,7 +18,7 @@ phenotypes and severity of COPD. This protocol permits regional mapping of venti
 gas uptake by tissue and blood in human lungs with single breath hold
 [@Dregely:2011aa;@Mugler:2010aa;@Qing:2014ab].  This project plans to establish connectivity
 between these advanced HXe MRI imaging signatures and important clinical outcomes of COPD to
-establish HXe MRI as a novel clinical diagnostic tool. They anticipate that this new biomarker
+advance HXe MRI as a novel clinical diagnostic tool. This new biomarker
 tool will naturally lead to deeper mechanistic understanding of COPD at the molecular-physiologic
 and clinical levels and support identification of potential pathophysiologic derangement
 associated with COPD and a new method to accurately predict therapeutic response to current
@@ -31,11 +31,11 @@ anticipated to overcome the limitation
 of pulmonary function testing (PFT) which only provides physiologic parameters of the lung
 as a whole unit, and High Resolution CT (HRCT) which only provides anatomic characterization
 without physiologic information.
-HXe MRI is anticipated to detect pathologic changes present in COPD patients with
-high sensitivity and specificity previously unattainable by current clinical standard
+HXe MRI has potential to detect pathologic changes present in COPD patients with
+high sensitivity and specificity previously unattainable by the current clinical standard
 (PFT and HRCT). Moreover, HXe MRI can determine whether gas transfer
 abnormalities are due to impaired ventilation or reduced gas-exchange, and thus provide new
-insights into pathogenesis of COPD in individual patients.
+insights into the pathogenesis of COPD in individual patients.
 
 Crucial to the success of establishing the utility of HXe MRI as a sensitive biomarker
 for accurately characterizing COPD phenotypes is quantification of imaging signatures in
@@ -43,13 +43,13 @@ an automated and robust fashion.  Identification of ventilation dead space ($V_D
 for correlation with GOLD classification will utilize the
 ventilation-based segmentation functionality in ITK-Lung [@Tustison:2011aa].
 In order to determine lobar
-values of HXe MRI, we will utilize the recently proposed lobar estimation algorithm
+values of HXe MRI, this study will utilize the recently proposed lobar estimation algorithm
 [@Tustison:2015aa] that will be available for both proton MRI and CT
 
 
 __3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
 Advances in rapid image sequencing methods have facilitated the acquisition of high-quality
-hyperpolarized gas MR images in pre-school children [@Altes:2006aa]. Furthermore improvements in image
+hyperpolarized gas MR images in pre-school children [@Altes:2006aa]. Furthermore, improvements in image
 processing and signal intensity analysis have made possible accurate measurements of
 lung volume compartments [@Tustison:2011aa].
 Co-investigators __Gerry Teague__ and __Talissa Altes__
@@ -62,14 +62,14 @@ of asthma control, treatment, and inflammation.
 Precise measurement of ventilation volumes by hyperpolarized noble gas MRI not only has the
 potential to resolve the spatial and temporal characteristics of gas distribution in
 children with asthma, but could also expand clinically relevant information in regards to
-asthma severity and its features.  In the past simple computer-assisted systems [@Woodhouse:2005aa] or
+asthma severity and its features.  In the past, simple computer-assisted systems [@Woodhouse:2005aa] or
 hand counts of visual defects were used to estimate the ventilation defect volume [@Altes:2001aa].
 Development of more advanced techniques (in terms of acquisition and analysis) will facilitate
 rapid conversion of complex hyperpolarized gas signal data into volume compartments for
 clinical applications.
 
 Absolutely crucial to the advanced techniques being developed by Dr. Teague and his group
-are sophisticated image analysis tools like the ones being proposed.  For example,
+are sophisticated image analysis tools like the ones being proposed in this project.  For example,
 our ventilation-based segmentation method is already being used to determine
 volumetric compartments based on lung function.  Additional ``cleaning'' necessary for these
 data include denoising techniques [@Manjon:2010aa] implemented and made available in ANTs.
@@ -91,7 +91,7 @@ Ventilation, FV), how much oxygen is in the airspaces (Oxygen Tension,
 PAO2), and if the normal spongy tissue structure has been compromised in
 lung disease (Apparent Diffusion Coefficient). Subjects will include
 those at risk for lung disease, and those displaying mild and moderate
-COPD. Subjects will be mostly drawn from the well-characterized
+COPD. They will be mostly drawn from the well-characterized
 population currently enrolled in the COPDGene trial (10,000 subjects
 overall) such that standard clinical images (End Inspiration and End
 Expiration CT) and Pulmonary Function Tests (PFTs), as well as genetic
@@ -244,7 +244,7 @@ vascular pruning) and MR (air trapping, perfusion volume defects, and
 hypoxic vasoconstriction) imaging biomarkers that form the basis for the
 study.
 
-__3(c.3.8) Longitudinal imaging follow-up in COPD and lung cancer  Our collaborator
+__3(c.3.8) Longitudinal imaging follow-up in COPD and lung cancer.__  Our collaborator
 __Joon-Beom Seo__, __Asan Medical Center__, directs the imaging component of the
 Korean Obstructive Lung Disease (KOLD) cohort study, which has collected
 over 1000 COPD cases from 17 participating centers with repeated imaging
@@ -268,14 +268,14 @@ support patient phenotyping and stratification to therapy as well as
 measurement of longitudinal changes and response to therapy.
 
 __3(c.3.10) Functional MR imaging of the lungs using hyperpolarized and inert gases.__
-Our collaborator, __Mitchell Albert__, __Thunder Bay Regional Research
+Our collaborator __Mitchell Albert__, __Thunder Bay Regional Research
 Institute__, has been advancing the use of inert fluorinated gases that
 can be breathed continuously in order to measure indicators of wash-in,
 wash-out and air trapping with dynamic imaging protocols.  To compute
 the wash-in and wash-out time constants on a pixelwise basis, access to
 accurate and reliable image registration tools will be essential.
 
-__3(c.3.11) Multimodality imaging studies of pulmonary diseases.__  Our collaborator,
+__3(c.3.11) Multimodality imaging studies of pulmonary diseases.__  Our collaborator
 __Edwin van Beek__, __University of Edinburgh__, has been conducting various
 multimodality studies, including the evaluation of pulmonary fibrosis
 using both gadolinium-enhanced MRI and contrast-enhanced CT perfusion
@@ -286,7 +286,7 @@ registration and segmentation capabilities will both be necessary toward
 this end.
 
 __3(c.3.12) Computational imaging biomarkers for diverse thoracic malignancies.__
-Our collaborator, __Yoshiharu Ohno__, __Kobe University__, leads a comprehensive
+Our collaborator __Yoshiharu Ohno__, __Kobe University__, leads a comprehensive
 program of multi-modality imaging (CT, MRI, PET, molecular imaging) research
 on lung cancer, COPD, ILD, and pulmonary infectious diseases.  His myriad
 image analysis needs include quantitative characterization of: lung
@@ -322,7 +322,7 @@ we do not anticipate significant problems in its development and consider the ri
 the project to be very low. Our optimism is based on the extensive preliminary work that has been
 performed over a significant period of time to successfully demonstrate feasibility of every aspect
 of the project. Given the level of expertise and experience of our interdisciplinary team and the
-well-defined scope of the imaging and software engineering problems, we are highly confident in a
+well-defined scope of the software development and engineering problems, we are highly confident in a
 successful outcome.
 
 __3(c.5) Timeline__
