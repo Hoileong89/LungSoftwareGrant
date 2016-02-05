@@ -5,3 +5,7 @@ OtherDocs
 stitched_cache
 
 stitched_files
+*.aux
+*.log
+*.out
+*.synctex.gz

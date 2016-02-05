@@ -222,7 +222,7 @@ Given the lack of open-source solutions for pulmonary image analysis,
 this project would produce the first-of-its-kind processing and analytic  platform for performing such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit [@ANTsWebsite], our
  project would include the most essential algorithms for analyzing lung
-images from different modalities including CT, 3He, and 1H MRI.
+images from different modalities, including CT, 3He, and 1H MRI.
 _Many algorithms have been proposed in various technical venues but that which we propose
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
 for pulmonary medical image analysis, many of which have been developed by our group._
@@ -297,7 +297,7 @@ these scripts were extensively modified to serve as a follow-up entry into the E
 registration challenge where B-spline SyN performed better than its original counterpart on pulmonary
 data [@Tustison:2012aa]._
 
-__Multi-modal template generation.__  Given the variability in anatomical shape across
+__Multi-modality template generation.__  Given the variability in anatomical shape across
 populations and the lack of publicly available atlases for specific organs, generating population- or
 subject-specific optimal shape/intensity templates significantly enhances study potential
 [@Avants:2010aa;@Tustison:2014aa].  First, an average template is estimated via a voxel-wise
@@ -392,6 +392,13 @@ the Brain Tumor segmentation (BRATS) competition at MICCAI 2013 [@Tustison:2014a
 * A B-spline variant of the SyN algorithm [@Tustison:2013ac] won the best paper award at the
 STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 
+![Core processing tools that have made the ANTs package one of the most popular neuroimaging
+toolkits.  Fundamental processing tasks such as image registration, template generation,
+bias correction, denoising, intensity-based segmentation, and joint label
+fusion are extremely well-performing software components which have been utilized for
+neuroimaging tasks such as brain extraction and cortical thickness estimation.
+The target applications of these core tools have an immediate analog for lung-specific
+tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)
 
 __3(c.1.2) Neuroimaging with ANTs as a model for the pulmonary community.__
 ANTs takes advantage of
@@ -408,14 +415,6 @@ by the community:
 * cortical  thickness estimation [@Das:2009aa;@Tustison:2014ab] (https://github.com/ntustison/antsCorticalThicknessExample),
 * brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
-
-![Core processing tools that have made the ANTs package one of the most popular neuroimaging
-toolkits.  Fundamental processing tasks such as image registration, template generation,
-bias correction, denoising, intensity-based segmentation, and joint label
-fusion are extremely well-performing software components which have been utilized for
-neuroimaging tasks such as brain extraction and cortical thickness estimation.
-The target applications of these core tools have an immediate analog for lung-specific
-tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)
 
 All of these tools have been wrapped in easy-to-use, well-documented shell scripts.  For
 example, the ANTs cortical thickness pipeline, as outlined in [@Tustison:2014ab], comprises
@@ -456,6 +455,15 @@ in the bottom left panel is the surface rendering of the ventilation-based segme
 
 -->
 
+
+![Using ANTs core processing tools, our team has developed several lung-specific extensions
+such as ventilation-based segmentation, lung and lobe estimation, and
+multi-modality pulmonary template building.  Although each of these extensions requires significant
+additional development and tuning, a robust and generic software foundation ensures that
+these extensions are of high quality and are readily adapted to the pulmonary image
+domain.](Figs/coreANtsToolsLung.png)
+
+
 ### 3(c.2) __Specific Aim 1:__   To develop ITK-Lung, a set of open-source software tools for CT, 1H, and 3He pulmonary computational analysis
 
 The envisioned open-science tool set for pulmonary image analysis consists of software,
@@ -494,19 +502,12 @@ into a lack of baseline performance standards with which researchers can compare
 own algorithms [@Tustison:2013aa].  This project constitutes a specific and overdue
 response to this major deficiency in the field._
 
-![Using ANTs core processing tools, our team has developed several lung-specific extensions
-such as ventilation-based segmentation, lung and lobe estimation, and
-multi-modality pulmonary template building.  Although each of these extensions requires significant
-additional development and tuning, a robust and generic software foundation ensures that
-these extensions are of high quality and are readily adapted to the pulmonary image
-domain.](Figs/coreANtsToolsLung.png)
-
 _A primary impetus for this project is that, through extension and continued development
 of ANTs and ITK functionality, we can make a significant impact on the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
 algorithms which are easy to use as we have done for the neuroimaging community._  The
 following list comprises core functionality for CT analysis that would be incorporated into
-ITK-Lung in addition to further enhancements to registration and segmentation capabilities
+ITK-Lung in addition to further enhancements to the registration and segmentation capabilities
 described in preliminary work:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa]),

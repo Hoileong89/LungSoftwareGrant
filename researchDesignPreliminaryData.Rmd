@@ -36,7 +36,7 @@ these scripts were extensively modified to serve as a follow-up entry into the E
 registration challenge where B-spline SyN performed better than its original counterpart on pulmonary
 data [@Tustison:2012aa]._
 
-__Multi-modal template generation.__  Given the variability in anatomical shape across
+__Multi-modality template generation.__  Given the variability in anatomical shape across
 populations and the lack of publicly available atlases for specific organs, generating population- or
 subject-specific optimal shape/intensity templates significantly enhances study potential
 [@Avants:2010aa;@Tustison:2014aa].  First, an average template is estimated via a voxel-wise
@@ -131,6 +131,13 @@ the Brain Tumor segmentation (BRATS) competition at MICCAI 2013 [@Tustison:2014a
 * A B-spline variant of the SyN algorithm [@Tustison:2013ac] won the best paper award at the
 STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 
+![Core processing tools that have made the ANTs package one of the most popular neuroimaging
+toolkits.  Fundamental processing tasks such as image registration, template generation,
+bias correction, denoising, intensity-based segmentation, and joint label
+fusion are extremely well-performing software components which have been utilized for
+neuroimaging tasks such as brain extraction and cortical thickness estimation.
+The target applications of these core tools have an immediate analog for lung-specific
+tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)
 
 __3(c.1.2) Neuroimaging with ANTs as a model for the pulmonary community.__
 ANTs takes advantage of
@@ -147,14 +154,6 @@ by the community:
 * cortical  thickness estimation [@Das:2009aa;@Tustison:2014ab] (https://github.com/ntustison/antsCorticalThicknessExample),
 * brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
-
-![Core processing tools that have made the ANTs package one of the most popular neuroimaging
-toolkits.  Fundamental processing tasks such as image registration, template generation,
-bias correction, denoising, intensity-based segmentation, and joint label
-fusion are extremely well-performing software components which have been utilized for
-neuroimaging tasks such as brain extraction and cortical thickness estimation.
-The target applications of these core tools have an immediate analog for lung-specific
-tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)
 
 All of these tools have been wrapped in easy-to-use, well-documented shell scripts.  For
 example, the ANTs cortical thickness pipeline, as outlined in [@Tustison:2014ab], comprises

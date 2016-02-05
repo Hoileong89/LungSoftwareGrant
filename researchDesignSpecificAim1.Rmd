@@ -1,4 +1,13 @@
 
+
+![Using ANTs core processing tools, our team has developed several lung-specific extensions
+such as ventilation-based segmentation, lung and lobe estimation, and
+multi-modality pulmonary template building.  Although each of these extensions requires significant
+additional development and tuning, a robust and generic software foundation ensures that
+these extensions are of high quality and are readily adapted to the pulmonary image
+domain.](Figs/coreANtsToolsLung.png)
+
+
 ### 3(c.2) __Specific Aim 1:__   To develop ITK-Lung, a set of open-source software tools for CT, 1H, and 3He pulmonary computational analysis
 
 The envisioned open-science tool set for pulmonary image analysis consists of software,
@@ -37,19 +46,12 @@ into a lack of baseline performance standards with which researchers can compare
 own algorithms [@Tustison:2013aa].  This project constitutes a specific and overdue
 response to this major deficiency in the field._
 
-![Using ANTs core processing tools, our team has developed several lung-specific extensions
-such as ventilation-based segmentation, lung and lobe estimation, and
-multi-modality pulmonary template building.  Although each of these extensions requires significant
-additional development and tuning, a robust and generic software foundation ensures that
-these extensions are of high quality and are readily adapted to the pulmonary image
-domain.](Figs/coreANtsToolsLung.png)
-
 _A primary impetus for this project is that, through extension and continued development
 of ANTs and ITK functionality, we can make a significant impact on the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
 algorithms which are easy to use as we have done for the neuroimaging community._  The
 following list comprises core functionality for CT analysis that would be incorporated into
-ITK-Lung in addition to further enhancements to registration and segmentation capabilities
+ITK-Lung in addition to further enhancements to the registration and segmentation capabilities
 described in preliminary work:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa]),

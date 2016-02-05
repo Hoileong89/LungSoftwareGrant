@@ -6,7 +6,7 @@ Given the lack of open-source solutions for pulmonary image analysis,
 this project would produce the first-of-its-kind processing and analytic  platform for performing such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit [@ANTsWebsite], our
  project would include the most essential algorithms for analyzing lung
-images from different modalities including CT, 3He, and 1H MRI.
+images from different modalities, including CT, 3He, and 1H MRI.
 _Many algorithms have been proposed in various technical venues but that which we propose
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
 for pulmonary medical image analysis, many of which have been developed by our group._
