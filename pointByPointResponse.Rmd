@@ -8,17 +8,27 @@
     * (Page 5, Approach:  weaknesses) "Some method descriptions are too brief... several \"trivial\"
       (well-known?) space wasters could be reduced, with more method/approach discussion then given: 1) pg. 115 – Table 1; 2) pg. 117 – Table 2; 3)
        pg. 113 – code fragment for an example command."
-    * (Page 5, Approach:  weaknesses) "[Gui processing] is given minimal attention...A little more could be said on this issue and on the hardware/memory/graphics requirements for running the software."
+    * (Page 5, Approach:  weaknesses) "[GUI processing] is given minimal attention...A little more could be said on this issue and on the hardware/memory/graphics requirements for running the software."
     * (Page 7, Approach:  weaknesses) "Details on their specific methods for the segmentation and other functions are not given"
-    * Response:   Where did the hardware discussion come from?  This is not a hardware proposal
+    * __Response__
+        * _Hardware:_ I am assuming hardware discussion deficiencies are restricted to GUI processing.  Should this be part of the
+                      reduction in scope?
+        * _Data:_ The only criticism directed towards "data" given above is in the context of "data throughput requirements".
+                  Does this include such mundane issues as input and output data IO formats?  Also, note that in parantheses
+                  is "benchmarking of computation time".  Can we just mention that we will provide computation times on the
+                  collaborator data as part of the documentation?
 2. PET imaging
     * (Page 2, Resume and summary of discussion) "missing opportunity to include PET imaging"
     * (Page 3, Overall impact) "PET imaging is notably missing"
     * (Page 4, Approach:  weaknesses) "Yet, positron emission tomography (PET) – not discussed in this proposal (c.3.12 noted)"
     * (Page 9, Overall impact) "PET imaging is not considered "
-    * Response:  I think I can get PET data from LIDC.  However, the problem is that what software should we write (SUV?).
+    * __Response:__  I can get PET data from LIDC.  However, the problem is that what software should we write (SUV?).  This
+                 issue seemed pretty important to the reviewers but will they be critical if we do not have collaborators
+                 that are analyzing clinical data.  Nobody at UVa does PET lung imaging research but, related, I could
+                 probably include blood perfusion data from Kun.
 3. Lung motion
     * (Page 2, Resume and summary of discussion) "overall dynamic nature of the lung environment"
+    * (Page 3, Significance:  weaknesses ) "Unlike the brain domain which often relies on static images for a non-moving organ, the lungs and nearby anatomy (heart, etc.) experience much motion".
     * (Page 4, Innovation:  weaknesses) "Given the dynamic nature of the lung environment (organ motion, complex large
     organs, vasculature dynamics [contrast, perfusion], etc.) and the considerable heterogeneity
     of applications and scanner configurations/modalities used in this domain, it is a trifle
@@ -28,33 +38,53 @@
     imaging may limit the use of such open source software"
     * (Page 10, Approach:  weaknesses) "The challenge of respiratory motion in pulmonary
     imaging for developing such tool kit is not thoroughly discussed and addressed."
-    * Response:
-        * We won the EMPIRE10 challenge.
-        * We won the best paper for the cardiac motion estimation challenge.
+    * __Response:__  I do not understand why this is such an issue given our track record.  We
+                 won the EMPIRE10 challenge which concerned normalizing two-time-point data.
+                 In a related domain, we won the best paper for the cardiac motion estimation
+                 challenge.  The neuroimaging domain is not completely static.  Not only do
+                 we have to deal with head motion during certain image acquisitions (fMRI, DTI)
+                 but we also have to deal with deformable application domains such as tumor
+                 growth and cortical atrophy.  I think we missed a reference to our point-set
+                 registration paper (IEEE-TMI) where we targeted specific anatomic structures
+                 in the lung.
 5. Too many external collaborators
     * (Page 3, Overall impact) "it also appears to be a distraction that could weaken the project’s depth at the expense of breadth."
     * (Page 5, Approach:  weaknesses) "involves too many external collaborative groups for one project...
       a bit of redundancy in the recruited groups. It seems they’d be better off (and less stressed) if
       they cut the number of collaborators in half (?)."
-    * Response:  Easy fix---we limit to UVa and Penn data as alpha testers
+    * __Response:__  Limit to UVa and Penn data as alpha testers
 6. General usage problems
     * (Page 3, Significance:  weaknesses ) "a case can be made that it is difficult to devise a general-usage open-source package
-that would actually be useful in the proposal’s chosen domain."  Could also go with 3. as they write
-"Unlike the brain domain which often relies on static images for a non-moving organ, the lungs and nearby anatomy (heart, etc.) experience much motion"
-    * Response:  ANTs has proven useful in the neuro domain.  Note that it is not just us that think this.  Eric Hoffman also thinks this (cite paper).
+      that would actually be useful in the proposal’s chosen domain."
     * (Page 5, Approach:  weaknesses) "It is not a package for clinicians, nor will it
     necessarily enable finished turnkey applications that clinicians can readily use."
     * (Page 7, Approach:  strengths)  "Many of the feature indices (Table 2) noted already
     exist in generic form in Brain packages, etc., and thus it should already exist for
     pulmonary images. Why is the research funding for such needed?"
-    * Response:
+    * __Response:__
+        * Dr. Eric Hoffman wrote in [8] concerning CT and MRI lung imaging:
+        "More widespread use of all imaging biomarkers has been limited for a number of key reasons,
+        including: 1) lack of support to harmonize image acquisition software; __2) universally available image analysis software;__ 3)
+        regulatory boundaries for emerging approaches; and 4) historically weak links between respiratory and radiology clinical programs."
+        (emphasis added).
+        * All of the external collaborators that we listed also recognize the need for such
+        a package.
+        * It is true that many brain packages offer registration tools which can be
+        appropriated for lung-specific processing.  However, it is not the case that these
+        features are commonly available in brain packages.  Some of them _are_ available in
+        the Insight Toolkit _because I wrote them and put them there_.
+        * ANTs, FSL, SPM, and FreeSurfer are also not tools targeted for clinicians nor do they provide
+        "finished turnkey applications that clinicians can readily use."  However, that does
+        not negate their utility.  Similarly, what we are proposing, as we mention in the
+        introduction is a publicly available research software utility targeted to lung applications that currently
+        does not exist.
 9.  Word choice
     * (Page 5, Approach:  weaknesses) "I would be careful to state that the chosen methods are the \"best/optimal,\""
-    * Response:  Easy fix.
+    * __Response:__  Easy fix.
 10.  Reduce scope
     * (Page 5, Approach:  weaknesses) Vessel segmentation:  "nothing is said about vessel segmentation."
     * (Page 5, Approach:  weaknesses) Nodule detection:  "This again is an extremely complex problem"
-    * Response:  Reduce methods along with external collaborators
+    * __Response:__  Reduce methods along with external collaborators
 14.  Lack of novelty
     * (Page 6, Overall impact) "This is a needed, though not novel, ... given the large amount
     of thoracic image analysis already in existence and the vague plan to incorporate it in
@@ -64,10 +94,12 @@ that would actually be useful in the proposal’s chosen domain."  Could also go
     * (Page 7, Innovation:  weaknesses) "there are some publically available image analysis
     software tools"
     * (Page 9, Overall impact) "Innovation is quite low".
-    * Response:  There are no publicly available tools:
-        * The LIDC and RIDER projects are databases with minimal support for software.  In fact
-          the software available is only to facilitate annotation and data conversion.  It
-          does not perform any of the useful
+    * __Response:__  Aside from a couple registration packages, there are no publicly available tools
+      for targeted lung imaging research.
+        * The LIDC and RIDER projects are databases with minimal software offerings.  In fact,
+          as far as we can tell, the only software available are tools to convert data and facilitate
+          nodule markup and match-up which is _specific to the RIDER database_.  The software package
+          we are proposing is of more general utility.
 15.  Naivety of investigators
     * (Page 7, Significance:  weaknesses) "The success is highly unlikely given the naiveness
     of the investigators regarding the complexity of the task, and that while they appear to
@@ -82,4 +114,5 @@ that would actually be useful in the proposal’s chosen domain."  Could also go
 16. Limited lung application
     * (Page 7, Approach:  strengths)  "however, [software tools] are mainly in the brain"...
      "however, large dataset verification is necessary."
-      * Response:  We can use Eduardos data.  However, there is no clinical outcome or result.
+      * __Response:__  We can use Eduardos data.  However, there is no clinical outcome or result.
+      Does the alpha testing from UVa and Penn data count as future verification?
