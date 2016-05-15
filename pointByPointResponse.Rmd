@@ -109,7 +109,7 @@
     processing the thorax is quite different from the brain."
     * (Page 9, Investigators:  strengths) "The Principal Investigator has extensive
     experience in neuroimaging but not much in pulmonary imaging."
-    * Response:  Respectfully disagree.  A separate group, Eric Hoffman has been designing lung
+    * __Response:__  Respectfully disagree.  A separate group, Eric Hoffman has been designing lung
       software for decades and he is aware of the need.
 16. Limited lung application
     * (Page 7, Approach:  strengths)  "however, [software tools] are mainly in the brain"...
