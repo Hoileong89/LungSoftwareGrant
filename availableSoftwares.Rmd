@@ -1,0 +1,41 @@
+# EMPIRE10 (Table III of Murphy et al., IEEE-TMI 2011)
+
+* 20 total algorithms
+* 7 are publicly available
+    * DROP          (stand-alone application)
+    * elastix       (stand-alone application)
+    * ANTs Exp
+    * ANTs SyN
+    * IMI Lübeck Diffeomorph         (stand-alone application)
+    * Plastimatch   (available in Slicer)
+    * NiftyReg      (other general utilities available: NiftySeg)
+
+
+# LIDA
+
+https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI
+
+# LOLA11
+
+* Some algorithms are implemlented in MeVisLab but it is not clear if
+the algorithm is available.
+* "Yacta" is in house sofware.
+* "SmartPaint" is available (http://www.cb.uu.se/~filip/SmartPaint/).  However, it is an
+interactive segmentation tool.
+*
+
+# VOLCANO
+
+
+
+# Other software
+
+* CIRRUS (http://cirrus.diagnijmegen.nl/lung/) based on MeVisLab
+    * MeVisLab - different levels of usage (see wikipedia page for details)
+* Slicer
+* SciRun
+* MITK
+* XIP
+* Pulmo3D (commercial)
+
+It should be noted that these are gui-heavy projects.

@@ -1,0 +1,114 @@
+
+# Initial organization
+
+1. No details regarding hardware and data
+    * (Page 2, Resume and summary of discussion) "little details about hardware and data"
+    * (Page 3, Overall impact) "some method descriptions and discussion of issues beyond software are lacking (sic)"
+    * (Page 4, Innovation:  weaknesses) "Little is said about the hardware and data throughput requirements (and benchmarking of computation time)."
+    * (Page 5, Approach:  weaknesses) "Some method descriptions are too brief... several \"trivial\"
+      (well-known?) space wasters could be reduced, with more method/approach discussion then given: 1) pg. 115 – Table 1; 2) pg. 117 – Table 2; 3)
+       pg. 113 – code fragment for an example command."
+    * (Page 5, Approach:  weaknesses) "[Gui processing] is given minimal attention...A little more could be said on this issue and on the hardware/memory/graphics requirements for running the software."
+    * (Page 7, Approach:  weaknesses) "Details on their specific methods for the segmentation and other functions are not given"
+
+* Where did the hardware discussion come from?  This is not a hardware proposal
+
+2. PET imaging
+    * (Page 2, Resume and summary of discussion) "missing opportunity to include PET imaging"
+    * (Page 3, Overall impact) "PET imaging is notably missing"
+    * (Page 4, Approach:  weaknesses) "Yet, positron emission tomography (PET) – not discussed in this proposal (c.3.12 noted)"
+    * (Page 9, Overall impact) "PET imaging is not considered "
+
+* I think I can get PET data from LIDC.  However, the problem is that what software should we write (SUV?).
+
+3. Lung motion
+    * (Page 2, Resume and summary of discussion) "overall dynamic nature of the lung environment"
+    * (Page 4, Innovation:  weaknesses) "Given the dynamic nature of the lung environment (organ motion, complex large
+    organs, vasculature dynamics [contrast, perfusion], etc.) and the considerable heterogeneity
+    of applications and scanner configurations/modalities used in this domain, it is a trifle
+    difficult to settle on a good basis for a general-usage package. The proposal necessarily must
+    settle on an idiosyncratic selection of methods in a vast domain."
+    * (Page 9, Overall impact) "The evolving of motion management techniques in pulmonary
+    imaging may limit the use of such open source software"
+    * (Page 10, Approach:  weaknesses) "The challenge of respiratory motion in pulmonary
+    imaging for developing such tool kit is not thoroughly discussed and addressed."
+
+* We won the EMPIRE10 challenge.
+* We won the best paper for the cardiac motion estimation challenge.
+
+5. Too many external collaborators
+    * (Page 3, Overall impact) "it also appears to be a distraction that could weaken the project’s depth at the expense of breadth."
+    * (Page 5, Approach:  weaknesses) "involves too many external collaborative groups for one project...
+      a bit of redundancy in the recruited groups. It seems they’d be better off (and less stressed) if
+      they cut the number of collaborators in half (?)."
+
+* Easy fix---we limit to UVa and Penn data as alpha testers
+
+6. General usage problems
+    * (Page 3, Significance:  weaknesses ) "a case can be made that it is difficult to devise a general-usage open-source package
+that would actually be useful in the proposal’s chosen domain."  Could also go with 3. as they write
+"Unlike the brain domain which often relies on static images for a non-moving organ, the lungs and nearby anatomy (heart, etc.) experience much motion"
+
+* ANTs has proven useful in the neuro domain.  Note that it is not just us
+that think this.  Eric Hoffman also thinks this (cite paper).
+
+8.  Targeted audience?
+    * (Page 5, Approach:  weaknesses) "It is not a package for clinicians, nor will it
+    necessarily enable finished turnkey applications that clinicians can readily use."
+
+* I think this should be combined with 6) General usage problems.
+
+9.  Word choice
+    * (Page 5, Approach:  weaknesses) "I would be careful to state that the chosen methods are the \"best/optimal,\""
+
+* Easy fix.
+
+10.  Reduce scope
+    * (Page 5, Approach:  weaknesses) "nothing is said about vessel segmentation."
+
+11.  Nodule detection
+    * (Page 5, Approach:  weaknesses) "This again is an extremely complex problem"
+
+* Combine 5), 10)  and 11)
+
+14.  Lack of novelty
+    * (Page 6, Overall impact) "This is a needed, though not novel, ... given the large amount
+    of thoracic image analysis already in existence and the vague plan to incorporate it in
+    order to avoid redundant research."
+    * (Page 7, Innovation:  weaknesses) "Why now is it expected that with the proposed
+    research that there will be \"an immediate and broad impact on the field\"?"
+    * (Page 7, Innovation:  weaknesses) "there are some publically available image analysis
+    software tools"
+    * (Page 9, Overall impact) "Innovation is quite low".
+
+* There are no publicly available tools:
+    * The LIDC and RIDER projects are databases with minimal support for software.  In fact
+      the software available is only to facilitate annotation and data conversion.  It
+      does not perform any of the useful
+
+15.  Naivety of investigators
+    * (Page 7, Significance:  weaknesses) "The success is highly unlikely given the naiveness
+    of the investigators regarding the complexity of the task, and that while they appear to
+    be aware of the years of CAD radiomics research in the pulmonary imaging field, recreating
+    it themselves is not trivial. On one hand, the simple features that were used in brain and
+    the associated software modules already exist. On the other hand, the complexity of
+    processing the thorax is quite different from the brain."
+    * (Page 9, Investigators:  strengths) "The Principal Investigator has extensive
+    experience in neuroimaging but not much in pulmonary imaging."
+
+* Respectfully disagree.  A separate group, Eric Hoffman has been designing lung software
+for decades and he is aware of the need.
+
+16. Limited lung application
+    * (Page 7, Approach:  strengths)  "however, [software tools] are mainly in the brain"...
+     "however, large dataset verification is necessary."
+
+* We can use Eduardos data.  However, there is no clinical outcome or result.
+
+18  Reduce scope II
+    * (Page 7, Approach:  strengths)  "Many of the feature indices (Table 2) noted already
+    exist in generic form in Brain packages, etc., and thus it should already exist for
+    pulmonary images. Why is the research funding for such needed?"
+    * (Page 8, Approach:  weaknesses)
+
+* Combine with 11)
