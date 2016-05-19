@@ -25,7 +25,7 @@
     * __Response:__  I can get PET data from LIDC.  However, the problem is that what software should we write (SUV?).  This
                  issue seemed pretty important to the reviewers but will they be critical if we do not have collaborators
                  that are analyzing clinical data.  Nobody at UVa does PET lung imaging research but, related, I could
-                 probably include blood perfusion data from Kun.
+                 probably include blood perfusion data from Kun.  
 3. Lung motion
     * (Page 2, Resume and summary of discussion) "overall dynamic nature of the lung environment"
     * (Page 3, Significance:  weaknesses ) "Unlike the brain domain which often relies on static images for a non-moving organ, the lungs and nearby anatomy (heart, etc.) experience much motion".
