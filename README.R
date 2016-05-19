@@ -28,7 +28,8 @@ cat( '\n Pandoc rendering', stitchedFile, '\n' )
 render( stitchedFile, output_format = "all" )
 
 soloFiles <- c( "narrative.Rmd",
-                 "summary.Rmd"
+                 "summary.Rmd",
+                 "introductionToRevisedApplication.Rmd"
               )
 for( i in 1:length( soloFiles ) )
   {

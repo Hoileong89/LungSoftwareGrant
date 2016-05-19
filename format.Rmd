@@ -5,7 +5,6 @@ output:
     latex_engine: xelatex
     keep_tex: yes
 header-includes:
-   - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\small}
    - \usepackage{booktabs}
    - \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
    - \linespread{0.92}

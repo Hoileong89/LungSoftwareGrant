@@ -91,7 +91,7 @@
     order to avoid redundant research."
     * (Page 7, Innovation:  weaknesses) "Why now is it expected that with the proposed
     research that there will be \"an immediate and broad impact on the field\"?"
-    * (Page 7, Innovation:  weaknesses) "there are some publically available image analysis
+    * (Page 7, Innovation:  weaknesses) "there are some publicly available image analysis
     software tools"
     * (Page 9, Overall impact) "Innovation is quite low".
     * __Response:__  Aside from a couple registration packages, there are no publicly available tools
