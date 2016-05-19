@@ -124,10 +124,6 @@ this assessment to be a significant undervaluing of our research contributions w
 of our showcased "preliminary" software has been used in large studies.  We thank the
 reviewer for pointing this out and have added a section outlining these publications.
 
-__General usage issues.__
-
-
-
 __Reduction of algorithmic scope. (Critique 2)__ Concerns describing the scope of the
 project as being too large were made in light of the extensive methodological depth of the
 field.  It should be noted that we have no intent of implementing a fraction of these
