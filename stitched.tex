@@ -42,46 +42,6 @@
             linkcolor=magenta,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-\newcommand{\ImportTok}[1]{{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
-\newcommand{\BuiltInTok}[1]{{#1}}
-\newcommand{\ExtensionTok}[1]{{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
-\newcommand{\RegionMarkerTok}[1]{{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
-\newcommand{\NormalTok}[1]{{#1}}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -177,7 +137,11 @@ exist for neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM),
 \emph{no such package exists for pulmonary imaging analysis. The primary
 goal of this project is to develop a robust, open-source image analysis
 toolkit and dissemination platform specifically targeted at the
-pulmonary research community.}
+pulmonary research community.
+\textcolor{red}{Given the signifcant efforts
+to make lung imaging datasets publicly available (such as LIDC and RIDER), this
+contribution would be extremely innovative as it would meet an obvious
+need through a first-of-its-kind software package for lung image analysis.}}
 
 Although methodological research is continually being presented at
 conferences and published in various venues, the unfortunate reality is
@@ -194,59 +158,67 @@ integrated into proprietary commercial software packages which severely
 limits accessibility to researchers.
 
 As a corrective alternative, this project brings together leading
-expertise in lung imaging research at Penn and UVa to develop, evaluate
-and deploy under community support an open-source software toolkit
-targeted for pulmonary imaging research. As principal developers of the
-popular, open-source ANTs, ITK-SNAP and ITK packages, we have extensive
+expertise in lung imaging research at the
+\textcolor{red}{University of Pennsylvania} and
+\textcolor{red}{University of Virginia} to develop, evaluate and deploy
+under community support an open-source software toolkit targeted for
+pulmonary imaging research. As principal developers of the popular,
+open-source ANTs, ITK-SNAP and ITK packages, we have extensive
 experience in the development of well-written software and propose to
 make a similar impact in the pulmonary community with this project.
-Specifically, we plan to provide methods for core pulmonary image
-analysis tasks across multiple modalities, many of which we have
-proposed in past work. These basic tasks include pulmonary image
-registration, template building for cross-sectional and longitudinal
-(i.e., respiratory cycle) analyses, functional and structural lung image
-segmentation, and computation of quantitative image indices as potential
-imaging biomarkers. In addition to the software, we will provide
-scripts, documentation, and tutorial materials consistent with
-open-science principles. Formally, this project is defined by the
-following specific aims:
+Specifically, we plan to provide \textcolor{red}{core algorithms} for
+\textcolor{red}{specific} pulmonary image analysis tasks across multiple
+modalities, many of which we have
+\textcolor{red}{included with previous publications}. These basic tasks
+include pulmonary image registration, template building for
+cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
+functional and structural lung image segmentation,
+\textcolor{red}{PET imaging}, \textcolor{red}{perfusion analysis}, and
+computation of quantitative image indices as potential imaging
+biomarkers. In addition to the software, we will provide scripts,
+documentation, and tutorial materials consistent with open-science
+principles. Formally, this project is defined by the following specific
+aims:
 
 \begin{itemize}
 \tightlist
 \item
   \textbf{Specific Aim 1:} \textbf{Develop ITK-Lung, a set of
   open-source software tools for CT, proton, and He-3 pulmonary
-  computational analysis.} These open-source software tools will
-  specifically target pulmonary image analysis and comprise core
-  application functions such as inspiratory/expiratory registration,
-  ventilation-based segmentation, lung and lobe estimation, airway and
-  vessel segmentation, nodule detection, and calculation of clinical
-  indices for characterization of lung development and pathology. To
-  support these software development efforts, CT and 1H MRI multi-atlas
-  libraries will be provided as open data, complete with the
-  corresponding lung, airway, vessel, and lobe segmentations according
-  to modality. In addition, we will generate optimal intensity/shape
-  templates from each library. Both sets of data will be provided with
-  the scripts used to produce them in order to permit user-reproduction
-  of the results. As developers of several leading open-source
-  applications for image segmentation and registration, we know
-  firsthand that the impact of a particular technological innovation
-  greatly depends on the availability of an easily accessible software
-  implementation. The proposed software framework will tie together all
-  of the capabilities of the project's developed methodology in the form
-  of programmable workflows and provide a seamless user experience
-  through a full featured graphical user interface. Interactive
-  functionality will extend beyond the ability to steer segmentation and
-  registration pipelines to include tools for evaluation and
-  visualization of processed results.
+  computational analysis.} These open-source software tools
+  \textcolor{red}{based on selected algorithms} will specifically target
+  pulmonary image analysis and comprise core application functions such
+  as inspiratory/expiratory registration, ventilation-based
+  segmentation, lung and lobe estimation, airway and vessel
+  segmentation, \textcolor{red}{PET imaging},
+  \textcolor{red}{perfusion analysis}, and calculation of clinical
+  indices for characterization of lung development and pathology.
+  \textcolor{red}{As a complement} to these software development
+  efforts, CT and 1H MRI multi-atlas libraries will be provided as open
+  data, complete with the corresponding lung, airway, vessel, and lobe
+  segmentations according to modality. In addition, we will generate
+  optimal intensity/shape templates from each library. Both sets of data
+  will be provided with the scripts used to produce them in order to
+  permit user-reproduction of the results. As developers of several
+  leading open-source applications for image segmentation and
+  registration, we know firsthand that the impact of a particular
+  technological innovation greatly depends on the availability of an
+  easily accessible software implementation. The proposed software
+  framework will tie together all of the capabilities of the project's
+  developed methodology in the form of programmable workflows and
+  provide a seamless user experience through a full featured graphical
+  user interface. Interactive functionality will extend beyond the
+  ability to steer segmentation and registration pipelines to include
+  tools for evaluation and visualization of processed results.
 \item
   \textbf{Specific Aim 2:} \textbf{Validate and disseminate the
   developed ITK-Lung resources by leveraging use cases from a broad
   network of partner investigators representing the state-of-the-science
   in lung imaging research.} This aim will evaluate and refine the
-  developed methodology within the real-world context of pulmonary
-  research being carried out at various partner sites. We will
-  disseminate the results of the project through open-source
+  \textcolor{red}{proposed framework} within the real-world context of
+  \textcolor{red}{actual research studies with institutional and
+  other external collaborators with the former being the primary "beta testers."}
+  We will disseminate the results of the project through open-source
   distribution of the software, atlases and documentation, online user
   support, and conduct of hands-on training workshops.
 \end{itemize}
@@ -287,13 +259,6 @@ software packages such as FreeSurfer {[}4{]}, the FMRIB Software Library
 several others. Performing a pubmed query for any one of these softwares
 every year for the past decade (cf Figure 1) illustrates the growing use
 of such packages and the research studies that are produced as a result.
-However, despite the absolute number of articles produced using such
-software and the year-by-year usage increase, no such analogous set of
-tools exist for pulmonary-specific research. In fact, in a recent review
-of CT- and MRI-derived biomarkers for pulmonary clinical investigation,
-the authorial consensus is that ``{[}the absence of{]} universally
-available image analysis software'' is a major hinderance to more
-widespread usage of such imaging biomarkers {[}8{]}.
 
 \begin{figure}[htbp]
 \centering
@@ -306,29 +271,46 @@ undertaken despite consensus amongst researchers and clinicians
 regarding the utility of such offerings.}
 \end{figure}
 
+\emph{\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
+community}, no such analogous set of tools exist for pulmonary-specific
+research.
+\textcolor{red}{Such an original and innovative software package would potentially have an immediate and
+significant impact.}} In fact, in a recent review of CT- and MRI-derived
+biomarkers for pulmonary clinical investigation, the authorial consensus
+is that ``\emph{{[}the absence of{]} universally available image
+analysis software'' is a major hinderance to more widespread usage of
+such imaging biomarkers} {[}8{]}.
+
 Medical image analysis libraries (e.g., the NIH-sponsored Insight
 ToolKit) provide extensive algorithmic capabilities for a range of
 generic image processing tasks. However, tailored software packages for
-certain application domains (e.g., lung image analysis) are not
-available despite the vast number of algorithms that have been proposed
-in the literature. It is important to note that the goals of this
-project would significantly support the National Library of Medicine's
-own open-source directives in that all software would be developed using
-the established Insight ToolKit's coding and testing standards with the
-specific objective that all project code would be contributed for
-inclusion in future versions of the Insight ToolKit (ITK) as we have
-done in the past. It should also be noted that open-source software, in
-general, has documented benefits within the targeted communities for
-which it is developed and supported. In addition to the increase in
-research output illustrated earlier, open-source permits students and
-researchers to learn specific computational techniques in a social
-environment {[}9{]}. This, in turn, provides motivation for user-based
-support including potential contributions such as bug fixes and feature
-additions. Additional analyses have shown the tremendous cost savings
-that open-source software yields {[}10{]}. Furthermore, open-source
-development and distribution within a large, and well-invested community
-(such as ITK) takes advantage of Linus's law, i.e., ``given enough
-eyeballs, all bugs are shallow," for producing robust software.
+certain application domains (e.g., lung image analysis)
+\textcolor{red}{do not exist} despite the vast number of algorithms that
+have been proposed in the literature
+\textcolor{red}{(many of which are not available to the public)}.\footnote{\textcolor{red}{Several competitions have been held in recent years dealing with the processing and
+  analysis of lung image data (e.g., VOLCANO09–--nodule detection, EMPIRE10—--motion estimation,
+  LOLA11—--lung and lobe segmentation, and VESSEL12---vasculature segmentation).  As far as we can tell, the vast majority of
+  the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
+  and RIDER, have amassed large amounts of imaging data but available software support is limited to organizational
+  tasks specific to those databases.}} It is important to note that the
+goals of this project would significantly support the National Library
+of Medicine's own open-source directives in that all software would be
+developed using the established Insight ToolKit's coding and testing
+standards with the specific objective that all project code would be
+contributed for inclusion in future versions of the Insight ToolKit
+(ITK) as we have done in the past. It should also be noted that
+open-source software, in general, has documented benefits within the
+targeted communities for which it is developed and supported. In
+addition to the increase in research output illustrated earlier,
+open-source permits students and researchers to learn specific
+computational techniques in a social environment {[}9{]}. This, in turn,
+provides motivation for user-based support including potential
+contributions such as bug fixes and feature additions. Additional
+analyses have shown the tremendous cost savings that open-source
+software yields {[}10{]}. Furthermore, open-source development and
+distribution within a large, and well-invested community (such as ITK)
+takes advantage of Linus's law, i.e., ``given enough eyeballs, all bugs
+are shallow,'' for producing robust software.
 
 \subsection{\texorpdfstring{\textbf{3(b)
 Innovation}}{3(b) Innovation}}\label{b-innovation}
@@ -338,40 +320,44 @@ Given the lack of open-source solutions for pulmonary image analysis,
 this project would produce the first-of-its-kind processing and analytic
 platform for performing such research. Similar to the brain-specific
 algorithms provided in our ANTs toolkit {[}11{]}, our project would
-include the most essential algorithms for analyzing lung images from
-different modalities, including CT, 3He, and 1H MRI. \emph{Many
-algorithms have been proposed in various technical venues but that which
+include \textcolor{red}{several} essential algorithms for analyzing lung
+images from different modalities, including CT, 3He, and 1H MRI.
+\emph{Many algorithms have been proposed in various technical venues,
+\textcolor{red}{(mostly
+as textual descriptions without accompanying software,)} but that which
 we propose would provide well-vetted and easy-to-use implementations of
 specific robust methodologies for pulmonary medical image analysis, many
 of which have been developed by our group.} To facilitate the usage of
 these algorithms, we will provide documentation including self-contained
 online examples, tutorials, and hands-on training workshops.
+\textcolor{red}{We recognize that the methodological depth of the field is extensive
+and implementing even a small portion of the total number of algorithms would be
+extremely daunting.  However, limiting algorithmic implementation to those with which we are
+familiar and have provided good performance for our clinical collaborations will provide
+an extremely beneficial package with significant implications for the community.}
 
 \textbf{3(b.2) Use case studies with leading pulmonary research
 scientists.} An additional innovative component of the project is the
-inclusion of extensive use cases from leading pulmonary imaging research
-scientists in various locations with different image acquisition
-protocols, equipment, etc. to ensure quality and robustness of the
-processed data. Additionally, such use cases involving other groups
-would highlight existing deficiencies in algorithmic functionality in
-our project which would then be remedied by additional development
-efforts. These real-world use cases were solicited representing as
-broadly as possible the requirements of the community as well as the
-multiple modality and algorithmic variations which commonly occur.
+inclusion of extensive use cases from leading pulmonary
+\textcolor{red}{imaging research scientists at our home institutions
+as well as other external collabotors with regression testing performed}
+using different image acquisition protocols, equipment, etc. to ensure
+quality and robustness of the \textcolor{red}{software and} processed
+data. Such use cases involving other groups would highlight existing
+deficiencies in framework functionality which would then be addressed.
+These real-world use cases were solicited representing as broadly as
+possible the requirements of the community as well as the multiple
+modality and algorithmic variations which commonly occur.
 
-We have partnered with leading pulmonary research groups who are
-familiar with our work and who will provide study-specific imaging data
-of various modalities which we will then process using the proposed
-toolkit. These processed data will be returned to the corresponding
-providers with detailed instructions on reproducing these results in
-their own labs. Software and tutorial materials drawn from these
-experiences will be provided to the public for any interested researcher
-to apply to their own data. Given the different image acquisition
-sources, this strategy should also demonstrate the robustness of our
-tools.
-
-In addition to these collaborative efforts, our own analyses at Penn and
-UVa will also be included. Any clinical findings of interest will be
+\textcolor{red}{Our institutional collaborators will comprise the group of primary beta testers.
+Processed data will be returned to the corresponding providers with detailed instructions
+on reproducing these results in their own labs. Other external collaborators who will also
+provide feedback based on their interaction with the platform.}
+\textcolor{red}{Tutorial materials, data, and example scripts} drawn
+from these experiences will be provided to the public for any interested
+researcher to apply to their own data. Given the different image
+acquisition sources, this strategy should also demonstrate the
+robustness of our tools. Any clinical findings of interest will be
 published in traditional venues (e.g., Chest). In addition, we will
 provide all the quantitative analysis scripts as a companion release for
 the paper (e.g., see previous similar offerings from our group {[}12,
@@ -385,6 +371,35 @@ design}}{3(c) Research design}}\label{c-research-design}
 
 \subsubsection{3(c.1) Preliminary data}\label{c.1-preliminary-data}
 
+\textcolor{red}{(NB:  replace this with table once all the refs are stabilized.)
+A significant portion of the proposed platform spanning the range of
+proposed functionality has been previously reported in various articles from our group.
+This includes both the reporting of methodoligical novelty and subsequent
+usage for clinical studies of small to large cohorts.
+The following list provides a representative sampling of this work categorized by
+proposed functionality:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\textcolor{red}{spatial normalization}}: {[}13--20{]}
+\item
+  \textbf{\textcolor{red}{template generation}}: {[}21{]}
+\item
+  \textbf{\textcolor{red}{lung segmentation}}: {[}19, 22--25{]}
+\item
+  \textbf{\textcolor{red}{lobe segmentation}}: {[}24, 25{]}
+\item
+  \textbf{\textcolor{red}{airway segmentation}}: {[}26{]}
+\item
+  \textbf{\textcolor{red}{functional segmentation}}: {[}21, 27, 28{]}
+\item
+  \textbf{\textcolor{red}{feature indices}}: {[}22, 29, 30{]}
+\end{itemize}
+
+\textcolor{red}{Much of this innovation has been provided through the ANTs processing toolkit to
+allow for continued use, potential future improvements, and reproducibility.}
+
 \textbf{3(c.1.1) Generic ANTs core tools for image analysis and
 processing.} The Advanced Normalization Tools (ANTs) package is a
 state-of-the-art, open-source software toolkit for image registration,
@@ -397,40 +412,41 @@ more general application and require pulmonary-specific tuning for the
 tasks targeted by this project. The following list comprises several
 core software tools for tuning, subsequent extensions, documentation,
 tutorial generation, and the creation of easy-to-use bash scripts for
-large-scale processing of pulmonary imaging data.
+large-scale processing of pulmonary imaging data:
 
 \textbf{ANTs image registration.} One of the most important
-methodological developments in medical image analysis is the advent of
-image registration techniques capable of accommodating the highly
-complex inter-individual variations seen in human anatomy. Our team is
+\textcolor{red}{innovations} in medical image analysis is the
+\textcolor{red}{development} of image registration techniques capable of
+mapping the highly complex variations seen in human anatomy. Our team is
 well-recognized for seminal contributions to the field that date back to
 the original elastic matching method of Bajcsy and co-investigators
-{[}14--16{]}. Our most recent work, embodied in the ANTs open-source,
+{[}31--33{]}. Our most recent work, embodied in the ANTs open-source,
 cross-platform toolkit for multiple modality image processing, continues
-to set the standard in the field. ANTs not only encodes the most
-advanced results in registration research, notably the Symmetric
-Normalization (SyN) algorithm for diffeomorphisms {[}17{]}, but also
-packages these within a full featured platform that includes an
-extensive library of similarity measures, transformation types, and
-regularizers. Recently, a thorough comparison with the original SyN
-algorithm was performed using a B-spline variant {[}12{]}. This
-evaluation utilized multiple publicly available, annotated brain data
-sets and demonstrated statistically significant improvement in label
-overlap measures. As part of that study, we produced the scripts
-\texttt{antsRegistrationSyN.sh} and \texttt{antsRegistrationSyNQuick.sh}
-which provide a simple interface to our normalization tools for
-brain-specific normalization and are two of the most widely used scripts
-in the ANTs toolkit. \emph{Similar to the developments that we are
-proposing, these scripts were extensively modified to serve as a
-follow-up entry into the EMPIRE10 lung image registration challenge
-where B-spline SyN performed better than its original counterpart on
-pulmonary data {[}18{]}.}
+to set the standard in the field \textcolor{red}{for brain} {[}34{]},
+\textcolor{red}{lung} {[}35{]}, \textcolor{red}{
+and cardiac imaging} {[}36{]}. ANTs not only encodes the most advanced
+results in registration research, notably the Symmetric Normalization
+(SyN) algorithm for diffeomorphisms {[}37{]}, but also packages these
+within a full featured platform that includes an extensive library of
+similarity measures, transformation types, and regularizers. Recently, a
+thorough comparison with the original SyN algorithm was performed using
+a B-spline variant {[}12{]}. This evaluation utilized multiple publicly
+available, annotated brain data sets and demonstrated statistically
+significant improvement in label overlap measures. As part of that
+study, we produced the scripts \texttt{antsRegistrationSyN.sh} and
+\texttt{antsRegistrationSyNQuick.sh} which provide a simple interface to
+our normalization tools for brain-specific normalization and are two of
+the most widely used scripts in the ANTs toolkit. \emph{Similar to the
+developments that we are proposing, these scripts were extensively
+modified to serve as a follow-up entry into the EMPIRE10 lung image
+registration challenge where B-spline SyN performed better than its
+original counterpart on pulmonary data {[}20{]}.}
 
 \textbf{Multi-modality template generation.} Given the variability in
 anatomical shape across populations and the lack of publicly available
 atlases for specific organs, generating population- or subject-specific
 optimal shape/intensity templates significantly enhances study potential
-{[}19, 20{]}. First, an average template is estimated via a voxel-wise
+{[}38, 39{]}. First, an average template is estimated via a voxel-wise
 mean of all the individual subject images. This estimate is iteratively
 updated by registering each image to the current template, performing a
 voxelwise average to create a new estimate, and then ``reshaping'' this
@@ -439,38 +455,38 @@ template estimate closer to the group mean---see Figure 2 for a
 cohort-specific multi-modality brain template for females in the age
 range 50--60. This functionality has proven to be a vital component of
 the ANTs toolkit for performing neuroimaging research (e.g., {[}13,
-21--25{]}). \emph{Similarly, this functionality has also demonstrated
-significant importance in pulmonary studies {[}26{]}.}
+40--44{]}). \emph{Similarly, this functionality has also demonstrated
+significant importance in pulmonary studies {[}21{]}.}
 
 \textbf{Bayesian segmentation with spatial and MRF priors.} Early
 statistically-based segmentation work appropriated NASA satellite image
 processing software for classification of head tissues in 2-D MR images
-{[}27{]}. Following this work, many researchers adopted statistical
+{[}45{]}. Following this work, many researchers adopted statistical
 methods for \(n\)-tissue anatomical brain segmentation. The
-Expectation-Maximization (EM) framework is natural {[}28{]} given the
+Expectation-Maximization (EM) framework is natural {[}46{]} given the
 ``missing data'' aspect of this problem. Core components of this type of
 work include the explicit modeling of the tissue intensity values as
-statistical distributions {[}29, 30{]} and the use of Markov Random
-Field (MRF) modeling {[}31{]} for regularizing the classification
-results {[}32{]}. Spatial prior probability maps of anatomical
-structures of interest are also employed within this framework {[}33,
-34{]}. Although this particular segmentation framework has significant
+statistical distributions {[}47, 48{]} and the use of Markov Random
+Field (MRF) modeling {[}49{]} for regularizing the classification
+results {[}50{]}. Spatial prior probability maps of anatomical
+structures of interest are also employed within this framework {[}51,
+52{]}. Although this particular segmentation framework has significant
 application in the neuroimaging domain, it is also relevant to other
-domains including functional ventilation of the lung {[}35{]}.
+domains including functional ventilation of the lung {[}27{]}.
 \emph{However, despite the numerous developments which have been
 proposed over the years within this area, there are an extremely limited
 number of actual software implementations. This deficit inspired us to
-create our own Bayesian segmentation framework {[}36{]} (denoted as
+create our own Bayesian segmentation framework {[}53{]} (denoted as
 Atropos), which we have made publicly available within ANTs and has
 proven highly effective in quantification of functional lung imaging
-{[}35, 37--39{]}.}
+{[}27, 28, 54, 55{]}.}
 
 \textbf{N4 bias correction.} Critical to quantitative processing of MRI
 is the minimization of field inhomogeneity effects which produce
 artificial low frequency intensity variation across the image.
 Large-scale studies, such as ADNI, employ perhaps the most widely used
-bias correction algorithm, N3 {[}40{]}, as part of their standard
-protocol {[}41{]}. In {[}42{]} we introduced an improvement of N3,
+bias correction algorithm, N3 {[}56{]}, as part of their standard
+protocol {[}57{]}. In {[}17{]} we introduced an improvement of N3,
 denoted as ``N4,'' which demonstrates a significant increase in
 performance and convergence behavior on a variety of data. This
 improvement is a result of an enhanced fitting routine (which includes
@@ -486,20 +502,20 @@ a ``best guess'' estimate of the target labeling. Several such
 algorithms have been developed and much effort has been devoted to
 determining relative performance levels---see, for example, the recent
 MICCAI 2012 Grand Challenge and Workshop on Multi-Atlas Labeling. The
-joint label fusion (JLF) algorithm of {[}43, 44{]} from our group is one
+joint label fusion (JLF) algorithm of {[}58, 59{]} from our group is one
 of the top performing JLF algorithms. JLF is capable of predicting
-anatomical labels with accuracy that rivals expert anatomists {[}45{]}.
-It has proven its effectiveness not only in cardiac data {[}46{]}, the
-human brain {[}13{]}, and in multiple modality canine MRI {[}46{]},
+anatomical labels with accuracy that rivals expert anatomists {[}60{]}.
+It has proven its effectiveness not only in cardiac data {[}61{]}, the
+human brain {[}13{]}, and in multiple modality canine MRI {[}61{]},
 \emph{but has also been successfully extended to the challenging problem
 of applying prior-based information to lung and lobe segmentation
-{[}47{]}.}
+{[}25{]}.}
 
 \textbf{Spatially adaptive denoising.} Patch-based denoising is critical
 for data ``cleaning'' prior to subsequent processing such as
 segmentation or spatial normalization. ANTs implements a
 state-of-the-art spatially adaptive version to denoising recently
-proposed in {[}48{]}.
+proposed in {[}62{]}.
 
 The previously described core tools, as well as several others, have
 been part of ANTs and ITK development efforts for more than a decade.
@@ -520,27 +536,27 @@ core elements of the ANTs toolkit:}
 \tightlist
 \item
   SyN was a top performer in a fairly recent large-scale brain
-  normalization evaluation {[}49{]}.
+  normalization evaluation {[}34{]}.
 \item
   SyN also competed in the Evaluation of Methods for Pulmonary Image
-  REgistration 2010 (EMPIRE10) challenge {[}50{]}, where it was the top
+  REgistration 2010 (EMPIRE10) challenge {[}35{]}, where it was the top
   performer for the benchmarks used to assess lung registration accuracy
   and biological plausibility of the inferred transform (i.e., boundary
   alignment, fissure alignment, landmark correspondence, and
   displacement field topology). The competition has continued to the
   present and SyN has remained the top-ranked algorithm.
 \item
-  The joint label fusion algorithm of {[}43, 51{]} (coupled with SyN)
+  The joint label fusion algorithm of {[}58, 63{]} (coupled with SyN)
   was top-ranked in the MICCAI 2012 challenge for labeled brain data
-  {[}52{]} and in 2013 for labeled canine hind leg data {[}53{]}.
+  {[}64{]} and in 2013 for labeled canine hind leg data {[}65{]}.
 \item
   The multivariate template capabilities in ANTs were combined with
   random forests to win the Brain Tumor segmentation (BRATS) competition
-  at MICCAI 2013 {[}20{]}.
+  at MICCAI 2013 {[}39{]}.
 \item
   A B-spline variant of the SyN algorithm {[}12{]} won the best paper
   award at the STACOM 2014 workshop for cardiac motion estimation
-  {[}54{]}.
+  {[}36{]}.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -569,62 +585,33 @@ community:
 \begin{itemize}
 \tightlist
 \item
-  brain normalization {[}55, 56{]}
+  brain normalization {[}66, 67{]}
   (\url{https://github.com/stnava/BasicBrainMapping}),
 \item
-  brain template generation {[}19{]}
+  brain template generation {[}38{]}
   (\url{https://github.com/ntustison/TemplateBuildingExample}),
 \item
-  skull-stripping or brain extraction {[}13, 57{]}
+  skull-stripping or brain extraction {[}13, 68{]}
   (\url{https://github.com/ntustison/antsBrainExtractionExample}),
 \item
-  prior-based brain tissue segmentation {[}55{]}
+  prior-based brain tissue segmentation {[}66{]}
   (\url{https://github.com/ntustison/antsAtroposN4Example}),
 \item
-  cortical thickness estimation {[}13, 58{]}
+  cortical thickness estimation {[}13, 69{]}
   (\url{https://github.com/ntustison/antsCorticalThicknessExample}),
 \item
-  brain tumor segmentation {[}20{]}
+  brain tumor segmentation {[}39{]}
   (\url{https://github.com/ntustison/ANTsAndArboles}), and
 \item
-  cortical labeling {[}43, 51{]}
+  cortical labeling {[}58, 63{]}
   (\url{https://github.com/ntustison/MalfLabelingExample}).
 \end{itemize}
 
 All of these tools have been wrapped in easy-to-use, well-documented
-shell scripts. For example, the ANTs cortical thickness pipeline, as
-outlined in {[}13{]}, comprises four major steps: (1) bias correction,
-(2) brain extraction, (3) \(n\)-tissue segmentation, and (4) cortical
-thickness estimation. Each step requires its own set of ANTs tools with
-appropriately tuned parameters. To maximize the utility of the pipeline
-for the interested user, in {[}13{]} we provide all the necessary
-programs (properly tuned) with a minimal set of input data required to
-obtain good results for common data. The result is an easy-to-use script
-that can be invoked by the programmer and non-programmer alike to obtain
-the desired processed data which outperforms the current
-state-of-the-art {[}13{]}. An example command call for the ANTs cortical
-thickness pipeline is:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-  \CommentTok{# ANTs processing call for a single subject}
-
-  \NormalTok{$ }\KeywordTok{sh} \NormalTok{antsCorticalThickness.sh -d 3 \textbackslash{}}
-                                \NormalTok{-a IXI/T1/IXI002-Guys-0828-T1.nii.gz \textbackslash{}}
-                                \NormalTok{-e IXI/template/T_Template0.nii.gz \textbackslash{}}
-                                \NormalTok{-m IXI/template/T_template0ProbabilityMask.nii.gz \textbackslash{}}
-                                \NormalTok{-f IXI/template/T_template0ExtractionMask.nii.gz \textbackslash{}}
-                                \NormalTok{-p IXI/template/Priors/priors%d.nii.gz \textbackslash{}}
-                                \NormalTok{-o IXI/ANTsResults/IXI002-Guys-02828-}
-\end{Highlighting}
-\end{Shaded}
-
-This approach to reducing the steep learning curve associated with many
-processing pipelines has several benefits. Bash is an extremely common
-command language that permits large-scale processing. Thus, running
-several jobs on a cluster infrastructure is straightforward with this
-approach. Such scripts are readable by the interested user who can glean
-parameters as well as manually make changes.
+shell scripts
+\textcolor{red}{which facilitate the processing of large studies.  Functionality
+includes compatibility with the major cluster systems (e.g., SLURM, SGE, and PBS).
+As part of this project we have developed similar scripts targeting lung analyses.}
 
 \begin{figure}[htbp]
 \centering
@@ -670,7 +657,7 @@ we have noted previously, do not exist in any comprehensive, publicly
 available package. This is in spite of the fact that new algorithms for
 lung image analysis are frequently reported in the literature. An
 extensive survey concentrating on the years 1999--2004 is given in
-{[}59{]} which covers computer-aided diagnosis of lung disease and lung
+{[}70{]} which covers computer-aided diagnosis of lung disease and lung
 cancer in CT (i.e., detection and tracking of pulmonary nodules) and
 provides an overview of the many relevant segmentation methods for
 pulmonary structures. Although many algorithms existed at the time,
@@ -681,7 +668,7 @@ in algorithmic \emph{availability}. \emph{Additionally, a key problem in
 the pulmonary image analysis community is that the lack of publicly
 available tools translates directly into a lack of baseline performance
 standards with which researchers can compare their own algorithms
-{[}60{]}. This project constitutes a specific and overdue response to
+{[}71{]}. This project constitutes a specific and overdue response to
 this major deficiency in the field.}
 
 \emph{A primary impetus for this project is that, through extension and
@@ -689,37 +676,41 @@ continued development of ANTs and ITK functionality, we can make a
 significant impact on the pulmonary imaging research community in both
 basic science and clinical workflows by developing lung-specific
 algorithms which are easy to use as we have done for the neuroimaging
-community.} The following list comprises core functionality for CT
-analysis that would be incorporated into ITK-Lung in addition to further
-enhancements to the registration and segmentation capabilities described
-in preliminary work:
+community.}
+\textcolor{red}{Although we will not provide the entire panoply of lung-based
+image processing algorithms that have been proposed over the years, a
+set of tools with a track record of good performance spanning the range of core
+functionality (similar to our ANTs neuroimaging
+toolkit) will be a definite benefit to the community.} The following
+list comprises core functionality for CT analysis that would be
+incorporated into ITK-Lung in addition to further enhancements to the
+registration and segmentation capabilities described in preliminary
+work:
 
 \begin{itemize}
 \tightlist
 \item
-  whole lung differentiation from the chest wall (e.g., {[}61--64{]}),
+  whole lung differentiation from the chest wall (e.g., {[}72--75{]}),
 \item
-  bronchial structure extraction (e.g., {[}65, 66{]} and the many
+  bronchial structure extraction (e.g., {[}76, 77{]} and the many
   submissions to the recent Extraction of Airways from CT (ExACT)
   challenge of the 2nd International Workshop on Pulmonary Image
-  Analysis {[}67{]}),
+  Analysis {[}78{]}),
 \item
-  vasculature segmentation (e.g., {[}68, 69{]}),
+  vasculature segmentation (e.g., {[}79, 80{]}),
 \item
-  lobe and/or fissure detection (e.g., {[}70, 71{]}),
+  lobe and/or fissure detection (e.g., {[}81, 82{]}), and
 \item
-  feature extraction and classification (e.g., {[}72--74{]}), and
-\item
-  nodule detection (e.g., {[}75{]} and the many submissions to the
-  Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD
-  Conference of SPIE Medical Imaging {[}76{]}).
+  feature extraction and classification (e.g., {[}83--85{]}).
 \end{itemize}
 
 Although this list is restricted to CT image analysis, inclusion of
 additional techniques specific to other modalities has additional
 benefit and are planned for this project (cf Table 1). Using ANTs core
-tools, we have produced several lung-specific algorithms for core tasks
-such as:
+tools \textcolor{red}{with lung-specific modifications}, we have
+produced several algorithms for core pulmonary imaging tasks.
+\textcolor{red}{We have even provided as open-source initial implementations and github
+examples for many of them.} These imaging tasks include:
 
 \textbf{Atlas-based lung segmentation.} Identification of anatomical
 structure in MRI is often a crucial preprocessing step for
@@ -727,20 +718,20 @@ quantification of morphological features or ventilation information from
 functional images. Quantitative regional analysis often requires the
 identification of lung and lobar anatomy. Although much algorithmic
 research for lung segmentation has been reported in the CT literature
-{[}77{]}, co-opting such technologies is complicated by MRI-specific
+{[}86{]}, co-opting such technologies is complicated by MRI-specific
 issues such as RF coil inhomogeneity, presence and resolution of
 structural detail, and the absence of a physically-based intensity
 scaling.
 
 We recently proposed a multi-atlas approach for automatically segmenting
-the left and right lungs in 1H MRI {[}47{]}. Multi-atlas approaches to
-segmentation have proven highly successful in neuroimaging {[}43, 51{]}
+the left and right lungs in 1H MRI {[}25{]}. Multi-atlas approaches to
+segmentation have proven highly successful in neuroimaging {[}58, 63{]}
 and these methods translate readily to the pulmonary domain. Whereas
 many current strategies for lung image segmentation employ low-level
 processing techniques based on encodable heuristics, consensus-based
 strategies, in contrast, optimize the prior knowledge applied to a
 specific segmentation problem (cf Figure 3). The evaluation of our
-proposed method {[}47{]} demonstrated excellent performance with Jaccard
+proposed method {[}25{]} demonstrated excellent performance with Jaccard
 overlap measures for the left and right lungs being \(0.966\pm0.018\)
 and \(0.970\pm0.016\), respectively. Further work for this project
 includes extension to CT datasets with a particular emphasis on
@@ -758,41 +749,37 @@ subdivisions which are ad hoc, non-anatomical, and do not adequately
 address intra- and inter-subject correspondences. However, we can take
 advantage of inter-subject similarities in lobar geometry to provide a
 prior-based estimation of lobar divisions using a consensus labeling
-approach (cf Figure 3).
-
-Specifically, to generate the lobe segmentation in a target 1H or CT
-lung image, we register the same-modality atlas set to the target image
-(given the general increased robustness of intra-modality
-vs.~inter-modality image registration) using the B-spline SyN
-registration approach described earlier {[}12{]}. Subsequently, we warp
-the set of lobe label images to the target image using the
+approach (cf Figure 3). Specifically, to generate the lobe segmentation
+in a target 1H or CT lung image, we register the same-modality atlas set
+to the target image (given the general increased robustness of
+intra-modality vs.~inter-modality image registration) using the B-spline
+SyN registration approach described earlier {[}12{]}. Subsequently, we
+warp the set of lobe label images to the target image using the
 atlas-to-target transformation. This process will be illustrated
 publicly as part of the project using the open-data multi-atlas CT and
-1H atlas libraries created as part of Sub-Aim 1b.
-
-Since we have no intensity information inside the target lung mask and
-CT atlas lung masks, we use a simply majority voting strategy to
-generate the optimal labeling for the target image. Following the
-majority voting, we remove any labelings outside the lung mask and
-assign any unlabeled voxels with the label closest in distance to that
-voxel. This methodology is more thoroughly described in {[}47{]} where
-we showed that lobar overlap measures in 1H MRI were on par with
-state-of-the-art CT methods where fissure information is actually
-visible (left upper: \(0.882 \pm 0.059\), left lower:
-\(0.868 \pm 0.06\), right upper: \(0.852 \pm 0.067\), right middle:
-\(0.657 \pm 0.130\), right lower: \(0.873 \pm 0.063\)). We will extend
-this framework to pulmonary CT in providing spatial prior probability
-maps augmented by image-specific CT data features such as fissures,
-airways, and blood vessels for data-driven, subject-specific lobe
-segmentation {[}71{]}.
+1H atlas libraries created as part of Sub-Aim 1b. Since we have no
+intensity information inside the target lung mask and CT atlas lung
+masks, we use a simply majority voting strategy to generate the optimal
+labeling for the target image. Following the majority voting, we remove
+any labelings outside the lung mask and assign any unlabeled voxels with
+the label closest in distance to that voxel. This methodology is more
+thoroughly described in {[}25{]} where we showed that lobar overlap
+measures in 1H MRI were on par with state-of-the-art CT methods where
+fissure information is actually visible (left upper:
+\(0.882 \pm 0.059\), left lower: \(0.868 \pm 0.06\), right upper:
+\(0.852 \pm 0.067\), right middle: \(0.657 \pm 0.130\), right lower:
+\(0.873 \pm 0.063\)). We will extend this framework to pulmonary CT in
+providing spatial prior probability maps augmented by image-specific CT
+data features such as fissures, airways, and blood vessels for
+data-driven, subject-specific lobe segmentation {[}82{]}.
 
 \textbf{Ventilation quantification.} Automated or semi-automated
 approaches for classifying areas of varying degrees of ventilation are
-of potential benefit for pulmonary functional analysis. In {[}35{]}, we
+of potential benefit for pulmonary functional analysis. In {[}27{]}, we
 presented an automated algorithmic pipeline for ventilation-based
 partitioning of the lungs in hyperpolarized 3He and 129Xe MRI. Without
 ground truth data for evaluation, we used a consensus labeling approach
-{[}78{]} to simultaneously estimate the true segmentation from given
+{[}87{]} to simultaneously estimate the true segmentation from given
 ``raters'' which included the segmentation from our automated approach
 and the manual tracings of three trained individuals. In terms of
 combined specificity and sensitivity, our automated algorithm
@@ -801,16 +788,16 @@ reproducible and less time-consuming. Since the initial development, we
 have continued to improve this segmentation pipeline by incorporating an
 iterative bias-correction/segmentation estimation scheme. An additional
 component that improves results is an ANTs-based implementation of the
-patch-based denoising protocol described in {[}48{]}.
+patch-based denoising protocol described in {[}62{]}.
 
 \textbf{Multi-modality lung template construction.} Although the
-template construction algorithm described in {[}19{]} is, as pointed out
+template construction algorithm described in {[}38{]} is, as pointed out
 earlier, frequently applied to T1-weighted brain data, it is
 sufficiently general such that it can potentially be applied to
 pulmonary data. Also, new innovations in diffeomorphic registration
 technology has led to a Symmetric Normalization B-spline variant which
 will be extended and refined to provide accurate normalizations {[}12{]}
-for pulmonary data {[}18{]}.
+for pulmonary data {[}20{]}.
 
 \textbf{Feature indices.} Imaging biomarkers for characterizing
 emphysema in CT have have been well researched, although there are ample
@@ -820,12 +807,12 @@ identifying the centrilobular and groundglass opacities and fractal and
 connectivity approaches to differentiate centrilobular from panlobular
 emphysema. The available indices for CT image analysis can roughly be
 divided into those that characterize the pulmonary parenchyma:
-volumetric tissue (e.g., {[}79, 80{]}), distribution of low attenuation
-areas (LAA) (e.g., {[}81, 82{]}), cooccurrence and run-length matrix
-features (e.g., {[}72, 83{]}), attenuation statistics (e.g., {[}84,
-85{]}), deformation measures (e.g., {[}86, 87{]}), and stochastic
-fractal dimension features (e.g., {[}72, 85{]}); and those that
-characterize the airways (e.g., {[}88--90{]}). The former are important
+volumetric tissue (e.g., {[}88, 89{]}), distribution of low attenuation
+areas (LAA) (e.g., {[}90, 91{]}), cooccurrence and run-length matrix
+features (e.g., {[}83, 92{]}), attenuation statistics (e.g., {[}93,
+94{]}), deformation measures (e.g., {[}14, 15{]}), and stochastic
+fractal dimension features (e.g., {[}83, 94{]}); and those that
+characterize the airways (e.g., {[}95--97{]}). The former are important
 for subjects with an emphysematous component of disease, whereas the
 latter are important for subjects with a bronchitic component of
 disease. \emph{An important component of this project is that many of
@@ -834,53 +821,44 @@ analysis using 3He MRI for a variety of lung diseases.} These indices
 can also be studied not only at any particular single time point, but
 also for changes with time. The addition of quantitative morphologic
 measurements of the airways provides an assessment of the contribution
-of airway changes to chronic lung disease.
+of airway changes to chronic lung disease. Table 2 provides an overview
+of these types of discriminative measurements, many of which can be used
+for CT and 3He lung assessment. We have already implemented many of
+these image features and have contributed the result of our work to the
+Insight Toolkit (e.g., {[}98, 99{]}).
 
 \input{ct_table.tex}
 
-Table 2 provides an overview of these types of discriminative
-measurements, many of which can be used for CT and 3He lung assessment.
-We have already implemented many of these image features and have
-contributed the result of our work to the Insight Toolkit (e.g., {[}91,
-92{]}).
-
-\textbf{Airway and vessel segmentation.} In describing the quantitative
-CT lung indices, it was pointed out that lung airway morphology has been
+\textbf{Airway segmentation.} In describing the quantitative CT lung
+indices, it was pointed out that lung airway morphology has been
 previously utilized as a biomarker for disease characterization.
 Additionally, there are other potential uses motivating the inclusion of
 airway segmentation in any pulmonary image analysis toolkit. In an
-evaluation of 15 airway segmentation algorithms {[}93{]} for the
+evaluation of 15 airway segmentation algorithms {[}100{]} for the
 Extraction of Airways from CT challenge held in 2009, the top 2
-performers were the algorithms of {[}94{]} and {[}95{]} with the latter
-being one of the more conservative algorithms and the former being more
-prone to false positives. Our plan is to provide an implementation of
-{[}94{]} and then augment this functionality with some of our previous
-work {[}96{]} for removing leakage path candidates.
+performers were the algorithms of {[}101{]} and {[}102{]} with the
+latter being one of the more conservative algorithms and the former
+being more prone to false positives. Our plan is to provide an
+implementation of {[}101{]} and then augment this functionality with
+some of our previous work {[}26{]} for removing leakage path candidates.
 
-ITK has extensive functionality for segmentation of vessel-like
-structures. Much of that work has been incorporated into comprehensive
-packages such as the analysis and visualization Vessel Modeling ToolKit
-(\url{http://www.vmtk.org}). For this project we will focus development
-and refinement of these ITK capabilities for CT lung application in
-segmenting the pulmonary vasculature.
+\textbf{\textcolor{red}{Vessel segmentation.}}
+\textcolor{red}{In contrast to much of what is described in the literature, there exist
+key contributions for pulmonary vessel segmentation available to the public, specifically
+the algorithms described in} {[}103{]}.
+\textcolor{red}{Similar to much of the
+research for enhancement of vessel-like morphology in different anatomies, the authors
+employed Hessian-based filters for deriving a "vesselness" function.  They evaluated
+different filtering strategies using the test data provided by the organizers of the
+VESSEL12 challenge organized in conjunction with the IEEE International Symposium on
+Biomedical Imaging (ISBI 2012).  Their approach ranked consistently as one of the top
+performers of the challenge.  Given that the first author is a regular
+ITK contributor, the corresponding code will be easily integrated into our platform.
+}
 
-\textbf{Nodule detection.} CT is used for screening of lung cancers
-(i.e., pulmonary nodules) which currently requires human intervention
-for the laborious and tedious task of manual scanning. Automated
-detection methods could potentially save significant time and effort
-which has inspired much research literature on the topic including
-several commercial systems and specialized visualization hardware for
-facilitating detection. In 2009, a nodule detection competition was held
-for comparing performance of individual algorithms as well as their
-combinations {[}76{]}. This competition included entries from both
-academic institutions as well as a system from Philips (although, to our
-knowledge, none are available for public use). The best performing
-algorithm of that competition was based on the work presented in
-{[}97{]}, where a k-nearest neighbor classification employing local
-image features is built from a large training data set. We plan to
-implement this method potentially with some modifications based on our
-experience with a more recent challenge dealing with segmentation of
-pathology {[}20{]}.
+\textbf{\textcolor{red}{Perfusion analysis.}}
+
+\textbf{\textcolor{red}{PET imaging.}}
 
 \textbf{3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas
 libraries, one for CT and another for 1H MRI.} The corresponding group
@@ -896,10 +874,10 @@ Both libraries will consist of \(n=30\) different subjects to represent
 a range of lung size and shape and will be annotated according to
 modality. The CT atlas library will include lung, lobe, airway, and
 vessel segmentations. The 1H MRI atlas library will include left/right
-lung segmentations and lobar estimations {[}47{]}. Along with the
+lung segmentations and lobar estimations {[}25{]}. Along with the
 annotated data we will provide the scripts and documentation to allow
 reproduction of the ITK-Lung results. Additionally, two group templates
-{[}19{]} for the two atlas libraries, respectively, will be included as
+{[}38{]} for the two atlas libraries, respectively, will be included as
 part of these open data sets.
 
 \textbf{3(c.2.3) Sub-Aim 1c will develop a graphical user interface
@@ -921,17 +899,17 @@ ITK-Lung as well as potentially other software, another much needed
 capability not currently available to the general community. Based on
 these considerations, we propose to base the GUI front-end to ITK-Lung
 on the ITK-SNAP multi-platform, open-source tool for interactive
-user-guided medical image segmentation and data visualization {[}98{]},
+user-guided medical image segmentation and data visualization {[}104{]},
 and whose development is led by project investigator Paul Yushkevich.
 ITK-SNAP provides an effective combination of semi-automatic
-segmentation functionality based on active contours {[}99{]} and manual
+segmentation functionality based on active contours {[}105{]} and manual
 delineation functionality, put together into a compact and easy-to-learn
 GUI, that perfectly complements the automated segmentation functionality
 proposed for development in this project. ITK-SNAP design emphasizes
 interaction and ease of use, with the bulk of the development effort
 dedicated to the user interface. ITK- SNAP has thousands of users (there
 have been over 2000 downloads per month in the last year), and our 2006
-paper on ITK-SNAP {[}98{]} has been cited over 1400 times (Google
+paper on ITK-SNAP {[}104{]} has been cited over 1400 times (Google
 Scholar) in the context of various biomedical domains. ITK-SNAP will
 also be used in this project for manual labeling of the proposed lung
 atlases; it is already used for this purpose by many investigators.
@@ -973,7 +951,7 @@ and automatic builds. Virtual machines with different versions of
 Windows, MacOS and Linux operating systems generate nightly builds and
 execute test code, uploading a binary to the central SourceForge
 repository. ANTs and ITK-SNAP are documented through video and text
-tutorials, housed online on dedicated websites {[}11, 101{]}. A similar
+tutorials, housed online on dedicated websites {[}11, 107{]}. A similar
 infrastructure will be developed for the software resources proposed in
 Aim 1.
 
@@ -989,6 +967,16 @@ investigator-driven studies presented below are carefully selected both
 for their capacity to fully exercise the developed tools and to provide
 a comprehensive representation of the various processing and analysis
 tasks of interest to the community.
+\textcolor{red}{Two groups are considered
+below as ``users'' of the software:  institutional (i.e., beta testers) and external collaborators.
+For the former, the developers of the proposed platform will provide one-on-one training
+sessions to ensure proper data processing by the beta testers.  We will use these sessions
+to develop online tutorials and processing examples for our external collaborators such that
+they will be able to process their data in-house.  We will also provide a targeted discussion
+forum to answer questions and address concerns for processing using ITK-Lung.}
+
+\subsection{Institutional
+collaborators}\label{institutional-collaborators}
 
 \textbf{3(c.3.1) Novel imaging biomarkers for Chronic Obstructive
 Pulmonary Disease (COPD).} Co-investigator \textbf{Mike Shim} and his
@@ -996,8 +984,8 @@ group have been actively developing 3D hyperpolarized xenon-129
 dissolved-phase MRI (HXe MRI) as a sensitive biomarker for accurately
 characterizing phenotypes and severity of COPD. This protocol permits
 regional mapping of ventilation and gas uptake by tissue and blood in
-human lungs with single breath hold {[}102--104{]}. This project plans
-to establish connectivity between these advanced HXe MRI imaging
+human lungs with single breath hold {[}24, 108, 109{]}. This project
+plans to establish connectivity between these advanced HXe MRI imaging
 signatures and important clinical outcomes of COPD to advance HXe MRI as
 a novel clinical diagnostic tool. This new biomarker tool will naturally
 lead to deeper mechanistic understanding of COPD at the
@@ -1026,17 +1014,17 @@ sensitive biomarker for accurately characterizing COPD phenotypes is
 quantification of imaging signatures in an automated and robust fashion.
 Identification of ventilation dead space (\(V_D\)) for correlation with
 GOLD classification will utilize the ventilation-based segmentation
-functionality in ITK-Lung {[}35{]}. In order to determine lobar values
+functionality in ITK-Lung {[}27{]}. In order to determine lobar values
 of HXe MRI, this study will utilize the recently proposed lobar
-estimation algorithm {[}47{]} that will be available for both proton MRI
-and CT
+estimation algorithm {[}25{]} that will be available for both proton MRI
+and CT.
 
 \textbf{3(c.3.2) Hyperpolarized gas imaging in children with asthma.}
 Advances in rapid image sequencing methods have facilitated the
 acquisition of high-quality hyperpolarized gas MR images in pre-school
-children {[}105{]}. Furthermore, improvements in image processing and
+children {[}110{]}. Furthermore, improvements in image processing and
 signal intensity analysis have made possible accurate measurements of
-lung volume compartments {[}35{]}. Co-investigators \textbf{Gerry
+lung volume compartments {[}27{]}. Co-investigators \textbf{Gerry
 Teague} and \textbf{Talissa Altes} are applying these innovations in
 children with asthma to study whether the lung defect volume \% as
 measured by hyperpolarized lung MRI correlates with a range of clinical
@@ -1050,8 +1038,8 @@ MRI not only has the potential to resolve the spatial and temporal
 characteristics of gas distribution in children with asthma, but could
 also expand clinically relevant information in regards to asthma
 severity and its features. In the past, simple computer-assisted systems
-{[}106{]} or hand counts of visual defects were used to estimate the
-ventilation defect volume {[}107{]}. Development of more advanced
+{[}111{]} or hand counts of visual defects were used to estimate the
+ventilation defect volume {[}112{]}. Development of more advanced
 techniques (in terms of acquisition and analysis) will facilitate rapid
 conversion of complex hyperpolarized gas signal data into volume
 compartments for clinical applications.
@@ -1061,9 +1049,9 @@ Dr.~Teague and his group are sophisticated image analysis tools like the
 ones being proposed in this project. For example, our ventilation-based
 segmentation method is already being used to determine volumetric
 compartments based on lung function. Additional ``cleaning'' necessary
-for these data include denoising techniques {[}48{]} implemented and
+for these data include denoising techniques {[}62{]} implemented and
 made available in ANTs. Lobe estimation will be possible by refining the
-techniques originally described in {[}47{]}.
+techniques originally described in {[}25{]}.
 
 \textbf{3(c.3.3) Characterization of COPDGene cohort by hyperpolarized
 gas (HP) MRI.} Co-investigator \textbf{Rahim Rizi} is leading a study of
@@ -1208,6 +1196,8 @@ modeling that may predict which patients will develop BOS before PFT
 abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
+
+\subsection{External collaborators}\label{external-collaborators}
 
 \textbf{3(c.3.5) Comparison of automated multi-modality registration
 methodologies to manual registration for assessing lung CT bronchial
@@ -1439,235 +1429,136 @@ Cortical Thickness Measurements}'' \emph{Neuroimage} 99, (2014):
 166--79.
 doi:\href{https://doi.org/10.1016/j.neuroimage.2014.05.044}{10.1016/j.neuroimage.2014.05.044}
 
+\hypertarget{ref-Gee:2003aa}{}
+14. Gee, J., Sundaram, T., Hasegawa, I., Uematsu, H., and Hatabu, H.
+``\textbf{Characterization of Regional Pulmonary Mechanics from Serial
+Magnetic Resonance Imaging Data}'' \emph{Acad Radiol} 10, no. 10 (2003):
+1147--52.
+
+\hypertarget{ref-Sundaram:2005aa}{}
+15. Sundaram, T. A. and Gee, J. C. ``\textbf{Towards a Model of Lung
+Biomechanics: Pulmonary Kinematics via Registration of Serial Lung
+Images}'' \emph{Med Image Anal} 9, no. 6 (2005): 524--37.
+doi:\href{https://doi.org/10.1016/j.media.2005.04.002}{10.1016/j.media.2005.04.002}
+
+\hypertarget{ref-Cook:2007aa}{}
+16. Cook, T. S., Tustison, N., Biederer, J., Tetzlaff, R., and Gee, J.
+``\textbf{How Do Registration Parameters Affect Quantitation of Lung
+Kinematics?}'' \emph{Med Image Comput Comput Assist Interv} 10, no. Pt 1
+(2007): 817--24.
+
+\hypertarget{ref-Tustison:2010aa}{}
+17. Tustison, N. J., Awate, S. P., Cai, J., Altes, T. A., Miller, G. W.,
+Lange, E. E. de, Mugler, J. P., 3rd, and Gee, J. C. ``\textbf{Pulmonary
+Kinematics from Tagged Hyperpolarized Helium-3 MRI}'' \emph{J Magn Reson
+Imaging} 31, no. 5 (2010): 1236--41.
+doi:\href{https://doi.org/10.1002/jmri.22137}{10.1002/jmri.22137}
+
+\hypertarget{ref-Tustison:2011ab}{}
+18. Tustison, N. J., Cook, T. S., Song, G., and Gee, J. C.
+``\textbf{Pulmonary Kinematics from Image Data: A Review}'' \emph{Acad
+Radiol} 18, no. 4 (2011): 402--17.
+doi:\href{https://doi.org/10.1016/j.acra.2010.10.019}{10.1016/j.acra.2010.10.019}
+
+\hypertarget{ref-Tustison:2011ad}{}
+19. Tustison, N. J., Awate, S. P., Song, G., Cook, T. S., and Gee, J. C.
+``\textbf{Point Set Registration Using Havrda-Charvat-Tsallis Entropy
+Measures}'' \emph{IEEE Trans Med Imaging} 30, no. 2 (2011): 451--60.
+doi:\href{https://doi.org/10.1109/TMI.2010.2086065}{10.1109/TMI.2010.2086065}
+
+\hypertarget{ref-Tustison:2012aa}{}
+20. Tustison, N. J., Song, G., Gee, James C, and Avants, B. B.
+``\textbf{Two Greedy SyN Variants for Pulmonary Image Registration}''
+\emph{Evaluation of methods for pulmonary image registration (EMPIRE10)}
+(2012):
+
+\hypertarget{ref-Tustison:2013ad}{}
+21. Tustison, N. J., Contrella, B., Altes, T. A., Avants, B. B., Lange,
+E. E. de, and Mugler, J. P. ``\textbf{Longitudinal Assessment of
+Treatment Effects on Pulmonary Ventilation Using 1H/3He MRI Multivariate
+Templates}'' \emph{Proc. sPIE 8672, medical imaging 2013: Biomedical
+applications in molecular, structural, and functional imaging} (2013):
+
+\hypertarget{ref-Barbosa:2011aa}{}
+22. Barbosa, E. M., Jr, Song, G., Tustison, N., Kreider, M., Gee, J. C.,
+Gefter, W. B., and Torigian, D. A. ``\textbf{Computational Analysis of
+Thoracic Multidetector Row HRCT for Segmentation and Quantification of
+Small Airway Air Trapping and Emphysema in Obstructive Pulmonary
+Disease}'' \emph{Acad Radiol} 18, no. 10 (2011): 1258--69.
+doi:\href{https://doi.org/10.1016/j.acra.2011.06.004}{10.1016/j.acra.2011.06.004}
+
+\hypertarget{ref-Qing:2014aa}{}
+23. Qing, K., Altes, T. A., Tustison, N. J., Feng, X., Chen, X., Mata,
+J. F., Miller, G. W., Lange, E. E. de, Tobias, W. A., Cates, G. D., Jr,
+Brookeman, J. R., and Mugler, J. P., 3rd. ``\textbf{Rapid Acquisition of
+Helium-3 and Proton Three-Dimensional Image Sets of the Human Lung in a
+Single Breath-Hold Using Compressed Sensing}'' \emph{Magn Reson Med}
+(2014): doi:\href{https://doi.org/10.1002/mrm.25499}{10.1002/mrm.25499}
+
+\hypertarget{ref-Qing:2014ab}{}
+24. Qing, K., Mugler, J. P., 3rd, Altes, T. A., Jiang, Y., Mata, J. F.,
+Miller, G. W., Ruset, I. C., Hersman, F. W., and Ruppert, K.
+``\textbf{Assessment of Lung Function in Asthma and COPD Using
+Hyperpolarized 129Xe Chemical Shift Saturation Recovery Spectroscopy and
+Dissolved-Phase MRI}'' \emph{NMR Biomed} 27, no. 12 (2014): 1490--501.
+doi:\href{https://doi.org/10.1002/nbm.3179}{10.1002/nbm.3179}
+
+\hypertarget{ref-Tustison:2015aa}{}
+25. Tustison, N. J., Qing, K., Wang, C., Altes, T. A., and Mugler, J.
+P., 3rd. ``\textbf{Atlas-Based Estimation of Lung and Lobar Anatomy in
+Proton MRI}'' \emph{Magn Reson Med} (Accepted):
+
+\hypertarget{ref-Song:2010aa}{}
+26. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
+Segmentation by Removing Paths of Leakage}'' \emph{Proc. 3rd int.
+workshop pulmonary image analysis} (2010): 109--116.
+
+\hypertarget{ref-Tustison:2011aa}{}
+27. Tustison, N. J., Avants, B. B., Flors, L., Altes, T. A., Lange, E.
+E. de, Mugler, J. P., 3rd, and Gee, J. C. ``\textbf{Ventilation-Based
+Segmentation of the Lungs Using Hyperpolarized (3)He MRI}'' \emph{J Magn
+Reson Imaging} 34, no. 4 (2011): 831--41.
+doi:\href{https://doi.org/10.1002/jmri.22738}{10.1002/jmri.22738}
+
+\hypertarget{ref-Teague:2014aa}{}
+28. Teague, W. G., Tustison, N. J., and Altes, T. A.
+``\textbf{Ventilation Heterogeneity in Asthma}'' \emph{J Asthma} 51, no.
+7 (2014): 677--84.
+doi:\href{https://doi.org/10.3109/02770903.2014.914535}{10.3109/02770903.2014.914535}
+
+\hypertarget{ref-Tustison:2010ab}{}
+29. Tustison, N. J., Altes, T. A., Song, G., Lange, E. E. de, Mugler, J.
+P., 3rd, and Gee, J. C. ``\textbf{Feature Analysis of Hyperpolarized
+Helium-3 Pulmonary MRI: A Study of Asthmatics Versus Nonasthmatics}''
+\emph{Magn Reson Med} 63, no. 6 (2010): 1448--55.
+doi:\href{https://doi.org/10.1002/mrm.22390}{10.1002/mrm.22390}
+
+\hypertarget{ref-Song:2012aa}{}
+30. Song, G., Mortani Barbosa, E., Jr, Tustison, N., Gefter, W. B.,
+Kreider, M., Gee, J. C., and Torigian, D. A. ``\textbf{A Comparative
+Study of HRCT Image Metrics and PFT Values for Characterization of ILD
+and COPD}'' \emph{Acad Radiol} 19, no. 7 (2012): 857--64.
+doi:\href{https://doi.org/10.1016/j.acra.2012.03.007}{10.1016/j.acra.2012.03.007}
+
 \hypertarget{ref-Bajcsy:1982aa}{}
-14. Bajcsy, R. and Broit, C. ``\textbf{Matching of Deformed Images}''
+31. Bajcsy, R. and Broit, C. ``\textbf{Matching of Deformed Images}''
 \emph{Sixth international conferenceon pattern recognition (iCPR'82)}
 (1982): 351--353.
 
 \hypertarget{ref-Bajcsy:1989aa}{}
-15. Bajcsy, R. and Kovacic, S. ``\textbf{Multiresolution Elastic
+32. Bajcsy, R. and Kovacic, S. ``\textbf{Multiresolution Elastic
 Matching}'' \emph{Computer Vision, Graphics, and Image Processing} 46,
 no. 1 (1989): 1--21.
 doi:\href{https://doi.org/10.1016/S0734-189X(89)80014-3}{10.1016/S0734-189X(89)80014-3},
 Available at \url{http://dx.doi.org/10.1016/S0734-189X(89)80014-3}
 
 \hypertarget{ref-Gee:1993aa}{}
-16. Gee, J. C., Reivich, M., and Bajcsy, R. ``\textbf{Elastically
+33. Gee, J. C., Reivich, M., and Bajcsy, R. ``\textbf{Elastically
 Deforming 3D Atlas to Match Anatomical Brain Images}'' \emph{J Comput
 Assist Tomogr} 17, no. 2 (): 225--36.
 
-\hypertarget{ref-Avants:2008aa}{}
-17. Avants, B. B., Epstein, C. L., Grossman, M., and Gee, J. C.
-``\textbf{Symmetric Diffeomorphic Image Registration with
-Cross-Correlation: Evaluating Automated Labeling of Elderly and
-Neurodegenerative Brain}'' \emph{Med Image Anal} 12, no. 1 (2008):
-26--41.
-doi:\href{https://doi.org/10.1016/j.media.2007.06.004}{10.1016/j.media.2007.06.004}
-
-\hypertarget{ref-Tustison:2012aa}{}
-18. Tustison, N. J., Song, G., Gee, James C, and Avants, B. B.
-``\textbf{Two Greedy SyN Variants for Pulmonary Image Registration}''
-\emph{Evaluation of methods for pulmonary image registration (EMPIRE10)}
-(2012):
-
-\hypertarget{ref-Avants:2010aa}{}
-19. Avants, B. B., Yushkevich, P., Pluta, J., Minkoff, D., Korczykowski,
-M., Detre, J., and Gee, J. C. ``\textbf{The Optimal Template Effect in
-Hippocampus Studies of Diseased Populations}'' \emph{Neuroimage} 49, no.
-3 (2010): 2457--66.
-doi:\href{https://doi.org/10.1016/j.neuroimage.2009.09.062}{10.1016/j.neuroimage.2009.09.062}
-
-\hypertarget{ref-Tustison:2014aa}{}
-20. Tustison, N. J., Shrinidhi, K. L., Wintermark, M., Durst, C. R.,
-Kandel, B. M., Gee, J. C., Grossman, M. C., and Avants, B. B.
-``\textbf{Optimal Symmetric Multimodal Templates and Concatenated Random
-Forests for Supervised Brain Tumor Segmentation (Simplified) with
-\(ANTsR\)}'' \emph{Neuroinformatics} (2014):
-doi:\href{https://doi.org/10.1007/s12021-014-9245-2}{10.1007/s12021-014-9245-2}
-
-\hypertarget{ref-Avants:2015aa}{}
-21. Avants, B. B., Duda, J. T., Kilroy, E., Krasileva, K., Jann, K.,
-Kandel, B. T., Tustison, N. J., Yan, L., Jog, M., Smith, R., Wang, Y.,
-Dapretto, M., and Wang, D. J. J. ``\textbf{The Pediatric Template of
-Brain Perfusion}'' \emph{Sci Data} 2, (2015): 150003.
-doi:\href{https://doi.org/10.1038/sdata.2015.3}{10.1038/sdata.2015.3}
-
-\hypertarget{ref-Datta:2012aa}{}
-22. Datta, R., Lee, J., Duda, J., Avants, B. B., Vite, C. H., Tseng, B.,
-Gee, J. C., Aguirre, G. D., and Aguirre, G. K. ``\textbf{A Digital Atlas
-of the Dog Brain}'' \emph{PLoS One} 7, no. 12 (2012): e52140.
-doi:\href{https://doi.org/10.1371/journal.pone.0052140}{10.1371/journal.pone.0052140}
-
-\hypertarget{ref-McMillan:2014aa}{}
-23. McMillan, C. T., Avants, B. B., Cook, P., Ungar, L., Trojanowski, J.
-Q., and Grossman, M. ``\textbf{The Power of Neuroimaging Biomarkers for
-Screening Frontotemporal Dementia}'' \emph{Hum Brain Mapp} 35, no. 9
-(2014): 4827--40.
-doi:\href{https://doi.org/10.1002/hbm.22515}{10.1002/hbm.22515}
-
-\hypertarget{ref-Cook:2014aa}{}
-24. Cook, P. A., McMillan, C. T., Avants, B. B., Peelle, J. E., Gee, J.
-C., and Grossman, M. ``\textbf{Relating Brain Anatomy and Cognitive
-Ability Using a Multivariate Multimodal Framework}'' \emph{Neuroimage}
-99, (2014): 477--86.
-doi:\href{https://doi.org/10.1016/j.neuroimage.2014.05.008}{10.1016/j.neuroimage.2014.05.008}
-
-\hypertarget{ref-Tustison:2014ad}{}
-25. Tustison, N. J., Avants, B. B., Cook, P. A., Kim, J., Whyte, J.,
-Gee, J. C., and Stone, J. R. ``\textbf{Logical Circularity in
-Voxel-Based Analysis: Normalization Strategy May Induce Statistical
-Bias}'' \emph{Hum Brain Mapp} 35, no. 3 (2014): 745--59.
-doi:\href{https://doi.org/10.1002/hbm.22211}{10.1002/hbm.22211}
-
-\hypertarget{ref-Tustison:2013ad}{}
-26. Tustison, N. J., Contrella, B., Altes, T. A., Avants, B. B., Lange,
-E. E. de, and Mugler, J. P. ``\textbf{Longitudinal Assessment of
-Treatment Effects on Pulmonary Ventilation Using 1H/3He MRI Multivariate
-Templates}'' \emph{Proc. sPIE 8672, medical imaging 2013: Biomedical
-applications in molecular, structural, and functional imaging} (2013):
-
-\hypertarget{ref-Vannier:1985aa}{}
-27. Vannier, M. W., Butterfield, R. L., Jordan, D., Murphy, W. A.,
-Levitt, R. G., and Gado, M. ``\textbf{Multispectral Analysis of Magnetic
-Resonance Images}'' \emph{Radiology} 154, no. 1 (1985): 221--4.
-doi:\href{https://doi.org/10.1148/radiology.154.1.3964938}{10.1148/radiology.154.1.3964938}
-
-\hypertarget{ref-Dempster:1977aa}{}
-28. Dempster, A., Laird, N., and Rubin, D. ``\textbf{Maximum Likelihood
-Estimation from Incomplete Data Using the EM Algorithms}'' \emph{Journal
-of the Royal Statistical Society} 39, (1977): 1--38.
-
-\hypertarget{ref-Cline:1990aa}{}
-29. Cline, H. E., Lorensen, W. E., Kikinis, R., and Jolesz, F.
-``\textbf{Three-Dimensional Segmentation of MR Images of the Head Using
-Probability and Connectivity}'' \emph{J Comput Assist Tomogr} 14, no. 6
-(): 1037--45.
-
-\hypertarget{ref-Kikinis:1992aa}{}
-30. Kikinis, R., Shenton, M. E., Gerig, G., Martin, J., Anderson, M.,
-Metcalf, D., Guttmann, C. R., McCarley, R. W., Lorensen, W., and Cline,
-H. ``\textbf{Routine Quantitative Analysis of Brain and Cerebrospinal
-Fluid Spaces with MR Imaging}'' \emph{J Magn Reson Imaging} 2, no. 6 ():
-619--29.
-
-\hypertarget{ref-Geman:1984aa}{}
-31. Geman, S. and Geman, D. ``\textbf{Stochastic Relaxation, Gibbs
-Distributions, and the Bayesian Restoration of Images}'' \emph{IEEE
-Trans Pattern Anal Mach Intell} 6, no. 6 (1984): 721--41.
-
-\hypertarget{ref-Held:1997aa}{}
-32. Held, K., Rota Kops, E., Krause, B. J., Wells, W. M., 3rd, Kikinis,
-R., and Müller-Gärtner, H. W. ``\textbf{Markov Random Field Segmentation
-of Brain MR Images}'' \emph{IEEE Trans Med Imaging} 16, no. 6 (1997):
-878--86. doi:\href{https://doi.org/10.1109/42.650883}{10.1109/42.650883}
-
-\hypertarget{ref-Van-Leemput:1999aa}{}
-33. Van Leemput, K., Maes, F., Vandermeulen, D., and Suetens, P.
-``\textbf{Automated Model-Based Tissue Classification of MR Images of
-the Brain}'' \emph{IEEE Trans Med Imaging} 18, no. 10 (1999): 897--908.
-doi:\href{https://doi.org/10.1109/42.811270}{10.1109/42.811270}
-
-\hypertarget{ref-Ashburner:2005aa}{}
-34. Ashburner, J. and Friston, K. J. ``\textbf{Unified Segmentation}''
-\emph{Neuroimage} 26, no. 3 (2005): 839--51.
-doi:\href{https://doi.org/10.1016/j.neuroimage.2005.02.018}{10.1016/j.neuroimage.2005.02.018}
-
-\hypertarget{ref-Tustison:2011aa}{}
-35. Tustison, N. J., Avants, B. B., Flors, L., Altes, T. A., Lange, E.
-E. de, Mugler, J. P., 3rd, and Gee, J. C. ``\textbf{Ventilation-Based
-Segmentation of the Lungs Using Hyperpolarized (3)He MRI}'' \emph{J Magn
-Reson Imaging} 34, no. 4 (2011): 831--41.
-doi:\href{https://doi.org/10.1002/jmri.22738}{10.1002/jmri.22738}
-
-\hypertarget{ref-Avants:2011aa}{}
-36. Avants, B. B., Tustison, N. J., Wu, J., Cook, P. A., and Gee, J. C.
-``\textbf{An Open Source Multivariate Framework for \(n\)-Tissue
-Segmentation with Evaluation on Public Data}'' \emph{Neuroinformatics}
-9, no. 4 (2011): 381--400.
-doi:\href{https://doi.org/10.1007/s12021-011-9109-y}{10.1007/s12021-011-9109-y}
-
-\hypertarget{ref-Altes:2012aa}{}
-37. Altes, T., Johnson, M., III, J. M., Miller, G. W., Flors, L., Mata,
-J., Salinas, C., Tustison, N., Lee, P.-S., Song, T., Froh, K. Y. D., and
-Botfield, M. ``\textbf{The Effect of Ivacaftor, an Investigational CFTR
-Potentiator, on Hyperpolarized Noble Gas Magnetic Resonance Imaging in
-Subjects with Cystic Fibrosis Who Have the G551D-CFTR Mutation}''
-\emph{PATHOGENESIS AND CLINICAL ISSUES IN CYSTIC FIBROSIS} B35, (2012):
-A2814--A2814.
-
-\hypertarget{ref-Teague:2014aa}{}
-38. Teague, W. G., Tustison, N. J., and Altes, T. A.
-``\textbf{Ventilation Heterogeneity in Asthma}'' \emph{J Asthma} 51, no.
-7 (2014): 677--84.
-doi:\href{https://doi.org/10.3109/02770903.2014.914535}{10.3109/02770903.2014.914535}
-
-\hypertarget{ref-Kirby:2014aa}{}
-39. Kirby, M., Pike, D., Coxson, H. O., McCormack, D. G., and Parraga,
-G. ``\textbf{Hyperpolarized (3)He Ventilation Defects Used to Predict
-Pulmonary Exacerbations in Mild to Moderate Chronic Obstructive
-Pulmonary Disease}'' \emph{Radiology} 273, no. 3 (2014): 887--96.
-doi:\href{https://doi.org/10.1148/radiol.14140161}{10.1148/radiol.14140161}
-
-\hypertarget{ref-Sled:1998aa}{}
-40. Sled, J. G., Zijdenbos, A. P., and Evans, A. C. ``\textbf{A
-Nonparametric Method for Automatic Correction of Intensity Nonuniformity
-in MRI Data}'' \emph{IEEE Trans Med Imaging} 17, no. 1 (1998): 87--97.
-doi:\href{https://doi.org/10.1109/42.668698}{10.1109/42.668698}
-
-\hypertarget{ref-Boyes:2008aa}{}
-41. Boyes, R. G., Gunter, J. L., Frost, C., Janke, A. L., Yeatman, T.,
-Hill, D. L. G., Bernstein, M. A., Thompson, P. M., Weiner, M. W.,
-Schuff, N., Alexander, G. E., Killiany, R. J., DeCarli, C., Jack, C. R.,
-Fox, N. C., and ADNI Study. ``\textbf{Intensity Non-Uniformity
-Correction Using N3 on 3-T Scanners with Multichannel Phased Array
-Coils}'' \emph{Neuroimage} 39, no. 4 (2008): 1752--62.
-doi:\href{https://doi.org/10.1016/j.neuroimage.2007.10.026}{10.1016/j.neuroimage.2007.10.026}
-
-\hypertarget{ref-Tustison:2010aa}{}
-42. Tustison, N. J., Awate, S. P., Cai, J., Altes, T. A., Miller, G. W.,
-Lange, E. E. de, Mugler, J. P., 3rd, and Gee, J. C. ``\textbf{Pulmonary
-Kinematics from Tagged Hyperpolarized Helium-3 MRI}'' \emph{J Magn Reson
-Imaging} 31, no. 5 (2010): 1236--41.
-doi:\href{https://doi.org/10.1002/jmri.22137}{10.1002/jmri.22137}
-
-\hypertarget{ref-Wang:2013aa}{}
-43. Wang, H. and Yushkevich, P. A. ``\textbf{Multi-Atlas Segmentation
-with Joint Label Fusion and Corrective Learning-an Open Source
-Implementation}'' \emph{Front Neuroinform} 7, (2013): 27.
-doi:\href{https://doi.org/10.3389/fninf.2013.00027}{10.3389/fninf.2013.00027}
-
-\hypertarget{ref-Wang:2013ab}{}
-44. Wang, H., Suh, J. W., Das, S. R., Pluta, J. B., Craige, C., and
-Yushkevich, P. A. ``\textbf{Multi-Atlas Segmentation with Joint Label
-Fusion}'' \emph{IEEE Trans Pattern Anal Mach Intell} 35, no. 3 (2013):
-611--23.
-doi:\href{https://doi.org/10.1109/TPAMI.2012.143}{10.1109/TPAMI.2012.143}
-
-\hypertarget{ref-Yushkevich:2010aa}{}
-45. Yushkevich, P. A., Wang, H., Pluta, J., Das, S. R., Craige, C.,
-Avants, B. B., Weiner, M. W., and Mueller, S. ``\textbf{Nearly Automatic
-Segmentation of Hippocampal Subfields in in Vivo Focal T2-Weighted
-MRI}'' \emph{Neuroimage} 53, no. 4 (2010): 1208--24.
-doi:\href{https://doi.org/10.1016/j.neuroimage.2010.06.040}{10.1016/j.neuroimage.2010.06.040}
-
-\hypertarget{ref-MALF}{}
-46. Available at
-\url{https://masi.vuse.vanderbilt.edu/workshop2013/index.php/Main_Page}
-
-\hypertarget{ref-Tustison:2015aa}{}
-47. Tustison, N. J., Qing, K., Wang, C., Altes, T. A., and Mugler, J.
-P., 3rd. ``\textbf{Atlas-Based Estimation of Lung and Lobar Anatomy in
-Proton MRI}'' \emph{Magn Reson Med} (Accepted):
-
-\hypertarget{ref-Manjon:2010aa}{}
-48. Manjón, J. V., Coupé, P., Martí-Bonmatí, L., Collins, D. L., and
-Robles, M. ``\textbf{Adaptive Non-Local Means Denoising of MR Images
-with Spatially Varying Noise Levels}'' \emph{J Magn Reson Imaging} 31,
-no. 1 (2010): 192--203.
-doi:\href{https://doi.org/10.1002/jmri.22003}{10.1002/jmri.22003}
-
 \hypertarget{ref-Klein:2009aa}{}
-49. Klein, A., Andersson, J., Ardekani, B. A., Ashburner, J., Avants,
+34. Klein, A., Andersson, J., Ardekani, B. A., Ashburner, J., Avants,
 B., Chiang, M.-C., Christensen, G. E., Collins, D. L., Gee, J., Hellier,
 P., Song, J. H., Jenkinson, M., Lepage, C., Rueckert, D., Thompson, P.,
 Vercauteren, T., Woods, R. P., Mann, J. J., and Parsey, R. V.
@@ -1677,7 +1568,7 @@ Human Brain MRI Registration}'' \emph{Neuroimage} 46, no. 3 (2009):
 doi:\href{https://doi.org/10.1016/j.neuroimage.2008.12.037}{10.1016/j.neuroimage.2008.12.037}
 
 \hypertarget{ref-Murphy:2011aa}{}
-50. Murphy, K., Ginneken, B. van, Reinhardt, J. M., Kabus, S., Ding, K.,
+35. Murphy, K., Ginneken, B. van, Reinhardt, J. M., Kabus, S., Ding, K.,
 Deng, X., Cao, K., Du, K., Christensen, G. E., Garcia, V., Vercauteren,
 T., Ayache, N., Commowick, O., Malandain, G., Glocker, B., Paragios, N.,
 Navab, N., Gorbunova, V., Sporring, J., Bruijne, M. de, Han, X.,
@@ -1692,63 +1583,235 @@ Registration Methods on Thoracic CT: The EMPIRE10 Challenge}''
 \emph{IEEE Trans Med Imaging} 30, no. 11 (2011): 1901--20.
 doi:\href{https://doi.org/10.1109/TMI.2011.2158349}{10.1109/TMI.2011.2158349}
 
-\hypertarget{ref-Wang:2012aa}{}
-51. Wang, H., Suh, J. W., Das, S. R., Pluta, J., Craige, C., and
-Yushkevich, P. A. ``\textbf{Multi-Atlas Segmentation with Joint Label
-Fusion}'' \emph{IEEE Trans Pattern Anal Mach Intell} (2012):
-doi:\href{https://doi.org/10.1109/TPAMI.2012.143}{10.1109/TPAMI.2012.143}
-
-\hypertarget{ref-Landman2012}{}
-52. ``\textbf{MICCAI 2012 Workshop on Multi- Atlas Labeling}'' (2012):
-
-\hypertarget{ref-Asman2013}{}
-53. Asman, A., Akhondi-Asl, A., Wang, H., Tustison, N., Avants, B.,
-Warfield, S. K., and Landman, B. ``\textbf{MICCAI 2013 Segmentation
-Algorithms, Theory and Applications (SATA) Challenge Results Summary,}''
-\emph{MICCAI 2013 challenge workshop on segmentation: Algorithms, theory
-and applications.} (2013):
-
 \hypertarget{ref-Tustison:2015ab}{}
-54. Tustison, N. J., Yang, Y., and Salerno, M. ``\textbf{Advanced
+36. Tustison, N. J., Yang, Y., and Salerno, M. ``\textbf{Advanced
 Normalization Tools for Cardiac Motion Correction}'' \emph{Statistical
 atlases and computational models of the heart - imaging and modelling
 challenges} 8896, (2015): 3--12.
 doi:\href{https://doi.org/10.1007/978-3-319-14678-2_1}{10.1007/978-3-319-14678-2\_1},
 Available at \url{http://dx.doi.org/10.1007/978-3-319-14678-2_1}
 
+\hypertarget{ref-Avants:2008aa}{}
+37. Avants, B. B., Epstein, C. L., Grossman, M., and Gee, J. C.
+``\textbf{Symmetric Diffeomorphic Image Registration with
+Cross-Correlation: Evaluating Automated Labeling of Elderly and
+Neurodegenerative Brain}'' \emph{Med Image Anal} 12, no. 1 (2008):
+26--41.
+doi:\href{https://doi.org/10.1016/j.media.2007.06.004}{10.1016/j.media.2007.06.004}
+
+\hypertarget{ref-Avants:2010aa}{}
+38. Avants, B. B., Yushkevich, P., Pluta, J., Minkoff, D., Korczykowski,
+M., Detre, J., and Gee, J. C. ``\textbf{The Optimal Template Effect in
+Hippocampus Studies of Diseased Populations}'' \emph{Neuroimage} 49, no.
+3 (2010): 2457--66.
+doi:\href{https://doi.org/10.1016/j.neuroimage.2009.09.062}{10.1016/j.neuroimage.2009.09.062}
+
+\hypertarget{ref-Tustison:2014aa}{}
+39. Tustison, N. J., Shrinidhi, K. L., Wintermark, M., Durst, C. R.,
+Kandel, B. M., Gee, J. C., Grossman, M. C., and Avants, B. B.
+``\textbf{Optimal Symmetric Multimodal Templates and Concatenated Random
+Forests for Supervised Brain Tumor Segmentation (Simplified) with
+\(ANTsR\)}'' \emph{Neuroinformatics} (2014):
+doi:\href{https://doi.org/10.1007/s12021-014-9245-2}{10.1007/s12021-014-9245-2}
+
+\hypertarget{ref-Avants:2015aa}{}
+40. Avants, B. B., Duda, J. T., Kilroy, E., Krasileva, K., Jann, K.,
+Kandel, B. T., Tustison, N. J., Yan, L., Jog, M., Smith, R., Wang, Y.,
+Dapretto, M., and Wang, D. J. J. ``\textbf{The Pediatric Template of
+Brain Perfusion}'' \emph{Sci Data} 2, (2015): 150003.
+doi:\href{https://doi.org/10.1038/sdata.2015.3}{10.1038/sdata.2015.3}
+
+\hypertarget{ref-Datta:2012aa}{}
+41. Datta, R., Lee, J., Duda, J., Avants, B. B., Vite, C. H., Tseng, B.,
+Gee, J. C., Aguirre, G. D., and Aguirre, G. K. ``\textbf{A Digital Atlas
+of the Dog Brain}'' \emph{PLoS One} 7, no. 12 (2012): e52140.
+doi:\href{https://doi.org/10.1371/journal.pone.0052140}{10.1371/journal.pone.0052140}
+
+\hypertarget{ref-McMillan:2014aa}{}
+42. McMillan, C. T., Avants, B. B., Cook, P., Ungar, L., Trojanowski, J.
+Q., and Grossman, M. ``\textbf{The Power of Neuroimaging Biomarkers for
+Screening Frontotemporal Dementia}'' \emph{Hum Brain Mapp} 35, no. 9
+(2014): 4827--40.
+doi:\href{https://doi.org/10.1002/hbm.22515}{10.1002/hbm.22515}
+
+\hypertarget{ref-Cook:2014aa}{}
+43. Cook, P. A., McMillan, C. T., Avants, B. B., Peelle, J. E., Gee, J.
+C., and Grossman, M. ``\textbf{Relating Brain Anatomy and Cognitive
+Ability Using a Multivariate Multimodal Framework}'' \emph{Neuroimage}
+99, (2014): 477--86.
+doi:\href{https://doi.org/10.1016/j.neuroimage.2014.05.008}{10.1016/j.neuroimage.2014.05.008}
+
+\hypertarget{ref-Tustison:2014ad}{}
+44. Tustison, N. J., Avants, B. B., Cook, P. A., Kim, J., Whyte, J.,
+Gee, J. C., and Stone, J. R. ``\textbf{Logical Circularity in
+Voxel-Based Analysis: Normalization Strategy May Induce Statistical
+Bias}'' \emph{Hum Brain Mapp} 35, no. 3 (2014): 745--59.
+doi:\href{https://doi.org/10.1002/hbm.22211}{10.1002/hbm.22211}
+
+\hypertarget{ref-Vannier:1985aa}{}
+45. Vannier, M. W., Butterfield, R. L., Jordan, D., Murphy, W. A.,
+Levitt, R. G., and Gado, M. ``\textbf{Multispectral Analysis of Magnetic
+Resonance Images}'' \emph{Radiology} 154, no. 1 (1985): 221--4.
+doi:\href{https://doi.org/10.1148/radiology.154.1.3964938}{10.1148/radiology.154.1.3964938}
+
+\hypertarget{ref-Dempster:1977aa}{}
+46. Dempster, A., Laird, N., and Rubin, D. ``\textbf{Maximum Likelihood
+Estimation from Incomplete Data Using the EM Algorithms}'' \emph{Journal
+of the Royal Statistical Society} 39, (1977): 1--38.
+
+\hypertarget{ref-Cline:1990aa}{}
+47. Cline, H. E., Lorensen, W. E., Kikinis, R., and Jolesz, F.
+``\textbf{Three-Dimensional Segmentation of MR Images of the Head Using
+Probability and Connectivity}'' \emph{J Comput Assist Tomogr} 14, no. 6
+(): 1037--45.
+
+\hypertarget{ref-Kikinis:1992aa}{}
+48. Kikinis, R., Shenton, M. E., Gerig, G., Martin, J., Anderson, M.,
+Metcalf, D., Guttmann, C. R., McCarley, R. W., Lorensen, W., and Cline,
+H. ``\textbf{Routine Quantitative Analysis of Brain and Cerebrospinal
+Fluid Spaces with MR Imaging}'' \emph{J Magn Reson Imaging} 2, no. 6 ():
+619--29.
+
+\hypertarget{ref-Geman:1984aa}{}
+49. Geman, S. and Geman, D. ``\textbf{Stochastic Relaxation, Gibbs
+Distributions, and the Bayesian Restoration of Images}'' \emph{IEEE
+Trans Pattern Anal Mach Intell} 6, no. 6 (1984): 721--41.
+
+\hypertarget{ref-Held:1997aa}{}
+50. Held, K., Rota Kops, E., Krause, B. J., Wells, W. M., 3rd, Kikinis,
+R., and Müller-Gärtner, H. W. ``\textbf{Markov Random Field Segmentation
+of Brain MR Images}'' \emph{IEEE Trans Med Imaging} 16, no. 6 (1997):
+878--86. doi:\href{https://doi.org/10.1109/42.650883}{10.1109/42.650883}
+
+\hypertarget{ref-Van-Leemput:1999aa}{}
+51. Van Leemput, K., Maes, F., Vandermeulen, D., and Suetens, P.
+``\textbf{Automated Model-Based Tissue Classification of MR Images of
+the Brain}'' \emph{IEEE Trans Med Imaging} 18, no. 10 (1999): 897--908.
+doi:\href{https://doi.org/10.1109/42.811270}{10.1109/42.811270}
+
+\hypertarget{ref-Ashburner:2005aa}{}
+52. Ashburner, J. and Friston, K. J. ``\textbf{Unified Segmentation}''
+\emph{Neuroimage} 26, no. 3 (2005): 839--51.
+doi:\href{https://doi.org/10.1016/j.neuroimage.2005.02.018}{10.1016/j.neuroimage.2005.02.018}
+
+\hypertarget{ref-Avants:2011aa}{}
+53. Avants, B. B., Tustison, N. J., Wu, J., Cook, P. A., and Gee, J. C.
+``\textbf{An Open Source Multivariate Framework for \(n\)-Tissue
+Segmentation with Evaluation on Public Data}'' \emph{Neuroinformatics}
+9, no. 4 (2011): 381--400.
+doi:\href{https://doi.org/10.1007/s12021-011-9109-y}{10.1007/s12021-011-9109-y}
+
+\hypertarget{ref-Altes:2012aa}{}
+54. Altes, T., Johnson, M., III, J. M., Miller, G. W., Flors, L., Mata,
+J., Salinas, C., Tustison, N., Lee, P.-S., Song, T., Froh, K. Y. D., and
+Botfield, M. ``\textbf{The Effect of Ivacaftor, an Investigational CFTR
+Potentiator, on Hyperpolarized Noble Gas Magnetic Resonance Imaging in
+Subjects with Cystic Fibrosis Who Have the G551D-CFTR Mutation}''
+\emph{PATHOGENESIS AND CLINICAL ISSUES IN CYSTIC FIBROSIS} B35, (2012):
+A2814--A2814.
+
+\hypertarget{ref-Kirby:2014aa}{}
+55. Kirby, M., Pike, D., Coxson, H. O., McCormack, D. G., and Parraga,
+G. ``\textbf{Hyperpolarized (3)He Ventilation Defects Used to Predict
+Pulmonary Exacerbations in Mild to Moderate Chronic Obstructive
+Pulmonary Disease}'' \emph{Radiology} 273, no. 3 (2014): 887--96.
+doi:\href{https://doi.org/10.1148/radiol.14140161}{10.1148/radiol.14140161}
+
+\hypertarget{ref-Sled:1998aa}{}
+56. Sled, J. G., Zijdenbos, A. P., and Evans, A. C. ``\textbf{A
+Nonparametric Method for Automatic Correction of Intensity Nonuniformity
+in MRI Data}'' \emph{IEEE Trans Med Imaging} 17, no. 1 (1998): 87--97.
+doi:\href{https://doi.org/10.1109/42.668698}{10.1109/42.668698}
+
+\hypertarget{ref-Boyes:2008aa}{}
+57. Boyes, R. G., Gunter, J. L., Frost, C., Janke, A. L., Yeatman, T.,
+Hill, D. L. G., Bernstein, M. A., Thompson, P. M., Weiner, M. W.,
+Schuff, N., Alexander, G. E., Killiany, R. J., DeCarli, C., Jack, C. R.,
+Fox, N. C., and ADNI Study. ``\textbf{Intensity Non-Uniformity
+Correction Using N3 on 3-T Scanners with Multichannel Phased Array
+Coils}'' \emph{Neuroimage} 39, no. 4 (2008): 1752--62.
+doi:\href{https://doi.org/10.1016/j.neuroimage.2007.10.026}{10.1016/j.neuroimage.2007.10.026}
+
+\hypertarget{ref-Wang:2013aa}{}
+58. Wang, H. and Yushkevich, P. A. ``\textbf{Multi-Atlas Segmentation
+with Joint Label Fusion and Corrective Learning-an Open Source
+Implementation}'' \emph{Front Neuroinform} 7, (2013): 27.
+doi:\href{https://doi.org/10.3389/fninf.2013.00027}{10.3389/fninf.2013.00027}
+
+\hypertarget{ref-Wang:2013ab}{}
+59. Wang, H., Suh, J. W., Das, S. R., Pluta, J. B., Craige, C., and
+Yushkevich, P. A. ``\textbf{Multi-Atlas Segmentation with Joint Label
+Fusion}'' \emph{IEEE Trans Pattern Anal Mach Intell} 35, no. 3 (2013):
+611--23.
+doi:\href{https://doi.org/10.1109/TPAMI.2012.143}{10.1109/TPAMI.2012.143}
+
+\hypertarget{ref-Yushkevich:2010aa}{}
+60. Yushkevich, P. A., Wang, H., Pluta, J., Das, S. R., Craige, C.,
+Avants, B. B., Weiner, M. W., and Mueller, S. ``\textbf{Nearly Automatic
+Segmentation of Hippocampal Subfields in in Vivo Focal T2-Weighted
+MRI}'' \emph{Neuroimage} 53, no. 4 (2010): 1208--24.
+doi:\href{https://doi.org/10.1016/j.neuroimage.2010.06.040}{10.1016/j.neuroimage.2010.06.040}
+
+\hypertarget{ref-MALF}{}
+61. Available at
+\url{https://masi.vuse.vanderbilt.edu/workshop2013/index.php/Main_Page}
+
+\hypertarget{ref-Manjon:2010aa}{}
+62. Manjón, J. V., Coupé, P., Martí-Bonmatí, L., Collins, D. L., and
+Robles, M. ``\textbf{Adaptive Non-Local Means Denoising of MR Images
+with Spatially Varying Noise Levels}'' \emph{J Magn Reson Imaging} 31,
+no. 1 (2010): 192--203.
+doi:\href{https://doi.org/10.1002/jmri.22003}{10.1002/jmri.22003}
+
+\hypertarget{ref-Wang:2012aa}{}
+63. Wang, H., Suh, J. W., Das, S. R., Pluta, J., Craige, C., and
+Yushkevich, P. A. ``\textbf{Multi-Atlas Segmentation with Joint Label
+Fusion}'' \emph{IEEE Trans Pattern Anal Mach Intell} (2012):
+doi:\href{https://doi.org/10.1109/TPAMI.2012.143}{10.1109/TPAMI.2012.143}
+
+\hypertarget{ref-Landman2012}{}
+64. ``\textbf{MICCAI 2012 Workshop on Multi- Atlas Labeling}'' (2012):
+
+\hypertarget{ref-Asman2013}{}
+65. Asman, A., Akhondi-Asl, A., Wang, H., Tustison, N., Avants, B.,
+Warfield, S. K., and Landman, B. ``\textbf{MICCAI 2013 Segmentation
+Algorithms, Theory and Applications (SATA) Challenge Results Summary,}''
+\emph{MICCAI 2013 challenge workshop on segmentation: Algorithms, theory
+and applications.} (2013):
+
 \hypertarget{ref-Avants:2011ab}{}
-55. Avants, B. B., Tustison, N. J., Song, G., Cook, P. A., Klein, A.,
+66. Avants, B. B., Tustison, N. J., Song, G., Cook, P. A., Klein, A.,
 and Gee, J. C. ``\textbf{A Reproducible Evaluation of ANTs Similarity
 Metric Performance in Brain Image Registration}'' \emph{Neuroimage} 54,
 no. 3 (2011): 2033--44.
 doi:\href{https://doi.org/10.1016/j.neuroimage.2010.09.025}{10.1016/j.neuroimage.2010.09.025}
 
 \hypertarget{ref-Avants:2014aa}{}
-56. Avants, B. B., Tustison, N. J., Stauffer, M., Song, G., Wu, B., and
+67. Avants, B. B., Tustison, N. J., Stauffer, M., Song, G., Wu, B., and
 Gee, J. C. ``\textbf{The Insight ToolKit Image Registration Framework}''
 \emph{Front Neuroinform} 8, (2014): 44.
 doi:\href{https://doi.org/10.3389/fninf.2014.00044}{10.3389/fninf.2014.00044}
 
 \hypertarget{ref-Avants:2010ab}{}
-57. Avants, B. B., Klein, A., Tustison, N. J., Woo, J., and Gee, J. C.
+68. Avants, B. B., Klein, A., Tustison, N. J., Woo, J., and Gee, J. C.
 ``\textbf{Evaluation of Open-Access, Automated Brain Extraction Methods
 on Multi-Site Multi-Disorder Data}'' \emph{16th annual meeting for the
 organization of human brain mapping} (2010):
 
 \hypertarget{ref-Das:2009aa}{}
-58. Das, S. R., Avants, B. B., Grossman, M., and Gee, J. C.
+69. Das, S. R., Avants, B. B., Grossman, M., and Gee, J. C.
 ``\textbf{Registration Based Cortical Thickness Measurement}''
 \emph{Neuroimage} 45, no. 3 (2009): 867--79.
 doi:\href{https://doi.org/10.1016/j.neuroimage.2008.12.016}{10.1016/j.neuroimage.2008.12.016}
 
 \hypertarget{ref-Sluimer:2006aa}{}
-59. Sluimer, I., Schilham, A., Prokop, M., and Ginneken, B. van.
+70. Sluimer, I., Schilham, A., Prokop, M., and Ginneken, B. van.
 ``\textbf{Computer Analysis of Computed Tomography Scans of the Lung: A
 Survey}'' \emph{IEEE Trans Med Imaging} 25, no. 4 (2006): 385--405.
 doi:\href{https://doi.org/10.1109/TMI.2005.862753}{10.1109/TMI.2005.862753}
 
 \hypertarget{ref-Tustison:2013aa}{}
-60. Tustison, N. J., Johnson, H. J., Rohlfing, T., Klein, A., Ghosh, S.
+71. Tustison, N. J., Johnson, H. J., Rohlfing, T., Klein, A., Ghosh, S.
 S., Ibanez, L., and Avants, B. B. ``\textbf{Instrumentation Bias in the
 Use and Evaluation of Scientific Software: Recommendations for
 Reproducible Practices in the Computational Sciences}'' \emph{Front
@@ -1756,7 +1819,7 @@ Neurosci} 7, (2013): 162.
 doi:\href{https://doi.org/10.3389/fnins.2013.00162}{10.3389/fnins.2013.00162}
 
 \hypertarget{ref-De-Nunzio:2011aa}{}
-61. De Nunzio, G., Tommasi, E., Agrusti, A., Cataldo, R., De Mitri, I.,
+72. De Nunzio, G., Tommasi, E., Agrusti, A., Cataldo, R., De Mitri, I.,
 Favetta, M., Maglio, S., Massafra, A., Quarta, M., Torsello, M., Zecca,
 I., Bellotti, R., Tangaro, S., Calvini, P., Camarlinghi, N., Falaschi,
 F., Cerello, P., and Oliva, P. ``\textbf{Automatic Lung Segmentation in
@@ -1765,7 +1828,7 @@ Imaging} 24, no. 1 (2011): 11--27.
 doi:\href{https://doi.org/10.1007/s10278-009-9229-1}{10.1007/s10278-009-9229-1}
 
 \hypertarget{ref-Prasad:2008aa}{}
-62. Prasad, M. N., Brown, M. S., Ahmad, S., Abtin, F., Allen, J., Costa,
+73. Prasad, M. N., Brown, M. S., Ahmad, S., Abtin, F., Allen, J., Costa,
 I. da, Kim, H. J., McNitt-Gray, M. F., and Goldin, J. G.
 ``\textbf{Automatic Segmentation of Lung Parenchyma in the Presence of
 Diseases Based on Curvature of Ribs}'' \emph{Acad Radiol} 15, no. 9
@@ -1773,132 +1836,114 @@ Diseases Based on Curvature of Ribs}'' \emph{Acad Radiol} 15, no. 9
 doi:\href{https://doi.org/10.1016/j.acra.2008.02.004}{10.1016/j.acra.2008.02.004}
 
 \hypertarget{ref-Wang:2009aa}{}
-63. Wang, J., Li, F., and Li, Q. ``\textbf{Automated Segmentation of
+74. Wang, J., Li, F., and Li, Q. ``\textbf{Automated Segmentation of
 Lungs with Severe Interstitial Lung Disease in CT}'' \emph{Med Phys} 36,
 no. 10 (2009): 4592--9.
 
 \hypertarget{ref-Rikxoort:2009aa}{}
-64. Rikxoort, E. M. van, Hoop, B. de, Viergever, M. A., Prokop, M., and
+75. Rikxoort, E. M. van, Hoop, B. de, Viergever, M. A., Prokop, M., and
 Ginneken, B. van. ``\textbf{Automatic Lung Segmentation from Thoracic
 Computed Tomography Scans Using a Hybrid Approach with Error
 Detection}'' \emph{Med Phys} 36, no. 7 (2009): 2934--47.
 
 \hypertarget{ref-Zheng:2007aa}{}
-65. Zheng, B., Leader, J. K., McMurray, J. M., Park, S. C., Fuhrman, C.
+76. Zheng, B., Leader, J. K., McMurray, J. M., Park, S. C., Fuhrman, C.
 R., Gur, D., and Sciurba, F. C. ``\textbf{Automated Detection and
 Quantitative Assessment of Pulmonary Airways Depicted on CT Images}''
 \emph{Med Phys} 34, no. 7 (2007): 2844--52.
 
 \hypertarget{ref-Nakamura:2008aa}{}
-66. Nakamura, M., Wada, S., Miki, T., Shimada, Y., Suda, Y., and Tamura,
+77. Nakamura, M., Wada, S., Miki, T., Shimada, Y., Suda, Y., and Tamura,
 G. ``\textbf{Automated Segmentation and Morphometric Analysis of the
 Human Airway Tree from Multidetector CT Images}'' \emph{J Physiol Sci}
 58, no. 7 (2008): 493--8.
 doi:\href{https://doi.org/10.2170/physiolsci.RP007408}{10.2170/physiolsci.RP007408}
 
 \hypertarget{ref-Lo:2009aa}{}
-67. Lo, P., Ginneken, B. van, Reinhardt, J. M., and Bruijne, M. de.
+78. Lo, P., Ginneken, B. van, Reinhardt, J. M., and Bruijne, M. de.
 ``\textbf{Extraction of Airways from CT (EXACT '09)}'' \emph{The second
 international workshop on pulmonary image analysis} (2009):
 
 \hypertarget{ref-Agam:2005aa}{}
-68. Agam, G., Armato, S. G., 3rd, and Wu, C. ``\textbf{Vessel Tree
+79. Agam, G., Armato, S. G., 3rd, and Wu, C. ``\textbf{Vessel Tree
 Reconstruction in Thoracic CT Scans with Application to Nodule
 Detection}'' \emph{IEEE Trans Med Imaging} 24, no. 4 (2005): 486--99.
 
 \hypertarget{ref-Korfiatis:2011aa}{}
-69. Korfiatis, P. D., Kalogeropoulou, C., Karahaliou, A. N., Kazantzi,
+80. Korfiatis, P. D., Kalogeropoulou, C., Karahaliou, A. N., Kazantzi,
 A. D., and Costaridou, L. I. ``\textbf{Vessel Tree Segmentation in
 Presence of Interstitial Lung Disease in MDCT}'' \emph{IEEE Trans Inf
 Technol Biomed} 15, no. 2 (2011): 214--20.
 doi:\href{https://doi.org/10.1109/TITB.2011.2112668}{10.1109/TITB.2011.2112668}
 
 \hypertarget{ref-Qi:2014aa}{}
-70. Qi, S., Triest, H. J. W. van, Yue, Y., Xu, M., and Kang, Y.
+81. Qi, S., Triest, H. J. W. van, Yue, Y., Xu, M., and Kang, Y.
 ``\textbf{Automatic Pulmonary Fissure Detection and Lobe Segmentation in
 CT Chest Images}'' \emph{Biomed Eng Online} 13, (2014): 59.
 doi:\href{https://doi.org/10.1186/1475-925X-13-59}{10.1186/1475-925X-13-59}
 
 \hypertarget{ref-Doel:2015aa}{}
-71. Doel, T., Gavaghan, D. J., and Grau, V. ``\textbf{Review of
+82. Doel, T., Gavaghan, D. J., and Grau, V. ``\textbf{Review of
 Automatic Pulmonary Lobe Segmentation Methods from CT}'' \emph{Comput
 Med Imaging Graph} 40, (2015): 13--29.
 doi:\href{https://doi.org/10.1016/j.compmedimag.2014.10.008}{10.1016/j.compmedimag.2014.10.008}
 
 \hypertarget{ref-Uppaluri:1999aa}{}
-72. Uppaluri, R., Hoffman, E. A., Sonka, M., Hartley, P. G.,
+83. Uppaluri, R., Hoffman, E. A., Sonka, M., Hartley, P. G.,
 Hunninghake, G. W., and McLennan, G. ``\textbf{Computer Recognition of
 Regional Lung Disease Patterns}'' \emph{Am J Respir Crit Care Med} 160,
 no. 2 (1999): 648--54.
 doi:\href{https://doi.org/10.1164/ajrccm.160.2.9804094}{10.1164/ajrccm.160.2.9804094}
 
 \hypertarget{ref-Rosas:2011aa}{}
-73. Rosas, I. O., Yao, J., Avila, N. A., Chow, C. K., Gahl, W. A., and
+84. Rosas, I. O., Yao, J., Avila, N. A., Chow, C. K., Gahl, W. A., and
 Gochuico, B. R. ``\textbf{Automated Quantification of High-Resolution CT
 Scan Findings in Individuals at Risk for Pulmonary Fibrosis}''
 \emph{Chest} 140, no. 6 (2011): 1590--7.
 doi:\href{https://doi.org/10.1378/chest.10-2545}{10.1378/chest.10-2545}
 
 \hypertarget{ref-DeBoer:2014aa}{}
-74. DeBoer, E. M., Swiercz, W., Heltshe, S. L., Anthony, M. M., Szefler,
+85. DeBoer, E. M., Swiercz, W., Heltshe, S. L., Anthony, M. M., Szefler,
 P., Klein, R., Strain, J., Brody, A. S., and Sagel, S. D.
 ``\textbf{Automated CT Scan Scores of Bronchiectasis and Air Trapping in
 Cystic Fibrosis}'' \emph{Chest} 145, no. 3 (2014): 593--603.
 doi:\href{https://doi.org/10.1378/chest.13-0588}{10.1378/chest.13-0588}
 
-\hypertarget{ref-Messay:2010aa}{}
-75. Messay, T., Hardie, R. C., and Rogers, S. K. ``\textbf{A New
-Computationally Efficient CAD System for Pulmonary Nodule Detection in
-CT Imagery}'' \emph{Med Image Anal} 14, no. 3 (2010): 390--406.
-doi:\href{https://doi.org/10.1016/j.media.2010.02.004}{10.1016/j.media.2010.02.004}
-
-\hypertarget{ref-Ginneken:2010aa}{}
-76. Ginneken, B. van, Armato, S. G., 3rd, Hoop, B. de, Amelsvoort-van de
-Vorst, S. van, Duindam, T., Niemeijer, M., Murphy, K., Schilham, A.,
-Retico, A., Fantacci, M. E., Camarlinghi, N., Bagagli, F., Gori, I.,
-Hara, T., Fujita, H., Gargano, G., Bellotti, R., Tangaro, S., Bolaños,
-L., De Carlo, F., Cerello, P., Cristian Cheran, S., Lopez Torres, E.,
-and Prokop, M. ``\textbf{Comparing and Combining Algorithms for
-Computer-Aided Detection of Pulmonary Nodules in Computed Tomography
-Scans: The ANODE09 Study}'' \emph{Med Image Anal} 14, no. 6 (2010):
-707--22.
-doi:\href{https://doi.org/10.1016/j.media.2010.05.005}{10.1016/j.media.2010.05.005}
-
 \hypertarget{ref-Rikxoort:2013aa}{}
-77. Rikxoort, E. M. van and Ginneken, B. van. ``\textbf{Automated
+86. Rikxoort, E. M. van and Ginneken, B. van. ``\textbf{Automated
 Segmentation of Pulmonary Structures in Thoracic Computed Tomography
 Scans: A Review}'' \emph{Phys Med Biol} 58, no. 17 (2013): R187--220.
 doi:\href{https://doi.org/10.1088/0031-9155/58/17/R187}{10.1088/0031-9155/58/17/R187}
 
 \hypertarget{ref-Warfield:2004aa}{}
-78. Warfield, S. K., Zou, K. H., and Wells, W. M. ``\textbf{Simultaneous
+87. Warfield, S. K., Zou, K. H., and Wells, W. M. ``\textbf{Simultaneous
 Truth and Performance Level Estimation (STAPLE): An Algorithm for the
 Validation of Image Segmentation}'' \emph{IEEE Trans Med Imaging} 23,
 no. 7 (2004): 903--21.
 doi:\href{https://doi.org/10.1109/TMI.2004.828354}{10.1109/TMI.2004.828354}
 
 \hypertarget{ref-Coxson:1999aa}{}
-79. Coxson, H. O., Rogers, R. M., Whittall, K. P., D'yachkova, Y., Paré,
+88. Coxson, H. O., Rogers, R. M., Whittall, K. P., D'yachkova, Y., Paré,
 P. D., Sciurba, F. C., and Hogg, J. C. ``\textbf{A Quantification of the
 Lung Surface Area in Emphysema Using Computed Tomography}'' \emph{Am J
 Respir Crit Care Med} 159, no. 3 (1999): 851--6.
 doi:\href{https://doi.org/10.1164/ajrccm.159.3.9805067}{10.1164/ajrccm.159.3.9805067}
 
 \hypertarget{ref-Perez:2005aa}{}
-80. Perez, A., 4th, Coxson, H. O., Hogg, J. C., Gibson, K., Thompson, P.
+89. Perez, A., 4th, Coxson, H. O., Hogg, J. C., Gibson, K., Thompson, P.
 F., and Rogers, R. M. ``\textbf{Use of CT Morphometry to Detect Changes
 in Lung Weight and Gas Volume}'' \emph{Chest} 128, no. 4 (2005):
 2471--7.
 doi:\href{https://doi.org/10.1378/chest.128.4.2471}{10.1378/chest.128.4.2471}
 
 \hypertarget{ref-Coxson:2005aa}{}
-81. Coxson, H. O. and Rogers, R. M. ``\textbf{New Concepts in the
+90. Coxson, H. O. and Rogers, R. M. ``\textbf{New Concepts in the
 Radiological Assessment of COPD}'' \emph{Semin Respir Crit Care Med} 26,
 no. 2 (2005): 211--20.
 doi:\href{https://doi.org/10.1055/s-2005-869540}{10.1055/s-2005-869540}
 
 \hypertarget{ref-Stolk:2007aa}{}
-82. Stolk, J., Putter, H., Bakker, E. M., Shaker, S. B., Parr, D. G.,
+91. Stolk, J., Putter, H., Bakker, E. M., Shaker, S. B., Parr, D. G.,
 Piitulainen, E., Russi, E. W., Grebski, E., Dirksen, A., Stockley, R.
 A., Reiber, J. H. C., and Stoel, B. C. ``\textbf{Progression Parameters
 for Emphysema: A Clinical Investigation}'' \emph{Respir Med} 101, no. 9
@@ -1906,53 +1951,41 @@ for Emphysema: A Clinical Investigation}'' \emph{Respir Med} 101, no. 9
 doi:\href{https://doi.org/10.1016/j.rmed.2007.04.016}{10.1016/j.rmed.2007.04.016}
 
 \hypertarget{ref-Xu:2006aa}{}
-83. Xu, Y., Sonka, M., McLennan, G., Guo, J., and Hoffman, E. A.
+92. Xu, Y., Sonka, M., McLennan, G., Guo, J., and Hoffman, E. A.
 ``\textbf{MDCT-Based 3-D Texture Classification of Emphysema and Early
 Smoking Related Lung Pathologies}'' \emph{IEEE Trans Med Imaging} 25,
 no. 4 (2006): 464--75.
 doi:\href{https://doi.org/10.1109/TMI.2006.870889}{10.1109/TMI.2006.870889}
 
 \hypertarget{ref-Gevenois:1996aa}{}
-84. Gevenois, P. A., De Vuyst, P., Sy, M., Scillia, P., Chaminade, L.,
+93. Gevenois, P. A., De Vuyst, P., Sy, M., Scillia, P., Chaminade, L.,
 Maertelaer, V. de, Zanen, J., and Yernault, J. C. ``\textbf{Pulmonary
 Emphysema: Quantitative CT During Expiration}'' \emph{Radiology} 199,
 no. 3 (1996): 825--9.
 doi:\href{https://doi.org/10.1148/radiology.199.3.8638012}{10.1148/radiology.199.3.8638012}
 
 \hypertarget{ref-Hoffman:2006aa}{}
-85. Hoffman, E. A., Simon, B. A., and McLennan, G. ``\textbf{State of
+94. Hoffman, E. A., Simon, B. A., and McLennan, G. ``\textbf{State of
 the Art. a Structural and Functional Assessment of the Lung via
 Multidetector-Row Computed Tomography: Phenotyping Chronic Obstructive
 Pulmonary Disease}'' \emph{Proc Am Thorac Soc} 3, no. 6 (2006): 519--32.
 doi:\href{https://doi.org/10.1513/pats.200603-086MS}{10.1513/pats.200603-086MS}
 
-\hypertarget{ref-Gee:2003aa}{}
-86. Gee, J., Sundaram, T., Hasegawa, I., Uematsu, H., and Hatabu, H.
-``\textbf{Characterization of Regional Pulmonary Mechanics from Serial
-Magnetic Resonance Imaging Data}'' \emph{Acad Radiol} 10, no. 10 (2003):
-1147--52.
-
-\hypertarget{ref-Sundaram:2005aa}{}
-87. Sundaram, T. A. and Gee, J. C. ``\textbf{Towards a Model of Lung
-Biomechanics: Pulmonary Kinematics via Registration of Serial Lung
-Images}'' \emph{Med Image Anal} 9, no. 6 (2005): 524--37.
-doi:\href{https://doi.org/10.1016/j.media.2005.04.002}{10.1016/j.media.2005.04.002}
-
 \hypertarget{ref-Aykac:2003aa}{}
-88. Aykac, D., Hoffman, E. A., McLennan, G., and Reinhardt, J. M.
+95. Aykac, D., Hoffman, E. A., McLennan, G., and Reinhardt, J. M.
 ``\textbf{Segmentation and Analysis of the Human Airway Tree from
 Three-Dimensional X-Ray CT Images}'' \emph{IEEE Trans Med Imaging} 22,
 no. 8 (2003): 940--50.
 doi:\href{https://doi.org/10.1109/TMI.2003.815905}{10.1109/TMI.2003.815905}
 
 \hypertarget{ref-Park:1998aa}{}
-89. Park, W., Hoffman, E. A., and Sonka, M. ``\textbf{Segmentation of
+96. Park, W., Hoffman, E. A., and Sonka, M. ``\textbf{Segmentation of
 Intrathoracic Airway Trees: A Fuzzy Logic Approach}'' \emph{IEEE Trans
 Med Imaging} 17, no. 4 (1998): 489--97.
 doi:\href{https://doi.org/10.1109/42.730394}{10.1109/42.730394}
 
 \hypertarget{ref-Ederle:2003aa}{}
-90. Ederle, J. R., Heussel, C. P., Hast, J., Fischer, B., Van Beek, E.
+97. Ederle, J. R., Heussel, C. P., Hast, J., Fischer, B., Van Beek, E.
 J. R., Ley, S., Thelen, M., and Kauczor, H. U. ``\textbf{Evaluation of
 Changes in Central Airway Dimensions, Lung Area and Mean Lung Density at
 Paired Inspiratory/expiratory High-Resolution Computed Tomography}''
@@ -1960,16 +1993,16 @@ Paired Inspiratory/expiratory High-Resolution Computed Tomography}''
 doi:\href{https://doi.org/10.1007/s00330-003-1909-5}{10.1007/s00330-003-1909-5}
 
 \hypertarget{ref-Tustison:2008aa}{}
-91. Tustison, N. J. and Gee, J. C. ``\textbf{Run-Length Matrices for
+98. Tustison, N. J. and Gee, J. C. ``\textbf{Run-Length Matrices for
 Texture Analysis}'' \emph{Insight Journal} (2008):
 
 \hypertarget{ref-Tustison:2009aa}{}
-92. Tustison, N. J. and Gee, J. C. ``\textbf{Stochastic Fractal
+99. Tustison, N. J. and Gee, J. C. ``\textbf{Stochastic Fractal
 Dimension Image}'' \emph{Insight Journal} (2009):
 
 \hypertarget{ref-Lo:2012aa}{}
-93. Lo, P., Ginneken, B. van, Reinhardt, J. M., Yavarna, T., Jong, P. A.
-de, Irving, B., Fetita, C., Ortner, M., Pinho, R., Sijbers, J.,
+100. Lo, P., Ginneken, B. van, Reinhardt, J. M., Yavarna, T., Jong, P.
+A. de, Irving, B., Fetita, C., Ortner, M., Pinho, R., Sijbers, J.,
 Feuerstein, M., Fabijańska, A., Bauer, C., Beichel, R., Mendoza, C. S.,
 Wiemker, R., Lee, J., Reeves, A. P., Born, S., Weinheimer, O., Rikxoort,
 E. M. van, Tschirren, J., Mori, K., Odry, B., Naidich, D. P., Hartmann,
@@ -1979,51 +2012,43 @@ Med Imaging} 31, no. 11 (2012): 2093--107.
 doi:\href{https://doi.org/10.1109/TMI.2012.2209674}{10.1109/TMI.2012.2209674}
 
 \hypertarget{ref-Feuerstein:2009aa}{}
-94. Feuerstein, M., Kitasaka, T., and Mori, K. ``\textbf{Adaptive Branch
-Tracing and Image Sharpening for Airway Tree Extraction in 3-d Chest
-CT}'' \emph{Proc. of second international workshop on pulmonary image
-analysis} (2009):
+101. Feuerstein, M., Kitasaka, T., and Mori, K. ``\textbf{Adaptive
+Branch Tracing and Image Sharpening for Airway Tree Extraction in 3-d
+Chest CT}'' \emph{Proc. of second international workshop on pulmonary
+image analysis} (2009):
 
 \hypertarget{ref-Lee:2009aa}{}
-95. Lee, J. and Reeves, A. P. ``\textbf{Segmentation of the Airway Tree
+102. Lee, J. and Reeves, A. P. ``\textbf{Segmentation of the Airway Tree
 from Chest CT Using Local Volume of Interest}'' \emph{Proc. of second
 international workshop on pulmonary image analysis} (2009):
 
-\hypertarget{ref-Song:2010aa}{}
-96. Song, G., Tustison, N., and Gee, J. C. ``\textbf{Airway Tree
-Segmentation by Removing Paths of Leakage}'' \emph{Proc. 3rd int.
-workshop pulmonary image analysis} (2010): 109--116.
-
-\hypertarget{ref-Murphy:2009aa}{}
-97. Murphy, K., Ginneken, B. van, Schilham, A. M. R., Hoop, B. J. de,
-Gietema, H. A., and Prokop, M. ``\textbf{A Large-Scale Evaluation of
-Automatic Pulmonary Nodule Detection in Chest CT Using Local Image
-Features and K-Nearest-Neighbour Classification}'' \emph{Med Image Anal}
-13, no. 5 (2009): 757--70.
-doi:\href{https://doi.org/10.1016/j.media.2009.07.001}{10.1016/j.media.2009.07.001}
+\hypertarget{ref-Staring:2012aa}{}
+103. Staring, M., Xiao, C., Shamonin, D. P., and Stoel, B. C.
+``\textbf{Pulmonary Vessel Segmentation Using Vessel Enhancement
+Filters}'' \emph{VESsel SEgmentation in the Lung} (2012):
 
 \hypertarget{ref-Yushkevich:2006aa}{}
-98. Yushkevich, P. A., Piven, J., Hazlett, H. C., Smith, R. G., Ho, S.,
+104. Yushkevich, P. A., Piven, J., Hazlett, H. C., Smith, R. G., Ho, S.,
 Gee, J. C., and Gerig, G. ``\textbf{User-Guided 3D Active Contour
 Segmentation of Anatomical Structures: Significantly Improved Efficiency
 and Reliability}'' \emph{Neuroimage} 31, no. 3 (2006): 1116--28.
 doi:\href{https://doi.org/10.1016/j.neuroimage.2006.01.015}{10.1016/j.neuroimage.2006.01.015}
 
 \hypertarget{ref-Caselles:1997aa}{}
-99. Caselles, V., Kimmel, R., and Sapiro, G. ``\textbf{Geodesic Active
+105. Caselles, V., Kimmel, R., and Sapiro, G. ``\textbf{Geodesic Active
 Contours}'' \emph{Int J Comput Vision} 22, (1997): 61--79.
 
 \hypertarget{ref-Zhu:1996aa}{}
-100. Zhu, S. and Yuille, A. ``\textbf{Region Competition: Unifying
+106. Zhu, S. and Yuille, A. ``\textbf{Region Competition: Unifying
 Snakes, Region Growing, and Bayes/MDL for Multiband Image
 Segmentation}'' \emph{IEEE Trans Pattern Anal Mach Intell} 18, no. 9
 (1996): 884--900.
 
 \hypertarget{ref-SnapWebsite}{}
-101. Available at \url{http://www.itksnap.org}
+107. Available at \url{http://www.itksnap.org}
 
 \hypertarget{ref-Dregely:2011aa}{}
-102. Dregely, I., Mugler, J. P., 3rd, Ruset, I. C., Altes, T. A., Mata,
+108. Dregely, I., Mugler, J. P., 3rd, Ruset, I. C., Altes, T. A., Mata,
 J. F., Miller, G. W., Ketel, J., Ketel, S., Distelbrink, J., Hersman, F.
 W., and Ruppert, K. ``\textbf{Hyperpolarized Xenon-129 Gas-Exchange
 Imaging of Lung Microstructure: First Case Studies in Subjects with
@@ -2032,7 +2057,7 @@ Obstructive Lung Disease}'' \emph{J Magn Reson Imaging} 33, no. 5
 doi:\href{https://doi.org/10.1002/jmri.22533}{10.1002/jmri.22533}
 
 \hypertarget{ref-Mugler:2010aa}{}
-103. Mugler, J. P., 3rd, Altes, T. A., Ruset, I. C., Dregely, I. M.,
+109. Mugler, J. P., 3rd, Altes, T. A., Ruset, I. C., Dregely, I. M.,
 Mata, J. F., Miller, G. W., Ketel, S., Ketel, J., Hersman, F. W., and
 Ruppert, K. ``\textbf{Simultaneous Magnetic Resonance Imaging of
 Ventilation Distribution and Gas Uptake in the Human Lung Using
@@ -2040,23 +2065,15 @@ Hyperpolarized Xenon-129}'' \emph{Proc Natl Acad Sci U S A} 107, no. 50
 (2010): 21707--12.
 doi:\href{https://doi.org/10.1073/pnas.1011912107}{10.1073/pnas.1011912107}
 
-\hypertarget{ref-Qing:2014ab}{}
-104. Qing, K., Mugler, J. P., 3rd, Altes, T. A., Jiang, Y., Mata, J. F.,
-Miller, G. W., Ruset, I. C., Hersman, F. W., and Ruppert, K.
-``\textbf{Assessment of Lung Function in Asthma and COPD Using
-Hyperpolarized 129Xe Chemical Shift Saturation Recovery Spectroscopy and
-Dissolved-Phase MRI}'' \emph{NMR Biomed} 27, no. 12 (2014): 1490--501.
-doi:\href{https://doi.org/10.1002/nbm.3179}{10.1002/nbm.3179}
-
 \hypertarget{ref-Altes:2006aa}{}
-105. Altes, T. A., Mata, J., Lange, E. E. de, Brookeman, J. R., and
+110. Altes, T. A., Mata, J., Lange, E. E. de, Brookeman, J. R., and
 Mugler, J. P., 3rd. ``\textbf{Assessment of Lung Development Using
 Hyperpolarized Helium-3 Diffusion MR Imaging}'' \emph{J Magn Reson
 Imaging} 24, no. 6 (2006): 1277--83.
 doi:\href{https://doi.org/10.1002/jmri.20723}{10.1002/jmri.20723}
 
 \hypertarget{ref-Woodhouse:2005aa}{}
-106. Woodhouse, N., Wild, J. M., Paley, M. N. J., Fichele, S., Said, Z.,
+111. Woodhouse, N., Wild, J. M., Paley, M. N. J., Fichele, S., Said, Z.,
 Swift, A. J., and Beek, E. J. R. van. ``\textbf{Combined Helium-3/proton
 Magnetic Resonance Imaging Measurement of Ventilated Lung Volumes in
 Smokers Compared to Never-Smokers}'' \emph{J Magn Reson Imaging} 21, no.
@@ -2064,7 +2081,7 @@ Smokers Compared to Never-Smokers}'' \emph{J Magn Reson Imaging} 21, no.
 doi:\href{https://doi.org/10.1002/jmri.20290}{10.1002/jmri.20290}
 
 \hypertarget{ref-Altes:2001aa}{}
-107. Altes, T. A., Powers, P. L., Knight-Scott, J., Rakes, G.,
+112. Altes, T. A., Powers, P. L., Knight-Scott, J., Rakes, G.,
 Platts-Mills, T. A., Lange, E. E. de, Alford, B. A., Mugler, J. P., 3rd,
 and Brookeman, J. R. ``\textbf{Hyperpolarized 3He MR Lung Ventilation
 Imaging in Asthmatics: Preliminary Findings}'' \emph{J Magn Reson

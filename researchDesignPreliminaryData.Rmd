@@ -3,6 +3,28 @@
 
 ### 3(c.1) Preliminary data
 
+\textcolor{red}{(NB:  replace this with table once all the refs are stabilized.)
+A significant portion of the proposed platform spanning the range of
+proposed functionality has been previously reported in various articles from our group.
+This includes both the reporting of methodoligical novelty and subsequent
+usage for clinical studies of small to large cohorts.
+The following list provides a representative sampling of this work categorized by
+proposed functionality:}
+
+* __\textcolor{red}{spatial normalization}__: [@Gee:2003aa;@Sundaram:2005aa;@Cook:2007aa;@Tustison:2010aa;@Tustison:2011ab;@Tustison:2011ad;@Tustison:2012aa;@Tustison:2014ab]
+* __\textcolor{red}{template generation}__: [@Tustison:2013ad]
+* __\textcolor{red}{lung segmentation}__: [@Tustison:2011ad;@Barbosa:2011aa;@Qing:2014aa;@Qing:2014ab;@Tustison:2015aa]
+* __\textcolor{red}{lobe segmentation}__: [@Qing:2014ab;@Tustison:2015aa]
+* __\textcolor{red}{airway segmentation}__: [@Song:2010aa]
+* __\textcolor{red}{functional segmentation}__: [@Tustison:2011aa;@Tustison:2013ad;@Teague:2014aa]
+* __\textcolor{red}{feature indices}__: [@Tustison:2010ab;@Barbosa:2011aa;@Song:2012aa]
+
+\textcolor{red}{Much of this innovation has been provided through the ANTs processing toolkit to
+allow for continued use, potential future improvements, and reproducibility.}
+<!--
+\input{papers_table.tex}
+-->
+
 __3(c.1.1) Generic ANTs core tools for image analysis and processing.__
 The Advanced Normalization Tools (ANTs) package is a state-of-the-art, open-source software toolkit
 for image registration, segmentation, and other core medical image analysis functionality [@ANTsWebsite].
@@ -12,16 +34,19 @@ made available in ITK).  However, as mentioned earlier, these programs have more
 general application and require pulmonary-specific tuning for the tasks targeted by
 this project.  The following list comprises several core software tools for
 tuning, subsequent extensions, documentation, tutorial generation, and the creation of
-easy-to-use bash scripts for large-scale processing of pulmonary imaging data.
+easy-to-use bash scripts for large-scale processing of pulmonary imaging data:
 
-__ANTs image registration.__  One of the most important methodological developments in
-medical image analysis is the advent of image registration techniques capable of
-accommodating the highly complex inter-individual variations seen in human anatomy.
+__ANTs image registration.__  One of the most important \textcolor{red}{innovations} in
+medical image analysis is the \textcolor{red}{development} of image registration techniques capable of
+mapping the highly complex variations seen in human anatomy.
 Our team is well-recognized for seminal contributions to the field that date back to the
 original elastic matching method of Bajcsy and co-investigators
 [@Bajcsy:1982aa;@Bajcsy:1989aa;@Gee:1993aa]. Our most recent work, embodied in the ANTs
 open-source, cross-platform toolkit for multiple modality image processing,
-continues to set the standard in the field. ANTs not only encodes the most advanced results
+continues to set the standard in the field
+\textcolor{red}{for brain} [@Klein:2009aa], \textcolor{red}{lung} [@Murphy:2011aa], \textcolor{red}{
+and cardiac imaging} [@Tustison:2015ab].
+ANTs not only encodes the most advanced results
 in registration research, notably the Symmetric Normalization (SyN) algorithm for
 diffeomorphisms [@Avants:2008aa], but also packages these within a full featured platform that
 includes an extensive library of similarity measures, transformation types, and regularizers.
@@ -155,7 +180,13 @@ by the community:
 * brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
 
-All of these tools have been wrapped in easy-to-use, well-documented shell scripts.  For
+All of these tools have been wrapped in easy-to-use, well-documented shell scripts
+\textcolor{red}{which facilitate the processing of large studies.  Functionality
+includes compatibility with the major cluster systems (e.g., SLURM, SGE, and PBS).
+As part of this project we have developed similar scripts targeting lung analyses.}
+
+<!--
+For
 example, the ANTs cortical thickness pipeline, as outlined in [@Tustison:2014ab], comprises
 four major steps:  (1) bias correction, (2) brain extraction, (3) $n$-tissue segmentation,
 and (4) cortical thickness estimation.  Each step requires its own set of ANTs tools with
@@ -164,7 +195,11 @@ user, in [@Tustison:2014ab] we provide all the necessary programs (properly tune
 a minimal set of input data required to obtain good results for common data.  The result
 is an easy-to-use script that can be invoked by the programmer and non-programmer alike to
 obtain the desired processed data which outperforms the current state-of-the-art
-[@Tustison:2014ab].  An example command call for the ANTs cortical thickness pipeline is:
+[@Tustison:2014ab].
+-->
+
+<!--
+An example command call for the ANTs cortical thickness pipeline is:
 ```bash
   # ANTs processing call for a single subject
 
@@ -181,7 +216,7 @@ has several benefits.  Bash is an extremely common command language that permits
 processing.  Thus, running several jobs on a cluster infrastructure is straightforward with
 this approach.  Such scripts are readable
 by the interested user who can glean parameters as well as manually make changes.
-
+-->
 
 <!--
 

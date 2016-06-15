@@ -49,22 +49,28 @@ response to this major deficiency in the field._
 _A primary impetus for this project is that, through extension and continued development
 of ANTs and ITK functionality, we can make a significant impact on the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
-algorithms which are easy to use as we have done for the neuroimaging community._  The
-following list comprises core functionality for CT analysis that would be incorporated into
+algorithms which are easy to use as we have done for the neuroimaging community._
+\textcolor{red}{Although we will obviously not provide the entire panoply of lung-based
+image processing algorithms that have been proposed over the years, a
+set of tools with a track record of good performance spanning the range of core
+functionality (similar to our ANTs neuroimaging
+toolkit), with the potential for expansion, will be a definite benefit to the community.}
+The following list comprises core functionality for CT analysis that would be incorporated into
 ITK-Lung in addition to further enhancements to the registration and segmentation capabilities
 described in preliminary work:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa]),
 * bronchial structure extraction (e.g., [@Zheng:2007aa;@Nakamura:2008aa] and the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
 * vasculature segmentation (e.g., [@Agam:2005aa;@Korfiatis:2011aa]),
-* lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]),
-* feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]), and
-* nodule detection (e.g., [@Messay:2010aa] and the many submissions to the Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD Conference of SPIE Medical Imaging [@Ginneken:2010aa]).
+* lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]), and
+* feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]).
 
 Although this list is restricted to CT image analysis, inclusion of additional techniques
 specific to other modalities has additional benefit and are planned for
-this project (cf Table 1).  Using ANTs core tools, we have produced several
-lung-specific algorithms for core tasks such as:
+this project (cf Table 1).  Using ANTs core tools \textcolor{red}{with lung-specific modifications},
+we have produced several algorithms for core pulmonary imaging tasks.
+\textcolor{red}{We have even provided as open-source initial implementations and github
+examples for many of them.}  These imaging tasks include:
 
 __Atlas-based lung segmentation.__  Identification of anatomical structure in MRI is often a
 crucial preprocessing step for quantification of morphological features or ventilation
@@ -108,7 +114,6 @@ which are ad hoc, non-anatomical, and do not adequately address intra- and inter
 correspondences.  However, we can take advantage of
 inter-subject similarities in lobar geometry to provide a prior-based estimation of
 lobar divisions using a consensus labeling approach (cf Figure 3).
-
 Specifically, to generate the lobe segmentation in a target 1H or CT lung image, we register the
 same-modality atlas set to the target image (given the general increased robustness
 of intra-modality vs. inter-modality image registration) using the B-spline
@@ -116,8 +121,6 @@ SyN registration approach described earlier [@Tustison:2013ac].
 Subsequently, we warp the set of lobe label images to the target image using
 the  atlas-to-target  transformation.  This process will be illustrated publicly as part
 of the project using the open-data multi-atlas CT and 1H atlas libraries created as part of Sub-Aim 1b.
-
-
 Since we have no intensity information inside
 the target lung mask and CT atlas lung masks, we use a simply majority voting strategy to
 generate the optimal labeling for the target image.  Following the majority voting, we
@@ -226,13 +229,13 @@ analysis using 3He MRI for a variety of lung diseases._
 These indices can also be studied not only at any particular single time point, but also
 for changes with time. The addition of quantitative morphologic measurements of the airways
 provides an assessment of the contribution of airway changes to chronic lung disease.
-
-\input{ct_table.tex}
-
 Table 2 provides an overview of these types of
 discriminative measurements, many of which can be used for CT and 3He lung assessment.
 We have already implemented many of these image features and have contributed the result of our work to
 the Insight Toolkit (e.g., [@Tustison:2008aa;@Tustison:2009aa]).
+
+\input{ct_table.tex}
+
 
 <!--
 As an
@@ -242,7 +245,7 @@ addition to avoiding research redundancy. It is also beneficial in that the enti
 community participates in the vetting of the software library.
 -->
 
-__Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
+__Airway segmentation.__  In describing the quantitative CT lung indices,
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
 for disease characterization.  Additionally, there are other potential uses motivating
 the inclusion of airway segmentation in any pulmonary image analysis toolkit.
@@ -253,11 +256,34 @@ Our plan is to provide an implementation of [@Feuerstein:2009aa] and then augmen
 functionality with some of our previous work [@Song:2010aa] for
 removing leakage path candidates.
 
+__\textcolor{red}{Vessel segmentation.}__
+\textcolor{red}{In contrast to much of what is described in the literature, there exist
+key contributions for pulmonary vessel segmentation available to the public, specifically
+the algorithms described in} [@Staring:2012aa]. \textcolor{red}{Similar to much of the
+research for enhancement of vessel-like morphology in different anatomies, the authors
+employed Hessian-based filters for deriving a "vesselness" function.  They evaluated
+different filtering strategies using the test data provided by the organizers of the
+VESSEL12 challenge organized in conjunction with the IEEE International Symposium on
+Biomedical Imaging (ISBI 2012).  Their approach ranked consistently as one of the top
+performers of the challenge.  Given that the first author is a regular
+ITK contributor, the corresponding code will be easily integrated into our platform.
+}
+
+__\textcolor{red}{Perfusion analysis.}__
+
+
+
+__\textcolor{red}{PET imaging.}__
+
+
+
+<!--
 ITK has extensive functionality for segmentation of vessel-like structures.  Much of that
 work has been incorporated into comprehensive packages such as the
 analysis and visualization Vessel Modeling ToolKit (http://www.vmtk.org).  For this
 project we will focus development and refinement of these
 ITK capabilities for CT lung application in segmenting the pulmonary vasculature.
+-->
 
 <!--
 ![Potential clinical use case for identifying the feeding airway branch path to the
@@ -267,6 +293,7 @@ of the ventilation defect of interest, we can automatically determine the bronch
 pathway from the trachea to the defect.](Figs/airways.png)
 -->
 
+<!--
 __Nodule detection.__ CT is used for screening of lung cancers (i.e., pulmonary nodules)
 which currently requires human intervention for the laborious and tedious task of manual
 scanning.  Automated detection methods could potentially save significant time and effort which
@@ -280,6 +307,7 @@ based on the work presented in [@Murphy:2009aa], where a k-nearest neighbor clas
 local image features is built from a large training data set.  We plan to implement this
 method potentially with some modifications based on our experience with a more recent
 challenge dealing with segmentation of pathology [@Tustison:2014aa].
+-->
 
 __3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas libraries, one for CT and another for 1H MRI.__
 The corresponding group templates will also be provided along with the scripts to produce the results using

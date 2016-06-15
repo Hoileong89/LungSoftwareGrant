@@ -78,42 +78,50 @@ specific application domains.  Although several such established packages exist 
 neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), _no such package exists for
 pulmonary imaging analysis.  The primary goal of this project is to develop
 a robust, open-source image analysis toolkit and dissemination platform
- specifically targeted at the pulmonary research community._
+specifically targeted at the pulmonary research community.
+\textcolor{red}{Given the signifcant efforts
+to make lung imaging datasets publicly available (such as LIDC and RIDER), this
+contribution would be extremely innovative as it would meet an obvious
+need through a first-of-its-kind software package for lung image analysis.}_
 
 Although methodological research is continually being presented at conferences and
 published in various venues, the unfortunate reality is that much of this work exists
-strictly in “advertisement” form.  Oftentimes the underlying code is unavailable to other
+strictly in "advertisement" form.  Oftentimes the underlying code is unavailable to other
 researchers or is implemented in a limited manner (i.e., strictly as proof-of-concept
 software).  Frequently, crucial parameter choices are omitted in the corresponding
 publication(s) which makes external implementations difficult.  In addition, the data used
-to showcase the proposed methodologies is often
-limited to carefully selected snapshots for publication purposes
-which might not be representative of algorithmic performance.  Finally, many of these
-analysis methods are patented and/or integrated into proprietary commercial software
-packages which severely limits accessibility to researchers.
+to showcase the proposed methodologies is often limited to carefully selected snapshots
+for publication purposes which might not be representative of algorithmic performance.
+Finally, many of these analysis methods are patented and/or integrated into proprietary
+commercial software packages which severely limits accessibility to researchers.
 
 As a corrective alternative, this project brings together leading expertise in lung
-imaging research at Penn and UVa to develop, evaluate and deploy under community support
+imaging research at the \textcolor{red}{University of Pennsylvania} and
+\textcolor{red}{University of Virginia} to develop, evaluate and deploy under community support
 an open-source software toolkit
 targeted for pulmonary imaging research.  As principal developers of the popular, open-source
 ANTs, ITK-SNAP and ITK packages, we have extensive experience in the development of
 well-written software and propose
 to make a similar impact in the pulmonary
 community with this project.  Specifically,
-we plan to provide methods for core pulmonary image analysis tasks across multiple modalities, many
-of which we have proposed in past work.  These basic tasks include pulmonary image registration,
+we plan to provide \textcolor{red}{core algorithms} for \textcolor{red}{specific} pulmonary
+image analysis tasks across multiple modalities, many
+of which we have \textcolor{red}{included with previous publications}.  These basic tasks include pulmonary image registration,
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
-functional and structural lung image segmentation, and computation of quantitative image
+functional and structural lung image segmentation, \textcolor{red}{PET imaging},
+\textcolor{red}{perfusion analysis}, and computation of quantitative image
 indices as potential imaging biomarkers.  In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science
 principles.   Formally, this project is defined by the following specific aims:
 
 * __Specific Aim 1:__  __Develop ITK-Lung, a set of open-source software tools for CT, proton, and He-3
-pulmonary computational analysis.__  These open-source software tools will specifically
-target pulmonary image analysis and comprise core application functions such as
+pulmonary computational analysis.__  These open-source software tools
+\textcolor{red}{based on selected algorithms}
+will specifically target pulmonary image analysis and comprise core application functions such as
 inspiratory/expiratory registration, ventilation-based segmentation,
-lung and lobe estimation, airway and vessel segmentation, nodule detection, and calculation of clinical indices for
-characterization of lung development and pathology.  To support these software development
+lung and lobe estimation, airway and vessel segmentation, \textcolor{red}{PET imaging},
+\textcolor{red}{perfusion analysis}, and calculation of clinical indices for
+characterization of lung development and pathology.  \textcolor{red}{As a complement} to these software development
 efforts, CT and 1H MRI multi-atlas libraries will be provided as open data, complete
 with the corresponding lung, airway, vessel, and lobe segmentations according to modality.
 In addition, we will generate optimal intensity/shape templates from each library.  Both
@@ -128,10 +136,12 @@ will extend beyond the ability to steer segmentation and registration pipelines 
 evaluation and visualization of processed results.
 * __Specific Aim 2:__  __Validate and disseminate the developed ITK-Lung resources by leveraging use
 cases from a broad network of partner investigators representing the state-of-the-science in
-lung imaging research.__  This aim will evaluate and refine the
-developed methodology within the real-world context of pulmonary research being carried out at
-various partner sites.  We will disseminate the results of the project through open-source
-distribution of the software, atlases and documentation, online user support, and conduct of hands-on training workshops.
+lung imaging research.__  This aim will evaluate and refine the \textcolor{red}{proposed framework}
+within the real-world context of \textcolor{red}{actual research studies with institutional and
+other external collaborators with the former being the primary "beta testers."}
+We will disseminate the results of the project through open-source
+distribution of the software, atlases and documentation, online user support, and conduct of
+hands-on training workshops.
 
 \newpage
 
@@ -162,12 +172,7 @@ benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], the
 Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa], and several others.  Performing a pubmed query for any one of
 these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
-such packages and the research studies that are produced as a result.  However, despite the
-absolute number of articles produced using such software and the year-by-year usage increase,
-no such analogous set of tools exist for pulmonary-specific research.  In fact, in a recent
-review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
-consensus is that ``[the absence of] universally available image analysis software'' is a major hinderance
-to more widespread usage of such imaging biomarkers [@Hoffman:2015aa].
+such packages and the research studies that are produced as a result.
 
 ```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=2, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken despite consensus amongst researchers and clinicians regarding the utility of such offerings." }
 years <- 2005:2014
@@ -193,11 +198,21 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
           theme( legend.position = "none" )
 ```
 
+_\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
+community}, no such analogous set of tools exist for pulmonary-specific research.
+\textcolor{red}{Such an original and innovative software package would potentially have an immediate and
+significant impact.}_  In fact, in a recent
+review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
+consensus is that ``_[the absence of] universally available image analysis software'' is a major hinderance
+to more widespread usage of such imaging biomarkers_ [@Hoffman:2015aa].
+
 Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provide extensive
 algorithmic
 capabilities for a range of generic image processing tasks.  However,
-tailored software packages for certain application domains (e.g., lung image analysis) are not
-available despite the vast number of algorithms that have been proposed in the literature.
+tailored software packages for certain application domains (e.g., lung image analysis)
+\textcolor{red}{do not exist}
+ despite the vast number of algorithms that have been proposed in the literature
+\textcolor{red}{(many of which are not available to the public)}.[^1]
 It is important to note that the goals of this project would
 significantly support the National Library of Medicine’s own open-source directives in that
 all software would be developed using the established Insight ToolKit’s coding and testing
@@ -211,45 +226,60 @@ This, in turn, provides motivation for user-based support including potential co
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
 cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore,
  open-source development and distribution within a large, and well-invested
-community (such as ITK) takes advantage of Linus's law, i.e., ``given enough eyeballs, all bugs are
+community (such as ITK) takes advantage of Linus's law, i.e., "given enough eyeballs, all bugs are
 shallow," for producing robust software.
+
+[^1]: \textcolor{red}{Several competitions have been held in recent years dealing with the processing and
+analysis of lung image data (e.g., VOLCANO09–--nodule detection, EMPIRE10—--motion estimation,
+LOLA11—--lung and lobe segmentation, and VESSEL12---vasculature segmentation).  As far as we can tell, the vast majority of
+the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
+and RIDER, have amassed large amounts of imaging data but available software support is limited to organizational
+tasks specific to those databases.}
+
 
 ## __3(b) Innovation__
 
 __3(b.1) Open-source pulmonary imaging algorithmic innovation.__
 Given the lack of open-source solutions for pulmonary image analysis,
-this project would produce the first-of-its-kind processing and analytic  platform for performing such research.
+this project would produce the first-of-its-kind processing and analytic  platform for performing
+such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit [@ANTsWebsite], our
- project would include the most essential algorithms for analyzing lung
+ project would include \textcolor{red}{several} essential algorithms for analyzing lung
 images from different modalities, including CT, 3He, and 1H MRI.
-_Many algorithms have been proposed in various technical venues but that which we propose
+_Many algorithms have been proposed in various technical venues, \textcolor{red}{(mostly
+as textual descriptions without accompanying software,)}
+but that which we propose
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
 for pulmonary medical image analysis, many of which have been developed by our group._
 To facilitate the usage of these algorithms, we will provide documentation including
 self-contained online examples, tutorials, and hands-on training workshops.
+\textcolor{red}{We recognize that the methodological depth of the field is extensive
+and implementing even a small portion of the total number of algorithms would be
+extremely daunting.  However, limiting algorithmic implementation to those with which we are
+familiar and have provided good performance for our clinical collaborations will provide
+an extremely beneficial package with significant implications for the community.}
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
 An additional innovative component of the project is the inclusion of extensive use
-cases from leading pulmonary imaging research scientists in various locations with different
+cases from leading pulmonary \textcolor{red}{imaging research scientists at our home institutions
+as well as other external collabotors with regression testing performed} using different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
-processed data.  Additionally, such  use cases involving other groups
-would highlight existing deficiencies in algorithmic functionality in our project
-which would then be remedied by additional development efforts.
+\textcolor{red}{software and} processed data.  Such use cases involving other groups
+would highlight existing deficiencies in framework functionality
+which would then be addressed.
 These real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
 
-We have partnered with leading pulmonary research groups who are familiar with our work
-and who will provide
-study-specific imaging data of various modalities which we will then process using the
-proposed toolkit.  These processed
-data will be returned to the corresponding providers with detailed instructions
-on reproducing these results in their own labs.  Software and tutorial materials drawn from
+\textcolor{red}{Our institutional collaborators will comprise the group of primary beta testers.
+Processed data will be returned to the corresponding providers with detailed instructions
+on reproducing these results in their own labs. Other external collaborators who will also
+provide feedback based on their interaction with the platform.}
+\textcolor{red}{Tutorial materials, data, and example scripts} drawn from
 these experiences will be provided to the public for any interested researcher to
 apply to their own data.  Given the different image acquisition sources,
 this strategy should also demonstrate the robustness of our tools.
-
-In addition to these collaborative efforts, our own analyses at Penn and UVa will also be included.  Any clinical findings
+Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
 provide all the quantitative analysis scripts as a companion release for the paper
 (e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
@@ -263,6 +293,28 @@ but will also offer a reproducible mechanism for using the tools created in this
 
 ### 3(c.1) Preliminary data
 
+\textcolor{red}{(NB:  replace this with table once all the refs are stabilized.)
+A significant portion of the proposed platform spanning the range of
+proposed functionality has been previously reported in various articles from our group.
+This includes both the reporting of methodoligical novelty and subsequent
+usage for clinical studies of small to large cohorts.
+The following list provides a representative sampling of this work categorized by
+proposed functionality:}
+
+* __\textcolor{red}{spatial normalization}__: [@Gee:2003aa;@Sundaram:2005aa;@Cook:2007aa;@Tustison:2010aa;@Tustison:2011ab;@Tustison:2011ad;@Tustison:2012aa;@Tustison:2014ab]
+* __\textcolor{red}{template generation}__: [@Tustison:2013ad]
+* __\textcolor{red}{lung segmentation}__: [@Tustison:2011ad;@Barbosa:2011aa;@Qing:2014aa;@Qing:2014ab;@Tustison:2015aa]
+* __\textcolor{red}{lobe segmentation}__: [@Qing:2014ab;@Tustison:2015aa]
+* __\textcolor{red}{airway segmentation}__: [@Song:2010aa]
+* __\textcolor{red}{functional segmentation}__: [@Tustison:2011aa;@Tustison:2013ad;@Teague:2014aa]
+* __\textcolor{red}{feature indices}__: [@Tustison:2010ab;@Barbosa:2011aa;@Song:2012aa]
+
+\textcolor{red}{Much of this innovation has been provided through the ANTs processing toolkit to
+allow for continued use, potential future improvements, and reproducibility.}
+<!--
+\input{papers_table.tex}
+-->
+
 __3(c.1.1) Generic ANTs core tools for image analysis and processing.__
 The Advanced Normalization Tools (ANTs) package is a state-of-the-art, open-source software toolkit
 for image registration, segmentation, and other core medical image analysis functionality [@ANTsWebsite].
@@ -272,16 +324,19 @@ made available in ITK).  However, as mentioned earlier, these programs have more
 general application and require pulmonary-specific tuning for the tasks targeted by
 this project.  The following list comprises several core software tools for
 tuning, subsequent extensions, documentation, tutorial generation, and the creation of
-easy-to-use bash scripts for large-scale processing of pulmonary imaging data.
+easy-to-use bash scripts for large-scale processing of pulmonary imaging data:
 
-__ANTs image registration.__  One of the most important methodological developments in
-medical image analysis is the advent of image registration techniques capable of
-accommodating the highly complex inter-individual variations seen in human anatomy.
+__ANTs image registration.__  One of the most important \textcolor{red}{innovations} in
+medical image analysis is the \textcolor{red}{development} of image registration techniques capable of
+mapping the highly complex variations seen in human anatomy.
 Our team is well-recognized for seminal contributions to the field that date back to the
 original elastic matching method of Bajcsy and co-investigators
 [@Bajcsy:1982aa;@Bajcsy:1989aa;@Gee:1993aa]. Our most recent work, embodied in the ANTs
 open-source, cross-platform toolkit for multiple modality image processing,
-continues to set the standard in the field. ANTs not only encodes the most advanced results
+continues to set the standard in the field
+\textcolor{red}{for brain} [@Klein:2009aa], \textcolor{red}{lung} [@Murphy:2011aa], \textcolor{red}{
+and cardiac imaging} [@Tustison:2015ab].
+ANTs not only encodes the most advanced results
 in registration research, notably the Symmetric Normalization (SyN) algorithm for
 diffeomorphisms [@Avants:2008aa], but also packages these within a full featured platform that
 includes an extensive library of similarity measures, transformation types, and regularizers.
@@ -415,7 +470,13 @@ by the community:
 * brain tumor segmentation [@Tustison:2014aa] (https://github.com/ntustison/ANTsAndArboles), and
 * cortical labeling [@Wang:2012aa;@Wang:2013aa] (https://github.com/ntustison/MalfLabelingExample).
 
-All of these tools have been wrapped in easy-to-use, well-documented shell scripts.  For
+All of these tools have been wrapped in easy-to-use, well-documented shell scripts
+\textcolor{red}{which facilitate the processing of large studies.  Functionality
+includes compatibility with the major cluster systems (e.g., SLURM, SGE, and PBS).
+As part of this project we have developed similar scripts targeting lung analyses.}
+
+<!--
+For
 example, the ANTs cortical thickness pipeline, as outlined in [@Tustison:2014ab], comprises
 four major steps:  (1) bias correction, (2) brain extraction, (3) $n$-tissue segmentation,
 and (4) cortical thickness estimation.  Each step requires its own set of ANTs tools with
@@ -424,7 +485,11 @@ user, in [@Tustison:2014ab] we provide all the necessary programs (properly tune
 a minimal set of input data required to obtain good results for common data.  The result
 is an easy-to-use script that can be invoked by the programmer and non-programmer alike to
 obtain the desired processed data which outperforms the current state-of-the-art
-[@Tustison:2014ab].  An example command call for the ANTs cortical thickness pipeline is:
+[@Tustison:2014ab].
+-->
+
+<!--
+An example command call for the ANTs cortical thickness pipeline is:
 ```bash
   # ANTs processing call for a single subject
 
@@ -441,7 +506,7 @@ has several benefits.  Bash is an extremely common command language that permits
 processing.  Thus, running several jobs on a cluster infrastructure is straightforward with
 this approach.  Such scripts are readable
 by the interested user who can glean parameters as well as manually make changes.
-
+-->
 
 <!--
 
@@ -504,22 +569,28 @@ response to this major deficiency in the field._
 _A primary impetus for this project is that, through extension and continued development
 of ANTs and ITK functionality, we can make a significant impact on the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
-algorithms which are easy to use as we have done for the neuroimaging community._  The
-following list comprises core functionality for CT analysis that would be incorporated into
+algorithms which are easy to use as we have done for the neuroimaging community._
+\textcolor{red}{Although we will not provide the entire panoply of lung-based
+image processing algorithms that have been proposed over the years, a
+set of tools with a track record of good performance spanning the range of core
+functionality (similar to our ANTs neuroimaging
+toolkit) will be a definite benefit to the community.}
+The following list comprises core functionality for CT analysis that would be incorporated into
 ITK-Lung in addition to further enhancements to the registration and segmentation capabilities
 described in preliminary work:
 
 * whole lung differentiation from the chest wall (e.g., [@De-Nunzio:2011aa;@Prasad:2008aa;@Wang:2009aa;@Rikxoort:2009aa]),
 * bronchial structure extraction (e.g., [@Zheng:2007aa;@Nakamura:2008aa] and the many submissions to the recent Extraction of Airways from CT (ExACT) challenge of the 2nd International Workshop on Pulmonary Image Analysis [@Lo:2009aa]),
 * vasculature segmentation (e.g., [@Agam:2005aa;@Korfiatis:2011aa]),
-* lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]),
-* feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]), and
-* nodule detection (e.g., [@Messay:2010aa] and the many submissions to the Automatic Nodule Detection (ANODE09) challenge of the 2009 CAD Conference of SPIE Medical Imaging [@Ginneken:2010aa]).
+* lobe and/or fissure detection (e.g., [@Qi:2014aa;@Doel:2015aa]), and
+* feature extraction and classification (e.g., [@Uppaluri:1999aa;@Rosas:2011aa;@DeBoer:2014aa]).
 
 Although this list is restricted to CT image analysis, inclusion of additional techniques
 specific to other modalities has additional benefit and are planned for
-this project (cf Table 1).  Using ANTs core tools, we have produced several
-lung-specific algorithms for core tasks such as:
+this project (cf Table 1).  Using ANTs core tools \textcolor{red}{with lung-specific modifications},
+we have produced several algorithms for core pulmonary imaging tasks.
+\textcolor{red}{We have even provided as open-source initial implementations and github
+examples for many of them.}  These imaging tasks include:
 
 __Atlas-based lung segmentation.__  Identification of anatomical structure in MRI is often a
 crucial preprocessing step for quantification of morphological features or ventilation
@@ -563,7 +634,6 @@ which are ad hoc, non-anatomical, and do not adequately address intra- and inter
 correspondences.  However, we can take advantage of
 inter-subject similarities in lobar geometry to provide a prior-based estimation of
 lobar divisions using a consensus labeling approach (cf Figure 3).
-
 Specifically, to generate the lobe segmentation in a target 1H or CT lung image, we register the
 same-modality atlas set to the target image (given the general increased robustness
 of intra-modality vs. inter-modality image registration) using the B-spline
@@ -571,8 +641,6 @@ SyN registration approach described earlier [@Tustison:2013ac].
 Subsequently, we warp the set of lobe label images to the target image using
 the  atlas-to-target  transformation.  This process will be illustrated publicly as part
 of the project using the open-data multi-atlas CT and 1H atlas libraries created as part of Sub-Aim 1b.
-
-
 Since we have no intensity information inside
 the target lung mask and CT atlas lung masks, we use a simply majority voting strategy to
 generate the optimal labeling for the target image.  Following the majority voting, we
@@ -681,13 +749,13 @@ analysis using 3He MRI for a variety of lung diseases._
 These indices can also be studied not only at any particular single time point, but also
 for changes with time. The addition of quantitative morphologic measurements of the airways
 provides an assessment of the contribution of airway changes to chronic lung disease.
-
-\input{ct_table.tex}
-
 Table 2 provides an overview of these types of
 discriminative measurements, many of which can be used for CT and 3He lung assessment.
 We have already implemented many of these image features and have contributed the result of our work to
 the Insight Toolkit (e.g., [@Tustison:2008aa;@Tustison:2009aa]).
+
+\input{ct_table.tex}
+
 
 <!--
 As an
@@ -697,7 +765,7 @@ addition to avoiding research redundancy. It is also beneficial in that the enti
 community participates in the vetting of the software library.
 -->
 
-__Airway and vessel segmentation.__  In describing the quantitative CT lung indices,
+__Airway segmentation.__  In describing the quantitative CT lung indices,
 it was pointed out that lung airway morphology has been previously utilized as a biomarker
 for disease characterization.  Additionally, there are other potential uses motivating
 the inclusion of airway segmentation in any pulmonary image analysis toolkit.
@@ -708,11 +776,34 @@ Our plan is to provide an implementation of [@Feuerstein:2009aa] and then augmen
 functionality with some of our previous work [@Song:2010aa] for
 removing leakage path candidates.
 
+__\textcolor{red}{Vessel segmentation.}__
+\textcolor{red}{In contrast to much of what is described in the literature, there exist
+key contributions for pulmonary vessel segmentation available to the public, specifically
+the algorithms described in} [@Staring:2012aa]. \textcolor{red}{Similar to much of the
+research for enhancement of vessel-like morphology in different anatomies, the authors
+employed Hessian-based filters for deriving a "vesselness" function.  They evaluated
+different filtering strategies using the test data provided by the organizers of the
+VESSEL12 challenge organized in conjunction with the IEEE International Symposium on
+Biomedical Imaging (ISBI 2012).  Their approach ranked consistently as one of the top
+performers of the challenge.  Given that the first author is a regular
+ITK contributor, the corresponding code will be easily integrated into our platform.
+}
+
+__\textcolor{red}{Perfusion analysis.}__
+
+
+
+__\textcolor{red}{PET imaging.}__
+
+
+
+<!--
 ITK has extensive functionality for segmentation of vessel-like structures.  Much of that
 work has been incorporated into comprehensive packages such as the
 analysis and visualization Vessel Modeling ToolKit (http://www.vmtk.org).  For this
 project we will focus development and refinement of these
 ITK capabilities for CT lung application in segmenting the pulmonary vasculature.
+-->
 
 <!--
 ![Potential clinical use case for identifying the feeding airway branch path to the
@@ -722,6 +813,7 @@ of the ventilation defect of interest, we can automatically determine the bronch
 pathway from the trachea to the defect.](Figs/airways.png)
 -->
 
+<!--
 __Nodule detection.__ CT is used for screening of lung cancers (i.e., pulmonary nodules)
 which currently requires human intervention for the laborious and tedious task of manual
 scanning.  Automated detection methods could potentially save significant time and effort which
@@ -735,6 +827,7 @@ based on the work presented in [@Murphy:2009aa], where a k-nearest neighbor clas
 local image features is built from a large training data set.  We plan to implement this
 method potentially with some modifications based on our experience with a more recent
 challenge dealing with segmentation of pathology [@Tustison:2014aa].
+-->
 
 __3(c.2.2) Sub-Aim 1b will provide two annotated multi-atlas libraries, one for CT and another for 1H MRI.__
 The corresponding group templates will also be provided along with the scripts to produce the results using
@@ -818,9 +911,15 @@ This aim builds on the project team’s long and successful track record of coll
 user community.  In particular, the investigator-driven studies presented below are carefully selected
 both for their capacity to fully exercise the developed tools and to provide a comprehensive representation
 of the various processing and analysis tasks of interest to the community.
+\textcolor{red}{Two groups are considered
+below as ``users'' of the software:  institutional (i.e., beta testers) and external collaborators.
+For the former, the developers of the proposed platform will provide one-on-one training
+sessions to ensure proper data processing by the beta testers.  We will use these sessions
+to develop online tutorials and processing examples for our external collaborators such that
+they will be able to process their data in-house.  We will also provide a targeted discussion
+forum to answer questions and address concerns for processing using ITK-Lung.}
 
-
-
+## Institutional collaborators
 
 <!--          UVA           -->
 
@@ -858,7 +957,7 @@ for correlation with GOLD classification will utilize the
 ventilation-based segmentation functionality in ITK-Lung [@Tustison:2011aa].
 In order to determine lobar
 values of HXe MRI, this study will utilize the recently proposed lobar estimation algorithm
-[@Tustison:2015aa] that will be available for both proton MRI and CT
+[@Tustison:2015aa] that will be available for both proton MRI and CT.
 
 
 __3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
@@ -1022,6 +1121,8 @@ abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
 
+## External collaborators
+
 __3(c.3.5) Comparison of automated multi-modality registration methodologies to
 manual registration for assessing lung CT bronchial morphologic changes and
 hyperpolarized helium MR ventilation defects in asthma patients: Can
@@ -1107,6 +1208,14 @@ image analysis needs include quantitative characterization of: lung
 parenchyma and airway changes; regional perfusion, ventilation, and
 metabolism from whole-lung perfusion and multi-modality metabolic imaging
 studies; ultra-short TE MRI data; and regional and global kinematics.
+
+
+
+
+
+
+
+
 
 More details about the research, data, and advances enabled by the
 proposed software tools for each of the extramural partner

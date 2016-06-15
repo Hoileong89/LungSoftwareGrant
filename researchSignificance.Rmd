@@ -26,12 +26,7 @@ benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], the
 Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa], and several others.  Performing a pubmed query for any one of
 these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
-such packages and the research studies that are produced as a result.  However, despite the
-absolute number of articles produced using such software and the year-by-year usage increase,
-no such analogous set of tools exist for pulmonary-specific research.  In fact, in a recent
-review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
-consensus is that ``[the absence of] universally available image analysis software'' is a major hinderance
-to more widespread usage of such imaging biomarkers [@Hoffman:2015aa].
+such packages and the research studies that are produced as a result.
 
 ```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=2, fig.width=6, fig.cap="Number of articles per year which cite publicly available neuroimaging analysis packages (specifically, FreeSurfer, AFNI, FSL, and SPM).  Although the benefits seem clear for the neuroscience community, analogous efforts within the pulmonary community have yet to be undertaken despite consensus amongst researchers and clinicians regarding the utility of such offerings." }
 years <- 2005:2014
@@ -57,11 +52,21 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
           theme( legend.position = "none" )
 ```
 
+_\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
+community}, no such analogous set of tools exist for pulmonary-specific research.
+\textcolor{red}{Such an original and innovative software package would potentially have an immediate and
+significant impact.}_  In fact, in a recent
+review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
+consensus is that ``_[the absence of] universally available image analysis software'' is a major hinderance
+to more widespread usage of such imaging biomarkers_ [@Hoffman:2015aa].
+
 Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provide extensive
 algorithmic
 capabilities for a range of generic image processing tasks.  However,
-tailored software packages for certain application domains (e.g., lung image analysis) are not
-available despite the vast number of algorithms that have been proposed in the literature.
+tailored software packages for certain application domains (e.g., lung image analysis)
+\textcolor{red}{do not exist}
+ despite the vast number of algorithms that have been proposed in the literature
+\textcolor{red}{(many of which are not available to the public)}.[^1]
 It is important to note that the goals of this project would
 significantly support the National Library of Medicine’s own open-source directives in that
 all software would be developed using the established Insight ToolKit’s coding and testing
@@ -75,5 +80,13 @@ This, in turn, provides motivation for user-based support including potential co
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
 cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore,
  open-source development and distribution within a large, and well-invested
-community (such as ITK) takes advantage of Linus's law, i.e., ``given enough eyeballs, all bugs are
+community (such as ITK) takes advantage of Linus's law, i.e., "given enough eyeballs, all bugs are
 shallow," for producing robust software.
+
+[^1]: \textcolor{red}{Several competitions have been held in recent years dealing with the processing and
+analysis of lung image data (e.g., VOLCANO09–--nodule detection, EMPIRE10—--motion estimation,
+LOLA11—--lung and lobe segmentation, and VESSEL12---vasculature segmentation).  As far as we can tell, the vast majority of
+the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
+and RIDER, have amassed large amounts of imaging data but available software support is limited to organizational
+tasks specific to those databases.}
+

@@ -3,38 +3,45 @@
 
 __3(b.1) Open-source pulmonary imaging algorithmic innovation.__
 Given the lack of open-source solutions for pulmonary image analysis,
-this project would produce the first-of-its-kind processing and analytic  platform for performing such research.
+this project would produce the first-of-its-kind processing and analytic  platform for performing
+such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit [@ANTsWebsite], our
- project would include the most essential algorithms for analyzing lung
+ project would include \textcolor{red}{several} essential algorithms for analyzing lung
 images from different modalities, including CT, 3He, and 1H MRI.
-_Many algorithms have been proposed in various technical venues but that which we propose
+_Many algorithms have been proposed in various technical venues, \textcolor{red}{(mostly
+as textual descriptions without accompanying software,)}
+but that which we propose
 would provide well-vetted and easy-to-use implementations of specific robust methodologies
 for pulmonary medical image analysis, many of which have been developed by our group._
 To facilitate the usage of these algorithms, we will provide documentation including
 self-contained online examples, tutorials, and hands-on training workshops.
+\textcolor{red}{We recognize that the methodological depth of the field is extensive
+and implementing even a small portion of the total number of algorithms would be
+extremely daunting.  However, limiting algorithmic implementation to those with which we are
+familiar and have provided good performance for our clinical collaborations will provide
+an extremely beneficial package with significant implications for the community.}
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
 An additional innovative component of the project is the inclusion of extensive use
-cases from leading pulmonary imaging research scientists in various locations with different
+cases from leading pulmonary \textcolor{red}{imaging research scientists at our home institutions
+as well as other external collabotors with regression testing performed} using different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
-processed data.  Additionally, such  use cases involving other groups
-would highlight existing deficiencies in algorithmic functionality in our project
-which would then be remedied by additional development efforts.
+\textcolor{red}{software and} processed data.  Such use cases involving other groups
+would highlight existing deficiencies in framework functionality
+which would then be addressed.
 These real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
 
-We have partnered with leading pulmonary research groups who are familiar with our work
-and who will provide
-study-specific imaging data of various modalities which we will then process using the
-proposed toolkit.  These processed
-data will be returned to the corresponding providers with detailed instructions
-on reproducing these results in their own labs.  Software and tutorial materials drawn from
+\textcolor{red}{Our institutional collaborators will comprise the group of primary beta testers.
+Processed data will be returned to the corresponding providers with detailed instructions
+on reproducing these results in their own labs. Other external collaborators who will also
+provide feedback based on their interaction with the platform.}
+\textcolor{red}{Tutorial materials, data, and example scripts} drawn from
 these experiences will be provided to the public for any interested researcher to
 apply to their own data.  Given the different image acquisition sources,
 this strategy should also demonstrate the robustness of our tools.
-
-In addition to these collaborative efforts, our own analyses at Penn and UVa will also be included.  Any clinical findings
+Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
 provide all the quantitative analysis scripts as a companion release for the paper
 (e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).

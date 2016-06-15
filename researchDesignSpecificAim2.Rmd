@@ -4,9 +4,15 @@ This aim builds on the project team’s long and successful track record of coll
 user community.  In particular, the investigator-driven studies presented below are carefully selected
 both for their capacity to fully exercise the developed tools and to provide a comprehensive representation
 of the various processing and analysis tasks of interest to the community.
+\textcolor{red}{Two groups are considered
+below as ``users'' of the software:  institutional (i.e., beta testers) and external collaborators.
+For the former, the developers of the proposed platform will provide one-on-one training
+sessions to ensure proper data processing by the beta testers.  We will use these sessions
+to develop online tutorials and processing examples for our external collaborators such that
+they will be able to process their data in-house.  We will also provide a targeted discussion
+forum to answer questions and address concerns for processing using ITK-Lung.}
 
-
-
+## Institutional collaborators
 
 <!--          UVA           -->
 
@@ -44,7 +50,7 @@ for correlation with GOLD classification will utilize the
 ventilation-based segmentation functionality in ITK-Lung [@Tustison:2011aa].
 In order to determine lobar
 values of HXe MRI, this study will utilize the recently proposed lobar estimation algorithm
-[@Tustison:2015aa] that will be available for both proton MRI and CT
+[@Tustison:2015aa] that will be available for both proton MRI and CT.
 
 
 __3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
@@ -208,6 +214,8 @@ abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
 
+## External collaborators
+
 __3(c.3.5) Comparison of automated multi-modality registration methodologies to
 manual registration for assessing lung CT bronchial morphologic changes and
 hyperpolarized helium MR ventilation defects in asthma patients: Can
@@ -293,6 +301,14 @@ image analysis needs include quantitative characterization of: lung
 parenchyma and airway changes; regional perfusion, ventilation, and
 metabolism from whole-lung perfusion and multi-modality metabolic imaging
 studies; ultra-short TE MRI data; and regional and global kinematics.
+
+
+
+
+
+
+
+
 
 More details about the research, data, and advances enabled by the
 proposed software tools for each of the extramural partner

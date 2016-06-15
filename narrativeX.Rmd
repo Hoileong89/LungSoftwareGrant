@@ -65,7 +65,7 @@ Scientific research has been significantly enhanced by recent emphases on open-d
 open-source tools.  This success has been quite apparent within the neuroimaging community
 but no such publicly available computational resources exist for pulmonary imaging.
 By providing publicly available, user-friendly, widely interoperable, and extensively validated
-tools for pulmonary imaging analysis and mapping, the project will enable a broad field of
-scientists to leverage modern imaging technologies more effectively in answering basic
-science questions about the lung, which will lead to clinical insights and
+tools for pulmonary imaging analysis, the project will enable
+scientists to leverage modern imaging analysis technologies more effectively in answering basic
+science questions about the lung, which has the potential for clinical insights and
 advancements.

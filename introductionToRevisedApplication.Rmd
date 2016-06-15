@@ -3,17 +3,18 @@
 
 The initial application was reviewed by the BMIT-B study section and scored in the 37th
 percentile.  The resume and summary of the review discussion commented positively on the
-potential high impact of the "excellent application" as well as the team''s expertise in
-both lung imaging and software development.  Concerns were also raised regarding the lack
+potential high impact of the "excellent application" as well as the expertise of the team in
+both lung imaging and software development.  Concerns were discussed regarding the lack
 of certain project details (vis-a-vis both hardware and data) and the expected application
 areas.   Additionally, issues were raised concerning the dynamic nature of the lung and
-the potential difficulties with the proposed project.  This revised application addresses
+the related potential difficulties with the proposed project.  This revised application addresses
 these concerns and includes additional details to motivate reconsideration.
 
 __Lack of details for hardware, data, and method descriptions.__ We agree and have added text detailing hardware
 requirements for the proposed project including additional discussion concerning the GPU
 hardware component.  We have also expanded our proposed documentation deliverables to
-include hardware platforms employed and benchmarking of computational times (Critique 1).
+include hardware platforms employed and benchmarking of computational times and,
+where applicable, reporting of performance based on publicly available competition data (Critique 1).
 Also, we have expanded descriptions for the methodologies proposed in the revised application
 and removed items that were deemed "trivial."
 
@@ -35,9 +36,9 @@ assistance for individual projects that we had originally planned.
 
 __Lack of novelty (Critiques 2 and 3).__ Despite the admitted lack of _algorithmic_ innovation,
 we believe that significant novelty lies in the fact that an open-source package for lung
-image analysis has yet to be offered which is analogous in functionality as the various
-brain packages.  As we pointed out in the original appliation, according to a prominent
-figure in lung image analysis, such lack has been one of the "major hinderances to more
+image analysis has yet to be offered which is analogous in functionality to critically important
+brain packages.  As we pointed out in the original application, according to a prominent
+figure in pulmonary image research, such lack has been one of the "major hinderances to more
 widespread usage of such [lung] imaging biomarkers."
 
 __Preexisting lung image analysis software (Critique 2).__ Already existing softwares were mentioned as obviating
@@ -45,17 +46,18 @@ factors for the proposed project.  It is true that "investigators have been asse
 images of tumors/nodules, interstitutal disase, and pulmonary embolism for decades" yet public
 availability of such work continues to be a critical problem.  Specific mention was made of available software
 accompanying the LIDC and RIDER lung imaging databases.  However, the only software we found were
-limited to functionality involving interpretation and translation of the XML files describing
+limited to interpretation and translation of the XML files describing
 the nodule annotations of those specific databases.  Such software certainly does not comprise
 a part of the generic processing utilities that we envision.  Similarly, we looked at the various
 lung-based image processing competitions that have been held over the years
 (VOLCANO09--nodule detection, EMPIRE10---motion estimation, and LOLA11---lung and lobe
-segmentation challenges) and it appears as though the majority of proposed algorithms are
-not publicly available.  Also, the reviewer asserts that "many of the feature indices
+segmentation, and VESSEL12---vasculature segmentation) and it appears that the vast
+majority of proposed algorithms are
+not publicly available.  The reviewer asserts that "many of the feature indices
 (Table 2) already exist in generic form in Brain packages, etc." We are unaware of such
 availability in the major brain packages (e.g., FSL, SPM, FreeSurfer) although we are
 aware that a significant number of them do exist in the Insight Toolkit as we
-created the corresponding software and put them in there.  Part of ITK-Lung would be
+created the corresponding software and put them there.  Part of ITK-Lung would be
 targeting these features to lung images.
 
 __Naivety on the part of the investigators (Critique 2).__  The concern is raised regarding the
@@ -70,11 +72,11 @@ reviewer for pointing this out and have added a section outlining these publicat
 
 __Reduction of algorithmic scope. (Critique 2)__ Concerns describing the scope of the
 project as being too large were made in light of the extensive methodological depth of the
-field.  It should be noted that we have no intent of implementing a fraction of these
+field.  We agree and note that we have no intention of implementing the vast majority of these
 methods.  We have revised our application to sharpen the delineation of our contributions.
 Additionally, we have dropped nodule detection from the set of lung-specific algorithms
 targeted in this application although such an implementation might be made available during
-the course of our interaction with our external collaborators.
+the course of our interaction with external collaborators.
 
 
 
