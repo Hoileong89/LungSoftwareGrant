@@ -270,12 +270,13 @@ ITK contributor, the corresponding code will be easily integrated into our platf
 }
 
 __\textcolor{red}{Perfusion analysis.}__
-
-
+\textcolor{red}{A nonparametric deconvolution technique for quantifying cerebral blood
+flow was first presented in [@Ostergaard:1996aa] and extended for use in assessing
+pulmonary blood flow [@Ohno:2004aa;@Hansch:2012aa].  This deconvolution strategy was recently
+implemented by our group for a separate project but will be modified for this particular
+proposal to automatically select the arterial input region and volume of interest.}
 
 __\textcolor{red}{PET imaging.}__
-
-
 
 <!--
 ITK has extensive functionality for segmentation of vessel-like structures.  Much of that

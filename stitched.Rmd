@@ -570,11 +570,11 @@ _A primary impetus for this project is that, through extension and continued dev
 of ANTs and ITK functionality, we can make a significant impact on the pulmonary imaging
 research community in both basic science and clinical workflows by developing lung-specific
 algorithms which are easy to use as we have done for the neuroimaging community._
-\textcolor{red}{Although we will not provide the entire panoply of lung-based
+\textcolor{red}{Although we will obviously not provide the entire panoply of lung-based
 image processing algorithms that have been proposed over the years, a
 set of tools with a track record of good performance spanning the range of core
 functionality (similar to our ANTs neuroimaging
-toolkit) will be a definite benefit to the community.}
+toolkit), with the potential for expansion, will be a definite benefit to the community.}
 The following list comprises core functionality for CT analysis that would be incorporated into
 ITK-Lung in addition to further enhancements to the registration and segmentation capabilities
 described in preliminary work:
@@ -790,12 +790,13 @@ ITK contributor, the corresponding code will be easily integrated into our platf
 }
 
 __\textcolor{red}{Perfusion analysis.}__
-
-
+\textcolor{red}{A nonparametric deconvolution technique for quantifying cerebral blood
+flow was first presented in [@Ostergaard:1996aa] and extended for use in assessing
+pulmonary blood flow [@Ohno:2004aa;@Hansch:2012aa].  This deconvolution strategy was recently
+implemented by our group for a separate project but will be modified for this particular
+proposal to automatically select the arterial input region and volume of interest.}
 
 __\textcolor{red}{PET imaging.}__
-
-
 
 <!--
 ITK has extensive functionality for segmentation of vessel-like structures.  Much of that
