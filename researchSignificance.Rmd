@@ -53,7 +53,7 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 ```
 
 _\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
-community}, no such analogous set of tools exist for pulmonary-specific research.
+community}, no such analogous set of tools exist for multi-modal pulmonary-specific research.
 \textcolor{red}{Such an original and innovative software package would potentially have an immediate and
 significant impact.}_  In fact, in a recent
 review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial

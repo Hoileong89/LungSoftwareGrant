@@ -60,18 +60,13 @@ knitr::opts_chunk$set( cache=TRUE )
 
 # 2 Specific Aims
 
-The development and proliferation of quantitative image analysis methods have accelerated
-research efforts and are having an increasingly significant impact in modern clinical
-practice.  Although the research utility of these techniques has been amply demonstrated in
-determining longitudinal and groupwise trends, they are also becoming increasingly relevant
-in the clinical setting in providing biomarkers for aiding patient diagnoses, monitoring
-disease progression, and determining treatment outcomes.  Increases in the capabilities
-and accessibility of computational facilities and a corresponding sophistication in computational
-algorithms have only made such practices more commonplace.
-
+<!--
 One of the most significant hurdles in adopting more quantitative clinical practices and
 exploring additional novel research pathways is the availability of accurate, robust, and
-easy-to-use image analysis tools.  Historically, the research and clinical communities (and their overlap)
+easy-to-use image analysis tools.
+-->
+
+Historically, the research and clinical communities (and their overlap)
 have significantly benefited from computational image
 analysis packages, particularly those softwares which have been tailored for
 specific application domains.  Although several such established packages exist for
@@ -83,6 +78,17 @@ specifically targeted at the pulmonary research community.
 to make lung imaging datasets publicly available (such as LIDC and RIDER), this
 contribution would be extremely innovative as it would meet an obvious
 need through a first-of-its-kind software package for lung image analysis.}_
+
+<!--
+The development and proliferation of quantitative image analysis methods have accelerated
+research efforts and are having an increasingly significant impact in modern clinical
+practice.  Although the research utility of these techniques has been amply demonstrated in
+determining longitudinal and groupwise trends, they are also becoming increasingly relevant
+in the clinical setting in providing biomarkers for aiding patient diagnoses, monitoring
+disease progression, and determining treatment outcomes.  Increases in the capabilities
+and accessibility of computational facilities and a corresponding sophistication in computational
+algorithms have only made such practices more commonplace.
+-->
 
 Although methodological research is continually being presented at conferences and
 published in various venues, the unfortunate reality is that much of this work exists
@@ -106,11 +112,17 @@ to make a similar impact in the pulmonary
 community with this project.  Specifically,
 we plan to provide \textcolor{red}{core algorithms} for \textcolor{red}{specific} pulmonary
 image analysis tasks across multiple modalities, many
-of which we have \textcolor{red}{included with previous publications}.  These basic tasks include pulmonary image registration,
+of which we have \textcolor{red}{included with previous publications}.  These basic tasks
+\textcolor{red}{include intra- and intermodal} pulmonary image registration,
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
 functional and structural lung image segmentation, \textcolor{red}{PET imaging},
 \textcolor{red}{perfusion analysis}, and computation of quantitative image
-indices as potential imaging biomarkers.  In addition to the software, we will
+indices as potential imaging biomarkers.  \textcolor{red}{These efforts would easily
+integrate with related NIH-sponsored projects such as the Chest Imaging Platform}[^11]
+\textcolor{red}{
+which seeks to interface specific pulmonary CT algorithms (e.g., nodule detection) with the
+ITK-based, open-source Slicer tool.}[^12]
+In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science
 principles.   Formally, this project is defined by the following specific aims:
 
@@ -142,6 +154,13 @@ other external collaborators with the former being the primary "beta testers."}
 We will disseminate the results of the project through open-source
 distribution of the software, atlases and documentation, online user support, and conduct of
 hands-on training workshops.
+
+
+[^11]:  http://chestimagingplatform.org
+
+[^12]:  http:/www.slicer.org
+
+
 
 \newpage
 
@@ -199,7 +218,7 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 ```
 
 _\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
-community}, no such analogous set of tools exist for pulmonary-specific research.
+community}, no such analogous set of tools exist for multi-modal pulmonary-specific research.
 \textcolor{red}{Such an original and innovative software package would potentially have an immediate and
 significant impact.}_  In fact, in a recent
 review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
