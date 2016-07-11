@@ -5,25 +5,6 @@
 # 2 Specific Aims
 
 <!--
-One of the most significant hurdles in adopting more quantitative clinical practices and
-exploring additional novel research pathways is the availability of accurate, robust, and
-easy-to-use image analysis tools.
--->
-
-Historically, the research and clinical communities (and their overlap)
-have significantly benefited from computational image
-analysis packages, particularly those softwares which have been tailored for
-specific application domains.  Although several such established packages exist for
-neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), _no such package exists for
-pulmonary imaging analysis.  The primary goal of this project is to develop
-a robust, open-source image analysis toolkit and dissemination platform
-specifically targeted at the pulmonary research community.
-\textcolor{red}{Given the signifcant efforts
-to make lung imaging datasets publicly available (such as LIDC and RIDER), this
-contribution would be extremely innovative as it would meet an obvious
-need through a first-of-its-kind software package for lung image analysis.}_
-
-<!--
 The development and proliferation of quantitative image analysis methods have accelerated
 research efforts and are having an increasingly significant impact in modern clinical
 practice.  Although the research utility of these techniques has been amply demonstrated in
@@ -34,6 +15,23 @@ and accessibility of computational facilities and a corresponding sophistication
 algorithms have only made such practices more commonplace.
 -->
 
+One of the most significant hurdles in adopting more quantitative clinical practices and
+exploring additional novel research pathways is the availability of accurate, robust, and
+easy-to-use image analysis tools.
+Historically, the research and clinical communities (and their overlap)
+have significantly benefited from computational image
+analysis packages, particularly those softwares which have been tailored for
+specific application domains.  Although several such established packages exist for
+neuroimaging research (e.g., FSL, FreeSurfer, AFNI, SPM), _no such package exists for
+pulmonary imaging analysis.  The primary goal of this project is to develop
+a robust, open-source image analysis toolkit and dissemination platform
+specifically targeted at the pulmonary research community.
+\textcolor{red}{Given the signifcant efforts
+to make lung imaging datasets publicly available (such as LIDC and RIDER), this
+contribution would be innovative as it would meet an obvious
+need through a first-of-its-kind software package for multi-modality lung image analysis.}_
+
+
 Although methodological research is continually being presented at conferences and
 published in various venues, the unfortunate reality is that much of this work exists
 strictly in "advertisement" form.  Oftentimes the underlying code is unavailable to other
@@ -43,7 +41,7 @@ publication(s) which makes external implementations difficult.  In addition, the
 to showcase the proposed methodologies is often limited to carefully selected snapshots
 for publication purposes which might not be representative of algorithmic performance.
 Finally, many of these analysis methods are patented and/or integrated into proprietary
-commercial software packages which severely limits accessibility to researchers.
+commercial software packages which limits accessibility to researchers.
 
 As a corrective alternative, this project brings together leading expertise in lung
 imaging research at the \textcolor{red}{University of Pennsylvania} and
@@ -61,16 +59,16 @@ of which we have \textcolor{red}{included with previous publications}.  These ba
 template building for cross-sectional and longitudinal (i.e., respiratory cycle) analyses,
 functional and structural lung image segmentation, \textcolor{red}{PET imaging},
 \textcolor{red}{perfusion analysis}, and computation of quantitative image
-indices as potential imaging biomarkers.  \textcolor{red}{These efforts would easily
-integrate with related NIH-sponsored projects such as the Chest Imaging Platform}[^11]
+indices as potential imaging biomarkers.  \textcolor{red}{These efforts would
+facilitate other NIH-sponsored projects}
 \textcolor{red}{
-which seeks to interface specific pulmonary CT algorithms (e.g., nodule detection) with the
-ITK-based, open-source Slicer tool.}[^12]
+which interface specific pulmonary CT algorithms (e.g., nodule detection) with clinical
+and research applications.}
 In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science
 principles.   Formally, this project is defined by the following specific aims:
 
-* __Specific Aim 1:__  __Develop ITK-Lung, a set of open-source software tools for CT, proton, and He-3
+* __Specific Aim 1:__  __Develop ITK-Lung, a set of open-source software tools for CT, PET, proton, and He-3
 pulmonary computational analysis.__  These open-source software tools
 \textcolor{red}{based on selected algorithms}
 will specifically target pulmonary image analysis and comprise core application functions such as
@@ -79,8 +77,11 @@ lung and lobe estimation, airway and vessel segmentation, \textcolor{red}{PET im
 \textcolor{red}{perfusion analysis}, and calculation of clinical indices for
 characterization of lung development and pathology.  \textcolor{red}{As a complement} to these software development
 efforts, CT and 1H MRI multi-atlas libraries will be provided as open data, complete
-with the corresponding lung, airway, vessel, and lobe segmentations according to modality.
-In addition, we will generate optimal intensity/shape templates from each library.  Both
+with the corresponding lung, airway, vessel, and lobe segmentations according to modality
+\textcolor{red}{to facilitate the employment of atlas-based algorithms on other data sets.}
+In addition, we will generate optimal intensity/shape templates from each library
+\textcolor{red}{for use as
+normalized coordinate systems for more localized (i.e., voxelwise analyses)}.  Both
 sets of data will be provided with the scripts used to produce them in order to permit
 user-reproduction of the results.
 As developers of several leading open-source applications for image segmentation and registration, we
@@ -92,18 +93,10 @@ will extend beyond the ability to steer segmentation and registration pipelines 
 evaluation and visualization of processed results.
 * __Specific Aim 2:__  __Validate and disseminate the developed ITK-Lung resources by leveraging use
 cases from a broad network of partner investigators representing the state-of-the-science in
-lung imaging research.__  This aim will evaluate and refine the \textcolor{red}{proposed framework}
-within the real-world context of \textcolor{red}{actual research studies with institutional and
-other external collaborators with the former being the primary "beta testers."}
+lung imaging research.__  \textcolor{red}{This aim will evaluate and refine the proposed framework within the real-world context of pulmonary research being carried out at Penn and UVa in addition to various partner sites serving as secondary beta testers.}
 We will disseminate the results of the project through open-source
 distribution of the software, atlases and documentation, online user support, and conduct of
 hands-on training workshops.
-
-
-[^11]:  http://chestimagingplatform.org
-
-[^12]:  http:/www.slicer.org
-
 
 
 \newpage

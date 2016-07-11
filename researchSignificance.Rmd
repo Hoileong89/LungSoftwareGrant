@@ -3,7 +3,7 @@
 
 ## __3(a) Significance__
 
-__3(a.1) The importance of pulmonary image analysis tools for research and clinical investigation.__
+__3(a.1) The importance of image analysis tools for research and clinical investigation.__
 The increased utilization of imaging for both research and clinical purposes has
 furthered
 the demand for quantitative image analysis techniques.  The use of these computational
@@ -24,7 +24,10 @@ Well-vetted and publicly available software is a significant benefit
 to targeted research communities.  For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], the
-Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa], and several others.  Performing a pubmed query for any one of
+Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa], and several others.
+
+<!--
+Performing a pubmed query for any one of
 these softwares every year for the past decade (cf Figure 1) illustrates the growing use of
 such packages and the research studies that are produced as a result.
 
@@ -51,11 +54,13 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
           xlab( "Publication year" ) +
           theme( legend.position = "none" )
 ```
+-->
+
 
 _\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
 community}, no such analogous set of tools exist for multi-modal pulmonary-specific research.
-\textcolor{red}{Such an original and innovative software package would potentially have an immediate and
-significant impact.}_  In fact, in a recent
+\textcolor{red}{Such an original software package would potentially have an immediate and
+significant impact.}_  Indeed, in a recent
 review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
 consensus is that ``_[the absence of] universally available image analysis software'' is a major hinderance
 to more widespread usage of such imaging biomarkers_ [@Hoffman:2015aa].
@@ -66,10 +71,10 @@ capabilities for a range of generic image processing tasks.  However,
 tailored software packages for certain application domains (e.g., lung image analysis)
 \textcolor{red}{do not exist}
  despite the vast number of algorithms that have been proposed in the literature
-\textcolor{red}{(many of which are not available to the public)}.[^1]
+\textcolor{red}{(most of which are not available to the public)}.[^1]
 It is important to note that the goals of this project would
 significantly support the National Library of Medicine’s own open-source directives in that
-all software would be developed using the established Insight ToolKit’s coding and testing
+all software proposed in the project would be developed using the established Insight ToolKit’s coding and testing
 standards with the specific objective that all project code would be contributed
 for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past.
 It should also be noted that open-source software, in general, has documented benefits
@@ -83,9 +88,9 @@ cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore,
 community (such as ITK) takes advantage of Linus's law, i.e., "given enough eyeballs, all bugs are
 shallow," for producing robust software.
 
-[^1]: \textcolor{red}{Several competitions have been held in recent years dealing with the processing and
-analysis of lung image data (e.g., VOLCANO09–--nodule detection, EMPIRE10—--motion estimation,
-LOLA11—--lung and lobe segmentation, and VESSEL12---vasculature segmentation).  As far as we can tell, the vast majority of
+[^1]: \textcolor{red}{Several competitions have been held in recent years focused on the processing and
+analysis of lung image data (e.g., VOLCANO09---nodule detection, EMPIRE10---motion estimation,
+LOLA11---lung and lobe segmentation, and VESSEL12---vasculature segmentation).  To the best of our knowledge, the vast majority of
 the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
 and RIDER, have amassed large amounts of imaging data but available software support is limited to organizational
 tasks specific to those databases.}

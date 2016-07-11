@@ -2,29 +2,31 @@
 ## __3(b) Innovation__
 
 __3(b.1) Open-source pulmonary imaging algorithmic innovation.__
-Given the lack of open-source solutions for pulmonary image analysis,
+Given the lack of open-source solutions for multi-modality pulmonary image analysis,
 this project would produce the first-of-its-kind processing and analytic  platform for performing
 such research.
 Similar to the brain-specific algorithms provided in our ANTs toolkit [@ANTsWebsite], our
  project would include \textcolor{red}{several} essential algorithms for analyzing lung
-images from different modalities, including CT, 3He, and 1H MRI.
-_Many algorithms have been proposed in various technical venues, \textcolor{red}{(mostly
-as textual descriptions without accompanying software,)}
-but that which we propose
-would provide well-vetted and easy-to-use implementations of specific robust methodologies
+images from different modalities, including CT, PET, 3He, and 1H MRI.
+_A large number of algorithms have been proposed in various technical venues,
+\textcolor{red}{(mostly
+as textual descriptions without accompanying software).}
+\textcolor{red}{In contrast, we will provide} well-vetted and easy-to-use
+implementations of specific robust methodologies
 for pulmonary medical image analysis, many of which have been developed by our group._
 To facilitate the usage of these algorithms, we will provide documentation including
 self-contained online examples, tutorials, and hands-on training workshops.
 \textcolor{red}{We recognize that the methodological depth of the field is extensive
 and implementing even a small portion of the total number of algorithms would be
-extremely daunting.  However, limiting algorithmic implementation to those with which we are
-familiar and have provided good performance for our clinical collaborations will provide
-an extremely beneficial package with significant implications for the community.}
+prohibitive.}  \textcolor{red}{However, the algorithmic implementations provided through this
+project have been discussed in the literature and have provided good performance in our
+clinical collaborations.  The availability of such implementations will provide a
+unique clinical utility to the community and provide a performance baseline for future
+algorithm developers.}
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
 An additional innovative component of the project is the inclusion of extensive use
-cases from leading pulmonary \textcolor{red}{imaging research scientists at our home institutions
-as well as other external collabotors with regression testing performed} using different
+cases from leading pulmonary \textcolor{red}{with regression testing performed} using different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
 \textcolor{red}{software and} processed data.  Such use cases involving other groups
 would highlight existing deficiencies in framework functionality
@@ -33,10 +35,12 @@ These real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
 
-\textcolor{red}{Our institutional collaborators will comprise the group of primary beta testers.
+\textcolor{red}{Our institutional collaborators will comprise the primary evaluation team.
 Processed data will be returned to the corresponding providers with detailed instructions
-on reproducing these results in their own labs. Other external collaborators who will also
-provide feedback based on their interaction with the platform.}
+on reproducing these results in their own labs. We have also partnered with leading
+pulmonary research groups outside of our home institutions who are familiar with our
+work and who will provide feedback based on their interaction with beta releases of the
+platform.}
 \textcolor{red}{Tutorial materials, data, and example scripts} drawn from
 these experiences will be provided to the public for any interested researcher to
 apply to their own data.  Given the different image acquisition sources,
@@ -45,8 +49,7 @@ Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
 provide all the quantitative analysis scripts as a companion release for the paper
 (e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
- Such a comprehensive clinical research
-investigation using these tools will not only provide insight into the specifics of certain
-pulmonary pathologies
-but will also offer a reproducible mechanism for using the tools created in this project.
+\textcolor{red}{A clinically-based evaluation of these tools will provide insight into the specifics
+of certain pulmonary pathologies
+and also offer a reproducible mechanism for using the tools created in this project.}
 
