@@ -4,13 +4,15 @@ This aim builds on the project team’s long and successful track record of coll
 user community.  In particular, the investigator-driven studies presented below are carefully selected
 both for their capacity to fully exercise the developed tools and to provide a comprehensive representation
 of the various processing and analysis tasks of interest to the community.
-\textcolor{red}{Two groups are considered
-below as ``users'' of the software:  institutional (i.e., beta testers) and external collaborators.
-For the former, the developers of the proposed platform will provide one-on-one training
-sessions to ensure proper data processing by the beta testers.  We will use these sessions
-to develop online tutorials and processing examples for our external collaborators such that
-they will be able to process their data in-house.  We will also provide a targeted discussion
-forum to answer questions and address concerns for processing using ITK-Lung.}
+\textcolor{red}{Two evaluation groups will serve as primary and secondary beta testers, respectively:
+institutional and external collaborators.  For the former, the development team will be embedded in
+the labs of project co-investigators, providing training to lab personnel and assisting with the
+creation of customized analysis pipelines.  These experiences will be used to develop tutorial
+materials and processing examples that our external collaborators will independently test by
+processing their own data in-house with beta versions of the proposed software and data resources.
+Similarly, the dissemination and user support mechanisms outlined in the Resource Sharing Plan will
+be refined by employing these as much as possible to communicate and interact with the external
+collaborator group.}
 
 ## Institutional collaborators
 
@@ -29,7 +31,9 @@ tool will naturally lead to deeper mechanistic understanding of COPD at the mole
 and clinical levels and support identification of potential pathophysiologic derangement
 associated with COPD and a new method to accurately predict therapeutic response to current
 standard COPD therapies. Refinement of HXe MRI as a pulmonary diagnostic tool is anticipated
-to encourage development of new clinical interventions.  HXe MRI is the
+to encourage development of new clinical interventions.
+
+HXe MRI is the
 first non-invasive imaging technique that can provide regional information about three unique
 characteristics of lung function: lung ventilation, size and connectedness of distal alveolar
 airspaces, and HXe gas transfer from airspaces to red blood cells. HXe MRI, therefore, is
@@ -206,13 +210,38 @@ prognostication.
 Application of the proposed advanced software tools and algorithms in
 this project for quantitative analysis of CT images in lung
 transplantation patients will be crucial to enable computation of an
-array of first and second order statistics which would capture not only
+array of first and second order statistics \textcolor{red}{that} would capture not only
 attenuation maps but also regional deformation and texture based
 features. In combination, this would allow multiparametric statistical
 modeling that may predict which patients will develop BOS before PFT
 abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
+
+__Novel PET/CT biomarkers for early prediction of treatment response and survival in patients
+with non small cell lung cancer (NSCLC).__
+PET and CT have traditionally played important roles in diagnosis, staging, and predicting
+treatment response in NSCLC [@Lardinois:2003aa;@Lee:2010aa;@Horne:2014aa]. Although many studies have demonstrated diagnostic and
+prognostic value of tumor metabolic burden and morphological information derived from PET/CT
+imaging measures [@Horne:2014aa;@Kim:2012aa], current ability to predict treatment response and survival following
+radiation therapy in NSCLC is far from satisfactory [@Berman:2014aa]. The poor performance of existing
+methods may be due to a number of reasons: first, most studies have been limited to primary
+tumor lesions and ignored the information available in other lesions/regions [@Ryu:2014aa]; second,
+many investigations have focused on global image measures of tumors, such as those derived
+from standardized uptake value (SUV) of PET images and tumor morphological information,
+which may not be sufficient to capture subtleties of tumor characteristics and tumor
+heterogeneity [@Chicklore:2013aa;@Depeursinge:2014aa]; and finally, group-level statistical analysis strategies are typically
+adopted to evaluate imaging markers, which may not be effective for personalized prediction [@Henderson:2005aa].
+
+To improve prediction of radiation therapy treatment response and survival in patients with
+NSCLC based on PET/CT imaging data, co-investigator David Mankoff and collaborators are
+developing methods to adaptively extract image features from the data that are then input
+into a multi-task learning framework constructed to jointly model (and leverage potential
+statistical correlations between) the problems of predicting treatment response and survival.
+The proposed software tools will fulfill essential pre-processing needs of the study: PET/CT
+data will be co-registered and a wealth of image features calculated using ITK-Lung.
+
+
 
 ## External collaborators
 
@@ -333,6 +362,15 @@ extensive outreach program.  Complete dissemination details can be found in the 
 
 __3(c.4) Risks and alternatives__
 
+Lung imaging analysis is made more difficult by the inherent challenges posed by the dynamic
+nature of the lung environment in acquiring high quality images.  This is compounded by the
+wider range of imaging signal characteristics in the chest due to the appearance of air, fat,
+soft tissue and bone, together with their interfaces, in the images.  The complexity of lung
+images and diversity of protocols and equipment/modalities used for their acquisition,
+therefore, demand flexible and tunable (i.e., open and programmable) tools, with manifold
+capabilities carefully curated to cover essential analysis and processing tasks, all of
+which ideally integrated within a single coherent toolbox – this is precisely the overall
+goal and deliverable of the proposed project.
 While the proposed infrastructure is complex and integrates multiple cutting-edge technologies,
 we do not anticipate significant problems in its development and consider the risk of failure of
 the project to be very low. Our optimism is based on the extensive preliminary work that has been
@@ -349,7 +387,7 @@ to support expanded functionality beyond core algorithms; Year 3 focused on ITK-
 Year 4 focused on releasing a fully functional system; and Year 5 focused on incremental improvements
 based on Aim 2 studies. Data collection and annotation (lung and lobes) for the multi-atlas libraries will take place in Years 1-2, followed by segmentations (vessels and airways) and template building in Year 3.
  __Aim 2:__  A preliminary version of the software will be deployed at
-evaluation sites toward the end of Year 2, and testing will run through Year 4.  Documentation and
+evaluation sites toward the end of Year 2 (with quarterly software updates thereafter), and testing will run through Year 4.  Documentation and
 dissemination efforts will take place throughout the course of the project.
 
 \clearpage

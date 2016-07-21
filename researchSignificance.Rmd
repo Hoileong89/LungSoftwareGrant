@@ -20,8 +20,9 @@ for improvement in individualized, evidence-based medicine has also increased th
 for sophisticated data transformation and machine learning techniques.
 
 __3(a.2) Open-source as an essential attribute of high-impact image analysis toolkits.__
-Well-vetted and publicly available software is a significant benefit
-to targeted research communities.  For example, the neuroscience community has greatly
+Well-vetted and publicly available software
+\textcolor{red}{have transformed targeted research fields}.
+For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], the
 Statistical Parametric Mapping (SPM) package [@Ashburner:2012aa], and several others.
@@ -57,7 +58,7 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 -->
 
 
-_\textcolor{red}{However, despite the obvious implications for the pulmonary imaging
+_\textcolor{red}{However, despite the important implications for the pulmonary imaging
 community}, no such analogous set of tools exist for multi-modal pulmonary-specific research.
 \textcolor{red}{Such an original software package would potentially have an immediate and
 significant impact.}_  Indeed, in a recent
@@ -72,14 +73,16 @@ tailored software packages for certain application domains (e.g., lung image ana
 \textcolor{red}{do not exist}
  despite the vast number of algorithms that have been proposed in the literature
 \textcolor{red}{(most of which are not available to the public)}.[^1]
-It is important to note that the goals of this project would
-significantly support the National Library of Medicine’s own open-source directives in that
+Importantly, the goals of this project would
+significantly support the National Library of Medicine’s (NLM)
+own open-source directives in that
 all software proposed in the project would be developed using the established Insight ToolKit’s coding and testing
 standards with the specific objective that all project code would be contributed
 for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past.
-It should also be noted that open-source software, in general, has documented benefits
-within the targeted communities for which it is developed and supported.  In addition to
-the increase in research output illustrated earlier, open-source permits students and
+\textcolor{red}{NLM's position on open-source stems from the} documented benefits
+within the targeted communities for which the software is developed and supported.  In addition to
+the increase in research output illustrated earlier, open-source permits
+\textcolor{red}{trainees} and
 researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
 This, in turn, provides motivation for user-based support including potential contributions
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous

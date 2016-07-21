@@ -3,13 +3,13 @@
 
 ### 3(c.1) Preliminary data
 
-A significant portion of the proposed platform spanning the range of
-proposed functionality has been previously reported in various articles from our group
-(cf Table 1).
-This includes both the reporting of methodoligical novelty and subsequent
-usage for clinical studies of small to large cohorts.
-\textcolor{red}{Much of this innovation has been provided through the ANTs processing toolkit to
-allow for continued use, potential future improvements, and reproducibility.}
+\textcolor{red}{Major progress toward the proposed platform, demonstrating
+project feasibility, has already been reported by our group (cf Table 1).
+These publications not only document methodological novelty of the work but
+also describe their subsequent usage for clinical research studies of small
+to large cohorts.  Much of this innovation has been encoded in prototypical
+form in the ANTs processing toolkit, as described below, to allow for continued
+use, potential future improvements, and reproducibility.}
 
 \input{papers_table.tex}
 
@@ -28,9 +28,9 @@ The Advanced Normalization Tools (ANTs) package is a state-of-the-art, open-sour
 for image registration, segmentation, and other basic medical image analysis functionality [@ANTsWebsite].
 Several core programs comprising portions of the proposed pulmonary imaging analysis software framework
 have been created and made available within ANTs (and either simultaneously or subsequently
-made available in ITK).  However, as mentioned earlier, these programs have more
+made available in ITK).  However, these programs have more
 general application and require pulmonary-specific tuning for the tasks targeted by
-this project.  The following list comprises several core software tools for
+this project.  The following list comprises \textcolor{red}{available functionality proposed} for
 tuning, subsequent extensions, documentation, tutorial generation, and the creation of
 easy-to-use bash scripts for large-scale processing of pulmonary imaging data:
 
@@ -56,24 +56,27 @@ that study, we produced the scripts ``antsRegistrationSyN.sh`` and
 for brain-specific normalization and are two of the most widely used scripts in the ANTs
 toolkit.  _Similar to the developments that we are proposing,
 these scripts were extensively modified to serve as a follow-up entry into the EMPIRE10 lung image
-registration challenge where B-spline SyN performed better than its original counterpart on pulmonary
-data [@Tustison:2012aa]._
+registration challenge where B-spline SyN performed better than its original counterpart
+on pulmonary data [@Tustison:2012aa],
+\textcolor{red}{which had been the official top ranked entry since the inception of the challenge.}_
 
 __Multi-modality template generation.__  Given the variability in anatomical shape across
-populations and the lack of publicly available atlases for specific organs, generating population- or
+populations, generating population- or
 subject-specific optimal shape/intensity templates significantly enhances study potential
-[@Avants:2010aa;@Tustison:2014aa].  First, an average template is estimated via a voxel-wise
+[@Avants:2010aa;@Tustison:2014aa].  First, an average template is estimated via a voxelwise
 mean of all the individual subject images.  This estimate is iteratively updated by registering
 each image to the current
 template, performing a voxelwise average to create a new estimate, and then "reshaping"
 this template based on the average inverse transformation which "moves" the template estimate
 closer to the group mean---see Figure 1 for a cohort-specific multi-modality brain template
 for females in the age range 50--60.
-This functionality has proven to be a vital component of the ANTs toolkit, with significant
+This functionality has proven to be a \textcolor{red}{highly valued} component of the ANTs toolkit, with significant
 community adoption, for performing neuroimaging research (e.g.,
 [@Avants:2015aa;@Datta:2012aa;@McMillan:2014aa;@Cook:2014aa;@Tustison:2014ad;@Tustison:2014ab]).
-_\textcolor{red}{Based on our pulmonary research collaborations, we believe that this functionality
-would be equally valuable and impactful to the pulmonary research field.} [@Tustison:2013ad]._
+_\textcolor{red}{The same technology specialized to lung imaging will accelerate the
+translation to the pulmonary domain of voxelwise studies that have transformed the
+neuroimaging field, and may prove equally valuable and impactful to the pulmonary
+research community} [@Tustison:2013ad]._
 
 
 __Bayesian segmentation with spatial and Markov Random Field priors.__
@@ -101,14 +104,14 @@ functional lung imaging data [@Tustison:2011aa;@Altes:2012aa;@Teague:2014aa;@Kir
 __N4 bias correction.__  Critical to quantitative processing of MRI is the minimization of field
 inhomogeneity effects which produce artificial low frequency intensity variation across the image.
 Large-scale studies, such as ADNI, employ perhaps the most widely used bias correction algorithm,
-N3 [@Sled:1998aa], as part of their standard protocol [@Boyes:2008aa].
-In [@Tustison:2010aa] we introduced an improvement of N3, denoted as "N4," which demonstrates
-a significant increase in performance and convergence behavior on a variety of data. This
-improvement is a result of an enhanced fitting routine (which includes multi-resolution
-capabilities) and a modified optimization formulation.  \textcolor{red}{
-It has since become the new standard in the field.}
+N3 [@Sled:1998aa], as part of their standard \textcolor{red}{processing} protocol [@Boyes:2008aa].
+In [@Tustison:2010aa] \textcolor{red}{introduced "N4," which incorporates both an enhanced fitting
+routine (including multi-resolution capabilities) and a modified optimization
+formulation that produces a significant improvement over N3 in performance and
+convergence behavior on a variety of data.  N4 has since become the new standard in the
+field.}
 
-__Joint label fusion for prior-based segmentation.__  Joint label fusion (JLF) is the current
+__Joint label fusion for multi-atlas segmentation.__  Joint label fusion (JLF) is the current
 state-of-the-art for propagating expert labelings from a reference atlas library onto new
 instances of unlabeled data. Image registration is used to align the atlas library
 (images plus segmentations) to a common space. A statistical model is then used to combine
@@ -116,20 +119,23 @@ the "guesses" from all the normalized atlas labels to provide a "best guess" est
 the target labeling. Several such algorithms have been developed and much effort has been
 devoted to determining relative performance levels---see, for example, the recent MICCAI 2012
 Grand Challenge and Workshop on Multi-Atlas Labeling.  The joint label fusion (JLF) algorithm of
-[@Wang:2013aa;@Wang:2013ab] from our group is one of the top performing JLF algorithms
-\textcolor{red}{and widely considered state-of-the-art}. JLF is capable
-of predicting anatomical labels with accuracy that rivals expert anatomists [@Yushkevich:2010aa].
-It has proven its effectiveness not only in cardiac data [@MALF],
-the human brain [@Tustison:2014ab], and in multiple modality canine MRI [@MALF], _but has
-also been successfully extended to the challenging problem of applying prior-based information to lung and lobe
+[@Wang:2013aa;@Wang:2013ab] from our group is
+\textcolor{red}{widely recognized as among the best performing, having placed
+first in the MICCAI Grand Challenge}. JLF is capable
+of predicting anatomical labels with accuracy that rivals expert anatomists
+[@Yushkevich:2010aa]
+and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
+[@Tustison:2014ab], [@MALF]. Importantly, we have
+successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2015aa]._
 
-__Spatially adaptive denoising.__ Patch-based
-denoising is critical for data "cleaning" prior to subsequent processing such
+__Spatially adaptive denoising.__ Denoising is critical for data "cleaning" prior to subsequent processing such
 as segmentation or spatial normalization.  ANTs implements a state-of-the-art
-spatially adaptive version to denoising recently proposed in [@Manjon:2010aa].
+spatially adaptive version to
+\textcolor{red}{patch-based} denoising recently proposed in [@Manjon:2010aa].
 
-__Field-leading open-source implementations.__  The previously described core tools, as well as several others, have been part of ANTs and
+__Field-leading open-source implementations.__  The previously described core \textcolor{red}{software
+functionality}, as well as several others, have been part of ANTs and
 ITK development efforts for more than a decade.  The deficiency of publicly
 available tools within the neuroscience community was the original motivation for the inception and
 continued development of ANTs.  As a result, our team is well-recognized for our many
@@ -161,18 +167,29 @@ STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 ![Core processing tools that have made the ANTs package one of the most popular neuroimaging
 toolkits.  Fundamental processing tasks such as image registration, template generation,
 bias correction, denoising, intensity-based segmentation, and joint label
-fusion are extremely well-performing software components which have been utilized for
+fusion are first-in-class software components which have been utilized for
 neuroimaging tasks such as brain extraction and cortical thickness estimation.
 The target applications of these core tools have an immediate analog for lung-specific
 tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)
 
 __3(c.1.2) Neuroimaging with ANTs as a model for the pulmonary community.__
-ANTs takes advantage of
-the mature Insight ToolKit in providing an optimal software framework for building scripts
-and programs specifically for neuroimaging.  For example, the following core neuroimage
-processing algorithms have been made available through our ANTs toolkit (complete with
-online self-contained examples with developer-tuned parameters) and have been used extensively
-by the community:
+
+ANTs takes advantage of the mature Insight Toolkit in providing a powerful framework for
+building scripts and programs to facilitate processing of large neuroimaging studies.
+In particular, ANTs has developed a very large user base by making openly available a
+complete suite of fundamental processing capabilities, covering brain normalization
+[@Avants:2011ab;@Avants:2014aa], brain template generation [@Avants:2010aa],
+skull-stripping or brain extraction [@Avants:2010ab,@Tustison:2014ab],
+prior-based brain tissue segmentation [@Avants:2011aa], cortical thickness estimation [@Das:2009aa;@Tustison:2014ab],
+brain tumor segmentation [@Tustison:2014aa], and cortical labeling [@Wang:2013ab;@Wang:2013aa].  These tools have been
+wrapped in easy-to-use, well-documented shell scripts that are accompanied by online
+self-contained examples with developer-tuned parameters and are compatible with the
+major cluster systems (e.g., SLURM, SGE, and PBS).  This project will implement a
+similar strategy to support the lung imaging community, as demonstrated by the following
+software utilities that have already begun to find widespread use among pulmonary research
+groups:
+
+<!--
 
 * brain normalization [@Avants:2011ab;@Avants:2014aa] (https://github.com/stnava/BasicBrainMapping),
 * brain template generation [@Avants:2010aa] (https://github.com/ntustison/TemplateBuildingExample),
@@ -187,6 +204,8 @@ All of these tools have been wrapped in easy-to-use, well-documented shell scrip
 includes compatibility with the major cluster systems (e.g., SLURM, SGE, and PBS).
 We have developed similar scripts targeting lung analyses which have begun to find
 widespread use by lung research groups:}
+
+-->
 
 * intra-modal lung registration [@Tustison:2013ac] (https://github.com/ntustison/antsCtLungRegistrationExample),
 * inter-modal lung registration [@Tustison:2013ac] (https://github.com/ntustison/ProtonCtLungMaskRegistration),
