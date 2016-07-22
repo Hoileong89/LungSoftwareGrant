@@ -85,8 +85,8 @@ pulmonary imaging analysis.  The primary goal of this project is to develop
 a robust, open-source image analysis toolkit and dissemination platform
 specifically targeted at the pulmonary research community.
 \textcolor{red}{Given the signifcant efforts
-to make lung imaging datasets publicly available (such as LIDC, RIDER, COPDGene, IELCAP), this
-contribution would be innovative as it would meet a critical
+to make lung imaging datasets publicly available (such as LIDC, RIDER, COPDGene,
+and IELCAP), this contribution would be innovative as it would meet a critical
 need through a first-of-its-kind software package for multi-modality lung image analysis.}_
 
 
@@ -328,8 +328,8 @@ use, potential future improvements, and reproducibility.}
 <!--
 * __\textcolor{red}{spatial normalization}__: [@Gee:2003aa;@Sundaram:2005aa;@Cook:2007aa;@Tustison:2010aa;@Tustison:2011ab;@Tustison:2011ad;@Tustison:2012aa;@Tustison:2014ab]
 * __\textcolor{red}{template generation}__: [@Tustison:2013ad]
-* __\textcolor{red}{lung segmentation}__: [@Tustison:2011ad;@Barbosa:2011aa;@Qing:2014aa;@Qing:2014ab;@Tustison:2015aa]
-* __\textcolor{red}{lobe segmentation}__: [@Qing:2014ab;@Tustison:2015aa]
+* __\textcolor{red}{lung segmentation}__: [@Tustison:2011ad;@Barbosa:2011aa;@Qing:2014aa;@Qing:2014ab;@Tustison:2016aa]
+* __\textcolor{red}{lobe segmentation}__: [@Qing:2014ab;@Tustison:2016aa]
 * __\textcolor{red}{airway segmentation}__: [@Song:2010aa]
 * __\textcolor{red}{functional segmentation}__: [@Tustison:2011aa;@Tustison:2013ad;@Teague:2014aa]
 * __\textcolor{red}{feature indices}__: [@Tustison:2010ab;@Barbosa:2011aa;@Song:2012aa]
@@ -439,7 +439,7 @@ of predicting anatomical labels with accuracy that rivals expert anatomists
 and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
 [@Tustison:2014ab], [@MALF]. Importantly, we have
 successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
-segmentation [@Tustison:2015aa]._
+segmentation [@Tustison:2016aa]._
 
 __Spatially adaptive denoising.__ Denoising is critical for data "cleaning" prior to subsequent processing such
 as segmentation or spatial normalization.  ANTs implements a state-of-the-art
@@ -521,8 +521,8 @@ widespread use by lung research groups:}
 
 * intra-modal lung registration [@Tustison:2013ac] (https://github.com/ntustison/antsCtLungRegistrationExample),
 * inter-modal lung registration [@Tustison:2013ac] (https://github.com/ntustison/ProtonCtLungMaskRegistration),
-* functional lung segmentaiton [@Tustison:2011aa] (https://github.com/ntustison/He3LongitudinalAnalysis), and
-* lung and lobe segmentation [@Tustison:2015aa] (https://github.com/ntustison/LungAndLobeEstimationExample).
+* functional lung segmentation [@Tustison:2011aa] (https://github.com/ntustison/He3LongitudinalAnalysis), and
+* lung and lobe segmentation [@Tustison:2016aa] (https://github.com/ntustison/LungAndLobeEstimationExample).
 
 <!--
 For
@@ -654,12 +654,12 @@ issues such as RF coil inhomogeneity, presence and resolution of structural deta
 the absence of a physically-based intensity scaling.
 
 We recently proposed a multi-atlas approach for automatically segmenting the left and right
-lungs in 1H MRI [@Tustison:2015aa].  Multi-atlas approaches to segmentation have proven highly
+lungs in 1H MRI [@Tustison:2016aa].  Multi-atlas approaches to segmentation have proven highly
 successful in \textcolor{red}{multiple domains} [@Wang:2012aa;@Wang:2013aa] and these methods translate readily to
 the pulmonary \textcolor{red}{applications}.  Whereas many current strategies for lung image segmentation employ
 low-level processing techniques based on encodable heuristics, consensus-based strategies,
 in contrast, optimize the prior knowledge applied to a specific segmentation problem (cf Figure 2).
-The evaluation of our proposed method [@Tustison:2015aa] demonstrated excellent performance
+The evaluation of our proposed method [@Tustison:2016aa] demonstrated excellent performance
 with Jaccard overlap measures for the left and right lungs measuring $0.966\pm0.018$ and
 $0.970\pm0.016$, respectively.  Further work for this project includes extension to
 CT datasets with a particular emphasis on segmentation in the presence of lung pathology that
@@ -701,23 +701,25 @@ the target lung mask and CT atlas lung masks, we use a simply majority voting st
 generate the optimal labeling for the target image.  Following the majority voting, we
 remove any labelings outside the lung mask and assign any unlabeled voxels with the label
 closest in distance to that voxel.  \textcolor{red}{Additional details can be found} in
-[@Tustison:2015aa] where we showed that lobar overlap measures in 1H MRI were on par
+[@Tustison:2016aa] where we showed that lobar overlap measures in 1H MRI were on par
 with \textcolor{red}{methods for CT images  in which}  fissure information is actually visible
 (left upper: $0.882 \pm 0.059$, left lower: $0.868 \pm 0.06$, right upper: $0.852 \pm 0.067$,
 right middle: $0.657 \pm 0.130$, right lower: $0.873 \pm 0.063$).  We will extend this
-framework to pulmonary CT in providing
-spatial prior probability maps derived from
+framework to pulmonary CT in providing spatial prior probability maps derived from
  image-specific CT data features such as fissures, airways, and blood vessels
 for data-driven, subject-specific lobe segmentation [@Doel:2015aa].
-
+\textcolor{red}{With the simultaneous acquisition of functional (i.e., PET and 3He images)
+and anatomical (i.e., 1H and CT) images, the availability of lobe anatomy estimation
+in anatomical lung images facilitates the calculation of regional functional measures which
+is difficult to directly obtain from the functional images.}
 
 __Ventilation quantification.__
 \textcolor{red}{The ability to classify} areas of varying degrees of ventilation
 \textcolor{red}{represents a basic need in} pulmonary functional analysis.  In [@Tustison:2011aa], we presented
 an automated algorithmic pipeline for ventilation-based partitioning of the lungs in hyperpolarized
 3He and 129Xe MRI.  \textcolor{red}{Given a whole lung mask (see }
-__Atlas-based lung segmentation__
-\textcolor{red}{The original pipeline performs MR inhomogeneity correction followed by
+__Atlas-based lung segmentation__)
+\textcolor{red}{the original pipeline performs MR inhomogeneity correction followed by
 Bayesian segmentation with an MRF prior.}
 Without ground truth data for evaluation, we used a consensus labeling approach [@Warfield:2004aa]
 to simultaneously estimate the true segmentation from given "raters"
@@ -770,6 +772,9 @@ computational footprint of
 encountered in lung studies while at the same time}
 providing accurate
 normalizations [@Tustison:2013ac] for pulmonary data [@Tustison:2012aa].
+\textcolor{red}{For functional lung imaging data (i.e., PET and 3He), this
+step generates the statistical coordinate system which could be used for subsequent
+voxelwise analyses to determine local correlation with clinical measures.}
 
 <!--
 In Figure 3, we illustrate the major processing components of a recent study
@@ -797,11 +802,11 @@ are rendered in blue.](Figs/longitudinalStudy.png)
 __Feature indices.__  Imaging biomarkers for characterizing emphysema in CT have
 have been well researched, although there are ample opportunities to refine these methods
 as well as to introduce more advanced approaches.  Examples of the latter include texture
-analysis for identifying the centrilobular and groundglass opacities and fractal and
+analysis for identifying the centrilobular and ground-glass opacities and fractal and
 connectivity approaches to differentiate centrilobular from panlobular emphysema. The
 available indices for CT image analysis can roughly be divided into those that characterize the
 pulmonary parenchyma:
-  volumetric tissue (e.g., [@Coxson:1999aa;@Perez:2005aa]),
+   volumetric tissue (e.g., [@Coxson:1999aa;@Perez:2005aa]),
    distribution of low attenuation areas (LAA) (e.g., [@Coxson:2005aa;@Stolk:2007aa]),
    cooccurrence and run-length matrix features (e.g., [@Uppaluri:1999aa;@Xu:2006aa]),
    attenuation statistics (e.g., [@Gevenois:1996aa;@Hoffman:2006aa]),
@@ -813,9 +818,10 @@ for subjects with an emphysematous component of disease, whereas the latter are 
 for subjects with a bronchitic diseases. _\textcolor{red}{An important benefit of this
 project's multi-modality scope}
  is that many of these measurements can also be directly applied to discriminative
-analysis using 3He MRI \textcolor{red}{and PET} for a variety of lung diseases._
-These indices can also be studied not only at any particular single time point, but also
-for changes with time.
+analysis using 3He MRI \textcolor{red}{and PET} for a variety of lung diseases Additionally,
+recent work has demonstrated [Lovinfosse:2016aa]
+these indices can also be studied not only at any particular single time point, but also
+for changes with time._
 
 <!--
 The addition of quantitative morphologic measurements of the airways
@@ -980,7 +986,7 @@ open-data platform for quantitatively assessing other lung and lobe segmentation
 Both libraries will consist of $n=30$ different
 subjects to represent a range of lung size and shape.  The CT atlas library will include lung, lobe,
 airway, and vessel segmentations whereas the 1H MRI atlas library will include left/right lung segmentations
-and lobar estimations [@Tustison:2015aa].
+and lobar estimations [@Tustison:2016aa].
 Along with the annotated data we will provide the scripts and documentation to allow \textcolor{red}{independent} reproduction of
 the ITK-Lung results.  \textcolor{red}{Finally, optimal} group templates [@Avants:2010aa] for the two atlas
 libraries
@@ -1106,7 +1112,7 @@ for correlation with GOLD classification will utilize the
 ventilation-based segmentation functionality in ITK-Lung [@Tustison:2011aa].
 In order to determine lobar
 values of HXe MRI, this study will utilize the recently proposed lobar estimation algorithm
-[@Tustison:2015aa] that will be available for both proton MRI and CT.
+[@Tustison:2016aa] that will be available for both proton MRI and CT.
 
 
 __3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
@@ -1136,7 +1142,7 @@ our ventilation-based segmentation method is already being used to determine
 volumetric compartments based on lung function.  Additional ``cleaning'' necessary for these
 data include denoising techniques [@Manjon:2010aa] implemented and made available in ANTs.
 Lobe estimation will be possible by refining the techniques originally described in
-[@Tustison:2015aa].
+[@Tustison:2016aa].
 
 
 
@@ -1254,7 +1260,7 @@ the time PFT abnormalities beyond the threshold of BOS diagnosis ensue,
 the disease is already manifest and is not reversible with existing
 therapies. It is conceivable that sophisticated analysis of CT,
 including quantitative attenuation masks in inspiratory and expiratory
-datasets, image registration and texture based feature extraction may
+datasets, image registration and texture based feature extraction [@Barbosa:2011aa;@Song:2012aa] may
 allow earlier detection of BOS in the preclinical phase, potentially
 generating surrogate biomarkers for drug trials and earlier
 prognostication.

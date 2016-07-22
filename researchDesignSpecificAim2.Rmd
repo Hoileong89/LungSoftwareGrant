@@ -54,7 +54,7 @@ for correlation with GOLD classification will utilize the
 ventilation-based segmentation functionality in ITK-Lung [@Tustison:2011aa].
 In order to determine lobar
 values of HXe MRI, this study will utilize the recently proposed lobar estimation algorithm
-[@Tustison:2015aa] that will be available for both proton MRI and CT.
+[@Tustison:2016aa] that will be available for both proton MRI and CT.
 
 
 __3(c.3.2) Hyperpolarized gas imaging in children with asthma.__
@@ -84,7 +84,7 @@ our ventilation-based segmentation method is already being used to determine
 volumetric compartments based on lung function.  Additional ``cleaning'' necessary for these
 data include denoising techniques [@Manjon:2010aa] implemented and made available in ANTs.
 Lobe estimation will be possible by refining the techniques originally described in
-[@Tustison:2015aa].
+[@Tustison:2016aa].
 
 
 
@@ -202,7 +202,7 @@ the time PFT abnormalities beyond the threshold of BOS diagnosis ensue,
 the disease is already manifest and is not reversible with existing
 therapies. It is conceivable that sophisticated analysis of CT,
 including quantitative attenuation masks in inspiratory and expiratory
-datasets, image registration and texture based feature extraction may
+datasets, image registration and texture based feature extraction [@Barbosa:2011aa;@Song:2012aa] may
 allow earlier detection of BOS in the preclinical phase, potentially
 generating surrogate biomarkers for drug trials and earlier
 prognostication.

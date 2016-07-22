@@ -29,8 +29,8 @@ pulmonary imaging analysis.  The primary goal of this project is to develop
 a robust, open-source image analysis toolkit and dissemination platform
 specifically targeted at the pulmonary research community.
 \textcolor{red}{Given the signifcant efforts
-to make lung imaging datasets publicly available (such as LIDC, RIDER, COPDGene, IELCAP), this
-contribution would be innovative as it would meet a critical
+to make lung imaging datasets publicly available (such as LIDC, RIDER, COPDGene,
+and IELCAP), this contribution would be innovative as it would meet a critical
 need through a first-of-its-kind software package for multi-modality lung image analysis.}_
 
 

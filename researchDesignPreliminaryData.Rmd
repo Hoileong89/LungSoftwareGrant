@@ -16,8 +16,8 @@ use, potential future improvements, and reproducibility.}
 <!--
 * __\textcolor{red}{spatial normalization}__: [@Gee:2003aa;@Sundaram:2005aa;@Cook:2007aa;@Tustison:2010aa;@Tustison:2011ab;@Tustison:2011ad;@Tustison:2012aa;@Tustison:2014ab]
 * __\textcolor{red}{template generation}__: [@Tustison:2013ad]
-* __\textcolor{red}{lung segmentation}__: [@Tustison:2011ad;@Barbosa:2011aa;@Qing:2014aa;@Qing:2014ab;@Tustison:2015aa]
-* __\textcolor{red}{lobe segmentation}__: [@Qing:2014ab;@Tustison:2015aa]
+* __\textcolor{red}{lung segmentation}__: [@Tustison:2011ad;@Barbosa:2011aa;@Qing:2014aa;@Qing:2014ab;@Tustison:2016aa]
+* __\textcolor{red}{lobe segmentation}__: [@Qing:2014ab;@Tustison:2016aa]
 * __\textcolor{red}{airway segmentation}__: [@Song:2010aa]
 * __\textcolor{red}{functional segmentation}__: [@Tustison:2011aa;@Tustison:2013ad;@Teague:2014aa]
 * __\textcolor{red}{feature indices}__: [@Tustison:2010ab;@Barbosa:2011aa;@Song:2012aa]
@@ -127,7 +127,7 @@ of predicting anatomical labels with accuracy that rivals expert anatomists
 and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
 [@Tustison:2014ab], [@MALF]. Importantly, we have
 successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
-segmentation [@Tustison:2015aa]._
+segmentation [@Tustison:2016aa]._
 
 __Spatially adaptive denoising.__ Denoising is critical for data "cleaning" prior to subsequent processing such
 as segmentation or spatial normalization.  ANTs implements a state-of-the-art
@@ -209,8 +209,8 @@ widespread use by lung research groups:}
 
 * intra-modal lung registration [@Tustison:2013ac] (https://github.com/ntustison/antsCtLungRegistrationExample),
 * inter-modal lung registration [@Tustison:2013ac] (https://github.com/ntustison/ProtonCtLungMaskRegistration),
-* functional lung segmentaiton [@Tustison:2011aa] (https://github.com/ntustison/He3LongitudinalAnalysis), and
-* lung and lobe segmentation [@Tustison:2015aa] (https://github.com/ntustison/LungAndLobeEstimationExample).
+* functional lung segmentation [@Tustison:2011aa] (https://github.com/ntustison/He3LongitudinalAnalysis), and
+* lung and lobe segmentation [@Tustison:2016aa] (https://github.com/ntustison/LungAndLobeEstimationExample).
 
 <!--
 For

@@ -16,8 +16,7 @@ We agree and have expanded descriptions for all elements of the project, includi
 discussion concerning GPU development, and hardware platforms employed and, where applicable,
 publicly available competition data for performance benchmarking.  We have also removed
 "trivial" items as per reviewer suggestions.
-\textcolor{red}{[CHECK that hardware platform/benchmarking is in proposal---yes,
-"Computational Power" 3(c.2.1)]}
+
 
 __Lack of PET imaging (Critiques 1 and 3).__
 We agree concerning the importance of PET
@@ -66,11 +65,11 @@ be limited to interpretation and translation of the XML files describing the nod
 of those specific databases.  In contrast, the COPDGene study has given rise to the
 Chest Imaging Platform software, which does not yet appear to be fully available to the
 public and whose focus and scope (CT imaging primarily of COPD) are significantly more
-narrow than those for this project. \textcolor{red}{[NEED to discuss CIP in proposal text]}  Such
+narrow than those for this project. Such
 software certainly does not comprise a part of the generic processing utilities that we envision.
 Similarly, we looked at the various lung-based image processing competitions that have been
-held over the years (VOLCANO09–nodule detection, EMPIRE10—registration and motion estimation,
-LOLA11—lung and lobe segmentation, and VESSEL12—vasculature segmentation) and, to the best
+held over the years (VOLCANO09---nodule detection, EMPIRE10---registration and motion estimation,
+LOLA11---lung and lobe segmentation, and VESSEL12---vasculature segmentation) and, to the best
 of our knowledge, the vast majority of proposed algorithms are not publicly available.
 Critique asserts that "many of the feature indices (Table 2) already exist in generic
 form in Brain packages, etc;" however, we are unaware of such availability in the major
@@ -95,9 +94,9 @@ has joined the project team, further strengthening feasibility of the project.
 __Reduction of algorithmic scope (Critique 2).__
 Concerns describing the scope of the project as being too large were raised in light of the
 extensive methodological depth of the field. We agree and have revised our application to
-sharpen the delineation of our contributions. \textcolor{red}{[CHECK that this is done in proposal]}
-Additionally, we have removed nodule detection from the project as software/solution
-existsxXXXX \textcolor{red}{[FIX this]}.
+sharpen the delineation of our contributions.
+Additionally, we have removed nodule detection from the project in the interest of avoiding
+redundancy as this seems to be a major developmental effort of the Chest Imaging Platform.
 
 __Budget (Critique 1).__
 This has been reduced as per review suggestions and includes further cuts to reflect the
