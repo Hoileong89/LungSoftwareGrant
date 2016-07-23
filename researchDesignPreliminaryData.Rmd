@@ -105,13 +105,13 @@ __N4 bias correction.__  Critical to quantitative processing of MRI is the minim
 inhomogeneity effects which produce artificial low frequency intensity variation across the image.
 Large-scale studies, such as ADNI, employ perhaps the most widely used bias correction algorithm,
 N3 [@Sled:1998aa], as part of their standard \textcolor{red}{processing} protocol [@Boyes:2008aa].
-In [@Tustison:2010aa] \textcolor{red}{introduced "N4," which incorporates both an enhanced fitting
+In [@Tustison:2010aa], \textcolor{red}{we introduced "N4," which incorporates both an enhanced fitting
 routine (including multi-resolution capabilities) and a modified optimization
 formulation that produces a significant improvement over N3 in performance and
 convergence behavior on a variety of data.  N4 has since become the new standard in the
 field.}
 
-__Joint label fusion for multi-atlas segmentation.__  Joint label fusion (JLF) is the current
+__Joint label fusion for \textcolor{red}{multi-atlas} segmentation.__  Joint label fusion (JLF) is the current
 state-of-the-art for propagating expert labelings from a reference atlas library onto new
 instances of unlabeled data. Image registration is used to align the atlas library
 (images plus segmentations) to a common space. A statistical model is then used to combine
@@ -125,7 +125,7 @@ first in the MICCAI Grand Challenge}. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists
 [@Yushkevich:2010aa]
 and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
-[@Tustison:2014ab], [@MALF]. Importantly, we have
+[@Tustison:2014ab], [@MALF]. \textcolor{red}{Importantly, we have}
 successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2016aa]._
 

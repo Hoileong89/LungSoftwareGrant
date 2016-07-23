@@ -64,7 +64,7 @@ functional and structural lung image segmentation, \textcolor{red}{PET imaging},
 indices as potential imaging biomarkers.  \textcolor{red}{These efforts would
 facilitate other NIH-sponsored projects}
 \textcolor{red}{
-which interface specific pulmonary algorithms (e.g., nodule detection) with clinical
+which interface specific pulmonary algorithms (e.g., CT nodule detection) with clinical
 and research applications.}
 In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science

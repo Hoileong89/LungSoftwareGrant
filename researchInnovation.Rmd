@@ -28,7 +28,8 @@ and baseline platform for future
 algorithm developers.}
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
-\textcolor{red}{Another} innovative component of the project is the inclusion of an extensive set of use
+\textcolor{red}{Another} innovative component of the project is the inclusion of
+\textcolor{red}{an} extensive \textcolor{red}{set of} use
 cases from leading pulmonary \textcolor{red}{research groups with regression testing performed} using different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
 \textcolor{red}{software and} processed data.
@@ -40,7 +41,7 @@ real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
 \textcolor{red}{Tutorial materials, data, and example scripts} drawn from
-these studies will be provided to the public for any interested researcher to
+these \textcolor{red}{studies} will be provided to the public for any interested researcher to
 apply to their own data.
 Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will

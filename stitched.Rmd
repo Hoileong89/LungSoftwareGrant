@@ -120,7 +120,7 @@ functional and structural lung image segmentation, \textcolor{red}{PET imaging},
 indices as potential imaging biomarkers.  \textcolor{red}{These efforts would
 facilitate other NIH-sponsored projects}
 \textcolor{red}{
-which interface specific pulmonary algorithms (e.g., nodule detection) with clinical
+which interface specific pulmonary algorithms (e.g., CT nodule detection) with clinical
 and research applications.}
 In addition to the software, we will
 provide scripts, documentation, and tutorial materials consistent with open-science
@@ -233,14 +233,14 @@ tailored software packages for certain application domains (e.g., lung image ana
 \textcolor{red}{do not exist}
  despite the vast number of algorithms that have been proposed in the literature
 \textcolor{red}{(most of which are not available to the public)}.[^1]
-Importantly, the goals of this project would
+\textcolor{red}{Importantly}, the goals of this project would
 significantly support the National Library of Medicine’s (NLM)
-own open-source directives in that
+open-source directives in that
 all software proposed in the project would be developed using the established Insight ToolKit’s coding and testing
 standards with the specific objective that all project code would be contributed
 for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past.
 \textcolor{red}{NLM's position on open-source stems from the} documented benefits
-within the targeted communities for which the software is developed and supported.  In addition to
+within the targeted communities for which the \textcolor{red}{software} is developed and supported.  In addition to
 the increase in research output illustrated earlier, open-source permits
 \textcolor{red}{trainees} and
 researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
@@ -252,7 +252,7 @@ community (such as ITK) takes advantage of Linus's law, i.e., "given enough eyeb
 shallow," for producing robust software.
 
 [^1]: \textcolor{red}{Several competitions have been held in recent years focused on the processing and
-analysis of lung image data (e.g., VOLCANO09---nodule detection, EMPIRE10---motion estimation,
+analysis of lung image data (e.g., VOLCANO09---nodule detection, EMPIRE10---registration and motion estimation,
 LOLA11---lung and lobe segmentation, and VESSEL12---vasculature segmentation).  To the best of our knowledge, the vast majority of
 the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
 and RIDER, have amassed large amounts of imaging data but available software support is limited to organizational
@@ -288,7 +288,8 @@ and baseline platform for future
 algorithm developers.}
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
-\textcolor{red}{Another} innovative component of the project is the inclusion of an extensive set of use
+\textcolor{red}{Another} innovative component of the project is the inclusion of
+\textcolor{red}{an} extensive \textcolor{red}{set of} use
 cases from leading pulmonary \textcolor{red}{research groups with regression testing performed} using different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
 \textcolor{red}{software and} processed data.
@@ -300,7 +301,7 @@ real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
 \textcolor{red}{Tutorial materials, data, and example scripts} drawn from
-these studies will be provided to the public for any interested researcher to
+these \textcolor{red}{studies} will be provided to the public for any interested researcher to
 apply to their own data.
 Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
@@ -417,13 +418,13 @@ __N4 bias correction.__  Critical to quantitative processing of MRI is the minim
 inhomogeneity effects which produce artificial low frequency intensity variation across the image.
 Large-scale studies, such as ADNI, employ perhaps the most widely used bias correction algorithm,
 N3 [@Sled:1998aa], as part of their standard \textcolor{red}{processing} protocol [@Boyes:2008aa].
-In [@Tustison:2010aa] \textcolor{red}{introduced "N4," which incorporates both an enhanced fitting
+In [@Tustison:2010aa], \textcolor{red}{we introduced "N4," which incorporates both an enhanced fitting
 routine (including multi-resolution capabilities) and a modified optimization
 formulation that produces a significant improvement over N3 in performance and
 convergence behavior on a variety of data.  N4 has since become the new standard in the
 field.}
 
-__Joint label fusion for multi-atlas segmentation.__  Joint label fusion (JLF) is the current
+__Joint label fusion for \textcolor{red}{multi-atlas} segmentation.__  Joint label fusion (JLF) is the current
 state-of-the-art for propagating expert labelings from a reference atlas library onto new
 instances of unlabeled data. Image registration is used to align the atlas library
 (images plus segmentations) to a common space. A statistical model is then used to combine
@@ -437,7 +438,7 @@ first in the MICCAI Grand Challenge}. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists
 [@Yushkevich:2010aa]
 and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
-[@Tustison:2014ab], [@MALF]. Importantly, we have
+[@Tustison:2014ab], [@MALF]. \textcolor{red}{Importantly, we have}
 successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2016aa]._
 
