@@ -42,7 +42,7 @@ development has only increased the number of available algorithms.    However, d
 continued _reporting_ of pulmonary image analysis algorithms, there is no corresponding
 increase in algorithmic _availability_.  _Additionally, a key problem in the pulmonary
 image analysis community is that the lack of publicly available tools translates directly
-into a paucity of baseline performance standards with which researchers can compare their
+into a \textcolor{red}{paucity} of baseline performance standards with which researchers can compare their
 own algorithms [@Tustison:2013aa].  This project constitutes a specific and overdue
 response to this major deficiency in the field._
 
@@ -59,7 +59,7 @@ and segmentation capabilities
 described in preliminary work.
 Using ANTs core tools \textcolor{red}{with lung-specific modifications,
 we have produced prototypical implementations complete with preliminary documentation
-and github examples for several of the proposed processing capabilitiesas described
+and github examples for several of the proposed processing capabilities as described
 below.}
 
 <!--
@@ -94,10 +94,11 @@ The evaluation of our proposed method [@Tustison:2016aa] demonstrated excellent 
 with Jaccard overlap measures for the left and right lungs measuring $0.966\pm0.018$ and
 $0.970\pm0.016$, respectively.  Further work for this project includes extension to
 CT datasets with a particular emphasis on segmentation in the presence of lung pathology that
-will incorporate the data from the proposed multi-atlas CT library.  Regional quantification of
-pathologies indicated by ground glass opacity can be quantified from intensity-based
-Bayesian segmentation with a Markov random field spatial priors (described below) following
-atlas-based lung segmentation.
+will incorporate the data from the proposed multi-atlas CT library.
+\textcolor{red}{Regional quantification of
+pathologies indicated by ground glass opacity can be identified from intensity-based
+Bayesian segmentation with an MRF spatial prior (described below) following
+atlas-based lung segmentation} [@zhu2012:aa].
 
 \input{algorithm_table.tex}
 
@@ -154,9 +155,9 @@ __Atlas-based lung segmentation__)
 Bayesian segmentation with an MRF prior.}
 Without ground truth data for evaluation, we used a consensus labeling approach [@Warfield:2004aa]
 to simultaneously estimate the true segmentation from given "raters"
-\textcolor{red}{and the performance of those raters with respect to that estimation}.
+\textcolor{red}{and the performance of those raters with respect to that estimation.
 In this evaluation, "raters" refers to the segmentation from our automated approach
-and the manual tracings of three trained individuals.  In terms of combined specificity and sensitivity, our automated algorithm
+and the manual tracings of three trained individuals.}  In terms of combined specificity and sensitivity, our automated algorithm
 demonstrated superior performance with the added benefit of being reproducible and less
 time-consuming.  \textcolor{red}{Future enhancements to this pipeline will include the incoproration
 of 1) an iterative bias-correction/segmentation scheme that should yield improved
@@ -246,11 +247,12 @@ pulmonary parenchyma:
 and those that characterize the airways (e.g., [@Aykac:2003aa;@Park:1998aa;@Ederle:2003aa]).
 The former are important
 for subjects with an emphysematous component of disease, whereas the latter are important
-for subjects with a bronchitic diseases. _\textcolor{red}{An important benefit of this
+for subjects with a bronchitic disease component. _\textcolor{red}{An important benefit of this
 project's multi-modality scope}
  is that many of these measurements can also be directly applied to discriminative
-analysis using 3He MRI \textcolor{red}{and PET} for a variety of lung diseases Additionally,
-recent work has demonstrated [Lovinfosse:2016aa]
+analysis using 3He MRI \textcolor{red}{and PET} for a variety of lung diseases.
+ Additionally,
+recent work has demonstrated [@Lovinfosse:2016aa]
 these indices can also be studied not only at any particular single time point, but also
 for changes with time._
 
@@ -303,7 +305,7 @@ ITK contributor, the corresponding code will be easily integrated into our platf
 
 __\textcolor{red}{Perfusion analysis.}__
 \textcolor{red}{A nonparametric deconvolution technique for quantifying cerebral blood
-flow was first presented in} [@Ostergaard:1996aa] \textcolor{red}{and extended for use in assessing
+flow was first presented in} [@Ostergaard:1996aa] \textcolor{red}{and subsequently extended for use in assessing
 pulmonary blood flow} [@Ohno:2004aa;@Hansch:2012aa]\textcolor{red}{.  This deconvolution strategy was recently
 implemented by our group for a separate lung imaging study but will be modified for this
 project to automatically select the arterial input region and volume of interest.}
@@ -416,7 +418,7 @@ and lobe segmentation within their respective modalities.}  Additionally, the ac
 open-data platform for quantitatively assessing other lung and lobe segmentation algorithms.
 Both libraries will consist of $n=30$ different
 subjects to represent a range of lung size and shape.  The CT atlas library will include lung, lobe,
-airway, and vessel segmentations whereas the 1H MRI atlas library will include left/right lung segmentations
+airway, and vessel segmentations \textcolor{red}{whereas t}he 1H MRI atlas library will include left/right lung segmentations
 and lobar estimations [@Tustison:2016aa].
 Along with the annotated data we will provide the scripts and documentation to allow \textcolor{red}{independent} reproduction of
 the ITK-Lung results.  \textcolor{red}{Finally, optimal} group templates [@Avants:2010aa] for the two atlas
