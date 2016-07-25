@@ -245,7 +245,7 @@ data will be co-registered and a wealth of image features calculated using ITK-L
 
 ## External collaborators
 
-__3(c.3.5) Comparison of automated multi-modality registration methodologies to
+__3(c.3.6) Comparison of automated multi-modality registration methodologies to
 manual registration for assessing lung CT bronchial morphologic changes and
 hyperpolarized helium MR ventilation defects in asthma patients: Can
 automation speed the work flow for combining structure and function
@@ -260,7 +260,7 @@ translation to the clinic will require standardized implementations
 across sites, and the project’s open-source platform is ideal for this
 purpose.
 
-__3(c.3.6) Validation of voxel-based ventilation CT.__ Our collaborator __Jim Wild__,
+__3(c.3.7) Validation of voxel-based ventilation CT.__ Our collaborator __Jim Wild__,
 __University of Sheffield__, has been active in the field of methods development
 for quantitative pulmonary imaging and its clinical translation for more than a decade.
 Relevant to this project, his group requires advanced registration capabilities to
@@ -269,7 +269,7 @@ ventilation. In addition, there is need within his research for multi-modality
 registration of pulmonary CT and MRI images as well as segmentation of key lung
 structures as part of standard processing workflows.
 
-__3(c.3.7) Deep functional phenotyping of COPD.__  Our collaborator __Hans-Ulrich
+__3(c.3.8) Deep functional phenotyping of COPD.__  Our collaborator __Hans-Ulrich
 Kauczor__, __University Medical Center Heidelberg__, is leading the COSYCONET
 (German COPD and Systemic Consequences--Comorbidities Network) study,
 the world’s first prospective multicenter trial comparing proton MRI and
@@ -281,7 +281,7 @@ vascular pruning) and MR (air trapping, perfusion volume defects, and
 hypoxic vasoconstriction) imaging biomarkers that form the basis for the
 study.
 
-__3(c.3.8) Longitudinal imaging follow-up in COPD and lung cancer.__  Our collaborator
+__3(c.3.9) Longitudinal imaging follow-up in COPD and lung cancer.__  Our collaborator
 __Joon-Beom Seo__, __Asan Medical Center__, directs the imaging component of the
 Korean Obstructive Lung Disease (KOLD) cohort study, which has collected
 over 1000 COPD cases from 17 participating centers with repeated imaging
@@ -291,7 +291,7 @@ registration is essential to tracking changes over time, and
 segmentation is an additional requirement to support automated lesion
 delineation for the cancer project.
 
-__3(c.3.9) Advanced image processing pipelines for MR image-guided pulmonary
+__3(c.3.10) Advanced image processing pipelines for MR image-guided pulmonary
 therapy decisions and support.__  Our collaborator __Grace Parraga__,
 __University of Western Ontario__, has been at the forefront of MR imaging
 of lung structure and function since 2005.  A major challenge hampering
@@ -304,7 +304,7 @@ work, carried out in collaboration with industrial partners, will
 support patient phenotyping and stratification to therapy as well as
 measurement of longitudinal changes and response to therapy.
 
-__3(c.3.10) Functional MR imaging of the lungs using hyperpolarized and inert gases.__
+__3(c.3.11) Functional MR imaging of the lungs using hyperpolarized and inert gases.__
 Our collaborator __Mitchell Albert__, __Thunder Bay Regional Research
 Institute__, has been advancing the use of inert fluorinated gases that
 can be breathed continuously in order to measure indicators of wash-in,
@@ -312,7 +312,7 @@ wash-out and air trapping with dynamic imaging protocols.  To compute
 the wash-in and wash-out time constants on a pixelwise basis, access to
 accurate and reliable image registration tools will be essential.
 
-__3(c.3.11) Multimodality imaging studies of pulmonary diseases.__  Our collaborator
+__3(c.3.12) Multimodality imaging studies of pulmonary diseases.__  Our collaborator
 __Edwin van Beek__, __University of Edinburgh__, has been conducting various
 multimodality studies, including the evaluation of pulmonary fibrosis
 using both gadolinium-enhanced MRI and contrast-enhanced CT perfusion
@@ -322,7 +322,7 @@ quantitative analysis of contrast enhancement, and advanced image
 registration and segmentation capabilities will both be necessary toward
 this end.
 
-__3(c.3.12) Computational imaging biomarkers for diverse thoracic malignancies.__
+__3(c.3.13) Computational imaging biomarkers for diverse thoracic malignancies.__
 Our collaborator __Yoshiharu Ohno__, __Kobe University__, leads a comprehensive
 program of multi-modality imaging (CT, MRI, PET, molecular imaging) research
 on lung cancer, COPD, ILD, and pulmonary infectious diseases.  His myriad
@@ -349,7 +349,7 @@ and analysis software resources in this project.  Moreover, the studies
 will yield valuable additions to the portfolio of use cases that serve
 as primary reference and instructional material for the software._
 
-__3(c.3.13) Sub-Aim 2a will disseminate the results of the project through open-source publication of the
+__3(c.3.14) Sub-Aim 2a will disseminate the results of the project through open-source publication of the
 code, annotated processed data, online user support, and conduct of hands-on training workshops.__
 ITK is the leading open-source development system for medical image analysis, and in
 recognition of this project’s value to the field, ITK will lend its infrastructure to provide long-term
