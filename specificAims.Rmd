@@ -15,7 +15,7 @@ and accessibility of computational facilities and a corresponding sophistication
 algorithms have only made such practices more commonplace.
 -->
 
-One of the most significant hurdles to \textcolor{red}{leveraging imaging innovations}
+One of the most significant hurdles \textcolor{red}{to leveraging imaging innovations}
 in adopting more quantitative clinical practices and
 exploring additional novel research pathways is the availability of accurate, robust, and
 easy-to-use image analysis tools.

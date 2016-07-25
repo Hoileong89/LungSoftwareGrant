@@ -129,8 +129,8 @@ Subsequently, we warp the set of lobe label images to the target image using
 the  atlas-to-target  transformation.  This process will be illustrated publicly as part
 of the project using the open-data multi-atlas CT and 1H atlas libraries created as part of Sub-Aim 1b.
 Since we have no intensity information inside
-the target lung mask and CT atlas lung masks, we use a simply majority voting strategy to
-generate the optimal labeling for the target image.  Following the majority voting, we
+the target lung mask and CT atlas lung masks, a simply majority voting strategy \textcolor{red}{is used} to
+generate the \textcolor{red}{consensus} labeling for the target image.  Following \textcolor{red}{this step}, we
 remove any labelings outside the lung mask and assign any unlabeled voxels with the label
 closest in distance to that voxel.  \textcolor{red}{Additional details can be found} in
 [@Tustison:2016aa] where we showed that lobar overlap measures in 1H MRI were on par
@@ -157,7 +157,7 @@ Without ground truth data for evaluation, we used a consensus labeling approach 
 to simultaneously estimate the true segmentation from given "raters"
 \textcolor{red}{and the performance of those raters with respect to that estimation.
 In this evaluation, "raters" refers to the segmentation from our automated approach
-and the manual tracings of three trained individuals.}  In terms of combined specificity and sensitivity, our automated algorithm
+and the manual tracings of three trained individuals.}  In terms of combined specificity and sensitivity, our algorithm
 demonstrated superior performance with the added benefit of being reproducible and less
 time-consuming.  \textcolor{red}{Future enhancements to this pipeline will include the incoproration
 of 1) an iterative bias-correction/segmentation scheme that should yield improved
@@ -183,20 +183,20 @@ registration has been independently evaluated and found to be of relatively high
 [@Klein:2009aa], tailoring our registration tool to achieve top performance levels for the
 EMPIRE10 challenge (Evaluation of Methods
 for Pulmonary Image REgistration 2010) required significant empirically-based tuning.  In
-addition, new innovations in diffeomorphic registration technology has led to a Symmetric
+addition, new innovations in diffeomorphic registration technology  has led to a Symmetric
 Normalization B-spline variant which has demonstrated accurate normalizations
 [@Tustison:2013ac]
 and transformations which are particularly well-suited for pulmonary data [@Tustison:2012aa].
 -->
 
 __Multi-modality lung template construction.__
-Because the template construction algorithm described in [@Avants:2010aa]
+\textcolor{red}{Because} the template construction algorithm described in [@Avants:2010aa]
 \textcolor{red}{was
 originally developed for proton MRI and neuroimaging applications, it will be
 modified in this project to additionally admit CT and PET data and further
 adapted for specialized use in studies of the lung.
 The latter development will build on our recent} innovations in diffeomorphic
-registration technology that has led to a Symmetric
+registration technology \textcolor{red}{that} has led to a Symmetric
 Normalization B-spline variant which will be extended and refined
 to include patch-based similarity metrics suitable for minimizing the
 computational footprint of
@@ -247,7 +247,7 @@ pulmonary parenchyma:
 and those that characterize the airways (e.g., [@Aykac:2003aa;@Park:1998aa;@Ederle:2003aa]).
 The former are important
 for subjects with an emphysematous component of disease, whereas the latter are important
-for subjects with a bronchitic disease component. _\textcolor{red}{An important benefit of this
+for subjects with a bronchitic \textcolor{red}{disease} component. _\textcolor{red}{An important benefit of this
 project's multi-modality scope}
  is that many of these measurements can also be directly applied to discriminative
 analysis using 3He MRI \textcolor{red}{and PET} for a variety of lung diseases.
@@ -369,7 +369,8 @@ used for metric computation in GPU-based affine registration in ANTs.
 __\textcolor{red}{Computational power.}__ With the proposed GPU acceleration of
 image registration, we expect that even the most complex registration-dependent
 problems will be possible to solve on a desktop computer in under 10 minutes.
-\textcolor{red}{This estimate is based on} preliminary work in which we have developed
+\textcolor{red}{This estimate is based on} preliminary work \textcolor{red}{in which}
+we have developed
 a CPU-based accelerated version of
 the ANTs deformable registration algorithm that is approximately 15 times faster in
 typical problems than the version currently
@@ -394,7 +395,7 @@ In this mode, the ITK-Lung GUI (see Sub-Aim 1c) will provide a user interface fr
 \textcolor{red}{available processing pipelines} running remotely. It will send data to the external resource
 over the network, monitor and control pipeline execution, and receive results when processing
 is complete. This remote pipeline execution mode will additionally support other highly computationally
-intensive tasks as well as other data processing tasks that may be added in the future.
+intensive tasks \textcolor{red}{as well as} other data processing tasks that may be added in the future.
 The external resource may be either a physical Linux cluster or a virtual one
 hosted on the Amazon Web Services (AWS) cloud. For AWS, we will use the MIT StarCluster
 software (\url{http://star.mit.edu/cluster}) to launch a virtual cluster directly from the

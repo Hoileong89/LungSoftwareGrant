@@ -19,7 +19,8 @@ To facilitate the usage of these algorithms, we will provide documentation inclu
 self-contained online examples, tutorials, and hands-on training workshops.
 \textcolor{red}{We recognize that the methodological depth of the field is extensive
 and implementing even a small portion of the total number of algorithms would be
-prohibitive.}  \textcolor{red}{However, the algorithmic implementations provided through this
+prohibitive.}  \textcolor{red}{However, the carefully curated selection of
+algorithmic implementations provided through this
 project have been discussed in the literature and have delivered consistently
 excellent performance in our
 clinical collaborations.  The availability of such implementations will offer a

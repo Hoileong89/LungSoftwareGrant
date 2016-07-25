@@ -125,7 +125,7 @@ first in the MICCAI Grand Challenge}. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists
 [@Yushkevich:2010aa]
 and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
-[@Tustison:2014ab], [@MALF]. \textcolor{red}{Importantly, we have}
+[@Tustison:2014ab], [@MALF]. _\textcolor{red}{Importantly, we have}
 successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2016aa]._
 
@@ -142,7 +142,7 @@ continued development of ANTs.  As a result, our team is well-recognized for our
 open-source advancements including important contributions to the
 field of image registration outlined earlier.  Indeed, ANTs-based image registration serves
 as the basis for the registration component of the latest version of the National Library of
-Medicine Insight Toolkit programming library (http://www.itk.org), which is the leading
+Medicine Insight Toolkit programming library (http://www.itk.org), the leading
 open-source platform for medical image analysis. _The
 combination of state-of-the-art algorithms and feature-rich flexibility has translated
 to top-placed rankings in major independent evaluations for core elements of the ANTs
@@ -167,7 +167,7 @@ STACOM 2014 workshop for cardiac motion estimation [@Tustison:2015ab].
 ![Core processing tools that have made the ANTs package one of the most popular neuroimaging
 toolkits.  Fundamental processing tasks such as image registration, template generation,
 bias correction, denoising, intensity-based segmentation, and joint label
-fusion are first-in-class software components which have been utilized for
+fusion are \textcolor{red}{first-in-class} software components which have been utilized for
 neuroimaging tasks such as brain extraction and cortical thickness estimation.
 The target applications of these core tools have an immediate analog for lung-specific
 tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)

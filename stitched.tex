@@ -115,8 +115,8 @@
 
 \section{2 Specific Aims}\label{specific-aims}
 
-One of the most significant hurdles to
-\textcolor{red}{leveraging imaging innovations} in adopting more
+One of the most significant hurdles
+\textcolor{red}{to leveraging imaging innovations} in adopting more
 quantitative clinical practices and exploring additional novel research
 pathways is the availability of accurate, robust, and easy-to-use image
 analysis tools. Historically, the research and clinical communities (and
@@ -320,7 +320,8 @@ hands-on training workshops.
 \textcolor{red}{We recognize that the methodological depth of the field is extensive
 and implementing even a small portion of the total number of algorithms would be
 prohibitive.}
-\textcolor{red}{However, the algorithmic implementations provided through this
+\textcolor{red}{However, the carefully curated selection of
+algorithmic implementations provided through this
 project have been discussed in the literature and have delivered consistently
 excellent performance in our
 clinical collaborations.  The availability of such implementations will offer a
@@ -481,10 +482,10 @@ of {[}46, 47{]} from our group is
 first in the MICCAI Grand Challenge}. JLF is capable of predicting
 anatomical labels with accuracy that rivals expert anatomists {[}48{]}
 and has proven its effectiveness \textcolor{red}{in multiple domains}
-{[}49{]}, {[}13{]}, {[}49{]}. \textcolor{red}{Importantly, we have}
-successfully extended \textcolor{red}{JLF} to the challenging problem of
-applying prior-based information to lung and lobe segmentation
-{[}50{]}.\_
+{[}49{]}, {[}13{]}, {[}49{]}.
+\emph{\textcolor{red}{Importantly, we have} successfully extended
+\textcolor{red}{JLF} to the challenging problem of applying prior-based
+information to lung and lobe segmentation {[}50{]}.}
 
 \textbf{Spatially adaptive denoising.} Denoising is critical for data
 ``cleaning'' prior to subsequent processing such as segmentation or
@@ -503,11 +504,10 @@ advancements including important contributions to the field of image
 registration outlined earlier. Indeed, ANTs-based image registration
 serves as the basis for the registration component of the latest version
 of the National Library of Medicine Insight Toolkit programming library
-(\url{http://www.itk.org}), which is the leading open-source platform
-for medical image analysis. \emph{The combination of state-of-the-art
-algorithms and feature-rich flexibility has translated to top-placed
-rankings in major independent evaluations for core elements of the ANTs
-toolkit:}
+(\url{http://www.itk.org}), the leading open-source platform for medical
+image analysis. \emph{The combination of state-of-the-art algorithms and
+feature-rich flexibility has translated to top-placed rankings in major
+independent evaluations for core elements of the ANTs toolkit:}
 
 \begin{itemize}
 \tightlist
@@ -543,10 +543,10 @@ toolkit:}
 the most popular neuroimaging toolkits. Fundamental processing tasks
 such as image registration, template generation, bias correction,
 denoising, intensity-based segmentation, and joint label fusion are
-first-in-class software components which have been utilized for
-neuroimaging tasks such as brain extraction and cortical thickness
-estimation. The target applications of these core tools have an
-immediate analog for lung-specific tasks such as lung and lobe
+\textcolor{red}{first-in-class} software components which have been
+utilized for neuroimaging tasks such as brain extraction and cortical
+thickness estimation. The target applications of these core tools have
+an immediate analog for lung-specific tasks such as lung and lobe
 segmentation.}
 \end{figure}
 
@@ -715,20 +715,20 @@ atlas-to-target transformation. This process will be illustrated
 publicly as part of the project using the open-data multi-atlas CT and
 1H atlas libraries created as part of Sub-Aim 1b. Since we have no
 intensity information inside the target lung mask and CT atlas lung
-masks, we use a simply majority voting strategy to generate the optimal
-labeling for the target image. Following the majority voting, we remove
-any labelings outside the lung mask and assign any unlabeled voxels with
-the label closest in distance to that voxel.
-\textcolor{red}{Additional details can be found} in {[}50{]} where we
-showed that lobar overlap measures in 1H MRI were on par with
-\textcolor{red}{methods for CT images  in which} fissure information is
-actually visible (left upper: \(0.882 \pm 0.059\), left lower:
-\(0.868 \pm 0.06\), right upper: \(0.852 \pm 0.067\), right middle:
-\(0.657 \pm 0.130\), right lower: \(0.873 \pm 0.063\)). We will extend
-this framework to pulmonary CT in providing spatial prior probability
-maps derived from image-specific CT data features such as fissures,
-airways, and blood vessels for data-driven, subject-specific lobe
-segmentation {[}63{]}.
+masks, a simply majority voting strategy \textcolor{red}{is used} to
+generate the \textcolor{red}{consensus} labeling for the target image.
+Following \textcolor{red}{this step}, we remove any labelings outside
+the lung mask and assign any unlabeled voxels with the label closest in
+distance to that voxel. \textcolor{red}{Additional details can be found}
+in {[}50{]} where we showed that lobar overlap measures in 1H MRI were
+on par with \textcolor{red}{methods for CT images  in which} fissure
+information is actually visible (left upper: \(0.882 \pm 0.059\), left
+lower: \(0.868 \pm 0.06\), right upper: \(0.852 \pm 0.067\), right
+middle: \(0.657 \pm 0.130\), right lower: \(0.873 \pm 0.063\)). We will
+extend this framework to pulmonary CT in providing spatial prior
+probability maps derived from image-specific CT data features such as
+fissures, airways, and blood vessels for data-driven, subject-specific
+lobe segmentation {[}63{]}.
 \textcolor{red}{With the simultaneous acquisition of functional (i.e., PET and 3He images)
 and anatomical (i.e., 1H and CT) images, the availability of lobe anatomy estimation
 in anatomical lung images facilitates the calculation of regional functional measures which
@@ -749,24 +749,25 @@ simultaneously estimate the true segmentation from given ``raters''
 \textcolor{red}{and the performance of those raters with respect to that estimation.
 In this evaluation, "raters" refers to the segmentation from our automated approach
 and the manual tracings of three trained individuals.} In terms of
-combined specificity and sensitivity, our automated algorithm
-demonstrated superior performance with the added benefit of being
-reproducible and less time-consuming.
+combined specificity and sensitivity, our algorithm demonstrated
+superior performance with the added benefit of being reproducible and
+less time-consuming.
 \textcolor{red}{Future enhancements to this pipeline will include the incoproration
 of 1) an iterative bias-correction/segmentation scheme that should yield improved
 optimization solutions and 2) a better performing denoising protocol based on the patch-based
 method} described in {[}51{]}.
 
-\textbf{Multi-modality lung template construction.} Because the template
-construction algorithm described in {[}22{]} \textcolor{red}{was
+\textbf{Multi-modality lung template construction.}
+\textcolor{red}{Because} the template construction algorithm described
+in {[}22{]} \textcolor{red}{was
 originally developed for proton MRI and neuroimaging applications, it will be
 modified in this project to additionally admit CT and PET data and further
 adapted for specialized use in studies of the lung.
 The latter development will build on our recent} innovations in
-diffeomorphic registration technology that has led to a Symmetric
-Normalization B-spline variant which will be extended and refined to
-include patch-based similarity metrics suitable for minimizing the
-computational footprint of
+diffeomorphic registration technology \textcolor{red}{that} has led to a
+Symmetric Normalization B-spline variant which will be extended and
+refined to include patch-based similarity metrics suitable for
+minimizing the computational footprint of
 \textcolor{red}{problems involving very large images of the kind commonly
 encountered in lung studies while at the same time} providing accurate
 normalizations {[}12{]} for pulmonary data {[}21{]}.
@@ -789,7 +790,8 @@ features (e.g., {[}69, 70{]}), attenuation statistics (e.g., {[}71,
 fractal dimension features (e.g., {[}69, 72{]}); and those that
 characterize the airways (e.g., {[}75--77{]}). The former are important
 for subjects with an emphysematous component of disease, whereas the
-latter are important for subjects with a bronchitic disease component.
+latter are important for subjects with a bronchitic
+\textcolor{red}{disease} component.
 \emph{\textcolor{red}{An important benefit of this
 project's multi-modality scope} is that many of these measurements can
 also be directly applied to discriminative analysis using 3He MRI
@@ -857,9 +859,9 @@ in ANTs.
 acceleration of image registration, we expect that even the most complex
 registration-dependent problems will be possible to solve on a desktop
 computer in under 10 minutes. \textcolor{red}{This estimate is based on}
-preliminary work in which we have developed a CPU-based accelerated
-version of the ANTs deformable registration algorithm that is
-approximately 15 times faster in typical problems than the version
+preliminary work \textcolor{red}{in which} we have developed a CPU-based
+accelerated version of the ANTs deformable registration algorithm that
+is approximately 15 times faster in typical problems than the version
 currently in use. This means that on a typical 8-core CPU, the same
 registration of
 \textcolor{red}{$512 \times 512 \times {\sim}500$ voxel images} can be
@@ -884,13 +886,13 @@ Sub-Aim 1c) will provide a user interface front-end to
 will send data to the external resource over the network, monitor and
 control pipeline execution, and receive results when processing is
 complete. This remote pipeline execution mode will additionally support
-other highly computationally intensive tasks as well as other data
-processing tasks that may be added in the future. The external resource
-may be either a physical Linux cluster or a virtual one hosted on the
-Amazon Web Services (AWS) cloud. For AWS, we will use the MIT
-StarCluster software (\url{http://star.mit.edu/cluster}) to launch a
-virtual cluster directly from the ITK-Lung GUI on demand. We will take
-advantage of the GPU enabled AWS instances,
+other highly computationally intensive tasks \textcolor{red}{as well as}
+other data processing tasks that may be added in the future. The
+external resource may be either a physical Linux cluster or a virtual
+one hosted on the Amazon Web Services (AWS) cloud. For AWS, we will use
+the MIT StarCluster software (\url{http://star.mit.edu/cluster}) to
+launch a virtual cluster directly from the ITK-Lung GUI on demand. We
+will take advantage of the GPU enabled AWS instances,
 \textcolor{red}{which would allow} the speed-ups described above to be
 combined with parallel execution across multiple hosts. The advantage of
 using AWS is that a power user would not need to purchase and configure
