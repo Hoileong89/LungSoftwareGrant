@@ -570,7 +570,7 @@ in the bottom left panel is the surface rendering of the ventilation-based segme
 -->
 
 
-![ANTs core processing tools for multi-modal lung imaging studies.
+![ANTs core processing tools for \textcolor{red}{multi-modal} lung imaging studies.
 Using ANTs processing tools, our team has developed several lung-specific extensions
 such as ventilation-based segmentation, lung and lobe estimation, and
 multi-modality pulmonary template building.  Although each of these extensions requires significant
@@ -1279,7 +1279,7 @@ abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
 biomarkers for diagnosis, prognostication and therapeutic trials.
 
-__Novel PET/CT biomarkers for early prediction of treatment response and survival in patients
+__3(c.3.5) Novel PET/CT biomarkers for early prediction of treatment response and survival in patients
 with non small cell lung cancer (NSCLC).__
 PET and CT have traditionally played important roles in diagnosis, staging, and predicting
 treatment response in NSCLC [@Lardinois:2003aa;@Lee:2010aa;@Horne:2014aa]. Although many studies have demonstrated diagnostic and

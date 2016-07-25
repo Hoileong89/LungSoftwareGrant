@@ -1,6 +1,6 @@
 
 
-![ANTs core processing tools for multi-modal lung imaging studies.
+![ANTs core processing tools for \textcolor{red}{multi-modal} lung imaging studies.
 Using ANTs processing tools, our team has developed several lung-specific extensions
 such as ventilation-based segmentation, lung and lobe estimation, and
 multi-modality pulmonary template building.  Although each of these extensions requires significant
