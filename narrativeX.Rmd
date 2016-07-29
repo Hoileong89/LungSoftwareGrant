@@ -17,6 +17,7 @@ header-includes:
    - \titlespacing{\subsection}{2pt}{*0}{*0}
    - \titlespacing{\subsubsection}{2pt}{*0}{*0}
    - \setlength{\parskip}{3pt}
+   - \hypersetup{breaklinks=true, bookmarks=true, pdfauthor={}, pdftitle={}, colorlinks=true, citecolor=black, urlcolor=black, linkcolor=black, pdfborder={0 0 0}}
 bibliography: references.bib
 csl: national-science-foundation-grant-proposals.csl
 fontsize: 11pt
