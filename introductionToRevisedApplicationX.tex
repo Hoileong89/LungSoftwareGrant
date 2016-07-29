@@ -74,7 +74,7 @@
 
 \usepackage{booktabs}
 \usepackage[font={small},labelfont=bf,labelsep=colon]{caption}
-\linespread{0.90}
+\linespread{0.89}
 \usepackage[compact]{titlesec}
 \usepackage{enumitem}
 \usepackage{tikz}
@@ -125,15 +125,22 @@ modality in the project, as well as a related contribution in pulmonary
 blood perfusion quantification based on recent work from our group.
 
 \textbf{Dynamic nature of the lung environment and heterogeneity of
-applications/equipment not addressed (Critiques 1 and 3).} Lung imaging
-analysis is indeed made more difficult by the inherent challenges posed
-by the dynamic nature of the lung environment in acquiring high quality
-images. This is compounded by the wider range of imaging signal
-characteristics in the chest due to the appearance of air, fat, soft
-tissue and bone, together with their interfaces, in the images. The
-complexity of lung images and diversity of protocols and
-equipment/modalities used for their acquisition, therefore, demand
-flexible and tunable (i.e., open and programmable) tools, with manifold
+applications/equipment not addressed (Critiques 1 and 3).} The unique
+dynamic nature of the multi-modality lung imaging environment indeed
+poses significant challenges to acquiring high quality images of the
+lung. Although acquisition protocols continue to improve---in part due
+to precisely the kinds of image registration/processing innovations that
+we propose to make available through ITK-Lung, the current
+state-of-the-art is sufficient to allow effective quantitation of lung
+structural and functional parameters in multi-modality studies. The
+major caveat, however, is that sophisticated and extensive pre- and
+post-processing of the images may be required depending on the type and
+degree of distortions and artifacts introduced during acquisition.
+Enabling such preprocessing is exactly one of the major goals of this
+project. To achieve this objective, given the additional complexity
+introduced, as noted in critique, by the heterogeneity of applications
+and equipment in lung imaging, flexible and tunable (i.e., open and
+programmable) tools \textcolor{red}{are needed}, with manifold
 capabilities carefully curated to cover essential analysis and
 processing tasks, all of which ideally integrated within a single
 coherent toolbox---this is precisely the overall goal and deliverable of
@@ -144,10 +151,9 @@ It was suggested that the number of proposed external collaborators is
 potentially excessive and possibly redundant. We agree with this
 assessment and have limited the primary beta testers to research groups
 at the project sites (i.e., the University of Pennsylvania and the
-University of Virginia). As the external groups continue to have an
-interest in the outcome of this project, we plan to maintain the
-proposed relationships but will scale back the direct assistance to
-these groups. The use of separate, independent testing sites will
+University of Virginia). However, we plan to maintain the proposed
+relationships with the external groups but will scale back the direct
+assistance to them. The use of separate, independent testing sites will
 increase the value of the tools produced by ensuring that their success
 is not specific to the particular source of data. This will increase the
 generality of the developed resources and thus ease dissemination to the
@@ -155,7 +161,7 @@ wider community.
 
 \textbf{Lack of novelty (Critiques 2 and 3).} Indeed, this project does
 not seek to invent new algorithms and is motivated instead by the lack
-of access to algorithms that define the current state-of-the-art, in
+of access to methods that define the current state-of-the-art, in
 particular, within a comprehensive, integrated framework. Thus, in spite
 of the relatively modest degree of algorithmic innovation, we believe
 that significant novelty lies in the proposed ``initiation of a new
@@ -174,44 +180,35 @@ annotations of those specific databases. In contrast, the COPDGene study
 has given rise to the Chest Imaging Platform software, which does not
 yet appear to be fully available to the public and whose focus and scope
 (CT imaging primarily of COPD) are significantly more narrow than those
-for this project. Such software certainly does not comprise a part of
-the generic processing utilities that we envision. Similarly, we looked
-at the various lung-based image processing competitions that have been
-held over the years (VOLCANO09---nodule detection,
-EMPIRE10---registration and motion estimation, LOLA11---lung and lobe
-segmentation, and VESSEL12---vasculature segmentation) and, to the best
-of our knowledge, the vast majority of proposed algorithms are not
-publicly available. Critique asserts that ``many of the feature indices
-(Table 2) already exist in generic form in Brain packages, etc;''
-however, we are unaware of such availability in the major brain packages
-(e.g., FSL, SPM, FreeSurfer), although we do know that a number of them
-exist in the Insight Toolkit because our group developed and contributed
-the corresponding software. This project would target these available
-features as well as create additional ones specialized to lung images.
+for this project. Similarly, we looked at the various lung-based image
+processing competitions that have been held over the years and, to the
+best of our knowledge, the vast majority of proposed algorithms are not
+publicly available. Critique 2 asserts that ``many of the feature
+indices (Table 2) already exist in generic form in Brain packages,
+etc;'' however, we are unaware of such availability in the major brain
+packages (e.g., FSL, SPM, FreeSurfer), although we do know that a number
+of them exist in the Insight Toolkit because our group developed and
+contributed the corresponding software. This project would target these
+available features---as well as create additional ones specialized to
+lung images.
 
 \textbf{Naivety on the part of the investigators (Critique 2).} The
 concern is raised regarding the necessary level of sophistication of the
-investigators to fulfill the project deliverables. Although the
-reviewers highlight the software expertise of our team and our success
-in the neuroimaging domain, it is assumed that we are ``too naïve with
-respect to the difficulty and complexity of creating {[}targeted
-pulmonary image analysis{]} software.'' Based on our publication record
-in the lung imaging field (now documented in the revised application),
-we respectfully submit that this assessment represents a significant
-undervaluing of our research contributions, where much of our showcased
-``preliminary'' software has been used in large studies. A new letter
-from one of the foremost authorities in the field, Eric Hoffman, attests
-to our group's international reputation in lung image analysis methods
-and software development. Moreover, Dr.~Hoffman has joined the project
-team, further strengthening feasibility of the project.
+investigators to fulfill the project deliverables. Based on our
+publication record in the lung imaging field (now documented in the
+revised application), we respectfully submit that this assessment
+represents a significant undervaluing of our contributions, where much
+of our showcased ``preliminary'' software has been used in large
+studies. A new letter from Eric Hoffman, an acknowledged authority in
+the field, attests to our group's reputation in lung image analysis
+methods and software development. Moreover, Dr.~Hoffman has joined the
+project team, further strengthening feasibility of the project.
 
 \textbf{Reduction of algorithmic scope (Critique 2).} Concerns
 describing the scope of the project as being too large were raised in
 light of the extensive methodological depth of the field. We agree and
 have revised our application to sharpen the delineation of our
-contributions. Additionally, we have removed nodule detection from the
-project in the interest of avoiding redundancy as this seems to be a
-major developmental effort of the Chest Imaging Platform.
+contributions.
 
 \textbf{Budget (Critique 1).} This has been reduced as per review
 suggestions and includes further cuts to reflect the more limited

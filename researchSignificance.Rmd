@@ -3,7 +3,7 @@
 
 ## __3(a) Significance__
 
-__3(a.1) The importance of image analysis tools for research and clinical investigation.__
+__3(a.1) The importance of analysis tools for research and clinical \textcolor{red]{imaging} investigation.__
 The increased utilization of imaging for both research and clinical purposes has
 furthered
 the demand for quantitative image analysis techniques.  The use of these computational
@@ -13,11 +13,15 @@ robustness and accuracy for determining biological correlates with imaging findi
 For example, in the area of pharmaceutical development and testing, imaging biomarkers are crucial.
 In order to determine fundamental study parameters such as drug safety
 and effectiveness, quantitative assessments derived from imaging measures must be objective
-and reproducible [@Wang:2010aa] which is often difficult without computational aid given the intra-
+and reproducible [@Wang:2010aa], which is often difficult without computational aid given the intra-
 and inter-reader variability in radiological practice [@Zhao:2013aa;@McErlean:2013aa].
+
+<!--
 Additionally, the exciting possibilities associated with "big data" and the potential
-for improvement in individualized, evidence-based medicine has also increased the need
+for improvement in individualized, evidence-based medicine have also increased the need
 for sophisticated data transformation and machine learning techniques.
+-->
+
 
 __3(a.2) Open-source as an essential attribute of high-impact image analysis toolkits.__
 Well-vetted and publicly available software
@@ -61,10 +65,18 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 _\textcolor{red}{However, despite the important implications for the pulmonary imaging
 community}, no such analogous set of tools exist for multi-modal pulmonary-specific research.
 \textcolor{red}{Such an original software package would potentially have an immediate and
-significant impact.}_  Indeed, in a recent
-review of CT- and MRI-derived biomarkers for pulmonary clinical investigation, the authorial
-consensus is that ``_[the absence of] universally available image analysis software'' is a major hinderance
-to more widespread usage of such imaging biomarkers_ [@Hoffman:2015aa].
+significant impact.}_  Indeed, a recent
+review [@Hoffman:2015aa] of CT- and MRI-derived biomarkers for pulmonary clinical investigation
+\textcolor{red}{
+highlighted the lack of universally available multi-modality image
+analysis software---despite the existence of an extensive and continually
+growing literature---as one of the major impediments to more widespread
+usage of the unique applications offered by each modality and the use of
+multi-modality imaging to gain a broader understanding of the etiology
+of lung disease. This project would thus be transformative in providing
+both a solution for this critical unmet need and a publically available
+set of multi-modality software approaches that can be built upon further.}
+
 
 Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provide extensive
 algorithmic
@@ -78,16 +90,17 @@ significantly support the National Library of Medicine’s (NLM)
 open-source directives in that
 all software proposed in the project would be developed using the established Insight ToolKit’s coding and testing
 standards with the specific objective that all project code would be contributed
-for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past.
+for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past;
+textcolor{red}{see Yoo letter of support}.
 \textcolor{red}{NLM's position on open-source stems from the} documented benefits
-within the targeted communities for which the \textcolor{red}{software} is developed and supported.  In addition to
-the increase in research output illustrated earlier, open-source permits
+within the targeted communities for which \textcolor{red}{such software} is developed and supported.  In addition to
+increase in research output, open-source permits
 \textcolor{red}{trainees} and
 researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
-This, in turn, provides motivation for user-based support including potential contributions
+This, in turn, provides motivation for user-based support, including potential contributions
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
 cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore,
- open-source development and distribution within a large, and well-invested
+ open-source development and distribution within a large and well-invested
 community (such as ITK) takes advantage of Linus's law, i.e., "given enough eyeballs, all bugs are
 shallow," for producing robust software.
 
@@ -96,5 +109,28 @@ analysis of lung image data (e.g., VOLCANO09---nodule detection, EMPIRE10---regi
 LOLA11---lung and lobe segmentation, and VESSEL12---vasculature segmentation).  To the best of our knowledge, the vast majority of
 the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
 and RIDER, have amassed large amounts of imaging data but available software support is limited to organizational
-tasks specific to those databases.}
+tasks specific to those databases. In contrast, the COPDGene study has given rise to the Chest Imaging Platform
+software, which does not yet appear to be fully available to the public and whose focus and scope (CT imaging
+primarily of COPD) are significantly more narrow than those for this project.}
+
+
+
+__\textcolor{red}{3(a.3) The challenging dynamic nature of the multi-modality lung imaging
+environment demands tools with comprehensive capabilities.}__ \textcolor{red}{There is need
+for continued improvement of imaging acquisition technologies for the
+lung; nevertheless, the current state-of-the-art permits effective
+quantitation of pulmonary structural and functional parameters in
+multi-modality studies. The major caveat, however, is that sophisticated
+and extensive pre- and post-processing of the images may be required
+depending on the type and degree of distortions and artifacts introduced
+in their acquisition. Enabling the ability to carry out such processing
+is one of the major goals of this project. To achieve this objective,
+given the additional complexity introduced by the heterogeneity of
+applications and equipment in lung imaging, flexible and tunable (i.e.,
+open and programmable) tools are needed, with manifold capabilities
+carefully curated to cover essential analysis and processing tasks,
+all of which ideally integrated within a single coherent toolbox---this is
+the overall goal and deliverable of the proposed project.}
+
+
 

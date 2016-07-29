@@ -54,7 +54,7 @@ demonstrated statistically significant improvement in label overlap measures.  A
 that study, we produced the scripts ``antsRegistrationSyN.sh`` and
 ``antsRegistrationSyNQuick.sh`` which provide a simple interface to our normalization tools
 for brain-specific normalization and are two of the most widely used scripts in the ANTs
-toolkit.  _Similar to the developments that we are proposing,
+toolkit.  _Similar to the developments that we are proposing \textcolor{red}{in this project},
 these scripts were extensively modified to serve as a follow-up entry into the EMPIRE10 lung image
 registration challenge where B-spline SyN performed better than its original counterpart
 on pulmonary data [@Tustison:2012aa],
@@ -69,7 +69,7 @@ each image to the current
 template, performing a voxelwise average to create a new estimate, and then "reshaping"
 this template based on the average inverse transformation which "moves" the template estimate
 closer to the group mean---see Figure 1 for a cohort-specific multi-modality brain template
-for females in the age range 50--60.
+for females in the age range 50--60 \textcolor{red}{years}.
 This functionality has proven to be a \textcolor{red}{highly valued} component of the ANTs toolkit, with significant
 community adoption, for performing neuroimaging research (e.g.,
 [@Avants:2015aa;@Datta:2012aa;@McMillan:2014aa;@Cook:2014aa;@Tustison:2014ad;@Tustison:2014ab]).
@@ -101,7 +101,7 @@ segmentation framework [@Avants:2011aa] (denoted as Atropos), which we have made
 available within ANTs and has proven highly effective in quantification of
 functional lung imaging data [@Tustison:2011aa;@Altes:2012aa;@Teague:2014aa;@Kirby:2014aa]._
 
-__N4 bias correction.__  Critical to quantitative processing of MRI is the minimization of field
+__N4 \textcolor{red}{MRI} bias correction.__  Critical to quantitative processing of MRI is the minimization of field
 inhomogeneity effects which produce artificial low frequency intensity variation across the image.
 Large-scale studies, such as ADNI, employ perhaps the most widely used bias correction algorithm,
 N3 [@Sled:1998aa], as part of their standard \textcolor{red}{processing} protocol [@Boyes:2008aa].
@@ -124,12 +124,12 @@ Grand Challenge and Workshop on Multi-Atlas Labeling.  The joint label fusion (J
 first in the MICCAI Grand Challenge}. JLF is capable
 of predicting anatomical labels with accuracy that rivals expert anatomists
 [@Yushkevich:2010aa]
-and has proven its effectiveness \textcolor{red}{in multiple domains} [@MALF],
-[@Tustison:2014ab], [@MALF]. _\textcolor{red}{Importantly, we have}
+and has proven its effectiveness \textcolor{red}{in multiple domains}
+[@Tustison:2014ab;@MALF]. _\textcolor{red}{Importantly, we have}
 successfully extended \textcolor{red}{JLF} to the challenging problem of applying prior-based information to lung and lobe
 segmentation [@Tustison:2016aa]._
 
-__Spatially adaptive denoising.__ Denoising is critical for data "cleaning" prior to subsequent processing such
+__Spatially adaptive denoising.__ Denoising is \textcolor{red}{essential} for data "cleaning" prior to subsequent processing such
 as segmentation or spatial normalization.  ANTs implements a state-of-the-art
 spatially adaptive version to
 \textcolor{red}{patch-based} denoising recently proposed in [@Manjon:2010aa].
@@ -169,11 +169,10 @@ toolkits.  Fundamental processing tasks such as image registration, template gen
 bias correction, denoising, intensity-based segmentation, and joint label
 fusion are \textcolor{red}{first-in-class} software components which have been utilized for
 neuroimaging tasks such as brain extraction and cortical thickness estimation.
-The target applications of these core tools have an immediate analog for lung-specific
-tasks such as lung and lobe segmentation.](Figs/coreANtsToolsNeuro.png)
+_The target applications of these core tools have an immediate analog for lung-specific
+tasks such as lung and lobe segmentation._](Figs/coreANtsToolsNeuro.png)
 
 __3(c.1.2) Neuroimaging with ANTs as a model for the pulmonary community.__
-
 ANTs takes advantage of the mature Insight Toolkit in providing a powerful framework for
 building scripts and programs to facilitate processing of large neuroimaging studies.
 In particular, ANTs has developed a very large user base by making openly available a
