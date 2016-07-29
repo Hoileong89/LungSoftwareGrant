@@ -216,7 +216,7 @@ features. In combination, this would allow multiparametric statistical
 modeling that may predict which patients will develop BOS before PFT
 abnormalities beyond the diagnostic threshold ensue. Such tools will be
 extended to other diffuse lung diseases, potentially generating new
-biomarkers for diagnosis, prognostication and therapeutic trials.
+biomarkers for diagnosis, prognostication, and therapeutic trials.
 
 __3(c.3.5) Novel PET/CT biomarkers for early prediction of treatment response and survival in patients
 with non small cell lung cancer (NSCLC).__
@@ -229,12 +229,12 @@ methods may be due to a number of reasons: first, most studies have been limited
 tumor lesions and ignored the information available in other lesions/regions [@Ryu:2014aa]; second,
 many investigations have focused on global image measures of tumors, such as those derived
 from standardized uptake value (SUV) of PET images and tumor morphological information,
-which may not be sufficient to capture subtleties of tumor characteristics and tumor
+which may not be sufficient for capturing subtleties of tumor characteristics and tumor
 heterogeneity [@Chicklore:2013aa;@Depeursinge:2014aa]; and finally, group-level statistical analysis strategies are typically
 adopted to evaluate imaging markers, which may not be effective for personalized prediction [@Henderson:2005aa].
 
 To improve prediction of radiation therapy treatment response and survival in patients with
-NSCLC based on PET/CT imaging data, co-investigator David Mankoff and collaborators are
+NSCLC based on PET/CT imaging data, co-investigator __David Mankoff__ and collaborators are
 developing methods to adaptively extract image features from the data that are then input
 into a multi-task learning framework constructed to jointly model (and leverage potential
 statistical correlations between) the problems of predicting treatment response and survival.
@@ -362,15 +362,6 @@ extensive outreach program.  Complete dissemination details can be found in the 
 
 __3(c.4) Risks and alternatives__
 
-Lung imaging analysis is made more difficult by the inherent challenges posed by the dynamic
-nature of the lung environment in acquiring high quality images.  This is compounded by the
-wider range of imaging signal characteristics in the chest due to the appearance of air, fat,
-soft tissue and bone, together with their interfaces, in the images.  The complexity of lung
-images and diversity of protocols and equipment/modalities used for their acquisition,
-therefore, demand flexible and tunable (i.e., open and programmable) tools, with manifold
-capabilities carefully curated to cover essential analysis and processing tasks, all of
-which ideally integrated within a single coherent toolbox – this is precisely the overall
-goal and deliverable of the proposed project.
 While the proposed infrastructure is complex and integrates multiple cutting-edge technologies,
 we do not anticipate significant problems in its development and consider the risk of failure of
 the project to be very low. Our optimism is based on the extensive preliminary work that has been

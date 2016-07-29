@@ -40,7 +40,7 @@ Enabling such preprocessing is exactly one of the
 major goals of this project. To achieve this objective, given the
 additional complexity introduced, as noted in critique, by the
 heterogeneity of applications and equipment in lung imaging, flexible
-and tunable (i.e., open and programmable) tools \textcolor{red}{are needed}, with manifold
+and tunable (i.e., open and programmable) tools are needed, with manifold
 capabilities carefully curated to cover essential analysis and
 processing tasks, all of which ideally integrated within a single
 coherent toolbox---this is precisely the overall goal and deliverable of
