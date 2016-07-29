@@ -25,7 +25,7 @@ for sophisticated data transformation and machine learning techniques.
 
 __3(a.2) Open-source as an essential attribute of high-impact image analysis toolkits.__
 Well-vetted and publicly available software
-\textcolor{red}{have transformed targeted research fields}.
+\textcolor{black}{have transformed targeted research fields}.
 For example, the neuroscience community has greatly
 benefited from highly evolved software packages such as FreeSurfer [@Fischl:2012aa], the FMRIB Software
 Library (FSL) [@Jenkinson:2012aa], the Analysis of Functional NeuroImages (AFNI) package [@Cox:2012aa], the
@@ -62,12 +62,12 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 -->
 
 
-_\textcolor{red}{However, despite the important implications for the pulmonary imaging
+_\textcolor{black}{However, despite the important implications for the pulmonary imaging
 community}, no such analogous set of tools exist for multi-modal pulmonary-specific research.
-\textcolor{red}{Such an original software package would potentially have an immediate and
+\textcolor{black}{Such an original software package would potentially have an immediate and
 significant impact.}_  Indeed, a recent
 review [@Hoffman:2015aa] of CT- and MRI-derived biomarkers for pulmonary clinical investigation
-\textcolor{red}{
+\textcolor{black}{
 highlighted the lack of universally available multi-modality image
 analysis software---despite the existence of an extensive and continually
 growing literature---as one of the major impediments to more widespread
@@ -82,20 +82,20 @@ Medical image analysis libraries (e.g., the NIH-sponsored Insight ToolKit) provi
 algorithmic
 capabilities for a range of generic image processing tasks.  However,
 tailored software packages for certain application domains (e.g., lung image analysis)
-\textcolor{red}{do not exist}
+\textcolor{black}{do not exist}
  despite the vast number of algorithms that have been proposed in the literature
-\textcolor{red}{(most of which are not available to the public)}.[^1]
-\textcolor{red}{Importantly}, the goals of this project would
+\textcolor{black}{(most of which are not available to the public)}.[^1]
+\textcolor{black}{Importantly}, the goals of this project would
 significantly support the National Library of Medicine’s (NLM)
 open-source directives in that
 all software proposed in the project would be developed using the established Insight ToolKit’s coding and testing
 standards with the specific objective that all project code would be contributed
 for inclusion in future versions of the Insight ToolKit (ITK) as we have done in the past;
-\textcolor{red}{see Yoo letter of support}.
-\textcolor{red}{NLM's position on open-source stems from the} documented benefits
-within the targeted communities for which \textcolor{red}{such software} is developed and supported.  In addition to
+\textcolor{black}{see Yoo letter of support}.
+\textcolor{black}{NLM's position on open-source stems from the} documented benefits
+within the targeted communities for which \textcolor{black}{such software} is developed and supported.  In addition to
 increase in research output, open-source permits
-\textcolor{red}{trainees} and
+\textcolor{black}{trainees} and
 researchers to learn specific computational techniques in a social environment [@Yunwen:2003aa].
 This, in turn, provides motivation for user-based support, including potential contributions
 such as bug fixes and feature additions.  Additional analyses have shown the tremendous
@@ -104,7 +104,7 @@ cost savings that open-source software yields [@Rothwell:2008aa].  Furthermore,
 community (such as ITK) takes advantage of Linus's law, i.e., "given enough eyeballs, all bugs are
 shallow," for producing robust software.
 
-[^1]: \textcolor{red}{Several competitions have been held in recent years focused on the processing and
+[^1]: \textcolor{black}{Several competitions have been held in recent years focused on the processing and
 analysis of lung image data (e.g., VOLCANO09---nodule detection, EMPIRE10---registration and motion estimation,
 LOLA11---lung and lobe segmentation, and VESSEL12---vasculature segmentation).  To the best of our knowledge, the vast majority of
 the proposed algorithms are not publicly available.  Other pulmonary imaging efforts, such as LIDC
@@ -115,8 +115,8 @@ primarily of COPD) are significantly more narrow than those for this project.}
 
 
 
-__\textcolor{red}{3(a.3) The challenging dynamic nature of the multi-modality lung imaging
-environment demands tools with comprehensive capabilities.}__ \textcolor{red}{There is need
+__\textcolor{black}{3(a.3) The challenging dynamic nature of the multi-modality lung imaging
+environment demands tools with comprehensive capabilities.}__ \textcolor{black}{There is need
 for continued improvement of imaging acquisition technologies for the
 lung; nevertheless, the current state-of-the-art permits effective
 quantitation of pulmonary structural and functional parameters in

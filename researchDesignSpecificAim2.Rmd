@@ -4,7 +4,7 @@ This aim builds on the project team’s long and successful track record of coll
 user community.  In particular, the investigator-driven studies presented below are carefully selected
 both for their capacity to fully exercise the developed tools and to provide a comprehensive representation
 of the various processing and analysis tasks of interest to the community.
-\textcolor{red}{Two evaluation groups will serve as primary and secondary beta testers, respectively:
+\textcolor{black}{Two evaluation groups will serve as primary and secondary beta testers, respectively:
 institutional and external collaborators.  For the former, the development team will be embedded in
 the labs of project co-investigators, providing training to lab personnel and assisting with the
 creation of customized analysis pipelines.  These experiences will be used to develop tutorial
@@ -210,7 +210,7 @@ prognostication.
 Application of the proposed advanced software tools and algorithms in
 this project for quantitative analysis of CT images in lung
 transplantation patients will be crucial to enable computation of an
-array of first and second order statistics \textcolor{red}{that} would capture not only
+array of first and second order statistics \textcolor{black}{that} would capture not only
 attenuation maps but also regional deformation and texture based
 features. In combination, this would allow multiparametric statistical
 modeling that may predict which patients will develop BOS before PFT
@@ -379,7 +379,7 @@ Year 4 focused on releasing a fully functional system; and Year 5 focused on inc
 based on Aim 2 studies. Data collection and annotation (lung and lobes) for the multi-atlas libraries will take place in Years 1-2, followed by segmentations (vessels and airways) and template building in Year 3.
  __Aim 2:__  A preliminary version of the software will be deployed at
 evaluation sites toward the end of Year 2
-\textcolor{red}{(with quarterly software updates thereafter)},
+\textcolor{black}{(with quarterly software updates thereafter)},
 and testing will run through Year 4.  Documentation and
 dissemination efforts will take place throughout the course of the project.
 

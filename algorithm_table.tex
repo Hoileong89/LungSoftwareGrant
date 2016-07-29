@@ -8,12 +8,12 @@
     \cmidrule[1pt](lr){1-5}
     registration and normalization & [12,21,56] & [12,56] & [12,56] & [12,56] \\
     template generation & [22,23] & [22,23,29] & [22,23,29] & [22,23] \\
-    lung segmentation & [50] & [50] & { -- } & { -- } \\
-    lobe segmentation & [50] & [50] & { -- } & { -- } \\
+    lung segmentation & [50] & [50] & { $\ddagger$ } & { $\ddagger$ } \\
+    lobe segmentation & [50] & [50] & { $\ddagger$ } & { $\ddagger$ } \\
     airway segmentation & [80, 82] & { -- } & { -- } & { -- } \\
     vessel segmentation & [83] & { -- } & { -- } & { -- } \\
-    functional segmentation & [38] & { -- } & [38]  & { -- }\\
-    feature indices & [97, 98] & { -- } & { -- }  & { -- }\\
+    functional segmentation & { $\ast$ } & { -- } & [38]  & { $\ast$ }\\
+    feature indices & [97, 98] & { -- } & { $\ast$ }  & { $\ast$ }\\
     \bottomrule
    \end{tabular*}
  \label{table:algorithms}
@@ -21,14 +21,18 @@
  in the project
  categorized by modality.  One of the motivations for the collaborative use
  cases as a specific aim is the inevitability that other lung-specific
- algorithmic needs will be identified and \textcolor{red}{subsequently} added to the functionality
+ algorithmic needs will be identified and \textcolor{black}{subsequently} added to the functionality
  developed and offered as part of this project.  It should also be noted that
  some modality-specific modifications will be required.  For example,
  our lobe estimation approach works well for 1H MRI where no internal anatomical
  features are available for refinement.  This lobe estimation strategy can be directly applied to CT in providing
- spatial prior maps for subsequent subject-specific refinement.  \textcolor{red}{
+ spatial prior maps for subsequent subject-specific refinement.  \textcolor{black}{
  In response to reviewer suggestion, nodule detection has been removed from the project to avoid redundancy
-with the Chest Imaging Platform software that has this capability as a major development focus.}
+ with the Chest Imaging Platform software that has this capability as a major development focus.
+ `$\ddagger$' indicates potential functionality in the case of simultaneous structural and functional
+ acquisition or inter-modal registration.  `$\ast$' denotes functionality where existing technologies
+ for one modality could extend to another modality.
+}
  }
 
 \end{table}

@@ -6,18 +6,18 @@ Given the lack of open-source solutions for multi-modality pulmonary image analy
 this project would produce the first-of-its-kind processing and analytic  platform for performing
 such research.
 Similar to the brain-specific algorithms provided in our ANTs
-\textcolor{red}{(Advanced Normalization Tools)} toolkit [@ANTsWebsite], our
- project would include \textcolor{red}{several} essential algorithms for analyzing lung
+\textcolor{black}{(Advanced Normalization Tools)} toolkit [@ANTsWebsite], our
+ project would include \textcolor{black}{several} essential algorithms for analyzing lung
 images from different modalities, including CT, PET, and MRI.
 _A large number of algorithms have been proposed in various technical venues,
-\textcolor{red}{but these are mostly in the form of
+\textcolor{black}{but these are mostly in the form of
 textual descriptions without accompanying software.}
-\textcolor{red}{In contrast, we will provide} well-vetted and easy-to-use
+\textcolor{black}{In contrast, we will provide} well-vetted and easy-to-use
 implementations of specific robust methodologies
 for pulmonary image analysis, many of which have been developed by our group._
 To facilitate the usage of these algorithms, we will provide documentation including
 self-contained online examples, tutorials, and hands-on training workshops.
-\textcolor{red}{We recognize that the methodological depth of the field is extensive
+\textcolor{black}{We recognize that the methodological depth of the field is extensive
 and have therefore carefully selected algorithms for implementation in the project that
 1) provide coverage of essential functionality, 2) have been rigorously
 discussed in the literature, and 3) have delivered consistently excellent
@@ -27,26 +27,26 @@ addition to a performance benchmark and baseline platform for
 application and algorithm developers.}
 
 __3(b.2) Use case studies with leading pulmonary research scientists.__
-\textcolor{red}{Another} innovative component of the project is the inclusion of
-\textcolor{red}{an} extensive \textcolor{red}{set of} use
-cases from leading pulmonary \textcolor{red}{research groups with regression testing performed} using different
+\textcolor{black}{Another} innovative component of the project is the inclusion of
+\textcolor{black}{an} extensive \textcolor{black}{set of} use
+cases from leading pulmonary \textcolor{black}{research groups with regression testing performed} using different
 image acquisition protocols, equipment, etc. to ensure quality and robustness of the
 processed data.
-\textcolor{red}{The use of separate, independent testing sites will increase the value of the
+\textcolor{black}{The use of separate, independent testing sites will increase the value of the
 tools produced by ensuring that their success is not specific to the particular
 source of data.  This will increase the generality of the developed resources and
 thus ease dissemination to the wider community. Toward this end, the}
 real-world use cases were solicited representing as broadly as
 possible the requirements of the community as well as
 the multiple modality and algorithmic variations which commonly occur.
-\textcolor{red}{Tutorial materials, data, and example scripts} drawn from
-these \textcolor{red}{studies} will be provided to the public for any interested researcher to
+\textcolor{black}{Tutorial materials, data, and example scripts} drawn from
+these \textcolor{black}{studies} will be provided to the public for any interested researcher to
 apply to their own data.
 Any clinical findings
 of interest will be published in traditional venues (e.g., Chest).  In addition, we will
-provide all the quantitative analysis scripts as a companion release for \textcolor{red}{our publications}
+provide all the quantitative analysis scripts as a companion release for \textcolor{black}{our publications}
 (e.g., see previous similar offerings from our group [@Tustison:2013ac;@Tustison:2014ab]).
-\textcolor{red}{A clinically-based evaluation of these tools will not only provide insight into the specifics
+\textcolor{black}{A clinically-based evaluation of these tools will not only provide insight into the specifics
 of certain pulmonary pathologies
 but also offer a reproducible mechanism for using the tools created in this project.}
 

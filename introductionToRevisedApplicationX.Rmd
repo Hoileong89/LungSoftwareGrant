@@ -138,8 +138,7 @@ Critique asserts that "many of the feature indices (Table 2) already exist in ge
 form in Brain packages, etc;" however, we are unaware of such availability in the major
 brain packages (e.g., FSL, SPM, FreeSurfer), although we do know that a number of them exist
 in the Insight Toolkit because our group developed and contributed the corresponding software.
-This project would target these available features---as well as create additional ones specialized
-to lung images.
+This project would target these available features---as well as create additional ones specialized---to lung images.
 
 __Naivety on the part of the investigators (Critique 2).__
 The concern is raised regarding the necessary level of sophistication of the investigators
