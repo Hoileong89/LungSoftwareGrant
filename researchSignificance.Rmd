@@ -3,7 +3,7 @@
 
 ## __3(a) Significance__
 
-__3(a.1) The importance of analysis tools for research and clinical \textcolor{red]{imaging} investigation.__
+__3(a.1) The importance of analysis tools for research and clinical \textcolor{black}{imaging} investigation.__
 The increased utilization of imaging for both research and clinical purposes has
 furthered
 the demand for quantitative image analysis techniques.  The use of these computational
