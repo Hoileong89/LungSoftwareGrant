@@ -1,14 +1,5 @@
 
-# Significance
-
-##  E. A. Hoffman et al., JMRI 2015.
-
-> "More widespread use of all [pulmonary] imaging biomarkers has been limited for a number
-> of key reasons, including:
->        1) lack of support to harmonize image acquisition software;
->      __2) universally available image analysis software;__
->        3) regulatory boundaries for emerging approaches; and
->        4) historically weak links between respiratory and radiology clinical programs."
+# Motivation
 
 ## What does the neuroimaging community offer?
 
@@ -18,17 +9,18 @@ Great packages such as:
 * FSL
 * FreeSurfer
 * SPM
+* ANTs
 
 ## Public & robust software $\longrightarrow$ research output
 
 ```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6}
-years <- 2005:2014
+years <- 2005:2016
 
 numberOfAbstractsPerYear <- rep( 0, length( years ) )
 for( i in 1:length( years ) )
   {
   cat( "Doing year", years[i], "\n" )
-  query = "afni OR fsl OR freesurfer OR (statistical AND parametric AND mapping)"
+  query = "afni OR fsl OR freesurfer OR (\"statistical parametric mapping\") OR (\"advanced normalization tools\")"
   res <- EUtilsSummary( query, db = "pubmed", retmax = 5000, mindate = as.character( years[i] ), maxdate = as.character( years[i] ) )
   summary( res )
   fetch <- EUtilsGet( res )
@@ -55,4 +47,11 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 * Learn directly from journal manuscripts *and* implementations.
 * Tremendous cost-savings.
 
+##  E. A. Hoffman et al., JMRI 2015.
 
+> "More widespread use of all [pulmonary] imaging biomarkers has been limited for a number
+> of key reasons, including:
+>        1) lack of support to harmonize image acquisition software;
+>      __2) universally available image analysis software;__
+>        3) regulatory boundaries for emerging approaches; and
+>        4) historically weak links between respiratory and radiology clinical programs."

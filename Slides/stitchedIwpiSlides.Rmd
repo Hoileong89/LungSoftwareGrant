@@ -1,0 +1,205 @@
+---
+author: Nick Tustison
+title: An open-source framework for multi-modal pulmonary image analysis
+shorttitle:  Lung imaging and ANTs
+bibliography: ../references.bib
+logo:
+output:
+  beamer_presentation:
+    colortheme: dolphin
+    fonttheme:  structurebold
+    highlight: tango
+    incremental: no
+    theme:  AnnArbor
+    template: default2.tex
+    includes:
+      in_header: header.tex
+    toc: no
+    keep_tex: yes
+  pdf_document:
+    toc: true
+    highlight: zenburn
+  html_document:
+    toc: true
+    theme: readable
+  revealjs_presentation:
+    pandoc_args: [ "--slide-level", "2" ]
+    incremental: true
+    widescreen: true
+    smaller: false
+    theme: night
+    transition: fade
+    highlight: zenburn
+    center: true
+    self_contained: false
+  ioslides_presentation:
+    css: atk.css
+    incremental: false
+    widescreen: true
+    smaller: false
+    fig_width: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( cache=TRUE )
+```
+
+# Motivation
+
+## What does the neuroimaging community offer?
+
+Great packages such as:
+
+* AFNI
+* FSL
+* FreeSurfer
+* SPM
+* ANTs
+
+## Public & robust software $\longrightarrow$ research output
+
+```{r pubmedQuery, include=TRUE, echo=FALSE, warning=FALSE, message=FALSE, results="hide", fig.height=3, fig.width=6}
+years <- 2005:2016
+
+numberOfAbstractsPerYear <- rep( 0, length( years ) )
+for( i in 1:length( years ) )
+  {
+  cat( "Doing year", years[i], "\n" )
+  query = "afni OR fsl OR freesurfer OR (\"statistical parametric mapping\") OR (\"advanced normalization tools\")"
+  res <- EUtilsSummary( query, db = "pubmed", retmax = 5000, mindate = as.character( years[i] ), maxdate = as.character( years[i] ) )
+  summary( res )
+  fetch <- EUtilsGet( res )
+  abstracts <- AbstractText( fetch )
+  numberOfAbstractsPerYear[i] <- length( abstracts )
+  }
+
+plotDataFrame <- data.frame( Year = as.factor( years ), NumberOfAbstracts = numberOfAbstractsPerYear )
+ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = NumberOfAbstracts ) ) +
+          geom_bar( stat = "identity" ) +
+          scale_fill_gradient( low = "#01256e", high = "#6d0e0e" ) +
+          ylab( "Number of articles" ) +
+          xlab( "Publication year" ) +
+          theme( legend.position = "none" )
+```
+
+## Benefits of open-source:
+
+* Motivates community-based support:
+     * bug fixes (_"Given enough eyeballs, all bugs are shallow."_),
+     * new features,
+     * reproducibility verification, and
+     * community tech support.
+* Learn directly from journal manuscripts *and* implementations.
+* Tremendous cost-savings.
+
+##  E. A. Hoffman et al., JMRI 2015.
+
+> "More widespread use of all [pulmonary] imaging biomarkers has been limited for a number
+> of key reasons, including:
+>        1) lack of support to harmonize image acquisition software;
+>      __2) universally available image analysis software;__
+>        3) regulatory boundaries for emerging approaches; and
+>        4) historically weak links between respiratory and radiology clinical programs."
+
+# ITK-Lung: A software framework for lung image processing and analysis
+
+## ANTs core tools for lung image analysis
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/coreANtsToolsLung.png}
+\end{figure}
+
+## Proposed core functionality
+
+|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__
+|:----|:-------:|:------:|:------:|:------:|
+|   registration     |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
+|   template generation    |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
+|   lung segmentation    |  $\circ$  |  $\circ$  |  $\ddagger$  |  $\ddagger$  |
+|   lobe segmentation    |  $\circ$  |  $\circ$  |  $\ddagger$  |  $\ddagger$  |
+|   airway segmentation   |  $\circ$  |  --  |  --  |  --  |
+|   vessel segmentation   |  $\circ$  |  --  |  --  |  --  |
+|   functional segmentation   |  $\ast$  |  --  |  $\circ$  |  $\ast$  |
+|   feature indices   |  $\circ$  |  --  |  $\ast$  |  $\ast$  |
+
+\footnotesize
+
+'$\circ$': previously published work
+
+'$\ast$': cross-modality functionality
+
+'$\ddagger$': simultaneous structural acquisitions
+
+
+
+## EMPIRE 2010
+
+\centering
+\begin{figure}
+  \includegraphics[width=0.9\textwidth]{./competitions/figures/EMPIRE10criteria.png}
+\end{figure}
+
+\centering
+\begin{figure}
+  \includegraphics[width=0.95\textwidth]{./competitions/figures/EMPIRE10Results.png}
+\end{figure}
+
+## Registration github examples
+
+* https://github.com/ntustison/antsCtLungRegistrationExample
+
+* https://github.com/ntustison/ProtonCtLungMaskRegistration
+
+## Atlas-based lung and lobe estimation
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/malfLungsBoth.pdf}
+\end{figure}
+
+## Good results on 1H MRI
+
+|     |  __Mean__   |   __SD__   | __Median__ |
+|:----|:-------:|:------:|:------:|
+| __Left lung__   |  0.963 (0.974)  |  0.013 (0.097)  |  0.964 (0.992) |
+| __Right lung__  |  0.968 (0.972)  |  0.012 (0.135)  |  0.970 (0.996) |
+| __Left upper__  |  0.882 (0.922)  |  0.059 (0.163)  |  0.894 (0.978) |
+| __Left lower__  |  0.868 (0.885)  |  0.06 (0.229)   |  0.892 (0.964) |
+| __Right upper__ |  0.852 (0.921)  |  0.067 (0.088)  |  0.875 (0.96)  |
+| __Right middle__|  0.657 (0.765)  |  0.130 (0.299)  |  0.696 (0.886) |
+| __Right lower__ |  0.873 (0.914)  |  0.063 (0.176)  |  0.900 (0.968) |
+
+(*) Comparison with state-of-the-art
+
+## Lung and lobe estimation github example
+
+https://github.com/ntustison/LungAndLobeEstimationExample
+
+## Functional ventilation
+
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/prePostAlbuterol.png}
+\end{figure}
+
+## Functional segmentation github example
+
+https://github.com/ntustison/LungVentilationSegmentationExample
+
+## Combining ANTs lung functionality
+
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/longitudinalStudy.png}
+\end{figure}
+
+
+<!--
+## Combining ANTs lung functionality II
+
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/airways.png}
+\end{figure}
+-->

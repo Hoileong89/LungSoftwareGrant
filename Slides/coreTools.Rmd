@@ -20,30 +20,43 @@
 
 $\int_{t=0}^{0.5} \left(\|\mathbf{v}_1(x,t)\|_L^2 + \|\mathbf{v}_2(x,t)\|_L^2\right)dt + \|I\left(\phi_1(x,0.5)\right) - J_i\left(\phi_2(x,0.5)\right)\|^2$
 
-![](./Figs/fishes.png)
-
-
+\centering
+\begin{figure}
+  \includegraphics[width=0.9\textwidth]{./Figs/fishes.png}
+\end{figure}
 
 ## Diffeomorphisms:  Occam's razor modeling
 
-![](./Figs/sillyputty.png)
+\centering
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{./Figs/sillyputty.png}
+\end{figure}
 
 _differentiable map with differentiable inverse_
 
 ## Diffeomoprhisms:  fine-grained and flexible maps
 
-![](./Figs/highresdiffeos.jpg)
+\centering
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{./Figs/highresdiffeos.jpg}
+\end{figure}
 
 ## Beyond original SyN
 
 \small
 
-![](./Figs/Frontiers_ITK.png)
+\centering
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{./Figs/Frontiers_ITK.png}
+\end{figure}
 
-![](./Figs/Frontiers_BSplineSyN.png)
+\centering
+\begin{figure}
+  \includegraphics[width=0.75\textwidth]{./Figs/Frontiers_BSplineSyN.png}
+\end{figure}
+
 
 ## ```antsRegistration```
-<BR><BR>
 
 ```bash
 $ antsRegistration -h
@@ -523,4 +536,3 @@ OPTIONS:
      --help
 ```
 </font>
-

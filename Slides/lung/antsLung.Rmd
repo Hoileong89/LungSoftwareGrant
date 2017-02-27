@@ -3,15 +3,24 @@
 
 ## ANTs core tools for lung image analysis
 
-![](./lung/figures/coreANtsToolsLung.png)
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/coreANtsToolsLung.png}
+\end{figure}
 
 ## Functional ventilation
 
-![](./lung/figures/prePostAlbuterol.png)
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/prePostAlbuterol.png}
+\end{figure}
 
 ## Lung and lobe estimation
 
-![](./lung/figures/lungEstimation.png)
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/lungEstimation.png}
+\end{figure}
 
 ## Good results on 1H MRI
 
@@ -29,8 +38,14 @@
 
 ## Combining ANTs lung functionality I
 
-![](./lung/figures/longitudinalStudy.png)
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/longitudinalStudy.png}
+\end{figure}
 
 ## Combining ANTs lung functionality II
 
-![](./lung/figures/airways.png)
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/airways.png}
+\end{figure}
