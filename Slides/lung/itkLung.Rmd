@@ -1,5 +1,5 @@
 
-# ITK-Lung: A software framework for lung image processing and analysis
+# ITK-Lung
 
 ## ANTs core tools for lung image analysis
 
@@ -10,7 +10,7 @@
 
 ## Proposed core functionality
 
-|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__
+|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__ |
 |:----|:-------:|:------:|:------:|:------:|
 |   registration     |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
 |   template generation    |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |

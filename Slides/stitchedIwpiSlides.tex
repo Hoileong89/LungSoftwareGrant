@@ -79,14 +79,79 @@
 \usepackage{helvet}
 \useinnertheme{rectangles}
 
-\title[Lung imaging and ANTs]{An open-source framework for multi-modal pulmonary image analysis}
-\author{Nick Tustison}
+\title[Pulmonary open-science imaging]{An open-source framework for multi-modal pulmonary image analysis\\
+\vspace{0.5em} \footnotesize  \emph{ITK-Lung: A Software Framework for
+Lung Image Processing and Analysis}\\
+\footnotesize (R01 HL133889-01A1)\\
+\normalsize \vspace{3em} The 2017 International Workshop on Pulmonary
+Imaging}
+\author{Jim Gee and Nick Tustison\\
+\vspace{0.25em} UPenn/UVa}
 \date{}
 
 \begin{document}
 \frame{\titlepage}
 
-\section{Motivation}\label{motivation}
+\section{Why should you care?}\label{why-should-you-care}
+
+\begin{frame}{List of collaborators}
+
+\begin{longtable}[c]{@{}lc@{}}
+\toprule
+Mike Shim & Grace Parraga\tabularnewline
+Gerry Teague & Edwin van Beek\tabularnewline
+Tally Altes & Yoshiharu Ohno\tabularnewline
+Rahim Rizi & Joon-Beom Seo\tabularnewline
+Eduardo Barbosa & Hans-Ulrich Kauczor\tabularnewline
+Warren Gefter & Jim Wild\tabularnewline
+David Mankoff & Mark Scheibler\tabularnewline
+Sean Fain & Eric Hoffman\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}{}
+
+\begin{quote}
+``More widespread use of all {[}pulmonary{]} imaging biomarkers has been
+limited for a number of key reasons, including: 1) lack of support to
+harmonize image acquisition software; \textbf{2) universally available
+image analysis software;} 3) regulatory boundaries for emerging
+approaches; and 4) historically weak links between respiratory and
+radiology clinical programs.''
+\end{quote}
+
+\begin{flushright}
+--- E. A. Hoffman et al., JMRI 2015.
+\end{flushright}
+
+\end{frame}
+
+\begin{frame}{``publications \(=\) advertisements''}
+
+\begin{quote}
+``An article about computational science in a scientific publication is
+not the scholarship itself, it is merely advertising of the scholarship.
+The actual scholarship is the complete software development environment
+and the complete set of instructions which generated the figures.''
+\end{quote}
+
+\begin{flushright}
+ --- Jonathan Buckheit and David Donoho (Jon Claerbout)
+\end{flushright}
+
+\end{frame}
+
+\begin{frame}{Competitions}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./Figs/competitions.png}
+\end{figure}
+
+\end{frame}
 
 \begin{frame}{What does the neuroimaging community offer?}
 
@@ -99,7 +164,8 @@ Great packages such as:
 \item
   FSL
 \item
-  FreeSurfer
+  FreeSurfer \(\longrightarrow\)
+  NeuroQuant\textsuperscript{\textregistered}
 \item
   SPM
 \item
@@ -129,7 +195,7 @@ output}
   \item
     new features,
   \item
-    reproducibility verification, and
+    reproducibility, and
   \item
     community tech support.
   \end{itemize}
@@ -137,25 +203,23 @@ output}
   Learn directly from journal manuscripts \emph{and} implementations.
 \item
   Tremendous cost-savings.
+\item
+  \emph{``Don't reinvent the wheel.''}
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}{E. A. Hoffman et al., JMRI 2015.}
+\begin{frame}{ANTs core tools for neuroimage analysis}
 
-\begin{quote}
-``More widespread use of all {[}pulmonary{]} imaging biomarkers has been
-limited for a number of key reasons, including: 1) lack of support to
-harmonize image acquisition software; \textbf{2) universally available
-image analysis software;} 3) regulatory boundaries for emerging
-approaches; and 4) historically weak links between respiratory and
-radiology clinical programs.''
-\end{quote}
+\centering
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{../Figs/coreANtsToolsNeuro.png}
+\end{figure}
 
 \end{frame}
 
-\section{ITK-Lung: A software framework for lung image processing and
-analysis}\label{itk-lung-a-software-framework-for-lung-image-processing-and-analysis}
+\section{ITK-Lung}\label{itk-lung}
 
 \begin{frame}{ANTs core tools for lung image analysis}
 

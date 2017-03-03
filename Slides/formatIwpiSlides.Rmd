@@ -1,7 +1,13 @@
 ---
-author: Nick Tustison
-title: An open-source framework for multi-modal pulmonary image analysis
-shorttitle:  Lung imaging and ANTs
+author: |
+   | Jim Gee and Nick Tustison
+   | \vspace{0.25em} UPenn/UVa
+title: |
+   | An open-source framework for multi-modal pulmonary image analysis
+   | \vspace{0.5em} \footnotesize  _ITK-Lung: A Software Framework for Lung Image Processing and Analysis_
+   | \footnotesize (R01 HL133889-01A1)
+   | \normalsize \vspace{3em} The 2017 International Workshop on Pulmonary Imaging
+shorttitle:  Pulmonary open-science imaging
 bibliography: ../references.bib
 logo:
 output:

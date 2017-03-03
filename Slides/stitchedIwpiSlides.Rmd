@@ -1,7 +1,13 @@
 ---
-author: Nick Tustison
-title: An open-source framework for multi-modal pulmonary image analysis
-shorttitle:  Lung imaging and ANTs
+author: |
+   | Jim Gee and Nick Tustison
+   | \vspace{0.25em} UPenn/UVa
+title: |
+   | An open-source framework for multi-modal pulmonary image analysis
+   | \vspace{0.5em} \footnotesize  _ITK-Lung: A Software Framework for Lung Image Processing and Analysis_
+   | \footnotesize (R01 HL133889-01A1)
+   | \normalsize \vspace{3em} The 2017 International Workshop on Pulmonary Imaging
+shorttitle:  Pulmonary open-science imaging
 bibliography: ../references.bib
 logo:
 output:
@@ -44,15 +50,66 @@ output:
 knitr::opts_chunk$set( cache=TRUE )
 ```
 
-# Motivation
+# Why should you care?
+
+## List of collaborators
+
+|  |  |
+|:----|:-------:|
+| Mike Shim  | Grace Parraga  |
+| Gerry Teague | Edwin van Beek |
+| Tally Altes | Yoshiharu Ohno |
+| Rahim Rizi | Joon-Beom Seo |
+| Eduardo Barbosa |  Hans-Ulrich Kauczor |
+| Warren Gefter | Jim Wild  |
+| David Mankoff | Mark Scheibler |
+| Sean Fain | Eric Hoffman |
+
+##  
+
+> "More widespread use of all [pulmonary] imaging biomarkers has been limited for a number
+> of key reasons, including:
+>        1) lack of support to harmonize image acquisition software;
+>      __2) universally available image analysis software;__
+>        3) regulatory boundaries for emerging approaches; and
+>        4) historically weak links between respiratory and radiology clinical programs."
+
+\begin{flushright}
+--- E. A. Hoffman et al., JMRI 2015.
+\end{flushright}
+
+## "publications $=$ advertisements"
+
+> "An article about computational science in a scientific publication is not the
+> scholarship itself, it is merely advertising of the scholarship. The actual
+> scholarship is the complete software development environment and the complete
+> set of instructions which generated the figures."
+
+\begin{flushright}
+ --- Jonathan Buckheit and David Donoho (Jon Claerbout)
+\end{flushright}
+
+## Competitions
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./Figs/competitions.png}
+\end{figure}
+
 
 ## What does the neuroimaging community offer?
+
+<!--
+The lack of available packages in the
+-->
+
+
 
 Great packages such as:
 
 * AFNI
 * FSL
-* FreeSurfer
+* FreeSurfer  $\longrightarrow$  NeuroQuant\textsuperscript{\textregistered}
 * SPM
 * ANTs
 
@@ -87,21 +144,20 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 * Motivates community-based support:
      * bug fixes (_"Given enough eyeballs, all bugs are shallow."_),
      * new features,
-     * reproducibility verification, and
+     * reproducibility, and
      * community tech support.
 * Learn directly from journal manuscripts *and* implementations.
 * Tremendous cost-savings.
+* _"Don't reinvent the wheel."_
 
-##  E. A. Hoffman et al., JMRI 2015.
+## ANTs core tools for neuroimage analysis
 
-> "More widespread use of all [pulmonary] imaging biomarkers has been limited for a number
-> of key reasons, including:
->        1) lack of support to harmonize image acquisition software;
->      __2) universally available image analysis software;__
->        3) regulatory boundaries for emerging approaches; and
->        4) historically weak links between respiratory and radiology clinical programs."
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{../Figs/coreANtsToolsNeuro.png}
+\end{figure}
 
-# ITK-Lung: A software framework for lung image processing and analysis
+# ITK-Lung
 
 ## ANTs core tools for lung image analysis
 
@@ -112,7 +168,7 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 
 ## Proposed core functionality
 
-|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__
+|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__ |
 |:----|:-------:|:------:|:------:|:------:|
 |   registration     |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
 |   template generation    |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
