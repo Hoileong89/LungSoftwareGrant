@@ -11,8 +11,7 @@ srcdir<-"./"
 buildrmd='stitchedIwpiSlides.Rmd'
 
 rawrmds <- c( "formatIwpiSlides.Rmd",
-              "significance.Rmd",
-              "lung/itkLung.Rmd"
+              "significance.Rmd"
                )
 
 for( x in 1:length( rawrmds ) ) {

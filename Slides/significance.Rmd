@@ -48,12 +48,6 @@
 
 ## What does the neuroimaging community offer?
 
-<!--
-The lack of available packages in the
--->
-
-
-
 Great packages such as:
 
 * AFNI
@@ -105,3 +99,33 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 \begin{figure}
 \includegraphics[width=0.95\textwidth]{../Figs/coreANtsToolsNeuro.png}
 \end{figure}
+
+# ITK-Lung
+
+## ANTs core tools for lung image analysis
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/coreANtsToolsLung.png}
+\end{figure}
+
+## Proposed core functionality
+
+|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__ |
+|:----|:-------:|:------:|:------:|:------:|
+|   registration     |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
+|   template generation    |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
+|   lung segmentation    |  $\circ$  |  $\circ$  |  $\ddagger$  |  $\ddagger$  |
+|   lobe segmentation    |  $\circ$  |  $\circ$  |  $\ddagger$  |  $\ddagger$  |
+|   airway segmentation   |  $\circ$  |  --  |  --  |  --  |
+|   vessel segmentation   |  $\circ$  |  --  |  --  |  --  |
+|   functional segmentation   |  $\ast$  |  --  |  $\circ$  |  $\ast$  |
+|   feature indices   |  $\circ$  |  --  |  $\ast$  |  $\ast$  |
+
+\footnotesize
+
+'$\circ$': previously published work
+
+'$\ast$': cross-modality functionality
+
+'$\ddagger$': simultaneous structural acquisitions
