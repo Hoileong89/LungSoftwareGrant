@@ -180,3 +180,110 @@ ggplot( data = plotDataFrame, aes( x = Year, y = NumberOfAbstracts, fill = Numbe
 '$\ast$': cross-modality functionality
 
 '$\ddagger$': simultaneous structural acquisitions
+
+# ITK-Lung
+
+## ANTs core tools for lung image analysis
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/coreANtsToolsLung.png}
+\end{figure}
+
+## Proposed core functionality
+
+|  __Functionality__  |  __CT__   |   __1H MRI__   | __3He MRI__ | __PET__ |
+|:----|:-------:|:------:|:------:|:------:|
+|   registration     |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
+|   template generation    |  $\circ$  |  $\circ$  |  $\circ$  |  $\circ$  |
+|   lung segmentation    |  $\circ$  |  $\circ$  |  $\ddagger$  |  $\ddagger$  |
+|   lobe segmentation    |  $\circ$  |  $\circ$  |  $\ddagger$  |  $\ddagger$  |
+|   airway segmentation   |  $\circ$  |  --  |  --  |  --  |
+|   vessel segmentation   |  $\circ$  |  --  |  --  |  --  |
+|   functional segmentation   |  $\ast$  |  --  |  $\circ$  |  $\ast$  |
+|   feature indices   |  $\circ$  |  --  |  $\ast$  |  $\ast$  |
+
+\footnotesize
+
+'$\circ$': previously published work
+
+'$\ast$': cross-modality functionality
+
+'$\ddagger$': simultaneous structural acquisitions
+
+
+## EMPIRE 2010
+
+\centering
+\begin{figure}
+  \includegraphics[width=0.9\textwidth]{./competitions/figures/EMPIRE10criteria.png}
+\end{figure}
+
+\centering
+\begin{figure}
+  \includegraphics[width=0.95\textwidth]{./competitions/figures/EMPIRE10Results.png}
+\end{figure}
+
+## Registration github examples
+
+* https://github.com/ntustison/antsCtLungRegistrationExample
+
+* https://github.com/ntustison/ProtonCtLungMaskRegistration
+
+## Atlas-based lung and lobe estimation
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/title.png}
+\end{figure}
+
+\vspace{-1em}
+
+\centering
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/malfLungsBoth.pdf}
+\end{figure}
+
+## Good results on 1H MRI
+
+|     |  __Mean__   |   __SD__   | __Median__ |
+|:----|:-------:|:------:|:------:|
+| __Left lung__   |  0.963 (0.974)  |  0.013 (0.097)  |  0.964 (0.992) |
+| __Right lung__  |  0.968 (0.972)  |  0.012 (0.135)  |  0.970 (0.996) |
+| __Left upper__  |  0.882 (0.922)  |  0.059 (0.163)  |  0.894 (0.978) |
+| __Left lower__  |  0.868 (0.885)  |  0.06 (0.229)   |  0.892 (0.964) |
+| __Right upper__ |  0.852 (0.921)  |  0.067 (0.088)  |  0.875 (0.96)  |
+| __Right middle__|  0.657 (0.765)  |  0.130 (0.299)  |  0.696 (0.886) |
+| __Right lower__ |  0.873 (0.914)  |  0.063 (0.176)  |  0.900 (0.968) |
+
+(*) Comparison with state-of-the-art
+
+## Lung and lobe estimation github example
+
+https://github.com/ntustison/LungAndLobeEstimationExample
+
+## Functional ventilation
+
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/prePostAlbuterol.png}
+\end{figure}
+
+## Functional segmentation github example
+
+https://github.com/ntustison/LungVentilationSegmentationExample
+
+## Combining ANTs lung functionality
+
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/longitudinalStudy.png}
+\end{figure}
+
+
+## Combining ANTs lung functionality II
+
+\centering
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/airways.png}
+\end{figure}

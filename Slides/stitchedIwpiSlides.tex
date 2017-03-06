@@ -33,6 +33,7 @@
 \makeatletter
 \def\fnum@table{\tablename~\thetable}
 \makeatother
+\usepackage{url}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -261,6 +262,167 @@ feature indices & \(\circ\) & -- & \(\ast\) & \(\ast\)\tabularnewline
 '\(\ast\)': cross-modality functionality
 
 '\(\ddagger\)': simultaneous structural acquisitions
+
+\end{frame}
+
+\section{ITK-Lung}\label{itk-lung-1}
+
+\begin{frame}{ANTs core tools for lung image analysis}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/coreANtsToolsLung.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Proposed core functionality}
+
+\begin{longtable}[c]{@{}lcccc@{}}
+\toprule
+\textbf{Functionality} & \textbf{CT} & \textbf{1H MRI} & \textbf{3He
+MRI} & \textbf{PET}\tabularnewline
+\midrule
+\endhead
+registration & \(\circ\) & \(\circ\) & \(\circ\) &
+\(\circ\)\tabularnewline
+template generation & \(\circ\) & \(\circ\) & \(\circ\) &
+\(\circ\)\tabularnewline
+lung segmentation & \(\circ\) & \(\circ\) & \(\ddagger\) &
+\(\ddagger\)\tabularnewline
+lobe segmentation & \(\circ\) & \(\circ\) & \(\ddagger\) &
+\(\ddagger\)\tabularnewline
+airway segmentation & \(\circ\) & -- & -- & --\tabularnewline
+vessel segmentation & \(\circ\) & -- & -- & --\tabularnewline
+functional segmentation & \(\ast\) & -- & \(\circ\) &
+\(\ast\)\tabularnewline
+feature indices & \(\circ\) & -- & \(\ast\) & \(\ast\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\footnotesize
+
+'\(\circ\)': previously published work
+
+'\(\ast\)': cross-modality functionality
+
+'\(\ddagger\)': simultaneous structural acquisitions
+
+\end{frame}
+
+\begin{frame}{EMPIRE 2010}
+
+\centering
+
+\begin{figure}
+  \includegraphics[width=0.9\textwidth]{./competitions/figures/EMPIRE10criteria.png}
+\end{figure}
+
+\centering
+
+\begin{figure}
+  \includegraphics[width=0.95\textwidth]{./competitions/figures/EMPIRE10Results.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Registration github examples}
+
+\begin{itemize}
+\item
+  \url{https://github.com/ntustison/antsCtLungRegistrationExample}
+\item
+  \url{https://github.com/ntustison/ProtonCtLungMaskRegistration}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Atlas-based lung and lobe estimation}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/title.png}
+\end{figure}
+
+\vspace{-1em}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{./lung/figures/malfLungsBoth.pdf}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Good results on 1H MRI}
+
+\begin{longtable}[c]{@{}lccc@{}}
+\toprule
+& \textbf{Mean} & \textbf{SD} & \textbf{Median}\tabularnewline
+\midrule
+\endhead
+\textbf{Left lung} & 0.963 (0.974) & 0.013 (0.097) & 0.964
+(0.992)\tabularnewline
+\textbf{Right lung} & 0.968 (0.972) & 0.012 (0.135) & 0.970
+(0.996)\tabularnewline
+\textbf{Left upper} & 0.882 (0.922) & 0.059 (0.163) & 0.894
+(0.978)\tabularnewline
+\textbf{Left lower} & 0.868 (0.885) & 0.06 (0.229) & 0.892
+(0.964)\tabularnewline
+\textbf{Right upper} & 0.852 (0.921) & 0.067 (0.088) & 0.875
+(0.96)\tabularnewline
+\textbf{Right middle} & 0.657 (0.765) & 0.130 (0.299) & 0.696
+(0.886)\tabularnewline
+\textbf{Right lower} & 0.873 (0.914) & 0.063 (0.176) & 0.900
+(0.968)\tabularnewline
+\bottomrule
+\end{longtable}
+
+(*) Comparison with state-of-the-art
+
+\end{frame}
+
+\begin{frame}{Lung and lobe estimation github example}
+
+\url{https://github.com/ntustison/LungAndLobeEstimationExample}
+
+\end{frame}
+
+\begin{frame}{Functional ventilation}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/prePostAlbuterol.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Functional segmentation github example}
+
+\url{https://github.com/ntustison/LungVentilationSegmentationExample}
+
+\end{frame}
+
+\begin{frame}{Combining ANTs lung functionality}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/longitudinalStudy.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Combining ANTs lung functionality II}
+
+\centering
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{./lung/figures/airways.png}
+\end{figure}
 
 \hypertarget{refs}{}
 

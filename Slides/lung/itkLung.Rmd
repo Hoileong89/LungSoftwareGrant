@@ -30,7 +30,6 @@
 '$\ddagger$': simultaneous structural acquisitions
 
 
-<!--
 ## EMPIRE 2010
 
 \centering
@@ -63,7 +62,6 @@
 \includegraphics[width=0.95\textwidth]{./lung/figures/malfLungsBoth.pdf}
 \end{figure}
 
-<!--
 ## Good results on 1H MRI
 
 |     |  __Mean__   |   __SD__   | __Median__ |
@@ -77,7 +75,6 @@
 | __Right lower__ |  0.873 (0.914)  |  0.063 (0.176)  |  0.900 (0.968) |
 
 (*) Comparison with state-of-the-art
--->
 
 ## Lung and lobe estimation github example
 
@@ -108,4 +105,3 @@ https://github.com/ntustison/LungVentilationSegmentationExample
 \begin{figure}
 \includegraphics[width=0.9\textwidth]{./lung/figures/airways.png}
 \end{figure}
--->
