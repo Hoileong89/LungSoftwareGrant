@@ -1,0 +1,14 @@
+---
+output:
+  pdf_document:
+    fig_caption: true
+    latex_engine: xelatex
+    keep_tex: yes
+  word_document:
+    fig_caption: true
+bibliography: references.bib
+csl: ../national-science-foundation-grant-proposals.csl
+fontsize: 11pt
+mainfont: Georgia
+geometry: margin=0.5in
+---
